@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
     <af:document title="Cluster_Detail.jsf" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
             <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
@@ -29,8 +31,198 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
-                                    <af:showDetailItem id="pane2" text="Clusters / Farmers">
-                                        
+                                    <af:showDetailItem id="pane2" text="Clusters Detail">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1009px;">
+                                                        <af:showDetailItem id="tab1" text="Cluster Master">
+                                                            <af:panelFormLayout id="pfl1" rows="2" maxColumns="3">
+                                                                <af:inputText value="#{bindings.ClusterMasterId.inputValue}"
+                                                                              label="#{bindings.ClusterMasterId.hints.label}"
+                                                                              required="#{bindings.ClusterMasterId.hints.mandatory}"
+                                                                              columns="#{bindings.ClusterMasterId.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.ClusterMasterId.hints.precision}"
+                                                                              shortDesc="#{bindings.ClusterMasterId.hints.tooltip}"
+                                                                              id="it1">
+                                                                    <f:validator binding="#{bindings.ClusterMasterId.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.ClusterId.inputValue}"
+                                                                              label="#{bindings.ClusterId.hints.label}"
+                                                                              required="#{bindings.ClusterId.hints.mandatory}"
+                                                                              columns="#{bindings.ClusterId.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.ClusterId.hints.precision}"
+                                                                              shortDesc="#{bindings.ClusterId.hints.tooltip}"
+                                                                              id="it2">
+                                                                    <f:validator binding="#{bindings.ClusterId.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputDate value="#{bindings.Dated.inputValue}"
+                                                                              label="#{bindings.Dated.hints.label}"
+                                                                              required="#{bindings.Dated.hints.mandatory}"
+                                                                              columns="#{bindings.Dated.hints.displayWidth}"
+                                                                              shortDesc="#{bindings.Dated.hints.tooltip}"
+                                                                              id="id1">
+                                                                    <f:validator binding="#{bindings.Dated.validator}"/>
+                                                                    <af:convertDateTime pattern="#{bindings.Dated.format}"/>
+                                                                </af:inputDate>
+                                                                <af:inputText value="#{bindings.Status.inputValue}"
+                                                                              label="#{bindings.Status.hints.label}"
+                                                                              required="#{bindings.Status.hints.mandatory}"
+                                                                              columns="#{bindings.Status.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Status.hints.precision}"
+                                                                              shortDesc="#{bindings.Status.hints.tooltip}"
+                                                                              id="it3">
+                                                                    <f:validator binding="#{bindings.Status.validator}"/>
+                                                                    <af:convertNumber groupingUsed="false"
+                                                                                      pattern="#{bindings.Status.format}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.Remarks.inputValue}"
+                                                                              label="#{bindings.Remarks.hints.label}"
+                                                                              required="#{bindings.Remarks.hints.mandatory}"
+                                                                              columns="#{bindings.Remarks.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Remarks.hints.precision}"
+                                                                              shortDesc="#{bindings.Remarks.hints.tooltip}"
+                                                                              id="it4">
+                                                                    <f:validator binding="#{bindings.Remarks.validator}"/>
+                                                                </af:inputText>
+                                                                <f:facet name="footer">
+                                                                    
+                                                                </f:facet>
+                                                            </af:panelFormLayout>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                   
+                                                    <af:panelGroupLayout id="pgl3"
+                                                                                         inlineStyle="width:747px;">
+                                                                        <af:panelGroupLayout layout="horizontal"
+                                                                                             id="pgl4">
+                                                                                              <af:spacer width="100" height="20" id="s6"/>
+                                                                            <af:button actionListener="#{bindings.First.execute}"
+                                                                                       text="First"
+                                                                                       disabled="#{!bindings.First.enabled}"
+                                                                                       partialSubmit="true" id="b4"/>
+                                                                            <af:button actionListener="#{bindings.Previous.execute}"
+                                                                                       text="Previous"
+                                                                                       disabled="#{!bindings.Previous.enabled}"
+                                                                                       partialSubmit="true" id="b6"/>
+                                                                            <af:button actionListener="#{bindings.Next.execute}"
+                                                                                       text="Next"
+                                                                                       disabled="#{!bindings.Next.enabled}"
+                                                                                       partialSubmit="true" id="b7"/>
+                                                                            <af:button actionListener="#{bindings.Last.execute}"
+                                                                                       text="Last"
+                                                                                       disabled="#{!bindings.Last.enabled}"
+                                                                                       partialSubmit="true" id="b8"/>
+                                                                        </af:panelGroupLayout>
+                                                                        <h:panelGroup id="pg2">
+                                                                            <af:button text="Submit" id="b9"/>
+                                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                                   text="Commit"
+                                                                                   disabled="#{!bindings.Commit.enabled}"
+                                                                                   id="b16"/>
+                                                                        <af:button actionListener="#{bindings.Delete1.execute}"
+                                                                                   text="Delete1"
+                                                                                   disabled="#{!bindings.Delete1.enabled}"
+                                                                                   id="b15"/>
+                                                                        <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                                                   text="CreateInsert1"
+                                                                                   disabled="#{!bindings.CreateInsert1.enabled}"
+                                                                                   id="b10"/>
+                                                                        </h:panelGroup>
+                                                                        
+                                                                    </af:panelGroupLayout>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:1007px;">
+                                                        <af:showDetailItem id="tab2" text="Cluster Detail">
+                                                            <af:table value="#{bindings.TblClusterDetailView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblClusterDetailView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblClusterDetailView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblClusterDetailView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblClusterDetailView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblClusterDetailView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblClusterDetailView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblClusterDetailView3Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      partialTriggers="::b11 ::b12 ::b13">
+                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
+                                                                           id="c1">
+                                                                    <af:inputText value="#{row.bindings.ClusterDetailId.inputValue}"
+                                                                                  label="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
+                                                                                  required="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.ClusterDetailId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.label}"
+                                                                           id="c2">
+                                                                    <af:inputText value="#{row.bindings.ClusterMasterId.inputValue}"
+                                                                                  label="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.label}"
+                                                                                  required="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.tooltip}"
+                                                                                  id="it6">
+                                                                        <f:validator binding="#{row.bindings.ClusterMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.FarmerRegId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterDetailView3.hints.FarmerRegId.label}"
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
+                                                                                  label="#{bindings.TblClusterDetailView3.hints.FarmerRegId.label}"
+                                                                                  required="#{bindings.TblClusterDetailView3.hints.FarmerRegId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterDetailView3.hints.FarmerRegId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.FarmerRegId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.FarmerRegId.tooltip}"
+                                                                                  id="it7">
+                                                                        <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:spacer width="200" height="20" id="s4"/>
+                                                    <h:panelGroup id="pg1">
+                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="CreateInsert"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b11"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b12"/>
+                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b13"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b14"/>
+                                                    </h:panelGroup>
+                                                    
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
                                     </af:showDetailItem>
                                 </af:panelAccordion>
                             </af:gridCell>

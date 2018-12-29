@@ -4,7 +4,7 @@
 <AppModule
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="AppModule"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
@@ -25,6 +25,12 @@
   <ViewUsage
     Name="TblCourseView1"
     ViewObjectName="model.vo.TblCourseView"/>
+  <ViewUsage
+    Name="TblFarmerRegView1"
+    ViewObjectName="model.vo.TblFarmerRegView"/>
+  <ViewUsage
+    Name="TblFarmerRegCropsView1"
+    ViewObjectName="model.vo.TblFarmerRegCropsView"/>
   <ViewLinkUsage
     Name="FKTblProjCompFKLink"
     ViewLinkObjectName="model.vo.FKTblProjCompFKLink"
@@ -42,5 +48,11 @@
     ViewLinkObjectName="model.vo.FKTblCourseFKLink2"
     SrcViewUsageName="model.vo.AppModule.TblProjCompInputView2"
     DstViewUsageName="model.vo.AppModule.TblCourseView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblFarmerRegCropsFKLink2"
+    ViewLinkObjectName="model.vo.FKTblFarmerRegCropsFKLink2"
+    SrcViewUsageName="model.vo.AppModule.TblFarmerRegView1"
+    DstViewUsageName="model.vo.AppModule.TblFarmerRegCropsView1"
     Reversed="false"/>
 </AppModule>

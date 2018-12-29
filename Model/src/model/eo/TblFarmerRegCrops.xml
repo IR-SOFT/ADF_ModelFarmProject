@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblFarmerRegCrops"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_FARMER_REG_CROPS"
+  AliasName="TblFarmerRegCrops"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="FarmerRegCropsId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="FARMER_REG_CROPS_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_FARMER_REG_CROPS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FarmerRegId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="FARMER_REG_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_FARMER_REG_CROPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CropId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CROP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_FARMER_REG_CROPS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblFarmerCrop"
+    Association="model.eo.FkTblFarmerRegCropsFkAssoc"
+    AssociationEnd="model.eo.FkTblFarmerRegCropsFkAssoc.TblFarmerCrop"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegCropsFkAssoc.TblFarmerRegCrops"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblFarmerReg"
+    Association="model.eo.FKTblFarmerRegCropsFKAssoc2"
+    AssociationEnd="model.eo.FKTblFarmerRegCropsFKAssoc2.TblFarmerReg"
+    AssociationOtherEnd="model.eo.FKTblFarmerRegCropsFKAssoc2.TblFarmerRegCrops"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <ViewLinkAccessor
+    Name="TblFarmerRegView"
+    ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
+    ViewLinkEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblFarmerRegView"
+    ViewLinkOtherEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblFarmerRegCropsView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblFarmerRegCropsPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_FARMER_REG_CROPS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerRegCrops.FarmerRegCropsId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblFarmerRegCropsFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_CROP_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_FARMER_REG_CROPS_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerRegCrops.CropId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TblFarmerRegCrops">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_FARMER_REG_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_FARMER_REG_CROPS"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerRegCrops.FarmerRegId"/>
+    </AttrArray>
+  </Key>
+</Entity>

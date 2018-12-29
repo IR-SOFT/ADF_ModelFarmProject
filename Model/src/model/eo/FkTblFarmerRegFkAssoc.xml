@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblFarmerRegFkAssoc"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="TblFarmerCluster"
+    Cardinality="1"
+    Source="true"
+    Owner="model.eo.TblFarmerCluster">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblFarmerCluster"/>
+      <Attr Name="_foreignKey" Value="model.eo.TblFarmerCluster.PkTblClusterPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerCluster.ClusterId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="TblFarmerReg"
+    Cardinality="-1"
+    Owner="model.eo.TblFarmerReg">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblFarmerReg"/>
+      <Attr Name="_foreignKey" Value="model.eo.TblFarmerReg.FkTblFarmerRegFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblFarmerReg.ClusterId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>
