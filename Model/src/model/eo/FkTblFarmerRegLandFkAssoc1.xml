@@ -3,7 +3,7 @@
 <!---->
 <Association
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="FKTblFarmerRegCropsFKAssoc2"
+  Name="FkTblFarmerRegLandFkAssoc1"
   Version="12.2.1.11.3"
   InheritPersonalization="merge">
   <DesignTime>
@@ -13,8 +13,7 @@
     Name="TblFarmerReg"
     Cardinality="1"
     Source="true"
-    Owner="model.eo.TblFarmerReg"
-    LockLevel="NONE">
+    Owner="model.eo.TblFarmerReg">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_minCardinality" Value="1"/>
@@ -27,17 +26,17 @@
     </AttrArray>
   </AssociationEnd>
   <AssociationEnd
-    Name="TblFarmerRegCrops"
+    Name="TblFarmerRegLand"
     Cardinality="-1"
-    Owner="model.eo.TblFarmerRegCrops">
+    Owner="model.eo.TblFarmerRegLand">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
-      <Attr Name="_finderName" Value="TblFarmerRegCrops"/>
-      <Attr Name="_foreignKey" Value="model.eo.TblFarmerRegCrops.fk_TblFarmerRegCrops"/>
+      <Attr Name="_finderName" Value="TblFarmerRegLand"/>
+      <Attr Name="_foreignKey" Value="model.eo.TblFarmerRegLand.FkTblFarmerRegLandFk"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="model.eo.TblFarmerRegCrops.FarmerRegId"/>
+      <Item Value="model.eo.TblFarmerRegLand.FarmerRegId"/>
     </AttrArray>
   </AssociationEnd>
 </Association>

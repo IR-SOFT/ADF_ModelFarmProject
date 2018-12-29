@@ -3,15 +3,10 @@
 <!---->
 <ViewLink
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="FKTblFarmerRegCropsFKLink2"
+  Name="FkTblFarmerRegCropsFkAssoc1Link"
   Version="12.2.1.11.3"
-  InheritPersonalization="merge">
-  <Properties>
-    <SchemaBasedProperties>
-      <LABEL
-        ResId="model.vo.FKTblFarmerRegCropsFKLink2_LABEL"/>
-    </SchemaBasedProperties>
-  </Properties>
+  InheritPersonalization="merge"
+  EntityAssociation="model.eo.FkTblFarmerRegCropsFkAssoc1">
   <ViewLinkDefEnd
     Name="TblFarmerRegView"
     Cardinality="1"
@@ -19,9 +14,8 @@
     Owner="model.vo.TblFarmerRegView">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
-      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
       <Attr Name="_finderName" Value="TblFarmerRegView"/>
-      <Attr Name="_entityAccessor" Value="true"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.vo.TblFarmerRegView.FarmerRegId"/>
@@ -34,14 +28,9 @@
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_finderName" Value="TblFarmerRegCropsView"/>
-      <Attr Name="_entityAccessor" Value="true"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.vo.TblFarmerRegCropsView.FarmerRegId"/>
     </AttrArray>
   </ViewLinkDefEnd>
-  <ResourceBundle>
-    <PropertiesBundle
-      PropertiesFile="model.ModelBundle"/>
-  </ResourceBundle>
 </ViewLink>

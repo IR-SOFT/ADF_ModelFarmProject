@@ -4,22 +4,26 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="TblFarmerRegView1" RangeSize="25" DataControl="AppModuleDataControl"
-              id="TblFarmerRegView1Iterator"/>
-    <searchRegion Binds="TblFarmerRegView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegView1Query"/>
-    <iterator Binds="TblFarmerRegLandView3" RangeSize="25" DataControl="AppModuleDataControl7"
-              id="TblFarmerRegLandView3Iterator"/>
-    <searchRegion Binds="TblFarmerRegLandView3Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegLandView3Query"/>
-    <iterator Binds="TblFarmerRegMemView3" RangeSize="25" DataControl="AppModuleDataControl8"
-              id="TblFarmerRegMemView3Iterator"/>
-    <searchRegion Binds="TblFarmerRegMemView3Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegMemView3Query"/>
+    <iterator Binds="TblFarmerRegView5" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblFarmerRegView5Iterator"/>
+    <searchRegion Binds="TblFarmerRegView5Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegView5Query"/>
+    <iterator Binds="TblFarmerRegLandView7" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblFarmerRegLandView7Iterator"/>
+    <searchRegion Binds="TblFarmerRegLandView7Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegLandView7Query"/>
+    <iterator Binds="TblFarmerRegMemView7" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblFarmerRegMemView7Iterator"/>
+    <searchRegion Binds="TblFarmerRegMemView7Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegMemView7Query"/>
+    <iterator Binds="TblFarmerRegCropsView7" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblFarmerRegCropsView7Iterator"/>
+    <searchRegion Binds="TblFarmerRegCropsView7Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblFarmerRegCropsView7Query"/>
   </executables>
   <bindings>
-    <tree IterBinding="TblFarmerRegView1Iterator" id="TblFarmerRegView1">
-      <nodeDefinition DefName="model.vo.TblFarmerRegView" Name="TblFarmerRegView10">
+    <tree IterBinding="TblFarmerRegView5Iterator" id="TblFarmerRegView5">
+      <nodeDefinition DefName="model.vo.TblFarmerRegView" Name="TblFarmerRegView50">
         <AttrNames>
           <Item Value="FarmerRegId"/>
           <Item Value="Name"/>
@@ -28,77 +32,82 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="ClusterId">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="ClusterId">
       <AttrNames>
         <Item Value="ClusterId"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="MarStatus">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="MarStatus">
       <AttrNames>
         <Item Value="MarStatus"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="Dob">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="Dob">
       <AttrNames>
         <Item Value="Dob"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="Doj">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="Doj">
       <AttrNames>
         <Item Value="Doj"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="PassNo">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="PassNo">
       <AttrNames>
         <Item Value="PassNo"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="Cnic">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="Cnic">
       <AttrNames>
         <Item Value="Cnic"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="DrLicNo">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="DrLicNo">
       <AttrNames>
         <Item Value="DrLicNo"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="Telephone">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="Telephone">
       <AttrNames>
         <Item Value="Telephone"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="Mobile">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="Mobile">
       <AttrNames>
         <Item Value="Mobile"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="Email">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="Email">
       <AttrNames>
         <Item Value="Email"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="Url">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="Url">
       <AttrNames>
         <Item Value="Url"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="PreAddress">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="PreAddress">
       <AttrNames>
         <Item Value="PreAddress"/>
       </AttrNames>
     </attributeValues>
-    <attributeValues IterBinding="TblFarmerRegView1Iterator" id="PerAddress">
+    <attributeValues IterBinding="TblFarmerRegView5Iterator" id="PerAddress">
       <AttrNames>
         <Item Value="PerAddress"/>
       </AttrNames>
     </attributeValues>
-    <action IterBinding="TblFarmerRegView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
-    <action IterBinding="TblFarmerRegView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
-    <action IterBinding="TblFarmerRegView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
-    <action IterBinding="TblFarmerRegView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
-    <tree IterBinding="TblFarmerRegLandView3Iterator" id="TblFarmerRegLandView3">
-      <nodeDefinition DefName="model.vo.TblFarmerRegLandView" Name="TblFarmerRegLandView30">
+    <action IterBinding="TblFarmerRegView5Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TblFarmerRegView5Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TblFarmerRegView5Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TblFarmerRegView5Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="TblFarmerRegView5Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFarmerRegView5Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblFarmerRegView5Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="TblFarmerRegLandView7Iterator" id="TblFarmerRegLandView7">
+      <nodeDefinition DefName="model.vo.TblFarmerRegLandView" Name="TblFarmerRegLandView70">
         <AttrNames>
           <Item Value="FarmerRegLandId"/>
           <Item Value="FarmerRegId"/>
@@ -117,8 +126,14 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <tree IterBinding="TblFarmerRegMemView3Iterator" id="TblFarmerRegMemView3">
-      <nodeDefinition DefName="model.vo.TblFarmerRegMemView" Name="TblFarmerRegMemView30">
+    <action IterBinding="TblFarmerRegLandView7Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFarmerRegLandView7Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblFarmerRegLandView7Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <tree IterBinding="TblFarmerRegMemView7Iterator" id="TblFarmerRegMemView7">
+      <nodeDefinition DefName="model.vo.TblFarmerRegMemView" Name="TblFarmerRegMemView70">
         <AttrNames>
           <Item Value="FarmerRegMemId"/>
           <Item Value="FarmerRegId"/>
@@ -133,5 +148,26 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action IterBinding="TblFarmerRegMemView7Iterator" id="CreateInsert2" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFarmerRegMemView7Iterator" id="Execute2" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblFarmerRegMemView7Iterator" id="Delete2" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <tree IterBinding="TblFarmerRegCropsView7Iterator" id="TblFarmerRegCropsView7">
+      <nodeDefinition DefName="model.vo.TblFarmerRegCropsView" Name="TblFarmerRegCropsView70">
+        <AttrNames>
+          <Item Value="FarmerRegCropsId"/>
+          <Item Value="FarmerRegId"/>
+          <Item Value="CropId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblFarmerRegCropsView7Iterator" id="CreateInsert3" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblFarmerRegCropsView7Iterator" id="Execute3" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblFarmerRegCropsView7Iterator" id="Delete3" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
   </bindings>
 </pageDefinition>
