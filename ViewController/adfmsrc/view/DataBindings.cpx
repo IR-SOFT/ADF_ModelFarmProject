@@ -19,6 +19,8 @@
     <page path="/Output_Indicators.jsf" usageId="view_Output_IndicatorsPageDef"/>
     <page path="/Monitoring_Parameters.jsf" usageId="view_Monitoring_ParametersPageDef"/>
     <page path="/Target_Crops.jsf" usageId="view_Target_CropsPageDef"/>
+    <page path="/Certification_Setup.jsf" usageId="view_Certification_SetupPageDef"/>
+    <page path="/Farmer_Registration.jsf" usageId="view_Farmer_RegistrationPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -36,6 +38,8 @@
     <page id="view_Output_IndicatorsPageDef" path="view.pageDefs.Output_IndicatorsPageDef"/>
     <page id="view_Monitoring_ParametersPageDef" path="view.pageDefs.Monitoring_ParametersPageDef"/>
     <page id="view_Target_CropsPageDef" path="view.pageDefs.Target_CropsPageDef"/>
+    <page id="view_Certification_SetupPageDef" path="view.pageDefs.Certification_SetupPageDef"/>
+    <page id="view_Farmer_RegistrationPageDef" path="view.pageDefs.Farmer_RegistrationPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"
@@ -69,6 +73,16 @@
                      SupportsSortCollection="true" syncMode="Immediate"
                      xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
     <BC4JDataControl id="AppModuleDataControl6" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl7" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl8" Package="model.eo"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
                      SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
                      SupportsSortCollection="true" syncMode="Immediate"

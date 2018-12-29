@@ -29,8 +29,26 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
-                                    <af:showDetailItem id="pane2" text="Clusters / Farmers">
-                                        
+                                    <af:showDetailItem id="pane2" text="Clusters Detail">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1009px;">
+                                                        <af:showDetailItem id="tab1" text="Tab Label 1"/>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"/>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
                                     </af:showDetailItem>
                                 </af:panelAccordion>
                             </af:gridCell>

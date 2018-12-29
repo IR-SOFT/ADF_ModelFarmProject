@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
     <af:document title="Certification_Setup.jsf" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
             <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
@@ -24,7 +26,97 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
-                                    <af:showDetailItem id="pane2" text="Certification Setup"></af:showDetailItem>
+                                    <af:showDetailItem id="pane2" text="Certification Setup">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1011px;">
+                                                        <af:showDetailItem id="tab1" text="Certification Setup">
+                                                            <af:table value="#{bindings.TblCertificationView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblCertificationView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblCertificationView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblCertificationView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblCertificationView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblCertificationView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblCertificationView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblCertificationView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                <af:column sortProperty="#{bindings.TblCertificationView1.hints.CertificationId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCertificationView1.hints.CertificationId.label}"
+                                                                           id="c1">
+                                                                    <af:inputText value="#{row.bindings.CertificationId.inputValue}"
+                                                                                  label="#{bindings.TblCertificationView1.hints.CertificationId.label}"
+                                                                                  required="#{bindings.TblCertificationView1.hints.CertificationId.mandatory}"
+                                                                                  columns="#{bindings.TblCertificationView1.hints.CertificationId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblCertificationView1.hints.CertificationId.precision}"
+                                                                                  shortDesc="#{bindings.TblCertificationView1.hints.CertificationId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.CertificationId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCertificationView1.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCertificationView1.hints.Name.label}"
+                                                                           id="c2">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblCertificationView1.hints.Name.label}"
+                                                                                  required="#{bindings.TblCertificationView1.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblCertificationView1.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblCertificationView1.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblCertificationView1.hints.Name.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCertificationView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCertificationView1.hints.Ast.label}"
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblCertificationView1.hints.Ast.label}"
+                                                                                  required="#{bindings.TblCertificationView1.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblCertificationView1.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblCertificationView1.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblCertificationView1.hints.Ast.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                    <af:spacer width="200" height="20" id="s2"/>
+                                                    <h:panelGroup id="pg1">
+                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="CreateInsert"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b6"/>
+                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b7"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b8"/>
+                                                    </h:panelGroup>
+                                                    
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"/>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
                                 </af:panelAccordion>
                             </af:gridCell>
                         </af:gridRow>
