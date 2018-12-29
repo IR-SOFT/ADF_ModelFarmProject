@@ -16,7 +16,7 @@
     <af:gridRow height="120px" id="pt_gr1">
       <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1">
         <!-- Header -->
-        <h:panelGroup id="pt_pg1" style=" margin-top:10px; background-color:White; width:1275px !important;">
+        <h:panelGroup id="pt_pg1" style=" margin-top:10px; background-color:White; ">
           <af:spacer width="21" height="30" id="pt_s1"/>
           <af:image source="#{resource['images:CABI.png']}" id="pt_i1" inlineStyle="width:226px; height:87px;"/>
           <af:spacer width="30" height="30" id="pt_s6"/>
