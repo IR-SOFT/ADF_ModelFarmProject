@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Cluster_DetailPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblClusterMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblClusterMasterView1Iterator"/>
+    <iterator Binds="TblClusterDetailView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblClusterDetailView3Iterator"/>
+    <searchRegion Binds="TblClusterDetailView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblClusterDetailView3Query"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TblClusterMasterView1Iterator" id="ClusterMasterId">
+      <AttrNames>
+        <Item Value="ClusterMasterId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblClusterMasterView1Iterator" id="ClusterId">
+      <AttrNames>
+        <Item Value="ClusterId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblClusterMasterView1Iterator" id="Dated">
+      <AttrNames>
+        <Item Value="Dated"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblClusterMasterView1Iterator" id="Status">
+      <AttrNames>
+        <Item Value="Status"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblClusterMasterView1Iterator" id="Remarks">
+      <AttrNames>
+        <Item Value="Remarks"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TblClusterMasterView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TblClusterMasterView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TblClusterMasterView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TblClusterMasterView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <tree IterBinding="TblClusterDetailView3Iterator" id="TblClusterDetailView3">
+      <nodeDefinition DefName="model.vo.TblClusterDetailView" Name="TblClusterDetailView30">
+        <AttrNames>
+          <Item Value="ClusterDetailId"/>
+          <Item Value="ClusterMasterId"/>
+          <Item Value="FarmerRegId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblClusterDetailView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblClusterDetailView3Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblClusterDetailView3Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblClusterMasterView1Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblClusterMasterView1Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>
