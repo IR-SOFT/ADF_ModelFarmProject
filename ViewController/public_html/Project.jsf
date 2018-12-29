@@ -27,7 +27,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:811px; width:1001px;">
+                                                   inlineStyle="height:811px; width:1050px;">
                                     <af:showDetailItem id="pane2" text="Project">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
@@ -152,7 +152,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
                                                     <af:panelTabbed position="above" id="pt4"
-                                                                    inlineStyle="height:264px; width:979px;">
+                                                                    inlineStyle="height:264px; width:1032px;">
                                                         <af:showDetailItem id="tab3" text="Project Offices">
                                                             <af:table value="#{bindings.TblProjOffView3.collectionModel}"
                                                                       var="row"
@@ -167,7 +167,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProjOffView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b7 ::b8 ::b9">
+                                                                      partialTriggers="::b7 ::b8 ::b9" width="1015">
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project ID"
@@ -200,7 +200,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Office Name"
-                                                                           id="c7" width="160" align="center">
+                                                                           id="c7" width="185" align="center">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Name.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Name.mandatory}"
@@ -228,7 +228,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.Address.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjOffView3.hints.Address.label}"
-                                                                           id="c9" align="center" width="150">
+                                                                           id="c9" align="center" width="185">
                                                                     <af:inputText value="#{row.bindings.Address.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Address.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Address.mandatory}"
@@ -316,7 +316,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr7">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
-                                                    <af:spacer width="334" height="15" id="s4"/>
+                                                    <af:spacer width="360" height="15" id="s4"/>
                                                     <h:panelGroup id="pg1">
  <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Create"

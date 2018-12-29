@@ -27,7 +27,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:387px; width:1001px;">
+                                                   inlineStyle="height:387px; width:1050px;">
                                     <af:showDetailItem id="pane2" text="Project Crops">
                                         <af:panelGridLayout id="pgl2">
                                            
