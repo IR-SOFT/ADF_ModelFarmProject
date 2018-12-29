@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="Clusters.jsf" id="d1">
+    <af:document title="Farmer_Registration.jsf" id="d1">
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
             <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">

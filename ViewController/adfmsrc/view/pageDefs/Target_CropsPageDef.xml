@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Target_CropsPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblClusterProjOffView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblClusterProjOffView1Iterator"/>
+    <searchRegion Binds="TblClusterProjOffView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblClusterProjOffView1Query"/>
+    <iterator Binds="TblClusterTargetCropsView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblClusterTargetCropsView3Iterator"/>
+    <searchRegion Binds="TblClusterTargetCropsView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblClusterTargetCropsView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblClusterProjOffView1Iterator" id="TblClusterProjOffView1">
+      <nodeDefinition DefName="model.vo.TblClusterProjOffView" Name="TblClusterProjOffView10">
+        <AttrNames>
+          <Item Value="ProjOffId"/>
+          <Item Value="ProjId"/>
+          <Item Value="Name"/>
+          <Item Value="ContactPer"/>
+          <Item Value="Address"/>
+          <Item Value="Tel"/>
+          <Item Value="Fax"/>
+          <Item Value="Email"/>
+          <Item Value="Category"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblClusterTargetCropsView3Iterator" id="TblClusterTargetCropsView3">
+      <nodeDefinition DefName="model.vo.TblClusterTargetCropsView" Name="TblClusterTargetCropsView30">
+        <AttrNames>
+          <Item Value="TargetCropsId"/>
+          <Item Value="ProjOffId"/>
+          <Item Value="CropId"/>
+          <Item Value="TarDis"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblClusterTargetCropsView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblClusterTargetCropsView3Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblClusterTargetCropsView3Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

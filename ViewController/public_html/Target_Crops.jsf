@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
-<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
     <af:document title="Cluster_Proj_Crops.jsf" id="d1">
+        <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
             <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
@@ -31,7 +33,102 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1010px;">
-                                                        <af:showDetailItem id="tab1" text="Project Office"/>
+                                                        <af:showDetailItem id="tab1" text="Project Office">
+                                                            <af:table value="#{bindings.TblClusterProjOffView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblClusterProjOffView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblClusterProjOffView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblClusterProjOffView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblClusterProjOffView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblClusterProjOffView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblClusterProjOffView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblClusterProjOffView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1">
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.ProjOffId.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.ProjOffId.label}"
+                                                                           id="c1">
+                                                                    <af:outputText value="#{row.ProjOffId}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.ProjOffId.tooltip}"
+                                                                                   id="ot1"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.ProjId.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.ProjId.label}"
+                                                                           id="c2">
+                                                                    <af:outputText value="#{row.ProjId}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.ProjId.tooltip}"
+                                                                                   id="ot2"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Name.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Name.label}"
+                                                                           id="c3">
+                                                                    <af:outputText value="#{row.Name}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Name.tooltip}"
+                                                                                   id="ot3"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.ContactPer.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.ContactPer.label}"
+                                                                           id="c4">
+                                                                    <af:outputText value="#{row.ContactPer}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.ContactPer.tooltip}"
+                                                                                   id="ot4"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Address.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Address.label}"
+                                                                           id="c5">
+                                                                    <af:outputText value="#{row.Address}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Address.tooltip}"
+                                                                                   id="ot5"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Tel.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Tel.label}"
+                                                                           id="c6">
+                                                                    <af:outputText value="#{row.Tel}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Tel.tooltip}"
+                                                                                   id="ot6"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Fax.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Fax.label}"
+                                                                           id="c7">
+                                                                    <af:outputText value="#{row.Fax}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Fax.tooltip}"
+                                                                                   id="ot7"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Email.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Email.label}"
+                                                                           id="c8">
+                                                                    <af:outputText value="#{row.Email}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Email.tooltip}"
+                                                                                   id="ot8"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Category.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Category.label}"
+                                                                           id="c9">
+                                                                    <af:outputText value="#{row.Category}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Category.tooltip}"
+                                                                                   id="ot9"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Ast.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Ast.label}"
+                                                                           id="c10">
+                                                                    <af:outputText value="#{row.Ast}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Ast.tooltip}"
+                                                                                   id="ot10"/>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
@@ -42,15 +139,112 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1012px;">
-                                                        <af:showDetailItem id="tab2" text="Target Crops"/>
+                                                        <af:showDetailItem id="tab2" text="Target Crops">
+                                                            <af:table value="#{bindings.TblClusterTargetCropsView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblClusterTargetCropsView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblClusterTargetCropsView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblClusterTargetCropsView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblClusterTargetCropsView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblClusterTargetCropsView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblClusterTargetCropsView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblClusterTargetCropsView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.label}"
+                                                                           id="c11">
+                                                                    <af:inputText value="#{row.bindings.TargetCropsId.inputValue}"
+                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.label}"
+                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.TargetCropsId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.label}"
+                                                                           id="c12">
+                                                                    <af:inputText value="#{row.bindings.ProjOffId.inputValue}"
+                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.label}"
+                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.ProjOffId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.CropId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterTargetCropsView3.hints.CropId.label}"
+                                                                           id="c13">
+                                                                    <af:inputText value="#{row.bindings.CropId.inputValue}"
+                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.CropId.label}"
+                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.CropId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.CropId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.CropId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.CropId.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.CropId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.TarDis.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterTargetCropsView3.hints.TarDis.label}"
+                                                                           id="c14">
+                                                                    <af:inputText value="#{row.bindings.TarDis.inputValue}"
+                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.TarDis.label}"
+                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.TarDis.mandatory}"
+                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.TarDis.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.TarDis.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.TarDis.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.TarDis.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblClusterTargetCropsView3.hints.Ast.label}"
+                                                                           id="c15">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.Ast.label}"
+                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.Ast.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
                                                     </af:panelTabbed>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:spacer width="200" height="20" id="s2"/>
                                                     <h:panelGroup id="pg1">
-                                                        <af:button text="button 1" id="b2"/>
+                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="CreateInsert"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b6"/>
+                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b7"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b8"/>
                                                     </h:panelGroup>
+                                                    
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">

@@ -36,6 +36,10 @@
                      inlineStyle="width:140px; text-align:center; vertical-align: middle;"
                      destination="Course_Training.jsf" icon="#{resource['images:trainning.png']}"/>
           <af:spacer width="20" height="30" id="pt_s5"/>
+          <af:button text="Cert/Expo" id="pt_b6"
+                     inlineStyle="width:140px; text-align:center; vertical-align: middle;"
+                     destination="Cert_Expo.jsf" icon="#{resource['images:trainning.png']}"/>
+          <af:spacer width="20" height="30" id="pt_s7"/>
           <af:button text="Monitoring" id="pt_b5" destination="Monitoring.jsf"
                      inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
                      icon="#{resource['images:monitoring.png']}"/>

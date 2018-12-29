@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Monitoring_ParametersPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblMonitoringOutputIndView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblMonitoringOutputIndView1Iterator"/>
+    <searchRegion Binds="TblMonitoringOutputIndView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="TblMonitoringOutputIndView1Query"/>
+    <iterator Binds="TblMonitoringMonParamView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblMonitoringMonParamView3Iterator"/>
+    <searchRegion Binds="TblMonitoringMonParamView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblMonitoringMonParamView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblMonitoringOutputIndView1Iterator" id="TblMonitoringOutputIndView1">
+      <nodeDefinition DefName="model.vo.TblMonitoringOutputIndView" Name="TblMonitoringOutputIndView10">
+        <AttrNames>
+          <Item Value="OutputIndId"/>
+          <Item Value="ProjCompOutputId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblMonitoringMonParamView3Iterator" id="TblMonitoringMonParamView3">
+      <nodeDefinition DefName="model.vo.TblMonitoringMonParamView" Name="TblMonitoringMonParamView30">
+        <AttrNames>
+          <Item Value="MonParamId"/>
+          <Item Value="OutputIndId"/>
+          <Item Value="Name"/>
+          <Item Value="Perc"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblMonitoringMonParamView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblMonitoringMonParamView3Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblMonitoringMonParamView3Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

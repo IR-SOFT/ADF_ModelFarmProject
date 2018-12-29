@@ -16,6 +16,9 @@
     <page path="/Course_Setup.jsf" usageId="view_course_setupPageDef"/>
     <page path="/Module_Setup.jsf" usageId="view_Module_SetupPageDef"/>
     <page path="/Topic_Setup.jsf" usageId="view_Topic_SetupPageDef"/>
+    <page path="/Output_Indicators.jsf" usageId="view_Output_IndicatorsPageDef"/>
+    <page path="/Monitoring_Parameters.jsf" usageId="view_Monitoring_ParametersPageDef"/>
+    <page path="/Target_Crops.jsf" usageId="view_Target_CropsPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -30,6 +33,9 @@
     <page id="view_course_setupPageDef" path="view.pageDefs.course_setupPageDef"/>
     <page id="view_Module_SetupPageDef" path="view.pageDefs.Module_SetupPageDef"/>
     <page id="view_Topic_SetupPageDef" path="view.pageDefs.Topic_SetupPageDef"/>
+    <page id="view_Output_IndicatorsPageDef" path="view.pageDefs.Output_IndicatorsPageDef"/>
+    <page id="view_Monitoring_ParametersPageDef" path="view.pageDefs.Monitoring_ParametersPageDef"/>
+    <page id="view_Target_CropsPageDef" path="view.pageDefs.Target_CropsPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"
