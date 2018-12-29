@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblProjComp"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_PROJ_COMP"
@@ -78,6 +78,13 @@
     Association="model.eo.FkTblProjCompOutputFkAssoc"
     AssociationEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjCompOutput"
     AssociationOtherEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjComp"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProjCompInput1"
+    Association="model.eo.FKTblProjCompInputFKAssoc2"
+    AssociationEnd="model.eo.FKTblProjCompInputFKAssoc2.TblProjCompInput1"
+    AssociationOtherEnd="model.eo.FKTblProjCompInputFKAssoc2.TblProjComp"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor

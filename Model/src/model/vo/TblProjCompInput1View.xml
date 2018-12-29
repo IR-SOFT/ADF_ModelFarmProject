@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblProjCompInput1View"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -16,6 +16,23 @@
   <EntityUsage
     Name="TblProjCompInput1"
     Entity="model.eo.TblProjCompInput1"/>
+  <EntityUsage
+    Name="TblProjComp"
+    Entity="model.eo.TblProjComp"
+    Reference="true"
+    Association="model.eo.FKTblProjCompInputFKAssoc2"
+    AssociationEnd="model.eo.FKTblProjCompInputFKAssoc2.TblProjComp"
+    SourceUsage="model.vo.TblProjCompInput1View.TblProjCompInput1"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblProjComp.ProjCompId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblProjCompInput1.ProjCompId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ProjCompInputId"
     IsNotNull="true"
@@ -45,6 +62,21 @@
     EntityAttrName="Ast"
     EntityUsage="TblProjCompInput1"
     AliasName="AST"/>
+  <ViewAttribute
+    Name="Proj_Comp_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblProjComp"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ProjCompId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjCompId"
+    EntityUsage="TblProjComp"
+    AliasName="PROJ_COMP_ID1"/>
   <ViewLinkAccessor
     Name="TblClusterView"
     ViewLink="model.vo.FkTblClusterFkLink"
