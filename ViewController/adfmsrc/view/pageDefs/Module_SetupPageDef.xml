@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="Module_SetupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblCourseView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblCourseView1Iterator"/>
+    <searchRegion Binds="TblCourseView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblCourseView1Query"/>
+    <iterator Binds="TblModuleView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblModuleView3Iterator"/>
+    <searchRegion Binds="TblModuleView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblModuleView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblCourseView1Iterator" id="TblCourseView1">
+      <nodeDefinition DefName="model.vo.TblCourseView" Name="TblCourseView10">
+        <AttrNames>
+          <Item Value="CourseId"/>
+          <Item Value="ProjCompInputId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblModuleView3Iterator" id="TblModuleView3">
+      <nodeDefinition DefName="model.vo.TblModuleView" Name="TblModuleView30">
+        <AttrNames>
+          <Item Value="ModuleId"/>
+          <Item Value="CourseId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblModuleView3Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="TblModuleView3Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblModuleView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Project_Components.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="15%" id="gc1">
+                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
+                        <af:showDetailItem id="sdi1" text="Components">
+                            <af:spacer width="190" height="10" id="s1"/>
+                            <af:button text="Project Components" id="b1" inlineStyle="width:190px;"
+                                       destination="Project_Components.jsf"/>
+                            <af:spacer width="190" height="10" id="s3"/>
+                            <af:button id="b3" inlineStyle="width:190px;"/>
+                            <af:spacer width="190" height="10" id="s5"/>
+                            <af:button id="b5" inlineStyle="width:190px;"/>
+                        </af:showDetailItem>
+                    </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="69%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   inlineStyle="height:811px; width:1025px;">
+                                    <af:showDetailItem id="pane2" text="Components">
+                                        
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1005px;">
+                                                        <af:showDetailItem id="tab1" text="Project Components">
+                                                            <af:table value="#{bindings.TblProjCompView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProjCompView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblProjCompView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProjCompView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProjCompView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProjCompView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblProjCompView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProjCompView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      partialTriggers="::b13 ::b14 ::b15">
+                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView1.hints.ProjCompId.label}"
+                                                                           id="c1">
+                                                                    <af:inputText value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                  label="#{bindings.TblProjCompView1.hints.ProjCompId.label}"
+                                                                                  required="#{bindings.TblProjCompView1.hints.ProjCompId.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompView1.hints.ProjCompId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompView1.hints.ProjCompId.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompView1.hints.ProjCompId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView1.hints.ProjId.label}"
+                                                                           id="c2">
+                                                                    <af:inputText value="#{row.bindings.ProjId.inputValue}"
+                                                                                  label="#{bindings.TblProjCompView1.hints.ProjId.label}"
+                                                                                  required="#{bindings.TblProjCompView1.hints.ProjId.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompView1.hints.ProjId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompView1.hints.ProjId.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompView1.hints.ProjId.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.ProjId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView1.hints.Name.label}"
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblProjCompView1.hints.Name.label}"
+                                                                                  required="#{bindings.TblProjCompView1.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompView1.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompView1.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompView1.hints.Name.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompView1.hints.Ast.label}"
+                                                                           id="c4">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblProjCompView1.hints.Ast.label}"
+                                                                                  required="#{bindings.TblProjCompView1.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompView1.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompView1.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompView1.hints.Ast.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                    <h:panelGroup id="pg3">
+                                                    <af:spacer width="400" height="10" id="s2"/>
+                                                        <af:button actionListener="#{bindings.CreateInsert2.execute}"
+                                                               text="CreateInsert2"
+                                                               disabled="#{!bindings.CreateInsert2.enabled}" id="b13"/>
+                                                    <af:button actionListener="#{bindings.Execute2.execute}"
+                                                               text="Execute2" disabled="#{!bindings.Execute2.enabled}"
+                                                               id="b14"/>
+                                                    <af:button actionListener="#{bindings.Delete2.execute}"
+                                                               text="Delete2" disabled="#{!bindings.Delete2.enabled}"
+                                                               id="b15"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b16"/>
+                                                    </h:panelGroup>
+                                                    
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9">
+                                                    <af:spacer width="100" height="30" id="s4"/>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                        <af:panelGridLayout id="pgl3">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" id="gc5">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:1012px;">
+                                                        <af:showDetailItem id="tab2" text="Project Component Input">
+                                                            <af:table value="#{bindings.TblProjCompInputView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProjCompInputView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblProjCompInputView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProjCompInputView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProjCompInputView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProjCompInputView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblProjCompInputView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProjCompInputView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b6 ::b7 ::b8">
+                                                                <af:column sortProperty="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.label}"
+                                                                           id="c5">
+                                                                    <af:inputText value="#{row.bindings.ProjCompInputId.inputValue}"
+                                                                                  label="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.label}"
+                                                                                  required="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.ProjCompInputId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompInputView3.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompInputView3.hints.ProjCompId.label}"
+                                                                           id="c6">
+                                                                    <af:inputText value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                  label="#{bindings.TblProjCompInputView3.hints.ProjCompId.label}"
+                                                                                  required="#{bindings.TblProjCompInputView3.hints.ProjCompId.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompInputView3.hints.ProjCompId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompInputView3.hints.ProjCompId.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompInputView3.hints.ProjCompId.tooltip}"
+                                                                                  id="it6">
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompInputView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompInputView3.hints.Name.label}"
+                                                                           id="c7">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblProjCompInputView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblProjCompInputView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompInputView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompInputView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompInputView3.hints.Name.tooltip}"
+                                                                                  id="it7">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompInputView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompInputView3.hints.Ast.label}"
+                                                                           id="c8">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblProjCompInputView3.hints.Ast.label}"
+                                                                                  required="#{bindings.TblProjCompInputView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompInputView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompInputView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompInputView3.hints.Ast.tooltip}"
+                                                                                  id="it8">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                             <h:panelGroup id="pg1">
+                                                    <af:spacer width="100" height="30" id="s6"/>
+                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="CreateInsert"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b6"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b7"/>
+                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b8"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b17"/>
+                                                    </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                        <af:showDetailItem text="Project Component Output" id="sdi2">
+                                                           <af:table value="#{bindings.TblProjCompOutputView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProjCompOutputView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblProjCompOutputView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProjCompOutputView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProjCompOutputView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProjCompOutputView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblProjCompOutputView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProjCompOutputView3Query.processQuery}"
+                                                                      varStatus="vs" id="t3"
+                                                                      partialTriggers="::b9 ::b10 ::b11">
+                                                                <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.label}"
+                                                                           id="c9">
+                                                                    <af:inputText value="#{row.bindings.ProjCompOutputId.inputValue}"
+                                                                                  label="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.label}"
+                                                                                  required="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.tooltip}"
+                                                                                  id="it9">
+                                                                        <f:validator binding="#{row.bindings.ProjCompOutputId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompOutputView3.hints.ProjCompId.label}"
+                                                                           id="c10">
+                                                                    <af:inputText value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                  label="#{bindings.TblProjCompOutputView3.hints.ProjCompId.label}"
+                                                                                  required="#{bindings.TblProjCompOutputView3.hints.ProjCompId.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompOutputView3.hints.ProjCompId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompOutputView3.hints.ProjCompId.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompOutputView3.hints.ProjCompId.tooltip}"
+                                                                                  id="it10">
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompOutputView3.hints.Name.label}"
+                                                                           id="c11">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblProjCompOutputView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblProjCompOutputView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompOutputView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompOutputView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompOutputView3.hints.Name.tooltip}"
+                                                                                  id="it11">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProjCompOutputView3.hints.Ast.label}"
+                                                                           id="c12">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblProjCompOutputView3.hints.Ast.label}"
+                                                                                  required="#{bindings.TblProjCompOutputView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompOutputView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompOutputView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompOutputView3.hints.Ast.tooltip}"
+                                                                                  id="it12">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            
+                                                            <h:panelGroup id="pg2">
+                                                    <af:spacer width="100" height="30" id="s7"/>
+                                                        <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                               text="CreateInsert1"
+                                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b9"/>
+                                                    <af:button actionListener="#{bindings.Execute1.execute}"
+                                                               text="Execute1" disabled="#{!bindings.Execute1.enabled}"
+                                                               id="b10"/>
+                                                    <af:button actionListener="#{bindings.Delete1.execute}"
+                                                               text="Delete1" disabled="#{!bindings.Delete1.enabled}"
+                                                               id="b11"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b18"/>
+                                                    </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                                
+                                            </af:gridRow>
+                                            
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                        
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

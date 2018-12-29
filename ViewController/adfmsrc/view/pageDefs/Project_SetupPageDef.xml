@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="Project_SetupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProgView1Iterator"/>
+    <searchRegion Binds="TblProgView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProgView1Query"/>
+    <iterator Binds="TblProjView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProjView1Iterator"/>
+    <searchRegion Binds="TblProjView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjView1Query"/>
+    <iterator Binds="TblProjOffView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblProjOffView3Iterator"/>
+    <searchRegion Binds="TblProjOffView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjOffView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblProgView1Iterator" id="TblProgView1">
+      <nodeDefinition DefName="model.vo.TblProgView" Name="TblProgView10">
+        <AttrNames>
+          <Item Value="Name"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblProjView1Iterator" id="TblProjView1">
+      <nodeDefinition DefName="model.vo.TblProjView" Name="TblProjView10">
+        <AttrNames>
+          <Item Value="ProjId"/>
+          <Item Value="ProgId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblProjOffView3Iterator" id="TblProjOffView3">
+      <nodeDefinition DefName="model.vo.TblProjOffView" Name="TblProjOffView30">
+        <AttrNames>
+          <Item Value="ProjOffId"/>
+          <Item Value="ProjId"/>
+          <Item Value="Name"/>
+          <Item Value="ContactPer"/>
+          <Item Value="Address"/>
+          <Item Value="Tel"/>
+          <Item Value="Fax"/>
+          <Item Value="Email"/>
+          <Item Value="Category"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblProjOffView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblProjOffView3Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblProjOffView3Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblProjView1Iterator" id="CreateInsert1" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="TblProjView1Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblProjView1Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

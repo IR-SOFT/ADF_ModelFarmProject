@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Prog_Setup.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
+                           <af:panelAccordion discloseMany="false" id="pa4" inlineStyle="width:195px;">
+                        <af:showDetailItem id="sdi1" text="Setups">
+                            <af:spacer width="190" height="10" id="s1"/>
+                            <af:button text="Program" id="b1" inlineStyle="width:190px;"
+                                       destination="Program.jsf" icon="#{resource['images:program.png']}"/>
+                            <af:spacer width="190" height="10" id="s3"/>
+                            <af:button text="Project" id="b3" inlineStyle="width:190px;" destination="Project.jsf"
+                                       icon="#{resource['images:projects.png']}"/>
+                            <af:spacer width="190" height="10" id="s5"/>
+                            <af:button text="Project Crops" id="b5" inlineStyle="width:190px;"
+                                       destination="Project_Crops.jsf" icon="#{resource['images:crops.png']}"/>
+                        </af:showDetailItem>
+                    </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   inlineStyle="height:811px; width:1001px;">
+                                    <af:showDetailItem id="pane2" text="Program Setup">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:665px;">
+                                                        <af:showDetailItem id="tab1" text="Program Setup">
+                                                            <af:table value="#{bindings.TblProgView12.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProgView12.rangeSize}"
+                                                                      emptyText="#{bindings.TblProgView12.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProgView12.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProgView12.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProgView12.rangeSize}"
+                                                                      filterModel="#{bindings.TblProgView11Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProgView11Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      inlineStyle="height:242px;"
+                                                                      partialTriggers="::b7 ::b8 ::b9" width="644">
+                                                                <af:column sortProperty="#{bindings.TblProgView12.hints.ProgId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="ID" align="center"
+                                                                           id="c1" width="50">
+                                                                    <af:inputText value="#{row.bindings.ProgId.inputValue}"
+                                                                                  label="#{bindings.TblProgView12.hints.ProgId.label}"
+                                                                                  required="#{bindings.TblProgView12.hints.ProgId.mandatory}"
+                                                                                  columns="#{bindings.TblProgView12.hints.ProgId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgView12.hints.ProgId.precision}"
+                                                                                  shortDesc="#{bindings.TblProgView12.hints.ProgId.tooltip}"
+                                                                                  id="it1"
+                                                                                  contentStyle='text-align:center'>
+                                                                        <f:validator binding="#{row.bindings.ProgId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgView12.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Programe Name"
+                                                                           id="c2" width="450">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblProgView12.hints.Name.label}"
+                                                                                  required="#{bindings.TblProgView12.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblProgView12.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgView12.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblProgView12.hints.Name.tooltip}"
+                                                                                  id="it2"
+                                                                                  contentStyle="text-transform:uppercase;">
+                                                                                  
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgView12.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Status" align="center"
+                                                                          
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblProgView12.hints.Ast.label}"
+                                                                                  required="#{bindings.TblProgView12.hints.Ast.mandatory}"
+                                                                                  shortDesc="#{bindings.TblProgView12.hints.Ast.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                                    <af:spacer width="174" height="15" id="s7"/>
+                                                    <h:panelGroup id="pg1">
+                                                    <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="Create"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b9"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               icon="#{resource['images:add.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s2"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b8" inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                          icon="#{resource['images:edit.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b7"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               icon="#{resource['images:delete.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s9"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b10"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               icon="#{resource['images:save.png']}"/>
+                                               </h:panelGroup>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
+                                                             halign="stretch">
+<af:spacer width="100" height="30" id="s6"/>
+                                                     
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:978px;">
+                                                        <af:showDetailItem id="tab2" text="Program Offices">
+                                                            <af:table value="#{bindings.TblProgOffView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProgOffView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblProgOffView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProgOffView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProgOffView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProgOffView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblProgOffView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProgOffView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2" width="963"
+                                                                      inlineStyle="height:241px;"
+                                                                      partialTriggers="::b12 ::b13 ::b14">
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Programe ID" align="center"
+                                                                           id="c5" width="60">
+                                                                    <af:inputText value="#{row.bindings.ProgId.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.ProgId.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.ProgId.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.ProgId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.ProgId.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.ProgId.tooltip}"
+                                                                                  id="it5"
+                                                                                  inlineStyle="text-align:center; vertical-align: middle;"
+                                                                                  contentStyle="text-align:center">
+                                                                        <f:validator binding="#{row.bindings.ProgId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgOffId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Office ID" align="center"
+                                                                           id="c4" width="50">
+                                                                    <af:inputText value="#{row.bindings.ProgOffId.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.ProgOffId.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.ProgOffId.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.ProgOffId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.ProgOffId.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.ProgOffId.tooltip}"
+                                                                                  id="it4"
+                                                                                  contentStyle="text-align:center">
+                                                                        <f:validator binding="#{row.bindings.ProgOffId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Office Name" align="center"
+                                                                           id="c6" width="155">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Name.tooltip}"
+                                                                                  id="it6"
+                                                                                  contentStyle="text-transform:uppercase;">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.ContactPer.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Contact Person" align="center"
+                                                                           id="c7" width="100">
+                                                                    <af:inputText value="#{row.bindings.ContactPer.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.ContactPer.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.ContactPer.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.ContactPer.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.ContactPer.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.ContactPer.tooltip}"
+                                                                                  id="it7" contentStyle="text-transform:uppercase;">
+                                                                        <f:validator binding="#{row.bindings.ContactPer.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Address.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Address" align="center"
+                                                                           id="c8" width="150">
+                                                                    <af:inputText value="#{row.bindings.Address.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.Address.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.Address.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.Address.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Address.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Address.tooltip}"
+                                                                                  id="it8" contentStyle="text-transform:uppercase;"> 
+                                                                        <f:validator binding="#{row.bindings.Address.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Tel.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Telephone" align="center"
+                                                                           id="c9" width="70">
+                                                                    <af:inputText value="#{row.bindings.Tel.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.Tel.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.Tel.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.Tel.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Tel.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Tel.tooltip}"
+                                                                                  id="it9">
+                                                                        <f:validator binding="#{row.bindings.Tel.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Fax.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Fax" align="center"
+                                                                           id="c10" width="70">
+                                                                    <af:inputText value="#{row.bindings.Fax.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.Fax.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.Fax.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.Fax.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Fax.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Fax.tooltip}"
+                                                                                  id="it10">
+                                                                        <f:validator binding="#{row.bindings.Fax.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Email.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="E-mail" align="center"
+                                                                           id="c11" width="70">
+                                                                    <af:inputText value="#{row.bindings.Email.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.Email.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.Email.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.Email.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Email.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Email.tooltip}"
+                                                                                  id="it11">
+                                                                        <f:validator binding="#{row.bindings.Email.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Category.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Category" align="center"
+                                                                           id="c12" width="80">
+                                                                    <af:inputText value="#{row.bindings.Category.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.Category.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.Category.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.Category.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Category.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Category.tooltip}"
+                                                                                  id="it12">
+                                                                        <f:validator binding="#{row.bindings.Category.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Status" align="center"
+                                                                           id="c13" width="40">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblProgOffView3.hints.Ast.label}"
+                                                                                  required="#{bindings.TblProgOffView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblProgOffView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Ast.tooltip}"
+                                                                                  id="it13">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                          <af:spacer width="334" height="15" id="s8"/>
+
+                                                    <h:panelGroup id="pg2">
+                                                   <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                               text="Create"
+                                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b12"
+                                                              inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                              icon="#{resource['images:add.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s10"/>
+                                                        <af:button actionListener="#{bindings.Execute1.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute1.enabled}"
+                                                               id="b14"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               icon="#{resource['images:edit.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s11"/>
+                                                        <af:button actionListener="#{bindings.Delete1.execute}"
+                                                               text="Delete" disabled="#{!bindings.Delete1.enabled}"
+                                                               id="b13"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               icon="#{resource['images:delete.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s12"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                          text="Save"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b11"
+                                                                          inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                                          icon="#{resource['images:save.png']}"/>
+                                                                </h:panelGroup>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                        
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

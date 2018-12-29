@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="Prog_OfficesPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblProgOffView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProgOffView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="ProgOffId">
+      <AttrNames>
+        <Item Value="ProgOffId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="ProgId">
+      <AttrNames>
+        <Item Value="ProgId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="ContactPer">
+      <AttrNames>
+        <Item Value="ContactPer"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="Address">
+      <AttrNames>
+        <Item Value="Address"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="Tel">
+      <AttrNames>
+        <Item Value="Tel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="Fax">
+      <AttrNames>
+        <Item Value="Fax"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="Category">
+      <AttrNames>
+        <Item Value="Category"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgOffView1Iterator" id="Ast">
+      <AttrNames>
+        <Item Value="Ast"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TblProgOffView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TblProgOffView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TblProgOffView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TblProgOffView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="TblProgOffView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblProgOffView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="TblProgOffView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Module_Setup.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="15%" id="gc1">
+                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
+                        <af:showDetailItem id="sdi1" text="Course Training">
+                            <af:spacer width="190" height="10" id="s1"/>
+                            <af:button text="Course Setup" id="b1" inlineStyle="width:190px;"
+                                       destination="Course_Setup.jsf"/>
+                            <af:spacer width="190" height="10" id="s3"/>
+                            <af:button id="b3" inlineStyle="width:190px;" text="Module Setup"
+                                       destination="Module_Setup.jsf"/>
+                            <af:spacer width="190" height="10" id="s5"/>
+                            <af:button id="b5" inlineStyle="width:190px;" text="Topic Setup"
+                                       destination="Topic_Setup.jsf"/>
+                        </af:showDetailItem>
+                    </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="69%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   inlineStyle="height:811px; width:1030px;">
+                                    <af:showDetailItem id="pane2" text="Module Setup">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:748px;">
+                                                        <af:showDetailItem id="tab1" text="Course Setup">
+                                                            <af:table value="#{bindings.TblCourseView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblCourseView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblCourseView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblCourseView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblCourseView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblCourseView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblCourseView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblCourseView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1">
+                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.CourseId.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblCourseView1.hints.CourseId.label}"
+                                                                           id="c1">
+                                                                    <af:outputText value="#{row.CourseId}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.CourseId.tooltip}"
+                                                                                   id="ot1"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.ProjCompInputId.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblCourseView1.hints.ProjCompInputId.label}"
+                                                                           id="c2">
+                                                                    <af:outputText value="#{row.ProjCompInputId}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.ProjCompInputId.tooltip}"
+                                                                                   id="ot2"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblCourseView1.hints.Name.label}"
+                                                                           id="c3">
+                                                                    <af:outputText value="#{row.Name}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.Name.tooltip}"
+                                                                                   id="ot3"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.Ast.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblCourseView1.hints.Ast.label}"
+                                                                           id="c4">
+                                                                    <af:outputText value="#{row.Ast}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.Ast.tooltip}"
+                                                                                   id="ot4"/>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:757px;">
+                                                        <af:showDetailItem id="tab2" text="Module Setup">
+                                                            <af:table value="#{bindings.TblModuleView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblModuleView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblModuleView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblModuleView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblModuleView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblModuleView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblModuleView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblModuleView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.ModuleId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblModuleView3.hints.ModuleId.label}"
+                                                                           id="c5">
+                                                                    <af:inputText value="#{row.bindings.ModuleId.inputValue}"
+                                                                                  label="#{bindings.TblModuleView3.hints.ModuleId.label}"
+                                                                                  required="#{bindings.TblModuleView3.hints.ModuleId.mandatory}"
+                                                                                  columns="#{bindings.TblModuleView3.hints.ModuleId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblModuleView3.hints.ModuleId.precision}"
+                                                                                  shortDesc="#{bindings.TblModuleView3.hints.ModuleId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.ModuleId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.CourseId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblModuleView3.hints.CourseId.label}"
+                                                                           id="c6">
+                                                                    <af:inputText value="#{row.bindings.CourseId.inputValue}"
+                                                                                  label="#{bindings.TblModuleView3.hints.CourseId.label}"
+                                                                                  required="#{bindings.TblModuleView3.hints.CourseId.mandatory}"
+                                                                                  columns="#{bindings.TblModuleView3.hints.CourseId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblModuleView3.hints.CourseId.precision}"
+                                                                                  shortDesc="#{bindings.TblModuleView3.hints.CourseId.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.CourseId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblModuleView3.hints.Name.label}"
+                                                                           id="c7">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblModuleView3.hints.Name.label}"
+                                                                                  required="#{bindings.TblModuleView3.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblModuleView3.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblModuleView3.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblModuleView3.hints.Name.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblModuleView3.hints.Ast.label}"
+                                                                           id="c8">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblModuleView3.hints.Ast.label}"
+                                                                                  required="#{bindings.TblModuleView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblModuleView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblModuleView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblModuleView3.hints.Ast.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:spacer width="200" height="20" id="s2"/>
+                                                    <h:panelGroup id="pg1">
+                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="CreateInsert"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b6"/>
+                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b7"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b8"/>
+                                                    </h:panelGroup>
+                                                   
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"/>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                        
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

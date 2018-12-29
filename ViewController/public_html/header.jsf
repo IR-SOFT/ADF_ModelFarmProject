@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:h="http://java.sun.com/jsf/html">
+  <af:xmlContent>
+    <afc:component>
+      <afc:description/>
+      <afc:display-name>header</afc:display-name>
+      
+      <afc:attribute>
+        <afc:attribute-name>menubarHeader</afc:attribute-name>
+        <afc:attribute-class>java.lang.String</afc:attribute-class>
+      </afc:attribute>
+    </afc:component>
+  </af:xmlContent>
+  <af:panelGridLayout id="pt_pgl1">
+    <af:gridRow height="120px" id="pt_gr1">
+      <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1">
+        <!-- Header -->
+        <h:panelGroup id="pt_pg1" style=" margin-top:10px; background-color:White; width:1275px !important;">
+          <af:spacer width="21" height="30" id="pt_s1"/>
+          <af:image source="#{resource['images:CABI.png']}" id="pt_i1" inlineStyle="width:226px; height:87px;"/>
+          <af:spacer width="30" height="30" id="pt_s6"/>
+          <af:button text="Home" id="pt_b2" destination="mainPage.jsf"
+                     inlineStyle="height:40px;width:140px !important; text-align:center; vertical-align: middle;"
+                     icon="#{resource['images:home.png']}"/>
+          <af:spacer width="20" height="30" id="pt_s2"/>
+          <af:button text="Setup" id="pt_b1" destination="setup.jsf"
+                     inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
+                     icon="#{resource['images:settings.png']}"/>
+          <af:spacer width="20" height="30" id="pt_s3"/>
+          <af:button text="Cluster/Farmers" id="pt_b3" destination="Clusters.jsf"
+                     inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
+                     icon="#{resource['images:farmers.png']}"/>
+          <af:spacer width="20" height="30" id="pt_s4"/>
+          <af:button text="Course/Training" id="pt_b4"
+                     inlineStyle="width:140px; text-align:center; vertical-align: middle;"
+                     destination="Course_Training.jsf" icon="#{resource['images:trainning.png']}"/>
+          <af:spacer width="20" height="30" id="pt_s5"/>
+          <af:button text="Monitoring" id="pt_b5" destination="Monitoring.jsf"
+                     inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
+                     icon="#{resource['images:monitoring.png']}"/>
+        </h:panelGroup>
+      </af:gridCell>
+    </af:gridRow>
+    <af:gridRow height="100%" id="pt_gr2">
+      <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc2" >
+        <af:panelGroupLayout layout="scroll" id="pt_pgl2">
+          <!-- Content -->
+          <af:facetRef facetName="body" >
+            <?audit suppress oracle.adf.faces.pt-facet-references?>
+          </af:facetRef>
+        </af:panelGroupLayout>
+      </af:gridCell>
+    </af:gridRow>
+    
+  </af:panelGridLayout>
+</af:pageTemplateDef>

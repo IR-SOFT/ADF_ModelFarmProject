@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblProjCompOutput"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_PROJ_COMP_OUTPUT"
+  AliasName="TblProjCompOutput"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ProjCompOutputId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_COMP_OUTPUT_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PROJ_COMP_OUTPUT"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_COMP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PROJ_COMP_OUTPUT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PROJ_COMP_OUTPUT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_PROJ_COMP_OUTPUT"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblProjComp"
+    Association="model.eo.FkTblProjCompOutputFkAssoc"
+    AssociationEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjComp"
+    AssociationOtherEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjCompOutput"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblProjCompOutputPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_PROJ_COMP_OUTPUT_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjCompOutput.ProjCompOutputId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblProjCompOutputUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_PROJ_COMP_OUTPUT_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjCompOutput.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblProjCompOutputFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_COMP_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_COMP_OUTPUT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjCompOutput.ProjCompId"/>
+    </AttrArray>
+  </Key>
+</Entity>

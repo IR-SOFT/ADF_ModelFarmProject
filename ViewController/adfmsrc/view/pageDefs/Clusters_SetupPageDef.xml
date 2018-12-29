@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="Clusters_SetupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblProjCompInputView1_1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblProjCompInputView1_1Iterator"/>
+    <searchRegion Binds="TblProjCompInputView1_1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompInputView1_1Query"/>
+    <iterator Binds="TblClusterView1_2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblClusterView1_2Iterator"/>
+    <searchRegion Binds="TblClusterView1_2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblClusterView1_2Query"/>
+    <iterator Binds="TblProjCompInput1View1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblProjCompInput1View1Iterator"/>
+    <searchRegion Binds="TblProjCompInput1View1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProjCompInput1View1Query"/>
+    <iterator Binds="TblClusterView2" RangeSize="25" DataControl="AppModuleDataControl" id="TblClusterView2Iterator"/>
+    <searchRegion Binds="TblClusterView2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblClusterView2Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblProjCompInputView1_1Iterator" id="TblProjCompInputView1_1">
+      <nodeDefinition DefName="model.queryBasedVO.TblProjCompInputView1" Name="TblProjCompInputView1_10">
+        <AttrNames>
+          <Item Value="ProjCompInputId"/>
+          <Item Value="ProjCompId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblClusterView1_2Iterator" id="TblClusterView1_2">
+      <nodeDefinition DefName="model.queryBasedVO.TblClusterView1" Name="TblClusterView1_20">
+        <AttrNames>
+          <Item Value="ClusterId"/>
+          <Item Value="ProjCompInputId"/>
+          <Item Value="Name"/>
+          <Item Value="District"/>
+          <Item Value="Tehsil"/>
+          <Item Value="Mauza"/>
+          <Item Value="Village"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblClusterView1_2Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblClusterView1_2Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblClusterView1_2Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="TblProjCompInput1View1Iterator" id="TblProjCompInput1View1">
+      <nodeDefinition DefName="model.vo.TblProjCompInput1View" Name="TblProjCompInput1View10">
+        <AttrNames>
+          <Item Value="ProjCompInputId"/>
+          <Item Value="ProjCompId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblClusterView2Iterator" id="TblClusterView2">
+      <nodeDefinition DefName="model.vo.TblClusterView" Name="TblClusterView20">
+        <AttrNames>
+          <Item Value="ClusterId"/>
+          <Item Value="ProjCompInputId"/>
+          <Item Value="Name"/>
+          <Item Value="District"/>
+          <Item Value="Tehsil"/>
+          <Item Value="Mauza"/>
+          <Item Value="Village"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblClusterView2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblClusterView2Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblClusterView2Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblTargetCropsFkLink"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="TblClusterProjOffView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.queryBasedVO.TblClusterProjOffView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="TblClusterProjOffView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.queryBasedVO.TblClusterProjOffView.ProjOffId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblClusterTargetCropsView"
+    Cardinality="-1"
+    Owner="model.queryBasedVO.TblClusterTargetCropsView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblClusterTargetCropsView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.queryBasedVO.TblClusterTargetCropsView.ProjOffId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="mainPagePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblUserLatlngView1" RangeSize="-1" DataControl="AppModuleDataControl"
+              id="TblUserLatlngView1Iterator"/>
+    <iterator Binds="TblLatlong1" RangeSize="-1" DataControl="AppModuleDataControl" id="TblLatlong1Iterator"/>
+  </executables>
+  <bindings>
+    <mapTheme IterBinding="TblUserLatlngView1Iterator" id="TblUserLatlngView1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <mapThemeDataMap convert="false" mapThemeType="point">
+        <data>
+          <item value="LatLng" label="LOOO ggg"/>
+        </data>
+        <item type="lat_long" longitude="Longitude" latitude="Latitude" label="LatLng"/>
+        <item type="category" value="LatLng"/>
+      </mapThemeDataMap>
+    </mapTheme>
+    <mapTheme IterBinding="TblLatlong1Iterator" id="TblLatlong1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <mapThemeDataMap convert="false" mapThemeType="point">
+        <data>
+          <item value="Qty" label="Quantity"/>
+        </data>
+        <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Warehousename"/>
+      </mapThemeDataMap>
+    </mapTheme>
+  </bindings>
+</pageDefinition>

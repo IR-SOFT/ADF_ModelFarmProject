@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="untitled1.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>\
+            <af:panelAccordion discloseMany="false" id="pa1">
+                <af:showDetailItem id="pane1" text="Panel Label 1">
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputText value="#{bindings.ProgId1.inputValue}" label="#{bindings.ProgId1.hints.label}"
+                                      required="#{bindings.ProgId1.hints.mandatory}"
+                                      columns="#{bindings.ProgId1.hints.displayWidth}"
+                                      maximumLength="#{bindings.ProgId1.hints.precision}"
+                                      shortDesc="#{bindings.ProgId1.hints.tooltip}" id="it1">
+                            <f:validator binding="#{bindings.ProgId1.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Name1.inputValue}" label="#{bindings.Name1.hints.label}"
+                                      required="#{bindings.Name1.hints.mandatory}"
+                                      columns="#{bindings.Name1.hints.displayWidth}"
+                                      maximumLength="#{bindings.Name1.hints.precision}"
+                                      shortDesc="#{bindings.Name1.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.Name1.validator}"/>
+                        </af:inputText>
+                        <af:selectOneChoice value="#{bindings.Ast1.inputValue}" label="#{bindings.Ast1.label}"
+                                            required="#{bindings.Ast1.hints.mandatory}"
+                                            shortDesc="#{bindings.Ast1.hints.tooltip}" id="soc1">
+                            <f:selectItems value="#{bindings.Ast1.items}" id="si1"/>
+                            <f:validator binding="#{bindings.Ast1.validator}"/>
+                        </af:selectOneChoice>
+                    </af:panelFormLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

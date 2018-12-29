@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="untitled1PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl1" id="TblProgView1Iterator"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl2" id="TblProgView1Iterator1"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl3" id="TblProgView1Iterator2"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl4" id="TblProgView1Iterator3"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl5" id="TblProgView1Iterator4"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl6" id="TblProgView1Iterator5"/>
+  </executables>
+  <bindings>
+    <list IterBinding="TblProgView1Iterator" StaticList="false" Uses="LOV_ProgId_AST" id="ProgId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="TblProgView1Iterator1" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgView1Iterator2" id="Ast">
+      <AttrNames>
+        <Item Value="Ast"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgView1Iterator3" id="ProgId1">
+      <AttrNames>
+        <Item Value="ProgId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgView1Iterator4" id="Name1">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="TblProgView1Iterator5" StaticList="false" Uses="LOV_Prog_Ast" id="Ast1" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+  </bindings>
+</pageDefinition>

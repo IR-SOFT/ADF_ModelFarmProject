@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblClusterFkLink"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  EntityAssociation="model.eo.FkTblClusterFkAssoc">
+  <ViewLinkDefEnd
+    Name="TblProjCompInput1View"
+    Cardinality="1"
+    Source="true"
+    Owner="model.vo.TblProjCompInput1View">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="TblProjCompInput1View"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblProjCompInput1View.ProjCompInputId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblClusterView"
+    Cardinality="-1"
+    Owner="model.vo.TblClusterView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblClusterView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblClusterView.ProjCompInputId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

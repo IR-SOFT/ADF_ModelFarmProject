@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblOutputIndFkLink"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  EntityAssociation="model.eo.FkTblOutputIndFkAssoc">
+  <ViewLinkDefEnd
+    Name="TblMonitoringProjCompOutputView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.vo.TblMonitoringProjCompOutputView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="TblMonitoringProjCompOutputView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblMonitoringProjCompOutputView.ProjCompOutputId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblMonitoringOutputIndView"
+    Cardinality="-1"
+    Owner="model.vo.TblMonitoringOutputIndView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblMonitoringOutputIndView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblMonitoringOutputIndView.ProjCompOutputId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

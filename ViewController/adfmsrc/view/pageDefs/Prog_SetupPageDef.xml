@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="Prog_SetupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblProgView1Iterator"/>
+    <searchRegion Binds="TblProgView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProgView11Query"/>
+    <iterator Binds="TblProgOffView3" RangeSize="25" DataControl="AppModuleDataControl" id="TblProgOffView3Iterator"/>
+    <searchRegion Binds="TblProgOffView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblProgOffView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblProgView1Iterator" id="TblProgView1">
+      <nodeDefinition DefName="model.vo.TblProgView" Name="TblProgView10">
+        <AttrNames>
+          <Item Value="ProgId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="TblProgView1Iterator" id="ProgId">
+      <AttrNames>
+        <Item Value="ProgId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgView1Iterator" id="Name">
+      <AttrNames>
+        <Item Value="Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblProgView1Iterator" id="Ast">
+      <AttrNames>
+        <Item Value="Ast"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TblProgView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TblProgView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TblProgView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TblProgView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="TblProgView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="TblProgView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="TblProgView1Iterator" id="TblProgView11">
+      <nodeDefinition DefName="model.vo.TblProgView" Name="TblProgView110">
+        <AttrNames>
+          <Item Value="ProgId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblProgView1Iterator" id="TblProgView12">
+      <nodeDefinition DefName="model.vo.TblProgView" Name="TblProgView120">
+        <AttrNames>
+          <Item Value="ProgId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblProgOffView3Iterator" id="TblProgOffView3">
+      <nodeDefinition DefName="model.vo.TblProgOffView" Name="TblProgOffView30">
+        <AttrNames>
+          <Item Value="ProgOffId"/>
+          <Item Value="ProgId"/>
+          <Item Value="Name"/>
+          <Item Value="ContactPer"/>
+          <Item Value="Address"/>
+          <Item Value="Tel"/>
+          <Item Value="Fax"/>
+          <Item Value="Email"/>
+          <Item Value="Category"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblProgView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblProgOffView3Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblProgOffView3Iterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="TblProgOffView3Iterator" id="Execute1" RequiresUpdateModel="true" Action="iteratorExecute"/>
+  </bindings>
+</pageDefinition>

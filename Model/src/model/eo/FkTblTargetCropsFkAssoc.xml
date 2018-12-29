@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblTargetCropsFkAssoc"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="TblClusterProjOff"
+    Cardinality="1"
+    Source="true"
+    Owner="model.eo.TblClusterProjOff">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblClusterProjOff"/>
+      <Attr Name="_foreignKey" Value="model.eo.TblClusterProjOff.PkTblProjOffPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblClusterProjOff.ProjOffId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="TblClusterTargetCrops"
+    Cardinality="-1"
+    Owner="model.eo.TblClusterTargetCrops">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblClusterTargetCrops"/>
+      <Attr Name="_foreignKey" Value="model.eo.TblClusterTargetCrops.FkTblTargetCropsFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblClusterTargetCrops.ProjOffId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

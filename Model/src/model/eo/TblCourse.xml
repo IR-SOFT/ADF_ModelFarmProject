@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblCourse"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_COURSE"
+  AliasName="TblCourse"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="CourseId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="COURSE_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_COURSE"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProjCompInputId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_COMP_INPUT_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_COURSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_COURSE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_COURSE"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblProjCompInput2"
+    Association="model.eo.FkTblCourseFkAssoc"
+    AssociationEnd="model.eo.FkTblCourseFkAssoc.TblProjCompInput2"
+    AssociationOtherEnd="model.eo.FkTblCourseFkAssoc.TblCourse"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblModule"
+    Association="model.eo.FkTblModuleFkAssoc"
+    AssociationEnd="model.eo.FkTblModuleFkAssoc.TblModule"
+    AssociationOtherEnd="model.eo.FkTblModuleFkAssoc.TblCourse"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblProjCompInputView"
+    ViewLink="model.vo.FKTblCourseFKLink2"
+    ViewLinkEnd="model.vo.FKTblCourseFKLink2.TblProjCompInputView"
+    ViewLinkOtherEnd="model.vo.FKTblCourseFKLink2.TblCourseView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblCoursePk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_COURSE_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblCourse.CourseId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblCourseUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_COURSE_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblCourse.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblCourseFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_COMP_INPUT_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_COURSE_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblCourse.ProjCompInputId"/>
+    </AttrArray>
+  </Key>
+</Entity>

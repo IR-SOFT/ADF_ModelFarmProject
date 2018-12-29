@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblMonitoringMonParam"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_MON_PARAM"
+  AliasName="TblMonitoringMonParam"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="MonParamId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="MON_PARAM_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MON_PARAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="OutputIndId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="OUTPUT_IND_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MON_PARAM">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MON_PARAM">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Perc"
+    IsNotNull="true"
+    Precision="3"
+    Scale="0"
+    ColumnName="PERC"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="TBL_MON_PARAM"/>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_MON_PARAM"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblMonitoringOutputInd"
+    Association="model.eo.FkTblMonParamFkAssoc"
+    AssociationEnd="model.eo.FkTblMonParamFkAssoc.TblMonitoringOutputInd"
+    AssociationOtherEnd="model.eo.FkTblMonParamFkAssoc.TblMonitoringMonParam"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblMonParamPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_MON_PARAM_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblMonitoringMonParam.MonParamId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblMonParamUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_MON_PARAM_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblMonitoringMonParam.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblMonParamFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_OUTPUT_IND_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_MON_PARAM_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblMonitoringMonParam.OutputIndId"/>
+    </AttrArray>
+  </Key>
+</Entity>

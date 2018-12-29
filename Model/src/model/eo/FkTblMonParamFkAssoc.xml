@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblMonParamFkAssoc"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="TblMonitoringOutputInd"
+    Cardinality="1"
+    Source="true"
+    Owner="model.eo.TblMonitoringOutputInd">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblMonitoringOutputInd"/>
+      <Attr Name="_foreignKey" Value="model.eo.TblMonitoringOutputInd.PkTblOutputIndPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblMonitoringOutputInd.OutputIndId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="TblMonitoringMonParam"
+    Cardinality="-1"
+    Owner="model.eo.TblMonitoringMonParam">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="TblMonitoringMonParam"/>
+      <Attr Name="_foreignKey" Value="model.eo.TblMonitoringMonParam.FkTblMonParamFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblMonitoringMonParam.OutputIndId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

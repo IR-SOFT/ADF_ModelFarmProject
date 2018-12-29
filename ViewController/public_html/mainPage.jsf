@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="mainPage.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="height:100.0%; width:100.0%;" styleClass="AFStretchWidth">
+                <af:showDetailItem id="pane1" text="Dashboard" flex="0" inflexibleHeight="100">
+                    <dvt:map id="map" startingX="0.0" mapServerConfigId="mapConfig3" baseMapName="ELOCATION.WORLD_MAP"
+                             mapZoom="0" startingY="0.0" autoZoomThemeId="mt1" inlineStyle="width:100%; height:869px;">
+                        <?audit suppress oracle.adf.dvt.acc-compreqsummary?>
+                        <dvt:mapPointTheme id="mt1" value="#{bindings.TblLatlong1.geoMapModel}"
+                                           clickListener="#{bindings.TblLatlong1.geoMapModel.processClickAction}"
+                                           selectionListener="#{bindings.TblLatlong1.geoMapModel.processSelection}"/>
+                    </dvt:map>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

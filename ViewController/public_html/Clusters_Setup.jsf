@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Clusters_Setup.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
+                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
+                        <af:showDetailItem id="sdi1" text="Clusters">
+                            <af:spacer width="190" height="10" id="s1"/>
+                            <af:button text="Clusters Setup" id="b1" inlineStyle="width:190px;"
+                                       destination="Clusters_Setup.jsf"/>
+                            <af:spacer width="190" height="10" id="s3"/>
+                            <af:button id="b3" inlineStyle="width:190px;"/>
+                            <af:spacer width="190" height="10" id="s5"/>
+                            <af:button id="b5" inlineStyle="width:190px;"/>
+                        </af:showDetailItem>
+                    </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   inlineStyle="height:811px; width:1030px;">
+                                    <af:showDetailItem id="pane2" text="Clusters Setup">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1012px;">
+                                                        <af:showDetailItem id="tab1" text="Input Component">
+                                                            <af:table value="#{bindings.TblProjCompInput1View1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblProjCompInput1View1.rangeSize}"
+                                                                      emptyText="#{bindings.TblProjCompInput1View1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblProjCompInput1View1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblProjCompInput1View1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblProjCompInput1View1.rangeSize}"
+                                                                      filterModel="#{bindings.TblProjCompInput1View1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblProjCompInput1View1Query.processQuery}"
+                                                                      varStatus="vs" id="t1">
+                                                                <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.ProjCompId.name}"
+                                                                           filterable="true"
+                                                                           headerText="Component ID"
+                                                                           id="c2" align="center" width="80">
+                                                                    <af:outputText value="#{row.ProjCompId}"
+                                                                                   shortDesc="#{bindings.TblProjCompInput1View1.hints.ProjCompId.tooltip}"
+                                                                                   id="ot2" contentStyle='text-align:center'/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.ProjCompInputId.name}"
+                                                                           filterable="true"
+                                                                           headerText="Input Component ID"
+                                                                           id="c1" align="center" width="110">
+                                                                    <af:outputText value="#{row.ProjCompInputId}"
+                                                                                   shortDesc="#{bindings.TblProjCompInput1View1.hints.ProjCompInputId.tooltip}"
+                                                                                   id="ot1" contentStyle='text-align:center'/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.Name.name}"
+                                                                           filterable="true"
+                                                                           headerText="Input Component Name"
+                                                                           id="c3" align="center" width="250">
+                                                                    <af:outputText value="#{row.Name}"
+                                                                                   shortDesc="#{bindings.TblProjCompInput1View1.hints.Name.tooltip}"
+                                                                                   id="ot3" contentStyle='text-align:left'/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.Ast.name}"
+                                                                           filterable="true"
+                                                                           headerText="Status"
+                                                                           id="c4" align="center">
+                                                                    <af:outputText value="#{row.Ast}"
+                                                                                   shortDesc="#{bindings.TblProjCompInput1View1.hints.Ast.tooltip}"
+                                                                                   id="ot4" contentStyle='text-align:center'/>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:1015px;">
+                                                        <af:showDetailItem id="tab2" text="Clusters Setup">
+                                                            <af:table value="#{bindings.TblClusterView2.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblClusterView2.rangeSize}"
+                                                                      emptyText="#{bindings.TblClusterView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblClusterView2.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblClusterView2.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblClusterView2.rangeSize}"
+                                                                      filterModel="#{bindings.TblClusterView2Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblClusterView2Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b2 ::b6 ::b7">
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.ProjCompInputId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Input ID"
+                                                                           id="c6" align="center" width="40">
+                                                                    <af:inputText value="#{row.bindings.ProjCompInputId.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.ProjCompInputId.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.ProjCompInputId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.ProjCompInputId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.ProjCompInputId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.ProjCompInputId.tooltip}"
+                                                                                  id="it2" contentStyle='text-align:center'>
+                                                                        <f:validator binding="#{row.bindings.ProjCompInputId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.ClusterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Cluster ID"
+                                                                           id="c5" align="center" width="60">
+                                                                    <af:inputText value="#{row.bindings.ClusterId.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.ClusterId.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.ClusterId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.ClusterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.ClusterId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.ClusterId.tooltip}"
+                                                                                  id="it1" contentStyle='text-align:center'>
+                                                                        <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Cluster Name"
+                                                                           id="c7" align="center" width="325">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.Name.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Name.tooltip}"
+                                                                                  id="it3" contentStyle="text-transform:uppercase;">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.District.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="District"
+                                                                           id="c8" align="center">
+                                                                    <af:inputText value="#{row.bindings.District.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.District.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.District.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.District.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.District.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.District.tooltip}"
+                                                                                  id="it4" >
+                                                                        <f:validator binding="#{row.bindings.District.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Tehsil.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Tehsil"
+                                                                           id="c9" align="center">
+                                                                    <af:inputText value="#{row.bindings.Tehsil.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.Tehsil.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.Tehsil.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.Tehsil.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Tehsil.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Tehsil.tooltip}"
+                                                                                  id="it5" >
+                                                                        <f:validator binding="#{row.bindings.Tehsil.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Mauza.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Mauza"
+                                                                           id="c10" align="center">
+                                                                    <af:inputText value="#{row.bindings.Mauza.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.Mauza.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.Mauza.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.Mauza.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Mauza.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Mauza.tooltip}"
+                                                                                  id="it6" >
+                                                                        <f:validator binding="#{row.bindings.Mauza.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Village.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Village"
+                                                                           id="c11" align="center" width="120">
+                                                                    <af:inputText value="#{row.bindings.Village.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.Village.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.Village.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.Village.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Village.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Village.tooltip}"
+                                                                                  id="it7" >
+                                                                        <f:validator binding="#{row.bindings.Village.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Status"
+                                                                           id="c12" align="center" width="50">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblClusterView2.hints.Ast.label}"
+                                                                                  required="#{bindings.TblClusterView2.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblClusterView2.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Ast.tooltip}"
+                                                                                  id="it8" contentStyle='text-align:center'>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:spacer width="360" height="10" id="s2"/>
+                                                    <h:panelGroup id="pg1">
+                                                        <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                               text="Create"
+                                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b2"
+                                                                   icon="#{resource['images:add.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:button actionListener="#{bindings.Execute1.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute1.enabled}"
+                                                               id="b6" icon="#{resource['images:edit.png']}"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:button actionListener="#{bindings.Delete1.execute}"
+                                                               text="Delete" disabled="#{!bindings.Delete1.enabled}"
+                                                               id="b7" icon="#{resource['images:delete.png']}"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s8"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b8"
+                                                               icon="#{resource['images:save.png']}"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                    </h:panelGroup>
+                                                    
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                        
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblProjComp"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_PROJ_COMP"
+  AliasName="TblProjComp"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_COMP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PROJ_COMP"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProjId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PROJ_COMP">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PROJ_COMP">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_PROJ_COMP"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblProjCompInput"
+    Association="model.eo.FkTblProjCompInputFkAssoc"
+    AssociationEnd="model.eo.FkTblProjCompInputFkAssoc.TblProjCompInput"
+    AssociationOtherEnd="model.eo.FkTblProjCompInputFkAssoc.TblProjComp"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProjCompOutput"
+    Association="model.eo.FkTblProjCompOutputFkAssoc"
+    AssociationEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjCompOutput"
+    AssociationOtherEnd="model.eo.FkTblProjCompOutputFkAssoc.TblProjComp"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblProjView"
+    ViewLink="model.vo.FKTblProjCompFKLink"
+    ViewLinkEnd="model.vo.FKTblProjCompFKLink.TblProjView"
+    ViewLinkOtherEnd="model.vo.FKTblProjCompFKLink.TblProjCompView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblProjCompPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_PROJ_COMP_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjComp.ProjCompId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblProjCompUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_PROJ_COMP_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjComp.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblProjCompFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_COMP_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjComp.ProjId"/>
+    </AttrArray>
+  </Key>
+</Entity>
