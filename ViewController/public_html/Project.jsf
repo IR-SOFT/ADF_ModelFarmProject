@@ -123,7 +123,7 @@
                                                     <af:spacer width="174" height="15" id="s8"/>
                                                     <h:panelGroup id="pg2">
                                                        <af:button actionListener="#{bindings.CreateInsert1.execute}"
-                                                               text="Create"
+                                                               text="Add"
                                                                disabled="#{!bindings.CreateInsert1.enabled}" id="b11"
                                                                   icon="#{resource['images:add.png']}"
                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
@@ -319,7 +319,7 @@
                                                     <af:spacer width="360" height="15" id="s4"/>
                                                     <h:panelGroup id="pg1">
  <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="Create"
+                                                               text="Add"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b7"
             icon="#{resource['images:add.png']}" inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s2"/>

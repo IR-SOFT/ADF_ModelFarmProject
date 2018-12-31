@@ -99,15 +99,18 @@
                                                     <af:spacer width="200" height="20" id="s2"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="CreateInsert"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"/>
+                                                               text="Add"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"
+                                                                   icon="#{resource['images:add.png']}"/>
                                                     <af:button actionListener="#{bindings.Execute.execute}"
-                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b6"/>
+                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b6" icon="#{resource['images:edit.png']}"/>
                                                     <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b7"/>
-                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b8"/>
+                                                               disabled="#{!bindings.Delete.enabled}" id="b7"
+                                                               icon="#{resource['images:delete.png']}"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b8"
+                                                               icon="#{resource['images:save.png']}"/>
                                                     </h:panelGroup>
                                                     
                                                 </af:gridCell>

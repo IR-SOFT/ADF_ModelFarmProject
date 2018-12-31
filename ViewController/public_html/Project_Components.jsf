@@ -116,15 +116,19 @@
                                                     <h:panelGroup id="pg3">
                                                     <af:spacer width="400" height="10" id="s2"/>
                                                         <af:button actionListener="#{bindings.CreateInsert2.execute}"
-                                                               text="CreateInsert2"
+                                                               text="Add"
+                                                               icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert2.enabled}" id="b13"/>
                                                     <af:button actionListener="#{bindings.Execute2.execute}"
-                                                               text="Execute2" disabled="#{!bindings.Execute2.enabled}"
+                                                               text="Edit"
+                                                               icon="#{resource['images:edit.png']}" disabled="#{!bindings.Execute2.enabled}"
                                                                id="b14"/>
                                                     <af:button actionListener="#{bindings.Delete2.execute}"
-                                                               text="Delete2" disabled="#{!bindings.Delete2.enabled}"
+                                                    icon="#{resource['images:delete.png']}"
+                                                               text="Delete" disabled="#{!bindings.Delete2.enabled}"
                                                                id="b15"/>
-                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                    <af:button actionListener="#{bindings.Commit.execute}"
+                                                    icon="#{resource['images:save.png']}" text="Save"
                                                                disabled="#{!bindings.Commit.enabled}" id="b16"/>
                                                     </h:panelGroup>
                                                     
@@ -304,15 +308,17 @@
                                                     <af:spacer width="100" height="30" id="s7"/>
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                text="CreateInsert1"
+                                                               icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert1.enabled}" id="b9"/>
                                                     <af:button actionListener="#{bindings.Execute1.execute}"
-                                                               text="Execute1" disabled="#{!bindings.Execute1.enabled}"
+                                                               text="Execute1" icon="#{resource['images:edit.png']}" disabled="#{!bindings.Execute1.enabled}"
                                                                id="b10"/>
                                                     <af:button actionListener="#{bindings.Delete1.execute}"
+                                                    icon="#{resource['images:delete.png']}"
                                                                text="Delete1" disabled="#{!bindings.Delete1.enabled}"
                                                                id="b11"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b18"/>
+                                                              icon="#{resource['images:save.png']}" disabled="#{!bindings.Commit.enabled}" id="b18"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>

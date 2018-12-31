@@ -189,17 +189,21 @@
                                                     <af:spacer width="200" height="20" id="s2"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                                   text="CreateInsert"
+                                                                   text="Add"
+                                                                   icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
                                                                    id="b4"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
-                                                                   text="Execute"
+                                                                   text="Edit"
+                                                                   icon="#{resource['images:edit.png']}"
                                                                    disabled="#{!bindings.Execute.enabled}" id="b6"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
+                                                                   icon="#{resource['images:delete.png']}"
                                                                    id="b7"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
-                                                                   text="Commit" disabled="#{!bindings.Commit.enabled}"
+                                                        icon="#{resource['images:save.png']}"
+                                                                   text="Save" disabled="#{!bindings.Commit.enabled}"
                                                                    id="b8"/>
                                                     </h:panelGroup>
                                                 </af:gridCell>

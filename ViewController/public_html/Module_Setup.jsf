@@ -180,7 +180,7 @@
                                                     <af:spacer width="200" height="20" id="s2"/>
                                                     <h:panelGroup id="pg1">
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="Create"
+                                                               text="Add"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b4"
                                                                     icon="#{resource['images:add.png']}"
                                                                     inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>

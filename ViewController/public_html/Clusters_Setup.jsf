@@ -229,11 +229,11 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="360" height="10" id="s2"/>
+                                                    <af:spacer width="360" height="10" id="s7"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
-                                                               text="Create"
-                                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b2"
+                                                               text="Add"
+                                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b4"
                                                                    icon="#{resource['images:add.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s4"/>
