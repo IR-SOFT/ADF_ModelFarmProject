@@ -10,7 +10,7 @@
                 <af:showDetailItem id="pane1">
                     <af:panelGridLayout id="pgl1">
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
-                            <af:gridCell marginStart="5px" width="15%" id="gc1"
+                            <af:gridCell marginStart="5px" width="16%" id="gc1"
                                          inlineStyle="width:70px; text-align:center; vertical-align: middle;">
                             <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
                         <af:showDetailItem id="sdi1" text="Course Training">
@@ -26,7 +26,7 @@
                         </af:showDetailItem>
                     </af:panelAccordion>
                             </af:gridCell>
-                            <af:gridCell marginStart="5px" width="69%" id="gc3">
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Module Setup">

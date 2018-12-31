@@ -10,7 +10,7 @@
                 <af:showDetailItem id="pane1">
                     <af:panelGridLayout id="pgl1">
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
-                            <af:gridCell marginStart="5px" width="15%" id="gc1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
                             <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
                         <af:showDetailItem id="sdi1" text="Clusters / Farmers">
                             <af:spacer width="190" height="10" id="s1"/>
@@ -20,11 +20,15 @@
                             <af:button id="b3" inlineStyle="width:190px;" text="Target Crops"
                                        destination="Target_Crops.jsf"/>
                             <af:spacer width="190" height="10" id="s5"/>
-                            <af:button id="b5" inlineStyle="width:190px;"/>
+                            <af:button id="b5" inlineStyle="width:190px;" text="Farmer Registration"
+                                       destination="Farmer_Registration.jsf"/>
+                            <af:spacer width="190" height="10" id="s2"/>
+                            <af:button id="b2" inlineStyle="width:190px;" text="Cluster Detail"
+                                       destination="Cluster_Detail.jsf"/>
                         </af:showDetailItem>
                     </af:panelAccordion>
                             </af:gridCell>
-                            <af:gridCell marginStart="5px" width="69%" id="gc3">
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Cluster Project Crops">
