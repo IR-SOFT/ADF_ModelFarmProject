@@ -290,13 +290,18 @@ FROM TBL_FARMER_REG TblFarmerReg]]></SQLQuery>
     <Item Value="FarmerRegId"/>
   </AttrArray>
   <ViewLinkAccessor
+    Name="TblFarmerRegCropsView"
+    ViewLink="model.queryBasedVO.FkTblFarmerRegCropsFkLink1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
     Name="TblFarmerRegLandView"
-    ViewLink="model.queryBasedVO.FkTblFarmerRegLandFkLink"
+    ViewLink="model.queryBasedVO.FkTblFarmerRegLandFkLink1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="TblFarmerRegMemView"
-    ViewLink="model.queryBasedVO.FkTblFarmerRegMemFkLink"
+    ViewLink="model.queryBasedVO.FkTblFarmerRegMemFkLink1"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

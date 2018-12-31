@@ -57,6 +57,13 @@
     AssociationOtherEnd="model.eo.FkTblClusterDetailFkAssoc.TblClusterDetail"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <ViewLinkAccessor
+    Name="TblFarmerRegView"
+    ViewLink="model.vo.FKTblClusterDetailFKLink2"
+    ViewLinkEnd="model.vo.FKTblClusterDetailFKLink2.TblFarmerRegView"
+    ViewLinkOtherEnd="model.vo.FKTblClusterDetailFKLink2.TblClusterDetailView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
   <Key
     Name="PkTblClusterDetailPk"
     PrimaryKey="true">

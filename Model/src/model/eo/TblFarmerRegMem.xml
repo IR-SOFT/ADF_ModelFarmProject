@@ -140,9 +140,9 @@
   </Attribute>
   <AccessorAttribute
     Name="TblFarmerReg"
-    Association="model.eo.FkTblFarmerRegMemFkAssoc"
-    AssociationEnd="model.eo.FkTblFarmerRegMemFkAssoc.TblFarmerReg"
-    AssociationOtherEnd="model.eo.FkTblFarmerRegMemFkAssoc.TblFarmerRegMem"
+    Association="model.eo.FkTblFarmerRegMemFkAssoc1"
+    AssociationEnd="model.eo.FkTblFarmerRegMemFkAssoc1.TblFarmerReg"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegMemFkAssoc1.TblFarmerRegMem"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key

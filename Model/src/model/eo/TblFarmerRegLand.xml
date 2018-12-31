@@ -160,9 +160,9 @@
     TableName="TBL_FARMER_REG_LAND"/>
   <AccessorAttribute
     Name="TblFarmerReg"
-    Association="model.eo.FkTblFarmerRegLandFkAssoc"
-    AssociationEnd="model.eo.FkTblFarmerRegLandFkAssoc.TblFarmerReg"
-    AssociationOtherEnd="model.eo.FkTblFarmerRegLandFkAssoc.TblFarmerRegLand"
+    Association="model.eo.FkTblFarmerRegLandFkAssoc1"
+    AssociationEnd="model.eo.FkTblFarmerRegLandFkAssoc1.TblFarmerReg"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegLandFkAssoc1.TblFarmerRegLand"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <Key

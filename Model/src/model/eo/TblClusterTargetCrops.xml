@@ -92,6 +92,13 @@
     AssociationOtherEnd="model.eo.Fk2TblTargetCropsFkAssoc.TblClusterTargetCrops"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <ViewLinkAccessor
+    Name="TblCropView"
+    ViewLink="model.vo.FKTblClusterTargetCropsFKLink"
+    ViewLinkEnd="model.vo.FKTblClusterTargetCropsFKLink.TblCropView"
+    ViewLinkOtherEnd="model.vo.FKTblClusterTargetCropsFKLink.TblClusterTargetCropsView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
   <Key
     Name="PkTblTargetCropsPk"
     PrimaryKey="true">

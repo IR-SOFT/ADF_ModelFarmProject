@@ -133,18 +133,23 @@
     EntityUsage="TblFarmerReg"
     AliasName="PER_ADDRESS"/>
   <ViewLinkAccessor
+    Name="TblFarmerRegCropsView"
+    ViewLink="model.vo.FkTblFarmerRegCropsFkAssoc1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
     Name="TblFarmerRegLandView"
-    ViewLink="model.vo.FkTblFarmerRegLandFkLink"
+    ViewLink="model.vo.FkTblFarmerRegLandFkAssoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="TblFarmerRegMemView"
-    ViewLink="model.vo.FkTblFarmerRegMemFkLink"
+    ViewLink="model.vo.FkTblFarmerRegMemFkAssoc1Link"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="TblFarmerRegCropsView"
-    ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
+    Name="TblClusterDetailView"
+    ViewLink="model.vo.FKTblClusterDetailFKLink2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
 </ViewObject>

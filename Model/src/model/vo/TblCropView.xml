@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblCropView"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -38,4 +38,14 @@
     EntityAttrName="Ast"
     EntityUsage="TblCrop"
     AliasName="AST"/>
+  <ViewLinkAccessor
+    Name="TblFarmerRegCropsView"
+    ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblClusterTargetCropsView"
+    ViewLink="model.vo.FKTblClusterTargetCropsFKLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

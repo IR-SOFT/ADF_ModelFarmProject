@@ -31,6 +31,24 @@
   <ViewUsage
     Name="TblFarmerRegCropsView1"
     ViewObjectName="model.vo.TblFarmerRegCropsView"/>
+  <ViewUsage
+    Name="TblCropView1"
+    ViewObjectName="model.vo.TblCropView"/>
+  <ViewUsage
+    Name="TblFarmerRegCropsView2"
+    ViewObjectName="model.vo.TblFarmerRegCropsView"/>
+  <ViewUsage
+    Name="TblCropView2"
+    ViewObjectName="model.vo.TblCropView"/>
+  <ViewUsage
+    Name="TblClusterTargetCropsView1"
+    ViewObjectName="model.vo.TblClusterTargetCropsView"/>
+  <ViewUsage
+    Name="TblFarmerRegView2"
+    ViewObjectName="model.vo.TblFarmerRegView"/>
+  <ViewUsage
+    Name="TblClusterDetailView1"
+    ViewObjectName="model.vo.TblClusterDetailView"/>
   <ViewLinkUsage
     Name="FKTblProjCompFKLink"
     ViewLinkObjectName="model.vo.FKTblProjCompFKLink"
@@ -54,5 +72,23 @@
     ViewLinkObjectName="model.vo.FKTblFarmerRegCropsFKLink2"
     SrcViewUsageName="model.vo.AppModule.TblFarmerRegView1"
     DstViewUsageName="model.vo.AppModule.TblFarmerRegCropsView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblFarmerRegCropsFKLink1"
+    ViewLinkObjectName="model.vo.FKTblFarmerRegCropsFKLink2"
+    SrcViewUsageName="model.vo.AppModule.TblCropView1"
+    DstViewUsageName="model.vo.AppModule.TblFarmerRegCropsView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblClusterTargetCropsFKLink"
+    ViewLinkObjectName="model.vo.FKTblClusterTargetCropsFKLink"
+    SrcViewUsageName="model.vo.AppModule.TblCropView2"
+    DstViewUsageName="model.vo.AppModule.TblClusterTargetCropsView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblClusterDetailFKLink2"
+    ViewLinkObjectName="model.vo.FKTblClusterDetailFKLink2"
+    SrcViewUsageName="model.vo.AppModule.TblFarmerRegView2"
+    DstViewUsageName="model.vo.AppModule.TblClusterDetailView1"
     Reversed="false"/>
 </AppModule>

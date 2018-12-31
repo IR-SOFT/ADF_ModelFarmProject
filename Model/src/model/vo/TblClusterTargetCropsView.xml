@@ -51,4 +51,10 @@
     EntityAttrName="Ast"
     EntityUsage="TblClusterTargetCrops"
     AliasName="AST"/>
+  <ViewLinkAccessor
+    Name="TblCropView"
+    ViewLink="model.vo.FKTblClusterTargetCropsFKLink"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

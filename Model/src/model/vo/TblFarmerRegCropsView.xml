@@ -38,7 +38,7 @@
     EntityUsage="TblFarmerRegCrops"
     AliasName="CROP_ID"/>
   <ViewLinkAccessor
-    Name="TblFarmerRegView"
+    Name="TblCropView"
     ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"

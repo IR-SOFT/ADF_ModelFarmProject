@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblCrop"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_CROP"
@@ -53,6 +53,20 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <ViewLinkAccessor
+    Name="TblFarmerRegCropsView"
+    ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
+    ViewLinkEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblFarmerRegCropsView"
+    ViewLinkOtherEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblCropView"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblClusterTargetCropsView"
+    ViewLink="model.vo.FKTblClusterTargetCropsFKLink"
+    ViewLinkEnd="model.vo.FKTblClusterTargetCropsFKLink.TblClusterTargetCropsView"
+    ViewLinkOtherEnd="model.vo.FKTblClusterTargetCropsFKLink.TblCropView"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkTblCropPk"
     PrimaryKey="true">

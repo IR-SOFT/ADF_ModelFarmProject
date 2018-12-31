@@ -224,38 +224,31 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
-    Name="TblFarmerCluster"
-    Association="model.eo.FkTblFarmerRegFkAssoc"
-    AssociationEnd="model.eo.FkTblFarmerRegFkAssoc.TblFarmerCluster"
-    AssociationOtherEnd="model.eo.FkTblFarmerRegFkAssoc.TblFarmerReg"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
+    Name="TblFarmerRegCrops"
+    Association="model.eo.FkTblFarmerRegCropsFkAssoc1"
+    AssociationEnd="model.eo.FkTblFarmerRegCropsFkAssoc1.TblFarmerRegCrops"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegCropsFkAssoc1.TblFarmerReg"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <AccessorAttribute
     Name="TblFarmerRegLand"
-    Association="model.eo.FkTblFarmerRegLandFkAssoc"
-    AssociationEnd="model.eo.FkTblFarmerRegLandFkAssoc.TblFarmerRegLand"
-    AssociationOtherEnd="model.eo.FkTblFarmerRegLandFkAssoc.TblFarmerReg"
+    Association="model.eo.FkTblFarmerRegLandFkAssoc1"
+    AssociationEnd="model.eo.FkTblFarmerRegLandFkAssoc1.TblFarmerRegLand"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegLandFkAssoc1.TblFarmerReg"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
     Name="TblFarmerRegMem"
-    Association="model.eo.FkTblFarmerRegMemFkAssoc"
-    AssociationEnd="model.eo.FkTblFarmerRegMemFkAssoc.TblFarmerRegMem"
-    AssociationOtherEnd="model.eo.FkTblFarmerRegMemFkAssoc.TblFarmerReg"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
-    Name="TblFarmerRegCrops"
-    Association="model.eo.FKTblFarmerRegCropsFKAssoc2"
-    AssociationEnd="model.eo.FKTblFarmerRegCropsFKAssoc2.TblFarmerRegCrops"
-    AssociationOtherEnd="model.eo.FKTblFarmerRegCropsFKAssoc2.TblFarmerReg"
+    Association="model.eo.FkTblFarmerRegMemFkAssoc1"
+    AssociationEnd="model.eo.FkTblFarmerRegMemFkAssoc1.TblFarmerRegMem"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegMemFkAssoc1.TblFarmerReg"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="TblFarmerRegCropsView"
-    ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
-    ViewLinkEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblFarmerRegCropsView"
-    ViewLinkOtherEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblFarmerRegView"
+    Name="TblClusterDetailView"
+    ViewLink="model.vo.FKTblClusterDetailFKLink2"
+    ViewLinkEnd="model.vo.FKTblClusterDetailFKLink2.TblClusterDetailView"
+    ViewLinkOtherEnd="model.vo.FKTblClusterDetailFKLink2.TblFarmerRegView"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

@@ -51,23 +51,16 @@
     </DesignTime>
   </Attribute>
   <AccessorAttribute
-    Name="TblFarmerCrop"
-    Association="model.eo.FkTblFarmerRegCropsFkAssoc"
-    AssociationEnd="model.eo.FkTblFarmerRegCropsFkAssoc.TblFarmerCrop"
-    AssociationOtherEnd="model.eo.FkTblFarmerRegCropsFkAssoc.TblFarmerRegCrops"
-    Type="oracle.jbo.server.EntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="TblFarmerReg"
-    Association="model.eo.FKTblFarmerRegCropsFKAssoc2"
-    AssociationEnd="model.eo.FKTblFarmerRegCropsFKAssoc2.TblFarmerReg"
-    AssociationOtherEnd="model.eo.FKTblFarmerRegCropsFKAssoc2.TblFarmerRegCrops"
+    Association="model.eo.FkTblFarmerRegCropsFkAssoc1"
+    AssociationEnd="model.eo.FkTblFarmerRegCropsFkAssoc1.TblFarmerReg"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegCropsFkAssoc1.TblFarmerRegCrops"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <ViewLinkAccessor
-    Name="TblFarmerRegView"
+    Name="TblCropView"
     ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"
-    ViewLinkEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblFarmerRegView"
+    ViewLinkEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblCropView"
     ViewLinkOtherEnd="model.vo.FKTblFarmerRegCropsFKLink2.TblFarmerRegCropsView"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
@@ -82,22 +75,22 @@
     </AttrArray>
   </Key>
   <Key
-    Name="FkTblFarmerRegCropsFk">
+    Name="Fk2TblFarmerRegCropsFk">
     <DesignTime>
       <Attr Name="_referencedKey" Value="PK_TBL_CROP_PK"/>
       <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_TBL_FARMER_REG_CROPS_FK"/>
+      <Attr Name="_DBObjectName" Value="FK2_TBL_FARMER_REG_CROPS_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.TblFarmerRegCrops.CropId"/>
     </AttrArray>
   </Key>
   <Key
-    Name="fk_TblFarmerRegCrops">
+    Name="FkTblFarmerRegCropsFk">
     <DesignTime>
       <Attr Name="_referencedKey" Value="PK_TBL_FARMER_REG_PK"/>
       <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_TBL_FARMER_REG_CROPS"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_FARMER_REG_CROPS_FK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.TblFarmerRegCrops.FarmerRegId"/>

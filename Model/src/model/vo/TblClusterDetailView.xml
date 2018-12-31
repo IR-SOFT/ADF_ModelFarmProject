@@ -37,4 +37,10 @@
     EntityAttrName="FarmerRegId"
     EntityUsage="TblClusterDetail"
     AliasName="FARMER_REG_ID"/>
+  <ViewLinkAccessor
+    Name="TblFarmerRegView"
+    ViewLink="model.vo.FKTblClusterDetailFKLink2"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>
