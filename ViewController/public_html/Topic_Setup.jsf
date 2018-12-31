@@ -51,7 +51,7 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.ModuleId.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblModuleView1.hints.ModuleId.label}"
-                                                                           id="c1">
+                                                                            align="center" id="c1" width="60">
                                                                     <af:outputText value="#{row.ModuleId}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.ModuleId.tooltip}"
                                                                                    id="ot1"/>
@@ -59,7 +59,7 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.CourseId.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblModuleView1.hints.CourseId.label}"
-                                                                           id="c2">
+                                                                            align="center" id="c2" width="60">
                                                                     <af:outputText value="#{row.CourseId}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.CourseId.tooltip}"
                                                                                    id="ot2"/>
@@ -67,7 +67,7 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.Name.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblModuleView1.hints.Name.label}"
-                                                                           id="c3">
+                                                                            align="center" id="c3" width="60">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
@@ -75,7 +75,7 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.Ast.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblModuleView1.hints.Ast.label}"
-                                                                           id="c4">
+                                                                            align="center" id="c4" width="60">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -110,35 +110,39 @@
                                                                 <af:column sortProperty="#{bindings.TblTopicsView3.hints.TopicsId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblTopicsView3.hints.TopicsId.label}"
-                                                                           id="c5">
+                                                                            align="center" id="c5" width="60">
                                                                     <af:inputText value="#{row.bindings.TopicsId.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.TopicsId.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.TopicsId.mandatory}"
                                                                                   columns="#{bindings.TblTopicsView3.hints.TopicsId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTopicsView3.hints.TopicsId.precision}"
                                                                                   shortDesc="#{bindings.TblTopicsView3.hints.TopicsId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1"
+                                                                                   inlineStyle="text-align:center; vertical-align: middle;"
+                                                                                  contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.TopicsId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblTopicsView3.hints.ModuleId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblTopicsView3.hints.ModuleId.label}"
-                                                                           id="c6">
+                                                                           align="center" id="c6" width="60">
                                                                     <af:inputText value="#{row.bindings.ModuleId.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.ModuleId.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.ModuleId.mandatory}"
                                                                                   columns="#{bindings.TblTopicsView3.hints.ModuleId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTopicsView3.hints.ModuleId.precision}"
                                                                                   shortDesc="#{bindings.TblTopicsView3.hints.ModuleId.tooltip}"
-                                                                                  id="it2">
+                                                                                  id="it2"
+                                                                                   inlineStyle="text-align:center; vertical-align: middle;"
+                                                                                  contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.ModuleId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblTopicsView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblTopicsView3.hints.Name.label}"
-                                                                           id="c7">
+                                                                           id="c7" width="200">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.Name.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.Name.mandatory}"
@@ -152,14 +156,15 @@
                                                                 <af:column sortProperty="#{bindings.TblTopicsView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblTopicsView3.hints.Ast.label}"
-                                                                           id="c8">
+                                                                            align="center" id="c8" width="60">
                                                                     <af:inputText value="#{row.bindings.Ast.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.Ast.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.Ast.mandatory}"
                                                                                   columns="#{bindings.TblTopicsView3.hints.Ast.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTopicsView3.hints.Ast.precision}"
                                                                                   shortDesc="#{bindings.TblTopicsView3.hints.Ast.tooltip}"
-                                                                                  id="it4">
+                                                                                  id="it4" inlineStyle="text-align:center; vertical-align: middle;"
+                                                                                  contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -173,15 +178,26 @@
                                                    <af:spacer width="200" height="20" id="s2"/>
                                                     <h:panelGroup id="pg1">
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="CreateInsert"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"/>
-                                                    <af:button actionListener="#{bindings.Execute.execute}"
-                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b6"/>
-                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b7"/>
-                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b8"/>
+                                                               text="Create"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"
+                                                                    icon="#{resource['images:add.png']}"
+                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b6"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               icon="#{resource['images:edit.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b7"
+                                                               icon="#{resource['images:delete.png']}"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s7"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b8"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
+                                                               icon="#{resource['images:save.png']}"/>
                                                     </h:panelGroup>
                                                    
                                                 </af:gridCell>
