@@ -49,26 +49,33 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCourseView1Query.processQuery}"
                                                                       varStatus="vs" id="t1">
-                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.CourseId.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblCourseView1.hints.CourseId.label}"
-                                                                           align="center" id="c1" width="60">
-                                                                    <af:outputText value="#{row.CourseId}"
-                                                                                   shortDesc="#{bindings.TblCourseView1.hints.CourseId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.ProjCompInputId.name}"
+                                                                      <af:column sortProperty="#{bindings.TblCourseView1.hints.ProjCompInputId.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblCourseView1.hints.ProjCompInputId.label}"
-                                                                           align="center" id="c2" width="60">
+                                                                           align="center" id="c2" width="138">
                                                                     <af:outputText value="#{row.ProjCompInputId}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.ProjCompInputId.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.TblCourseView1.hints.Project_Comp_Name.label}"
+                                                                           id="c9" width="157">
+                                                                    <af:outputText value="#{row.Project_Comp_Name}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.Project_Comp_Name.tooltip}"
+                                                                                   id="ot5"/>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCourseView1.hints.CourseId.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblCourseView1.hints.CourseId.label}"
+                                                                           align="center" id="c1" width="51">
+                                                                    <af:outputText value="#{row.CourseId}"
+                                                                                   shortDesc="#{bindings.TblCourseView1.hints.CourseId.tooltip}"
+                                                                                   id="ot1"/>
+                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblCourseView1.hints.Name.label}"
-                                                                           id="c3" width="200">
+                                                                           id="c3" width="74">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>

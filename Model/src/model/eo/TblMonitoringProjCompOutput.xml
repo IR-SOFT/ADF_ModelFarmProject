@@ -73,6 +73,13 @@
     AssociationOtherEnd="model.eo.FkTblOutputIndFkAssoc.TblMonitoringProjCompOutput"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProjComp"
+    Association="model.eo.FKTblMonitoringProjCompOutputAssoc"
+    AssociationEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblProjComp"
+    AssociationOtherEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblMonitoringProjCompOutput"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="PkTblProjCompOutputPk"
     PrimaryKey="true">
@@ -99,6 +106,17 @@
       <Attr Name="_referencedKey" Value="PK_TBL_PROJ_COMP_PK"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_COMP_OUTPUT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblMonitoringProjCompOutput.ProjCompId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TblMonitoringProjCompOutput">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_COMP_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_MONITORING_PROJ_COMP_OU"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.TblMonitoringProjCompOutput.ProjCompId"/>

@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblProjCompView"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,9 +13,49 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Active_Status1_1"
+    ViewObjectName="model.lov.Active_Status"
+    AMUsageName="AppModule"
+    ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="AppModule_Active_Status1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="astDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblProjComp"
     Entity="model.eo.TblProjComp"/>
+  <EntityUsage
+    Name="TblProj"
+    Entity="model.eo.TblProj"
+    Reference="true"
+    Association="model.eo.FKTblProjCompAssoc"
+    AssociationEnd="model.eo.FKTblProjCompAssoc.TblProj"
+    SourceUsage="model.vo.TblProjCompView.TblProjComp"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblProj.ProjId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblProjComp.ProjId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ProjCompId"
     IsNotNull="true"
@@ -44,7 +84,30 @@
     PrecisionRule="true"
     EntityAttrName="Ast"
     EntityUsage="TblProjComp"
-    AliasName="AST"/>
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Project_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblProj"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ProjId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjId"
+    EntityUsage="TblProj"
+    AliasName="PROJ_ID1"/>
   <ViewLinkAccessor
     Name="TblProjCompInputView"
     ViewLink="model.vo.FkTblProjCompInputFkLink"

@@ -19,6 +19,7 @@
           <Item Value="CourseId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="Course_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

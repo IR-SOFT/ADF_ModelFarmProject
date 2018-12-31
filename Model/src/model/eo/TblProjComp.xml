@@ -87,6 +87,27 @@
     AssociationOtherEnd="model.eo.FKTblProjCompInputFKAssoc2.TblProjComp"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProjCompInput2"
+    Association="model.eo.FKTblProjCompInput2Assoc"
+    AssociationEnd="model.eo.FKTblProjCompInput2Assoc.TblProjCompInput2"
+    AssociationOtherEnd="model.eo.FKTblProjCompInput2Assoc.TblProjComp"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblMonitoringProjCompOutput"
+    Association="model.eo.FKTblMonitoringProjCompOutputAssoc"
+    AssociationEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblMonitoringProjCompOutput"
+    AssociationOtherEnd="model.eo.FKTblMonitoringProjCompOutputAssoc.TblProjComp"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProj"
+    Association="model.eo.FKTblProjCompAssoc"
+    AssociationEnd="model.eo.FKTblProjCompAssoc.TblProj"
+    AssociationOtherEnd="model.eo.FKTblProjCompAssoc.TblProjComp"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <ViewLinkAccessor
     Name="TblProjView"
     ViewLink="model.vo.FKTblProjCompFKLink"
@@ -120,6 +141,17 @@
       <Attr Name="_referencedKey" Value="PK_TBL_PROJ_PK"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_COMP_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjComp.ProjId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TblProjComp">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_COMP"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.TblProjComp.ProjId"/>

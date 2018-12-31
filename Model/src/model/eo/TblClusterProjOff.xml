@@ -150,6 +150,13 @@
     AssociationOtherEnd="model.eo.FkTblTargetCropsFkAssoc.TblClusterProjOff"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProj"
+    Association="model.eo.FKTblClusterProjOffAssoc"
+    AssociationEnd="model.eo.FKTblClusterProjOffAssoc.TblProj"
+    AssociationOtherEnd="model.eo.FKTblClusterProjOffAssoc.TblClusterProjOff"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="PkTblProjOffPk"
     PrimaryKey="true">
@@ -176,6 +183,17 @@
       <Attr Name="_referencedKey" Value="PK_TBL_PROJ_PK"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_OFF_TBL_PROJ_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblClusterProjOff.ProjId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TblClusterProjOff">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_CLUSTER_PROJ_OFF"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.TblClusterProjOff.ProjId"/>

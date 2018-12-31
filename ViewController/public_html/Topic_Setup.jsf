@@ -48,6 +48,20 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblModuleView1Query.processQuery}"
                                                                       varStatus="vs" id="t1">
+                                                                      <af:column sortProperty="#{bindings.TblModuleView1.hints.CourseId.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblModuleView1.hints.CourseId.label}"
+                                                                            align="center" id="c2" width="60">
+                                                                    <af:outputText value="#{row.CourseId}"
+                                                                                   shortDesc="#{bindings.TblModuleView1.hints.CourseId.tooltip}"
+                                                                                   id="ot2"/>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblModuleView1.hints.Course_Name.label}"
+                                                                           id="c9">
+                                                                    <af:outputText value="#{row.Course_Name}"
+                                                                                   shortDesc="#{bindings.TblModuleView1.hints.Course_Name.tooltip}"
+                                                                                   id="ot5"/>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.ModuleId.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblModuleView1.hints.ModuleId.label}"
@@ -56,14 +70,7 @@
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.ModuleId.tooltip}"
                                                                                    id="ot1"/>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblModuleView1.hints.CourseId.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblModuleView1.hints.CourseId.label}"
-                                                                            align="center" id="c2" width="60">
-                                                                    <af:outputText value="#{row.CourseId}"
-                                                                                   shortDesc="#{bindings.TblModuleView1.hints.CourseId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.Name.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblModuleView1.hints.Name.label}"

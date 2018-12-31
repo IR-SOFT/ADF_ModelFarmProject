@@ -40,6 +40,7 @@
           <Item Value="ProjCompId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="Project_Comp_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

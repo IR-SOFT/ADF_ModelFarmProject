@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblProjCompInput2"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_PROJ_COMP_INPUT"
@@ -73,6 +73,13 @@
     AssociationOtherEnd="model.eo.FkTblCourseFkAssoc.TblProjCompInput2"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProjComp"
+    Association="model.eo.FKTblProjCompInput2Assoc"
+    AssociationEnd="model.eo.FKTblProjCompInput2Assoc.TblProjComp"
+    AssociationOtherEnd="model.eo.FKTblProjCompInput2Assoc.TblProjCompInput2"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="PkTblProjCompInputPk"
     PrimaryKey="true">
@@ -99,6 +106,17 @@
       <Attr Name="_referencedKey" Value="PK_TBL_PROJ_COMP_PK"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_COMP_INPUT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblProjCompInput2.ProjCompId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_TblProjCompInput2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_PROJ_COMP_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_PROJ_COMP_INPUT2"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.TblProjCompInput2.ProjCompId"/>

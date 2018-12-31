@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblCluster"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_CLUSTER"
@@ -125,6 +125,13 @@
     AssociationOtherEnd="model.eo.FkTblClusterFkAssoc.TblCluster"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblClusterMaster"
+    Association="model.eo.FKTblClusterMasterAssoc"
+    AssociationEnd="model.eo.FKTblClusterMasterAssoc.TblClusterMaster"
+    AssociationOtherEnd="model.eo.FKTblClusterMasterAssoc.TblCluster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ViewLinkAccessor
     Name="TblProjCompInputView"
     ViewLink="model.vo.FKTblClusterFKLink2"

@@ -78,6 +78,18 @@
                                                                         <f:validator binding="#{row.bindings.ProjId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.TblProjCompView1.hints.Project_Name.label}"
+                                                                           id="c13">
+                                                                    <af:inputText value="#{row.bindings.Project_Name.inputValue}"
+                                                                                  label="#{bindings.TblProjCompView1.hints.Project_Name.label}"
+                                                                                  required="#{bindings.TblProjCompView1.hints.Project_Name.mandatory}"
+                                                                                  columns="#{bindings.TblProjCompView1.hints.Project_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjCompView1.hints.Project_Name.precision}"
+                                                                                  shortDesc="#{bindings.TblProjCompView1.hints.Project_Name.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Project_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjCompView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjCompView1.hints.Name.label}"
@@ -92,19 +104,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompView1.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblProjCompView1.hints.Ast.label}"
                                                                            id="c4">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblProjCompView1.hints.Ast.label}"
-                                                                                  required="#{bindings.TblProjCompView1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblProjCompView1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblProjCompView1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblProjCompView1.hints.Ast.tooltip}"
-                                                                                  id="it4">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblProjCompView1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblProjCompView1.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
@@ -209,19 +219,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompInputView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompInputView3.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblProjCompInputView3.hints.Ast.label}"
                                                                            id="c8">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblProjCompInputView3.hints.Ast.label}"
-                                                                                  required="#{bindings.TblProjCompInputView3.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblProjCompInputView3.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblProjCompInputView3.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblProjCompInputView3.hints.Ast.tooltip}"
-                                                                                  id="it8">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblProjCompInputView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblProjCompInputView3.hints.Ast.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si2"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                              <h:panelGroup id="pg1">
@@ -305,19 +313,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblProjCompOutputView3.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblProjCompOutputView3.hints.Ast.label}"
                                                                            id="c12">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblProjCompOutputView3.hints.Ast.label}"
-                                                                                  required="#{bindings.TblProjCompOutputView3.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblProjCompOutputView3.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblProjCompOutputView3.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblProjCompOutputView3.hints.Ast.tooltip}"
-                                                                                  id="it12">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblProjCompOutputView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblProjCompOutputView3.hints.Ast.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si3"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             

@@ -29,6 +29,7 @@
           <Item Value="ProgId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="Program_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

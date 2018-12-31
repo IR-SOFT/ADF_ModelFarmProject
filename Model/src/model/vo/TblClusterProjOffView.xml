@@ -16,6 +16,25 @@
   <EntityUsage
     Name="TblClusterProjOff"
     Entity="model.eo.TblClusterProjOff"/>
+  <EntityUsage
+    Name="TblProj"
+    Entity="model.eo.TblProj"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    Association="model.eo.FKTblClusterProjOffAssoc"
+    AssociationEnd="model.eo.FKTblClusterProjOffAssoc.TblProj"
+    SourceUsage="model.vo.TblClusterProjOffView.TblClusterProjOff"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblProj.ProjId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblClusterProjOff.ProjId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ProjOffId"
     IsNotNull="true"
@@ -84,6 +103,24 @@
     EntityAttrName="Ast"
     EntityUsage="TblClusterProjOff"
     AliasName="AST"/>
+  <ViewAttribute
+    Name="Project_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblProj"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ProjId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjId"
+    EntityUsage="TblProj"
+    AliasName="PROJ_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ProjOffId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblClusterTargetCropsView"
     ViewLink="model.vo.FkTblTargetCropsFkLink"

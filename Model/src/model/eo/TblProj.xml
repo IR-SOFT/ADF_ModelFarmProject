@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblProj"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_PROJ"
@@ -78,6 +78,20 @@
     Association="model.eo.FkTblProjOffTblProjFkAssoc"
     AssociationEnd="model.eo.FkTblProjOffTblProjFkAssoc.TblProjOff"
     AssociationOtherEnd="model.eo.FkTblProjOffTblProjFkAssoc.TblProj"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblClusterProjOff"
+    Association="model.eo.FKTblClusterProjOffAssoc"
+    AssociationEnd="model.eo.FKTblClusterProjOffAssoc.TblClusterProjOff"
+    AssociationOtherEnd="model.eo.FKTblClusterProjOffAssoc.TblProj"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblProjComp"
+    Association="model.eo.FKTblProjCompAssoc"
+    AssociationEnd="model.eo.FKTblProjCompAssoc.TblProjComp"
+    AssociationOtherEnd="model.eo.FKTblProjCompAssoc.TblProj"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor

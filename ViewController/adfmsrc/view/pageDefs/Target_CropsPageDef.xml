@@ -27,6 +27,7 @@
           <Item Value="Email"/>
           <Item Value="Category"/>
           <Item Value="Ast"/>
+          <Item Value="Project_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

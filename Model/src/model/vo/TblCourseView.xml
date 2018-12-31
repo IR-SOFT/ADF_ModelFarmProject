@@ -39,6 +39,25 @@
   <EntityUsage
     Name="TblCourse"
     Entity="model.eo.TblCourse"/>
+  <EntityUsage
+    Name="TblProjCompInput2"
+    Entity="model.eo.TblProjCompInput2"
+    Association="model.eo.FkTblCourseFkAssoc"
+    AssociationEnd="model.eo.FkTblCourseFkAssoc.TblProjCompInput2"
+    SourceUsage="model.vo.TblCourseView.TblCourse"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblProjCompInput2.ProjCompInputId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblCourse.ProjCompInputId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="CourseId"
     IsNotNull="true"
@@ -76,6 +95,24 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Project_Comp_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblProjCompInput2"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ProjCompInputId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjCompInputId"
+    EntityUsage="TblProjCompInput2"
+    AliasName="PROJ_COMP_INPUT_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="CourseId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblModuleView"
     ViewLink="model.vo.FkTblModuleFkLink"

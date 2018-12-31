@@ -23,6 +23,7 @@
           <Item Value="ProjCompId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="Proj_Comp_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

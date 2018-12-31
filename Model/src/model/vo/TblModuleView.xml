@@ -39,6 +39,25 @@
   <EntityUsage
     Name="TblModule"
     Entity="model.eo.TblModule"/>
+  <EntityUsage
+    Name="TblCourse"
+    Entity="model.eo.TblCourse"
+    Association="model.eo.FkTblModuleFkAssoc"
+    AssociationEnd="model.eo.FkTblModuleFkAssoc.TblCourse"
+    SourceUsage="model.vo.TblModuleView.TblModule"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblCourse.CourseId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblModule.CourseId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ModuleId"
     IsNotNull="true"
@@ -76,6 +95,24 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Course_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblCourse"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="CourseId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CourseId"
+    EntityUsage="TblCourse"
+    AliasName="COURSE_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ModuleId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblTopicsView"
     ViewLink="model.vo.FkTblTopicsFkLink"

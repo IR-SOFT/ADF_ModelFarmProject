@@ -51,6 +51,20 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblClusterProjOffView1Query.processQuery}"
                                                                       varStatus="vs" id="t1">
+                                                                      <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.ProjId.name}"
+                                                                           filterable="true"
+                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.ProjId.label}"
+                                                                           id="c2">
+                                                                    <af:outputText value="#{row.ProjId}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.ProjId.tooltip}"
+                                                                                   id="ot2"/>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblClusterProjOffView1.hints.Project_Name.label}"
+                                                                           id="c16">
+                                                                    <af:outputText value="#{row.Project_Name}"
+                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.Project_Name.tooltip}"
+                                                                                   id="ot11"/>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.ProjOffId.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblClusterProjOffView1.hints.ProjOffId.label}"
@@ -59,14 +73,7 @@
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.ProjOffId.tooltip}"
                                                                                    id="ot1"/>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.ProjId.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.ProjId.label}"
-                                                                           id="c2">
-                                                                    <af:outputText value="#{row.ProjId}"
-                                                                                   shortDesc="#{bindings.TblClusterProjOffView1.hints.ProjId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Name.name}"
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblClusterProjOffView1.hints.Name.label}"

@@ -69,6 +69,18 @@
                                                                         <f:validator binding="#{row.bindings.ProgId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.TblProjView1.hints.Program_Name.label}"
+                                                                           id="c15">
+                                                                    <af:inputText value="#{row.bindings.Program_Name.inputValue}"
+                                                                                  label="#{bindings.TblProjView1.hints.Program_Name.label}"
+                                                                                  required="#{bindings.TblProjView1.hints.Program_Name.mandatory}"
+                                                                                  columns="#{bindings.TblProjView1.hints.Program_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblProjView1.hints.Program_Name.precision}"
+                                                                                  shortDesc="#{bindings.TblProjView1.hints.Program_Name.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Program_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project ID" align="center"

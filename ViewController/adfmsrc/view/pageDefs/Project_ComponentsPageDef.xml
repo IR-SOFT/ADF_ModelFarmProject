@@ -24,6 +24,7 @@
           <Item Value="ProjId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="Project_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

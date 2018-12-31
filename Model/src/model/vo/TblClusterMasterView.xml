@@ -16,6 +16,25 @@
   <EntityUsage
     Name="TblClusterMaster"
     Entity="model.eo.TblClusterMaster"/>
+  <EntityUsage
+    Name="TblCluster"
+    Entity="model.eo.TblCluster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    Association="model.eo.FKTblClusterMasterAssoc"
+    AssociationEnd="model.eo.FKTblClusterMasterAssoc.TblCluster"
+    SourceUsage="model.vo.TblClusterMasterView.TblClusterMaster"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblCluster.ClusterId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblClusterMaster.ClusterId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ClusterMasterId"
     IsNotNull="true"
@@ -49,6 +68,24 @@
     EntityAttrName="Remarks"
     EntityUsage="TblClusterMaster"
     AliasName="REMARKS"/>
+  <ViewAttribute
+    Name="Cluster_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblCluster"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="ClusterId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ClusterId"
+    EntityUsage="TblCluster"
+    AliasName="CLUSTER_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ClusterMasterId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblClusterDetailView"
     ViewLink="model.vo.FkTblClusterDetailFkLink"

@@ -39,6 +39,25 @@
   <EntityUsage
     Name="TblProj"
     Entity="model.eo.TblProj"/>
+  <EntityUsage
+    Name="TblProg"
+    Entity="model.eo.TblProg"
+    Association="model.eo.FkTblProjTblProgFkAssoc"
+    AssociationEnd="model.eo.FkTblProjTblProgFkAssoc.TblProg"
+    SourceUsage="model.vo.TblProjView.TblProj"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblProg.ProgId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblProj.ProgId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ProjId"
     IsNotNull="true"
@@ -76,6 +95,24 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Program_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblProg"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ProgId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProgId"
+    EntityUsage="TblProg"
+    AliasName="PROG_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ProjId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblProjOffView"
     ViewLink="model.vo.FkTblProjOffTblProjFkLink"

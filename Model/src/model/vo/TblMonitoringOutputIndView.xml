@@ -13,9 +13,51 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Active_Status1_1"
+    ViewObjectName="model.lov.Active_Status"
+    AMUsageName="AppModule"
+    ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="AppModule_Active_Status1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="astDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblMonitoringOutputInd"
     Entity="model.eo.TblMonitoringOutputInd"/>
+  <EntityUsage
+    Name="TblMonitoringProjCompOutput"
+    Entity="model.eo.TblMonitoringProjCompOutput"
+    Association="model.eo.FkTblOutputIndFkAssoc"
+    AssociationEnd="model.eo.FkTblOutputIndFkAssoc.TblMonitoringProjCompOutput"
+    SourceUsage="model.vo.TblMonitoringOutputIndView.TblMonitoringOutputInd"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblMonitoringProjCompOutput.ProjCompOutputId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblMonitoringOutputInd.ProjCompOutputId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="OutputIndId"
     IsNotNull="true"
@@ -44,7 +86,33 @@
     PrecisionRule="true"
     EntityAttrName="Ast"
     EntityUsage="TblMonitoringOutputInd"
-    AliasName="AST"/>
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Project_Comp_Output_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblMonitoringProjCompOutput"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ProjCompOutputId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjCompOutputId"
+    EntityUsage="TblMonitoringProjCompOutput"
+    AliasName="PROJ_COMP_OUTPUT_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="OutputIndId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblMonitoringMonParamView"
     ViewLink="model.vo.FkTblMonParamFkLink"

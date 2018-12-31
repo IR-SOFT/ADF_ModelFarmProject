@@ -59,6 +59,12 @@
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.ProjCompId.tooltip}"
                                                                                    id="ot2" contentStyle='text-align:center'/>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.TblProjCompInput1View1.hints.Proj_Comp_Name.label}"
+                                                                           id="c13">
+                                                                    <af:outputText value="#{row.Proj_Comp_Name}"
+                                                                                   shortDesc="#{bindings.TblProjCompInput1View1.hints.Proj_Comp_Name.tooltip}"
+                                                                                   id="ot5"/>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.ProjCompInputId.name}"
                                                                            filterable="true"
                                                                            headerText="Input Component ID"
