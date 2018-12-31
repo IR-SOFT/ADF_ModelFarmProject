@@ -94,19 +94,17 @@
                                                                         <f:validator binding="#{row.bindings.FatherName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegView5.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblFarmerRegView5.hints.Ast.label}"
                                                                            id="c4">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblFarmerRegView5.hints.Ast.label}"
-                                                                                  required="#{bindings.TblFarmerRegView5.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblFarmerRegView5.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblFarmerRegView5.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblFarmerRegView5.hints.Ast.tooltip}"
-                                                                                  id="it4">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblFarmerRegView5.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblFarmerRegView5.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>

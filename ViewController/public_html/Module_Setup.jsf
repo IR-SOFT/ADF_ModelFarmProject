@@ -154,21 +154,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblModuleView3.hints.Ast.label}"
-                                                                           align="center" id="c8" width="60">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblModuleView3.hints.Ast.label}"
-                                                                                  required="#{bindings.TblModuleView3.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblModuleView3.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblModuleView3.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblModuleView3.hints.Ast.tooltip}"
-                                                                                  id="it4"
-                                                                                        inlineStyle="text-align:center; vertical-align: middle;"
-                                                                                  contentStyle="text-align:center">
+                                                                <af:column headerText="#{bindings.TblModuleView3.hints.Ast.label}"
+                                                                           id="c8">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblModuleView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblModuleView3.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>

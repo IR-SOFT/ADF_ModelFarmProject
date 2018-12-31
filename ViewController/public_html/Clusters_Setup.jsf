@@ -75,13 +75,11 @@
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Name.tooltip}"
                                                                                    id="ot3" contentStyle='text-align:left'/>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.Ast.name}"
-                                                                           filterable="true"
-                                                                           headerText="Status"
-                                                                           id="c4" align="center">
+                                                                <af:column headerText="#{bindings.TblProjCompInput1View1.hints.Ast.label}"
+                                                                           id="c4">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Ast.tooltip}"
-                                                                                   id="ot4" contentStyle='text-align:center'/>
+                                                                                   id="ot4"/>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
@@ -208,19 +206,17 @@
                                                                         <f:validator binding="#{row.bindings.Village.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Status"
-                                                                           id="c12" align="center" width="50">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblClusterView2.hints.Ast.label}"
-                                                                                  required="#{bindings.TblClusterView2.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblClusterView2.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Ast.tooltip}"
-                                                                                  id="it8" contentStyle='text-align:center'>
+                                                                <af:column headerText="#{bindings.TblClusterView2.hints.Ast.label}"
+                                                                           id="c12">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblClusterView2.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView2.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>

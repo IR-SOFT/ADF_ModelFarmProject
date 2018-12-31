@@ -78,19 +78,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblCropView1.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Status"
-                                                                           id="c3" align="center">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblCropView1.hints.Ast.label}"
-                                                                                  required="#{bindings.TblCropView1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblCropView1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblCropView1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblCropView1.hints.Ast.tooltip}"
-                                                                                  id="it3" contentStyle='text-align:center'>
+                                                                <af:column headerText="#{bindings.TblCropView1.hints.Ast.label}"
+                                                                           id="c3">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblCropView1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCropView1.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
