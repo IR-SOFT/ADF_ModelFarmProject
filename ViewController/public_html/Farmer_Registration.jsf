@@ -248,14 +248,19 @@
                                                                                        text="First"
                                                                                        disabled="#{!bindings.First.enabled}"
                                                                                        partialSubmit="true" id="b4"/>
+                                                                                       <af:spacer width="5" height="20" id="s6"/>
                                                                             <af:button actionListener="#{bindings.Previous.execute}"
                                                                                        text="Previous"
                                                                                        disabled="#{!bindings.Previous.enabled}"
                                                                                        partialSubmit="true" id="b6"/>
+                                                                                       <af:spacer width="5" height="20"
+                                                                                                  id="s13"/>
                                                                             <af:button actionListener="#{bindings.Next.execute}"
                                                                                        text="Next"
                                                                                        disabled="#{!bindings.Next.enabled}"
                                                                                        partialSubmit="true" id="b7"/>
+                                                                                       <af:spacer width="5" height="20"
+                                                                                                  id="s14"/>
                                                                             <af:button actionListener="#{bindings.Last.execute}"
                                                                                        text="Last"
                                                                                        disabled="#{!bindings.Last.enabled}"
@@ -263,18 +268,24 @@
                                                                         </af:panelGroupLayout>
                                                                        
                                                                         <h:panelGroup id="pg1">
-                                                                            <af:spacer width="100" height="20" id="s6"/>
+                                                                            <af:spacer width="100" height="20"
+                                                                                       id="s15"/>
                                                                             <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                                    text="Add"
                                                                                    icon="#{resource['images:add.png']}"
                                                                                    disabled="#{!bindings.CreateInsert.enabled}"
                                                                                    id="b11"/>
+                                                                                   <af:spacer width="5" height="20"
+                                                                                              id="s26"/>
                                                                             <af:button text="Edit" id="b9" icon="#{resource['images:edit.png']}"/>
+                                                                        <af:spacer width="5" height="20" id="s25"/>
                                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                                    text="Delete"
                                                                                    icon="#{resource['images:delete.png']}"
                                                                                    disabled="#{!bindings.Delete.enabled}"
                                                                                    id="b13"/>
+                                                                                   <af:spacer width="5" height="20"
+                                                                                              id="s27"/>
                                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                                    text="Save"
                                                                                    icon="#{resource['images:save.png']}"
@@ -521,14 +532,17 @@
                                                                text="Add"
                                                                icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert1.enabled}" id="b15"/>
+                                                               <af:spacer width="5" height="20" id="s24"/>
                                                     <af:button actionListener="#{bindings.Execute1.execute}"
                                                     icon="#{resource['images:edit.png']}"
                                                                text="Edit" disabled="#{!bindings.Execute1.enabled}"
                                                                id="b16"/>
+                                                               <af:spacer width="5" height="20" id="s23"/>
                                                     <af:button actionListener="#{bindings.Delete1.execute}"
                                                     icon="#{resource['images:delete.png']}"
                                                                text="Delete" disabled="#{!bindings.Delete1.enabled}"
                                                                id="b17"/>
+                                                               <af:spacer width="5" height="20" id="s22"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                     icon="#{resource['images:save.png']}"
                                                                disabled="#{!bindings.Commit.enabled}" id="b18"/>
@@ -704,14 +718,17 @@
                                                                text="Add"
                                                                icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert2.enabled}" id="b19"/>
+                                                               <af:spacer width="5" height="20" id="s21"/>
                                                     <af:button actionListener="#{bindings.Execute2.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute2.enabled}"
                                                                icon="#{resource['images:edit.png']}"
                                                                id="b20"/>
+                                                               <af:spacer width="5" height="20" id="s20"/>
                                                     <af:button actionListener="#{bindings.Delete2.execute}"
                                                                text="Delete" disabled="#{!bindings.Delete2.enabled}"
                                                                icon="#{resource['images:delete.png']}"
                                                                id="b21"/>
+                                                               <af:spacer width="5" height="20" id="s19"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                     icon="#{resource['images:save.png']}"
                                                                disabled="#{!bindings.Commit.enabled}" id="b22"/>
@@ -782,14 +799,17 @@
                                                                text="Add"
                                                                icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert3.enabled}" id="b23"/>
+                                                               <af:spacer width="5" height="20" id="s18"/>
                                                     <af:button actionListener="#{bindings.Execute3.execute}"
                                                                text="Edit"
                                                                icon="#{resource['images:edit.png']}" disabled="#{!bindings.Execute3.enabled}"
                                                                id="b24"/>
+                                                               <af:spacer width="5" height="20" id="s17"/>
                                                     <af:button actionListener="#{bindings.Delete3.execute}"
                                                                text="Delete"
                                                                icon="#{resource['images:delete.png']}" disabled="#{!bindings.Delete3.enabled}"
                                                                id="b25"/>
+                                                               <af:spacer width="5" height="20" id="s16"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                disabled="#{!bindings.Commit.enabled}" icon="#{resource['images:save.png']}" id="b26"/>
                                                     </h:panelGroup>

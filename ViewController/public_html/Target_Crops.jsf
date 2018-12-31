@@ -240,13 +240,16 @@
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add" icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b4"/>
+                                                               <af:spacer width="5" height="20" id="s6"/>
                                                     <af:button actionListener="#{bindings.Execute.execute}"
                                                     icon="#{resource['images:edit.png']}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                id="b6"/>
+                                                               <af:spacer width="5" height="20" id="s7"/>
                                                     <af:button actionListener="#{bindings.Delete.execute}"
                                                     icon="#{resource['images:delete.png']}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}" id="b7"/>
+                                                               <af:spacer width="5" height="20" id="s8"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                     icon="#{resource['images:save.png']}"
                                                                disabled="#{!bindings.Commit.enabled}" id="b8"/>
