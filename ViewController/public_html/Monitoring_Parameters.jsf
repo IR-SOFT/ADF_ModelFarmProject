@@ -192,19 +192,26 @@
                                                                    text="Add"
                                                                    icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
-                                                                   id="b4"/>
+                                                                   id="b4"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                    text="Edit"
                                                                    icon="#{resource['images:edit.png']}"
-                                                                   disabled="#{!bindings.Execute.enabled}" id="b6"/>
+                                                                   disabled="#{!bindings.Execute.enabled}" id="b6"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s6"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
                                                                    icon="#{resource['images:delete.png']}"
-                                                                   id="b7"/>
+                                                                   id="b7"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s7"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                         icon="#{resource['images:save.png']}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
-                                                                   id="b8"/>
+                                                                   id="b8"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
                                                 </af:gridCell>
                                             </af:gridRow>
