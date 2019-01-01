@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_Training"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_TRAINING"
+  AliasName="Tbl_Training"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="TrainingId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="TRAINING_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TRAINING"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TRAINING">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_TRAINING"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="PkTblTrainingPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_TRAINING_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Training.TrainingId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblTrainingUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_TRAINING_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Training.Name"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_Beneficiary"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_BENEFICIARY"
+  AliasName="Tbl_Beneficiary"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="BeneficiaryId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="BENEFICIARY_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_BENEFICIARY"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_BENEFICIARY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Vtp"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="VTP"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_BENEFICIARY">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_BENEFICIARY"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="PkTblBeneficiaryPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_BENEFICIARY_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Beneficiary.BeneficiaryId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblBeneficiaryUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_BENEFICIARY_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Beneficiary.Name"/>
+    </AttrArray>
+  </Key>
+</Entity>

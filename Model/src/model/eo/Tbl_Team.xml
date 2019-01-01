@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_Team"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_TEAM"
+  AliasName="Tbl_Team"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="TeamId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="TEAM_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TEAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TrainerId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="TRAINER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TEAM">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TEAM">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_TEAM"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Tbl_Trainer"
+    Association="model.eo.FkTblTeamFkAssoc"
+    AssociationEnd="model.eo.FkTblTeamFkAssoc.Tbl_Trainer"
+    AssociationOtherEnd="model.eo.FkTblTeamFkAssoc.Tbl_Team"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Tbl_TrainingSchMaster"
+    Association="model.eo.Fk5TblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.Fk5TblTrainingSchMasterFkAssoc.Tbl_TrainingSchMaster"
+    AssociationOtherEnd="model.eo.Fk5TblTrainingSchMasterFkAssoc.Tbl_Team"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblTeamPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_TEAM_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Team.TeamId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblTeamUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_TEAM_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Team.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblTeamFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_TRAINER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_TEAM_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Team.TrainerId"/>
+    </AttrArray>
+  </Key>
+</Entity>

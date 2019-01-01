@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_Module"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_MODULE"
+  AliasName="Tbl_Module"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ModuleId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="MODULE_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MODULE"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CourseId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="COURSE_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MODULE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MODULE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_MODULE"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Tbl_TrainingSchMaster"
+    Association="model.eo.Fk3TblTrainingSchMasterFkAssoc"
+    AssociationEnd="model.eo.Fk3TblTrainingSchMasterFkAssoc.Tbl_TrainingSchMaster"
+    AssociationOtherEnd="model.eo.Fk3TblTrainingSchMasterFkAssoc.Tbl_Module"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="Tbl_Course"
+    Association="model.eo.FkTblModuleFkAssoc1"
+    AssociationEnd="model.eo.FkTblModuleFkAssoc1.Tbl_Course"
+    AssociationOtherEnd="model.eo.FkTblModuleFkAssoc1.Tbl_Module"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblModulePk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_MODULE_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Module.ModuleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblModuleUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_MODULE_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Module.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblModuleFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_COURSE_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_MODULE_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_Module.CourseId"/>
+    </AttrArray>
+  </Key>
+</Entity>

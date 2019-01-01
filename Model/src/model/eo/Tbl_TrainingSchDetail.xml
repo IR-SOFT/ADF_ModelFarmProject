@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_TrainingSchDetail"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_TRAINING_SCH_DETAIL"
+  AliasName="Tbl_TrainingSchDetail"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="TrainingSchDetailId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="TRAINING_SCH_DETAIL_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TRAINING_SCH_DETAIL"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TrainingSchMasterId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="TRAINING_SCH_MASTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TRAINING_SCH_DETAIL">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DatedD"
+    IsNotNull="true"
+    ColumnName="DATED_D"
+    SQLType="DATE"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    TableName="TBL_TRAINING_SCH_DETAIL"/>
+  <Attribute
+    Name="ClusterId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CLUSTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TRAINING_SCH_DETAIL">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Tbl_TrainingSchMaster"
+    Association="model.eo.FkTblTrainingSchDetailFkAssoc"
+    AssociationEnd="model.eo.FkTblTrainingSchDetailFkAssoc.Tbl_TrainingSchMaster"
+    AssociationOtherEnd="model.eo.FkTblTrainingSchDetailFkAssoc.Tbl_TrainingSchDetail"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Tbl_Cluster"
+    Association="model.eo.Fk2TblTrainingSchDetailFkAssoc"
+    AssociationEnd="model.eo.Fk2TblTrainingSchDetailFkAssoc.Tbl_Cluster"
+    AssociationOtherEnd="model.eo.Fk2TblTrainingSchDetailFkAssoc.Tbl_TrainingSchDetail"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblTrainingSchDetailPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_TRAINING_SCH_DETAIL_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_TrainingSchDetail.TrainingSchDetailId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Fk2TblTrainingSchDetailFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_CLUSTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK2_TBL_TRAINING_SCH_DETAIL_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_TrainingSchDetail.ClusterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblTrainingSchDetailFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_TRAINING_SCH_MASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_TRAINING_SCH_DETAIL_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_TrainingSchDetail.TrainingSchMasterId"/>
+    </AttrArray>
+  </Key>
+</Entity>
