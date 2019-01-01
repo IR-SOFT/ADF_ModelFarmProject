@@ -115,30 +115,30 @@
                                                                                               <af:spacer width="100" height="20" id="s6"/>
                                                                             <af:button actionListener="#{bindings.First.execute}"
                                                                                        text="First"
+                                                                                       icon="#{resource['images:first.png']}"
                                                                                        disabled="#{!bindings.First.enabled}"
-                                                                                       partialSubmit="true" id="b4"
-                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>                                                                           
+                                                                                       partialSubmit="true" id="b4"/>                                                                           
                                                                                     <af:spacer width="5" height="20"
                                                                                                id="s13"/>
                                                                             <af:button actionListener="#{bindings.Previous.execute}"
                                                                                        text="Previous"
+                                                                                       icon="#{resource['images:backward.png']}"
                                                                                        disabled="#{!bindings.Previous.enabled}"
-                                                                                       partialSubmit="true" id="b6"
-                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                                       partialSubmit="true" id="b6"/>
                                                                                        <af:spacer width="5" height="20"
                                                                                                   id="s14"/>
                                                                             <af:button actionListener="#{bindings.Next.execute}"
                                                                                        text="Next"
+                                                                                       icon="#{resource['images:forward.png']}"
                                                                                        disabled="#{!bindings.Next.enabled}"
-                                                                                       partialSubmit="true" id="b7"
-                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                                       partialSubmit="true" id="b7"/>
                                                                                        <af:spacer width="5" height="20"
                                                                                                   id="s15"/>
                                                                             <af:button actionListener="#{bindings.Last.execute}"
                                                                                        text="Last"
+                                                                                       icon="#{resource['images:last.png']}"
                                                                                        disabled="#{!bindings.Last.enabled}"
-                                                                                       partialSubmit="true" id="b8"
-                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                                                       partialSubmit="true" id="b8"/>
                                                                         </af:panelGroupLayout>
                                                                         <h:panelGroup id="pg2">
                                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"

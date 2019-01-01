@@ -259,31 +259,36 @@
                                                                     
                                                                         <af:panelGroupLayout layout="horizontal"
                                                                                              id="pgl4">
-                                                                            <af:spacer width="200" height="20" id="s7"/>
+                                                                            <af:spacer width="200" height="20"
+                                                                                       id="s13"/>
                                                                             <af:button actionListener="#{bindings.First.execute}"
                                                                                        text="First"
+                                                                                       icon="#{resource['images:first.png']}"
                                                                                        disabled="#{!bindings.First.enabled}"
                                                                                        partialSubmit="true" id="b7"/>
                                                                             <af:button actionListener="#{bindings.Previous.execute}"
                                                                                        text="Previous"
+                                                                                       icon="#{resource['images:backward.png']}"
                                                                                        disabled="#{!bindings.Previous.enabled}"
                                                                                        partialSubmit="true" id="b8"/>
                                                                             <af:button actionListener="#{bindings.Next.execute}"
                                                                                        text="Next"
+                                                                                       icon="#{resource['images:forward.png']}"
                                                                                        disabled="#{!bindings.Next.enabled}"
                                                                                        partialSubmit="true" id="b9"/>
                                                                             <af:button actionListener="#{bindings.Last.execute}"
                                                                                        text="Last"
+                                                                                       icon="#{resource['images:last.png']}"
                                                                                        disabled="#{!bindings.Last.enabled}"
-                                                                                       partialSubmit="true" id="b10"/>
+                                                                                       partialSubmit="true" id="b6"/>
                                                                                        
                                                                                        <h:panelGroup id="pg1">
                                                                                 <af:spacer width="40" height="20"
-                                                                                           id="s8"/>
+                                                                                           id="s14"/>
                                                                                 <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="CreateInsert"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b12"/>
-                                                               <af:button text="Submit" id="b11"/>
+                                                               <af:button text="Submit" id="b23"/>
                                                     <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}" id="b13"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
