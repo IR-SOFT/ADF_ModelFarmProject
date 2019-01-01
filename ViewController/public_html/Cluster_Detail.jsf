@@ -116,47 +116,55 @@
                                                                             <af:button actionListener="#{bindings.First.execute}"
                                                                                        text="First"
                                                                                        disabled="#{!bindings.First.enabled}"
-                                                                                       partialSubmit="true" id="b4"/>                                                                           
+                                                                                       partialSubmit="true" id="b4"
+                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>                                                                           
                                                                                     <af:spacer width="5" height="20"
                                                                                                id="s13"/>
                                                                             <af:button actionListener="#{bindings.Previous.execute}"
                                                                                        text="Previous"
                                                                                        disabled="#{!bindings.Previous.enabled}"
-                                                                                       partialSubmit="true" id="b6"/>
+                                                                                       partialSubmit="true" id="b6"
+                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                                        <af:spacer width="5" height="20"
                                                                                                   id="s14"/>
                                                                             <af:button actionListener="#{bindings.Next.execute}"
                                                                                        text="Next"
                                                                                        disabled="#{!bindings.Next.enabled}"
-                                                                                       partialSubmit="true" id="b7"/>
+                                                                                       partialSubmit="true" id="b7"
+                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                                        <af:spacer width="5" height="20"
                                                                                                   id="s15"/>
                                                                             <af:button actionListener="#{bindings.Last.execute}"
                                                                                        text="Last"
                                                                                        disabled="#{!bindings.Last.enabled}"
-                                                                                       partialSubmit="true" id="b8"/>
+                                                                                       partialSubmit="true" id="b8"
+                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                         </af:panelGroupLayout>
                                                                         <h:panelGroup id="pg2">
                                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                                    text="Add"
                                                                                    icon="#{resource['images:add.png']}"
                                                                                    disabled="#{!bindings.CreateInsert1.enabled}"
-                                                                                   id="b10"/>
+                                                                                   id="b10"
+                                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                                    <af:spacer width="5" height="20" id="s4"/>
-                                                                            <af:button text="Edit" id="b9" icon="#{resource['images:edit.png']}"/>
+                                                                            <af:button text="Edit" id="b9" icon="#{resource['images:edit.png']}"
+                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                             <af:spacer width="5" height="20" id="s12"/>
                                                                             <af:button actionListener="#{bindings.Delete1.execute}"
                                                                                    text="Delete"
                                                                                    icon="#{resource['images:delete.png']}"
                                                                                    disabled="#{!bindings.Delete1.enabled}"
-                                                                                   id="b15"/>
+                                                                                   id="b15"
+                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                                    <af:spacer width="5" height="20"
                                                                                               id="s10"/>
                                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                                    text="Save"
                                                                                    icon="#{resource['images:save.png']}"
                                                                                    disabled="#{!bindings.Commit.enabled}"
-                                                                                   id="b16"/>
+                                                                                   id="b16"
+                                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                         
                                                                         
                                                                         </h:panelGroup>
@@ -237,20 +245,24 @@
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
                                                                icon="#{resource['images:add.png']}"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b11"/>
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b11"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                <af:spacer width="5" height="20" id="s7"/>
                                                     <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                icon="#{resource['images:edit.png']}"
-                                                               id="b12"/>
+                                                               id="b12"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                <af:spacer width="5" height="20" id="s8"/>
                                                     <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}"
-                                                               icon="#{resource['images:delete.png']}" id="b13"/>
+                                                               icon="#{resource['images:delete.png']}" id="b13"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                <af:spacer width="5" height="20" id="s9"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                disabled="#{!bindings.Commit.enabled}"
-                                                               icon="#{resource['images:save.png']}" id="b14"/>
+                                                               icon="#{resource['images:save.png']}" id="b14"
+                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
                                                     
                                                 </af:gridCell>
