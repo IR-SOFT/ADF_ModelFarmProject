@@ -110,4 +110,28 @@
     ViewLink="model.vo.FkTblTrainingSchDetailFkLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblProjCompView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink2"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblCourseView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink3"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblModuleView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink4"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblClusterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink5"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

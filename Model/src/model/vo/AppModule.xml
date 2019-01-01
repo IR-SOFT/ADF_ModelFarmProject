@@ -49,6 +49,42 @@
   <ViewUsage
     Name="TblClusterDetailView1"
     ViewObjectName="model.vo.TblClusterDetailView"/>
+  <ViewUsage
+    Name="Tbl_ClusterView1"
+    ViewObjectName="model.vo.Tbl_ClusterView"/>
+  <ViewUsage
+    Name="Tbl_TrainingSchDetailView1"
+    ViewObjectName="model.vo.Tbl_TrainingSchDetailView"/>
+  <ViewUsage
+    Name="TblClusterView2"
+    ViewObjectName="model.vo.TblClusterView"/>
+  <ViewUsage
+    Name="Tbl_TrainingSchDetailView2"
+    ViewObjectName="model.vo.Tbl_TrainingSchDetailView"/>
+  <ViewUsage
+    Name="TblProjCompView2"
+    ViewObjectName="model.vo.TblProjCompView"/>
+  <ViewUsage
+    Name="Tbl_TrainingSchMasterView1"
+    ViewObjectName="model.vo.Tbl_TrainingSchMasterView"/>
+  <ViewUsage
+    Name="TblCourseView2"
+    ViewObjectName="model.vo.TblCourseView"/>
+  <ViewUsage
+    Name="Tbl_TrainingSchMasterView2"
+    ViewObjectName="model.vo.Tbl_TrainingSchMasterView"/>
+  <ViewUsage
+    Name="TblModuleView1"
+    ViewObjectName="model.vo.TblModuleView"/>
+  <ViewUsage
+    Name="Tbl_TrainingSchMasterView3"
+    ViewObjectName="model.vo.Tbl_TrainingSchMasterView"/>
+  <ViewUsage
+    Name="TblClusterView3"
+    ViewObjectName="model.vo.TblClusterView"/>
+  <ViewUsage
+    Name="Tbl_TrainingSchMasterView4"
+    ViewObjectName="model.vo.Tbl_TrainingSchMasterView"/>
   <ViewLinkUsage
     Name="FKTblProjCompFKLink"
     ViewLinkObjectName="model.vo.FKTblProjCompFKLink"
@@ -90,5 +126,41 @@
     ViewLinkObjectName="model.vo.FKTblClusterDetailFKLink2"
     SrcViewUsageName="model.vo.AppModule.TblFarmerRegView2"
     DstViewUsageName="model.vo.AppModule.TblClusterDetailView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKtblTrainingSchDetailFKLink2"
+    ViewLinkObjectName="model.vo.FKtblTrainingSchDetailFKLink2"
+    SrcViewUsageName="model.vo.AppModule.Tbl_ClusterView1"
+    DstViewUsageName="model.vo.AppModule.Tbl_TrainingSchDetailView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblTrainingSchDetailFKLink1"
+    ViewLinkObjectName="model.vo.FKTblTrainingSchDetailFKLink2"
+    SrcViewUsageName="model.vo.AppModule.TblClusterView2"
+    DstViewUsageName="model.vo.AppModule.Tbl_TrainingSchDetailView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblTrainingSchMasterFKLink2"
+    ViewLinkObjectName="model.vo.FKTblTrainingSchMasterFKLink2"
+    SrcViewUsageName="model.vo.AppModule.TblProjCompView2"
+    DstViewUsageName="model.vo.AppModule.Tbl_TrainingSchMasterView1"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblTrainingSchMasterFKLink3"
+    ViewLinkObjectName="model.vo.FKTblTrainingSchMasterFKLink3"
+    SrcViewUsageName="model.vo.AppModule.TblCourseView2"
+    DstViewUsageName="model.vo.AppModule.Tbl_TrainingSchMasterView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblTrainingSchMasterFKLink4"
+    ViewLinkObjectName="model.vo.FKTblTrainingSchMasterFKLink4"
+    SrcViewUsageName="model.vo.AppModule.TblModuleView1"
+    DstViewUsageName="model.vo.AppModule.Tbl_TrainingSchMasterView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FKTblTrainingSchMasterFKLink5"
+    ViewLinkObjectName="model.vo.FKTblTrainingSchMasterFKLink5"
+    SrcViewUsageName="model.vo.AppModule.TblClusterView3"
+    DstViewUsageName="model.vo.AppModule.Tbl_TrainingSchMasterView4"
     Reversed="false"/>
 </AppModule>

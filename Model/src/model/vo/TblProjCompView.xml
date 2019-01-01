@@ -124,4 +124,9 @@
     Type="oracle.jbo.server.ViewRowImpl"
     Reversed="true"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="Tbl_TrainingSchMasterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink2"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

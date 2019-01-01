@@ -48,9 +48,9 @@
     </af:gridRow>
     <af:gridRow height="100%" id="pt_gr2">
       <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc2" >
-        <af:panelGroupLayout layout="scroll" id="pt_pgl2">
+        <af:panelGroupLayout layout="scroll" id="pt_pgl2" inlineStyle="background-color:white;">
           <!-- Content -->
-          <af:facetRef facetName="body" >
+          <af:facetRef facetName="body">
             <?audit suppress oracle.adf.faces.pt-facet-references?>
           </af:facetRef>
         </af:panelGroupLayout>

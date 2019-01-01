@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblModule"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_MODULE"
@@ -78,6 +78,13 @@
     Association="model.eo.FkTblTopicsFkAssoc"
     AssociationEnd="model.eo.FkTblTopicsFkAssoc.TblTopics"
     AssociationOtherEnd="model.eo.FkTblTopicsFkAssoc.TblModule"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="Tbl_TrainingSchMasterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink4"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink4.Tbl_TrainingSchMasterView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink4.TblModuleView"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key

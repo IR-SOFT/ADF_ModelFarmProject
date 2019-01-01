@@ -115,6 +115,13 @@
     ViewLinkOtherEnd="model.vo.FKTblProjCompFKLink.TblProjCompView"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="Tbl_TrainingSchMasterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink2"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink2.Tbl_TrainingSchMasterView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink2.TblProjCompView"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkTblProjCompPk"
     PrimaryKey="true">

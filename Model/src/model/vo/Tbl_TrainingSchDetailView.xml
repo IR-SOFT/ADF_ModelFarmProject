@@ -44,4 +44,10 @@
     EntityAttrName="ClusterId"
     EntityUsage="Tbl_TrainingSchDetail"
     AliasName="CLUSTER_ID"/>
+  <ViewLinkAccessor
+    Name="TblClusterView"
+    ViewLink="model.vo.FKTblTrainingSchDetailFKLink2"
+    Type="oracle.jbo.server.ViewRowImpl"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

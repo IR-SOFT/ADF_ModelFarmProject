@@ -139,6 +139,20 @@
     ViewLinkOtherEnd="model.vo.FKTblClusterFKLink2.TblClusterView"
     Type="oracle.jbo.server.ViewRowImpl"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="Tbl_TrainingSchDetailView"
+    ViewLink="model.vo.FKTblTrainingSchDetailFKLink2"
+    ViewLinkEnd="model.vo.FKTblTrainingSchDetailFKLink2.Tbl_TrainingSchDetailView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchDetailFKLink2.TblClusterView"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="Tbl_TrainingSchMasterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink5"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink5.Tbl_TrainingSchMasterView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink5.TblClusterView"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="PkTblClusterPk"
     PrimaryKey="true">

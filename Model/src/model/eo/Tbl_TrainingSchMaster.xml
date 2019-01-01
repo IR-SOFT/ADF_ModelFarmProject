@@ -209,6 +209,34 @@
     AssociationOtherEnd="model.eo.Fk3TblTrainingSchMasterFkAssoc.Tbl_TrainingSchMaster"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <ViewLinkAccessor
+    Name="TblProjCompView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink2"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink2.TblProjCompView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink2.Tbl_TrainingSchMasterView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblCourseView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink3"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink3.TblCourseView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink3.Tbl_TrainingSchMasterView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblModuleView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink4"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink4.TblModuleView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink4.Tbl_TrainingSchMasterView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="TblClusterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink5"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink5.TblClusterView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink5.Tbl_TrainingSchMasterView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
   <Key
     Name="PkTblTrainingSchMasterPk"
     PrimaryKey="true">

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FKTblTrainingSchMasterFKLink2"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="FKTblTrainingSchMasterFKLink2_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="TblProjCompView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.vo.TblProjCompView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_accessor" Value="true"/>
+      <Attr Name="_finderName" Value="TblProjCompView"/>
+      <Attr Name="_entityAccessor" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblProjCompView.ProjCompId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="Tbl_TrainingSchMasterView"
+    Cardinality="-1"
+    Owner="model.vo.Tbl_TrainingSchMasterView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Tbl_TrainingSchMasterView"/>
+      <Attr Name="_entityAccessor" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.Tbl_TrainingSchMasterView.ProjCompId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="model.vo.common.FKTblTrainingSchMasterFKLink2MsgBundle"/>
+  </ResourceBundle>
+</ViewLink>

@@ -72,6 +72,13 @@
     AssociationOtherEnd="model.eo.Fk2TblTrainingSchDetailFkAssoc.Tbl_TrainingSchDetail"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <ViewLinkAccessor
+    Name="TblClusterView"
+    ViewLink="model.vo.FKTblTrainingSchDetailFKLink2"
+    ViewLinkEnd="model.vo.FKTblTrainingSchDetailFKLink2.TblClusterView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchDetailFKLink2.Tbl_TrainingSchDetailView"
+    Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
   <Key
     Name="PkTblTrainingSchDetailPk"
     PrimaryKey="true">

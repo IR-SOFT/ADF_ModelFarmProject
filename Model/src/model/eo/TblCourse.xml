@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblCourse"
-  Version="12.2.1.9.14"
+  Version="12.2.1.11.3"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_COURSE"
@@ -86,6 +86,13 @@
     ViewLinkEnd="model.vo.FKTblCourseFKLink2.TblProjCompInputView"
     ViewLinkOtherEnd="model.vo.FKTblCourseFKLink2.TblCourseView"
     Type="oracle.jbo.server.ViewRowImpl"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="Tbl_TrainingSchMasterView"
+    ViewLink="model.vo.FKTblTrainingSchMasterFKLink3"
+    ViewLinkEnd="model.vo.FKTblTrainingSchMasterFKLink3.Tbl_TrainingSchMasterView"
+    ViewLinkOtherEnd="model.vo.FKTblTrainingSchMasterFKLink3.TblCourseView"
+    Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <Key
     Name="PkTblCoursePk"
