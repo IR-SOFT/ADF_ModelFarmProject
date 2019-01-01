@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Trainer.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
+                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
+                        <af:showDetailItem id="sdi1" text="Course Training">
+                            <af:spacer width="190" height="10" id="s1"/>
+                            <af:button text="Course Setup" id="b1" inlineStyle="width:190px;"
+                                       destination="Course_Setup.jsf"/>
+                            <af:spacer width="190" height="10" id="s3"/>
+                            <af:button id="b3" inlineStyle="width:190px;" text="Module Setup"
+                                       destination="Module_Setup.jsf"/>
+                            <af:spacer width="190" height="10" id="s5"/>
+                            <af:button id="b5" inlineStyle="width:190px;" text="Topic Setup"
+                                       destination="Topic_Setup.jsf"/>
+                                       <af:spacer width="190" height="10" id="s2"/>
+                            <af:button id="b2" inlineStyle="width:190px;" text="Team Setup"
+                                       destination="Team_Setup.jsf"/>
+                                       <af:spacer width="190" height="10" id="s6"/>
+                            <af:button id="b4" inlineStyle="width:190px;" text="Trainer"
+                                       destination="Trainer.jsf"/>
+                        </af:showDetailItem>
+                    </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   inlineStyle="height:811px; width:1030px;">
+                                    <af:showDetailItem id="pane2" text="Trainer">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1013px;">
+                                                        <af:showDetailItem id="tab1" text="Trainer">
+                                                            <af:table value="#{bindings.Tbl_TrainerView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.Tbl_TrainerView1.rangeSize}"
+                                                                      emptyText="#{bindings.Tbl_TrainerView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.Tbl_TrainerView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.Tbl_TrainerView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.Tbl_TrainerView1.rangeSize}"
+                                                                      filterModel="#{bindings.Tbl_TrainerView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.Tbl_TrainerView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      partialTriggers="::b7 ::b8 ::b9 ::b10 ::b12 ::b13">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.TrainerId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerView1.hints.TrainerId.label}"
+                                                                           id="c1">
+                                                                    <af:inputText value="#{row.bindings.TrainerId.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerView1.hints.TrainerId.label}"
+                                                                                  required="#{bindings.Tbl_TrainerView1.hints.TrainerId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerView1.hints.TrainerId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerView1.hints.TrainerId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerView1.hints.TrainerId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerView1.hints.Name.label}"
+                                                                           id="c2">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerView1.hints.Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainerView1.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerView1.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerView1.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerView1.hints.Name.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.FatherName.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerView1.hints.FatherName.label}"
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.FatherName.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerView1.hints.FatherName.label}"
+                                                                                  required="#{bindings.Tbl_TrainerView1.hints.FatherName.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerView1.hints.FatherName.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerView1.hints.FatherName.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerView1.hints.FatherName.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.FatherName.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerView1.hints.Ast.label}"
+                                                                           id="c4">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerView1.hints.Ast.label}"
+                                                                                  required="#{bindings.Tbl_TrainerView1.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerView1.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerView1.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerView1.hints.Ast.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                    
+                                                    
+                                                    
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:1011px;">
+                                                        <af:showDetailItem id="tab2" text="Detail">
+                                                            <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
+                                                                <af:inputText value="#{bindings.MarStatus.inputValue}"
+                                                                              label="#{bindings.MarStatus.hints.label}"
+                                                                              required="#{bindings.MarStatus.hints.mandatory}"
+                                                                              columns="#{bindings.MarStatus.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.MarStatus.hints.precision}"
+                                                                              shortDesc="#{bindings.MarStatus.hints.tooltip}"
+                                                                              id="it5">
+                                                                    <f:validator binding="#{bindings.MarStatus.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputDate value="#{bindings.Dob.inputValue}"
+                                                                              label="#{bindings.Dob.hints.label}"
+                                                                              required="#{bindings.Dob.hints.mandatory}"
+                                                                              columns="#{bindings.Dob.hints.displayWidth}"
+                                                                              shortDesc="#{bindings.Dob.hints.tooltip}"
+                                                                              id="id1">
+                                                                    <f:validator binding="#{bindings.Dob.validator}"/>
+                                                                    <af:convertDateTime pattern="#{bindings.Dob.format}"/>
+                                                                </af:inputDate>
+                                                                <af:inputDate value="#{bindings.Doj.inputValue}"
+                                                                              label="#{bindings.Doj.hints.label}"
+                                                                              required="#{bindings.Doj.hints.mandatory}"
+                                                                              columns="#{bindings.Doj.hints.displayWidth}"
+                                                                              shortDesc="#{bindings.Doj.hints.tooltip}"
+                                                                              id="id2">
+                                                                    <f:validator binding="#{bindings.Doj.validator}"/>
+                                                                    <af:convertDateTime pattern="#{bindings.Doj.format}"/>
+                                                                </af:inputDate>
+                                                                <af:inputText value="#{bindings.Ntn.inputValue}"
+                                                                              label="#{bindings.Ntn.hints.label}"
+                                                                              required="#{bindings.Ntn.hints.mandatory}"
+                                                                              columns="#{bindings.Ntn.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Ntn.hints.precision}"
+                                                                              shortDesc="#{bindings.Ntn.hints.tooltip}"
+                                                                              id="it6">
+                                                                    <f:validator binding="#{bindings.Ntn.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.PassNo.inputValue}"
+                                                                              label="#{bindings.PassNo.hints.label}"
+                                                                              required="#{bindings.PassNo.hints.mandatory}"
+                                                                              columns="#{bindings.PassNo.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.PassNo.hints.precision}"
+                                                                              shortDesc="#{bindings.PassNo.hints.tooltip}"
+                                                                              id="it7">
+                                                                    <f:validator binding="#{bindings.PassNo.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.Cnic.inputValue}"
+                                                                              label="#{bindings.Cnic.hints.label}"
+                                                                              required="#{bindings.Cnic.hints.mandatory}"
+                                                                              columns="#{bindings.Cnic.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Cnic.hints.precision}"
+                                                                              shortDesc="#{bindings.Cnic.hints.tooltip}"
+                                                                              id="it8">
+                                                                    <f:validator binding="#{bindings.Cnic.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.DrLicNo.inputValue}"
+                                                                              label="#{bindings.DrLicNo.hints.label}"
+                                                                              required="#{bindings.DrLicNo.hints.mandatory}"
+                                                                              columns="#{bindings.DrLicNo.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.DrLicNo.hints.precision}"
+                                                                              shortDesc="#{bindings.DrLicNo.hints.tooltip}"
+                                                                              id="it9">
+                                                                    <f:validator binding="#{bindings.DrLicNo.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.Telephone.inputValue}"
+                                                                              label="#{bindings.Telephone.hints.label}"
+                                                                              required="#{bindings.Telephone.hints.mandatory}"
+                                                                              columns="#{bindings.Telephone.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Telephone.hints.precision}"
+                                                                              shortDesc="#{bindings.Telephone.hints.tooltip}"
+                                                                              id="it10">
+                                                                    <f:validator binding="#{bindings.Telephone.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.Mobile.inputValue}"
+                                                                              label="#{bindings.Mobile.hints.label}"
+                                                                              required="#{bindings.Mobile.hints.mandatory}"
+                                                                              columns="#{bindings.Mobile.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Mobile.hints.precision}"
+                                                                              shortDesc="#{bindings.Mobile.hints.tooltip}"
+                                                                              id="it11">
+                                                                    <f:validator binding="#{bindings.Mobile.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.Email.inputValue}"
+                                                                              label="#{bindings.Email.hints.label}"
+                                                                              required="#{bindings.Email.hints.mandatory}"
+                                                                              columns="#{bindings.Email.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Email.hints.precision}"
+                                                                              shortDesc="#{bindings.Email.hints.tooltip}"
+                                                                              id="it12">
+                                                                    <f:validator binding="#{bindings.Email.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.Url.inputValue}"
+                                                                              label="#{bindings.Url.hints.label}"
+                                                                              required="#{bindings.Url.hints.mandatory}"
+                                                                              columns="#{bindings.Url.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.Url.hints.precision}"
+                                                                              shortDesc="#{bindings.Url.hints.tooltip}"
+                                                                              id="it13">
+                                                                    <f:validator binding="#{bindings.Url.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.PreAddress.inputValue}"
+                                                                              label="#{bindings.PreAddress.hints.label}"
+                                                                              required="#{bindings.PreAddress.hints.mandatory}"
+                                                                              columns="#{bindings.PreAddress.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.PreAddress.hints.precision}"
+                                                                              shortDesc="#{bindings.PreAddress.hints.tooltip}"
+                                                                              id="it14">
+                                                                    <f:validator binding="#{bindings.PreAddress.validator}"/>
+                                                                </af:inputText>
+                                                                <af:inputText value="#{bindings.PerAddress.inputValue}"
+                                                                              label="#{bindings.PerAddress.hints.label}"
+                                                                              required="#{bindings.PerAddress.hints.mandatory}"
+                                                                              columns="#{bindings.PerAddress.hints.displayWidth}"
+                                                                              maximumLength="#{bindings.PerAddress.hints.precision}"
+                                                                              shortDesc="#{bindings.PerAddress.hints.tooltip}"
+                                                                              id="it15">
+                                                                    <f:validator binding="#{bindings.PerAddress.validator}"/>
+                                                                </af:inputText>
+                                                                <f:facet name="footer">
+                                                                 <af:spacer width="200" height="20" id="s4"/>
+                                                                    <af:panelGroupLayout id="pgl3">
+                                                                    
+                                                                        <af:panelGroupLayout layout="horizontal"
+                                                                                             id="pgl4">
+                                                                            <af:spacer width="200" height="20" id="s7"/>
+                                                                            <af:button actionListener="#{bindings.First.execute}"
+                                                                                       text="First"
+                                                                                       disabled="#{!bindings.First.enabled}"
+                                                                                       partialSubmit="true" id="b7"/>
+                                                                            <af:button actionListener="#{bindings.Previous.execute}"
+                                                                                       text="Previous"
+                                                                                       disabled="#{!bindings.Previous.enabled}"
+                                                                                       partialSubmit="true" id="b8"/>
+                                                                            <af:button actionListener="#{bindings.Next.execute}"
+                                                                                       text="Next"
+                                                                                       disabled="#{!bindings.Next.enabled}"
+                                                                                       partialSubmit="true" id="b9"/>
+                                                                            <af:button actionListener="#{bindings.Last.execute}"
+                                                                                       text="Last"
+                                                                                       disabled="#{!bindings.Last.enabled}"
+                                                                                       partialSubmit="true" id="b10"/>
+                                                                                       
+                                                                                       <h:panelGroup id="pg1">
+                                                                                <af:spacer width="40" height="20"
+                                                                                           id="s8"/>
+                                                                                <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="CreateInsert"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b12"/>
+                                                               <af:button text="Submit" id="b11"/>
+                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b13"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b14"/>
+                                                    </h:panelGroup>
+                                                                        </af:panelGroupLayout>
+                                                                        
+                                                                    </af:panelGroupLayout>
+                                                                </f:facet>
+                                                            </af:panelFormLayout>
+                                                        </af:showDetailItem>
+                                                        <af:showDetailItem text="Trainer Academy" id="sdi2">
+                                                            <af:table value="#{bindings.Tbl_TrainerAcaView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.Tbl_TrainerAcaView3.rangeSize}"
+                                                                      emptyText="#{bindings.Tbl_TrainerAcaView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.Tbl_TrainerAcaView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.Tbl_TrainerAcaView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.Tbl_TrainerAcaView3.rangeSize}"
+                                                                      filterModel="#{bindings.Tbl_TrainerAcaView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.Tbl_TrainerAcaView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b15 ::b16 ::b17">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.label}"
+                                                                           id="c5">
+                                                                    <af:inputText value="#{row.bindings.TrainerAcaId.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.tooltip}"
+                                                                                  id="it16">
+                                                                        <f:validator binding="#{row.bindings.TrainerAcaId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.label}"
+                                                                           id="c6">
+                                                                    <af:inputText value="#{row.bindings.TrainerId.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.tooltip}"
+                                                                                  id="it17">
+                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.Degree.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.Degree.label}"
+                                                                           id="c7">
+                                                                    <af:inputText value="#{row.bindings.Degree.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.Degree.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.Degree.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.Degree.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.Degree.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.Degree.tooltip}"
+                                                                                  id="it18">
+                                                                        <f:validator binding="#{row.bindings.Degree.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.label}"
+                                                                           id="c8">
+                                                                    <af:inputText value="#{row.bindings.PassYear.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.tooltip}"
+                                                                                  id="it19">
+                                                                        <f:validator binding="#{row.bindings.PassYear.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.label}"
+                                                                           id="c9">
+                                                                    <af:inputText value="#{row.bindings.MajSub.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.tooltip}"
+                                                                                  id="it20">
+                                                                        <f:validator binding="#{row.bindings.MajSub.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.label}"
+                                                                           id="c10">
+                                                                    <af:inputText value="#{row.bindings.UniBoard.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.tooltip}"
+                                                                                  id="it21">
+                                                                        <f:validator binding="#{row.bindings.UniBoard.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.Perc.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.Perc.label}"
+                                                                           id="c11">
+                                                                    <af:inputText value="#{row.bindings.Perc.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.Perc.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.Perc.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.Perc.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.Perc.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.Perc.tooltip}"
+                                                                                  id="it22">
+                                                                        <f:validator binding="#{row.bindings.Perc.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.Tbl_TrainerAcaView3.hints.Perc.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.label}"
+                                                                           id="c12">
+                                                                    <af:inputText value="#{row.bindings.Cgpa.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.label}"
+                                                                                  required="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.tooltip}"
+                                                                                  id="it23">
+                                                                        <f:validator binding="#{row.bindings.Cgpa.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:spacer width="40" height="20" id="s9"/>
+                                                            <h:panelGroup id="pg2">
+                                                                <af:spacer width="200" height="20" id="s10"/>
+                                                                <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                               text="CreateInsert1"
+                                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b15"/>
+                                                    <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Execute" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b16"/>
+                                                    <af:button actionListener="#{bindings.Delete1.execute}"
+                                                               text="Delete1" disabled="#{!bindings.Delete1.enabled}"
+                                                               id="b17"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b18"/>
+                                                    </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                        <af:showDetailItem text="Trainer Percquisites" id="sdi3">
+                                                            <af:table value="#{bindings.Tbl_TrainerPercView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.Tbl_TrainerPercView3.rangeSize}"
+                                                                      emptyText="#{bindings.Tbl_TrainerPercView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.Tbl_TrainerPercView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.Tbl_TrainerPercView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.Tbl_TrainerPercView3.rangeSize}"
+                                                                      filterModel="#{bindings.Tbl_TrainerPercView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.Tbl_TrainerPercView3Query.processQuery}"
+                                                                      varStatus="vs" id="t3"
+                                                                      partialTriggers="::b19 ::b20 ::b21">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.label}"
+                                                                           id="c13">
+                                                                    <af:inputText value="#{row.bindings.TrainerPercId.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.label}"
+                                                                                  required="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.tooltip}"
+                                                                                  id="it24">
+                                                                        <f:validator binding="#{row.bindings.TrainerPercId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.label}"
+                                                                           id="c14">
+                                                                    <af:inputText value="#{row.bindings.TrainerId.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.label}"
+                                                                                  required="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.tooltip}"
+                                                                                  id="it25">
+                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.PercName.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerPercView3.hints.PercName.label}"
+                                                                           id="c15">
+                                                                    <af:inputText value="#{row.bindings.PercName.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerPercView3.hints.PercName.label}"
+                                                                                  required="#{bindings.Tbl_TrainerPercView3.hints.PercName.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerPercView3.hints.PercName.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerPercView3.hints.PercName.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerPercView3.hints.PercName.tooltip}"
+                                                                                  id="it26">
+                                                                        <f:validator binding="#{row.bindings.PercName.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.Amount.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerPercView3.hints.Amount.label}"
+                                                                           id="c16">
+                                                                    <af:inputText value="#{row.bindings.Amount.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerPercView3.hints.Amount.label}"
+                                                                                  required="#{bindings.Tbl_TrainerPercView3.hints.Amount.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerPercView3.hints.Amount.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerPercView3.hints.Amount.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerPercView3.hints.Amount.tooltip}"
+                                                                                  id="it27">
+                                                                        <f:validator binding="#{row.bindings.Amount.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.Tbl_TrainerPercView3.hints.Amount.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.Remarks.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerPercView3.hints.Remarks.label}"
+                                                                           id="c17">
+                                                                    <af:inputText value="#{row.bindings.Remarks.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerPercView3.hints.Remarks.label}"
+                                                                                  required="#{bindings.Tbl_TrainerPercView3.hints.Remarks.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerPercView3.hints.Remarks.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerPercView3.hints.Remarks.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerPercView3.hints.Remarks.tooltip}"
+                                                                                  id="it28">
+                                                                        <f:validator binding="#{row.bindings.Remarks.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerPercView3.hints.Ast.label}"
+                                                                           id="c18">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainerPercView3.hints.Ast.label}"
+                                                                                  required="#{bindings.Tbl_TrainerPercView3.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainerPercView3.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainerPercView3.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainerPercView3.hints.Ast.tooltip}"
+                                                                                  id="it29">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:spacer width="30" height="20" id="s11"/>
+                                                    <h:panelGroup id="pg3">
+                                                    <af:spacer width="200" height="20" id="s12"/>
+                                                        <af:button actionListener="#{bindings.CreateInsert2.execute}"
+                                                               text="CreateInsert2"
+                                                               disabled="#{!bindings.CreateInsert2.enabled}" id="b19"/>
+                                                    <af:button actionListener="#{bindings.Execute1.execute}"
+                                                               text="Execute1" disabled="#{!bindings.Execute1.enabled}"
+                                                               id="b20"/>
+                                                    <af:button actionListener="#{bindings.Delete2.execute}"
+                                                               text="Delete2" disabled="#{!bindings.Delete2.enabled}"
+                                                               id="b21"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b22"/>
+                                                    </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                        
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Team_SetupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Tbl_TeamView1" RangeSize="25" DataControl="AppModuleDataControl" id="Tbl_TeamView1Iterator"/>
+    <searchRegion Binds="Tbl_TeamView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TeamView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="Tbl_TeamView1Iterator" id="Tbl_TeamView1">
+      <nodeDefinition DefName="model.vo.Tbl_TeamView" Name="Tbl_TeamView10">
+        <AttrNames>
+          <Item Value="TeamId"/>
+          <Item Value="TrainerId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="Tbl_TeamView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="Tbl_TeamView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="Tbl_TeamView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

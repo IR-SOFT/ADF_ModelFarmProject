@@ -154,6 +154,8 @@
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc9">
                                                     <af:spacer width="100" height="30" id="s4"/>
+                                                    
+                                                   
                                                 </af:gridCell>
                                             </af:gridRow>
                                         </af:panelGridLayout>
@@ -342,6 +344,94 @@
                                                                id="b11"/>
                                                     <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
                                                               icon="#{resource['images:save.png']}" disabled="#{!bindings.Commit.enabled}" id="b18"/>
+                                                    </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                        <af:showDetailItem text="Beneficiary" id="sdi3">
+                                                            <af:table value="#{bindings.Tbl_BeneficiaryView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.Tbl_BeneficiaryView1.rangeSize}"
+                                                                      emptyText="#{bindings.Tbl_BeneficiaryView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.Tbl_BeneficiaryView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.Tbl_BeneficiaryView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.Tbl_BeneficiaryView1.rangeSize}"
+                                                                      filterModel="#{bindings.Tbl_BeneficiaryView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.Tbl_BeneficiaryView1Query.processQuery}"
+                                                                      varStatus="vs" id="t4"
+                                                                      partialTriggers="::b4 ::b12 ::b19">
+                                                                <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.label}"
+                                                                           id="c14">
+                                                                    <af:inputText value="#{row.bindings.BeneficiaryId.inputValue}"
+                                                                                  label="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.label}"
+                                                                                  required="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.tooltip}"
+                                                                                  id="it8">
+                                                                        <f:validator binding="#{row.bindings.BeneficiaryId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_BeneficiaryView1.hints.Name.label}"
+                                                                           id="c15">
+                                                                    <af:inputText value="#{row.bindings.Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_BeneficiaryView1.hints.Name.label}"
+                                                                                  required="#{bindings.Tbl_BeneficiaryView1.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_BeneficiaryView1.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_BeneficiaryView1.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_BeneficiaryView1.hints.Name.tooltip}"
+                                                                                  id="it12">
+                                                                        <f:validator binding="#{row.bindings.Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.label}"
+                                                                           id="c16">
+                                                                    <af:inputText value="#{row.bindings.Vtp.inputValue}"
+                                                                                  label="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.label}"
+                                                                                  required="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.mandatory}"
+                                                                                  columns="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.tooltip}"
+                                                                                  id="it13">
+                                                                        <f:validator binding="#{row.bindings.Vtp.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_BeneficiaryView1.hints.Ast.label}"
+                                                                           id="c17">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.Tbl_BeneficiaryView1.hints.Ast.label}"
+                                                                                  required="#{bindings.Tbl_BeneficiaryView1.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.Tbl_BeneficiaryView1.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_BeneficiaryView1.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_BeneficiaryView1.hints.Ast.tooltip}"
+                                                                                  id="it14">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:spacer width="30" height="40" id="s14"/>
+                                                    <h:panelGroup id="pg4">
+                                                        <af:spacer width="200" height="20" id="s15"/>
+                                                        <af:button actionListener="#{bindings.CreateInsert3.execute}"
+                                                               text="CreateInsert3"
+                                                               disabled="#{!bindings.CreateInsert3.enabled}" id="b4"/>
+                                                    <af:button actionListener="#{bindings.Execute3.execute}"
+                                                               text="Execute3" disabled="#{!bindings.Execute3.enabled}"
+                                                               id="b12"/>
+                                                    <af:button actionListener="#{bindings.Delete3.execute}"
+                                                               text="Delete3" disabled="#{!bindings.Delete3.enabled}"
+                                                               id="b19"/>
+                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b20"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>

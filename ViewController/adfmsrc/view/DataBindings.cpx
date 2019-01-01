@@ -22,6 +22,8 @@
     <page path="/Certification_Setup.jsf" usageId="view_Certification_SetupPageDef"/>
     <page path="/Farmer_Registration.jsf" usageId="view_Farmer_RegistrationPageDef"/>
     <page path="/Cluster_Detail.jsf" usageId="view_Cluster_DetailPageDef"/>
+    <page path="/Team_Setup.jsf" usageId="view_Team_SetupPageDef"/>
+    <page path="/Trainer.jsf" usageId="view_TrainerPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -42,6 +44,8 @@
     <page id="view_Certification_SetupPageDef" path="view.pageDefs.Certification_SetupPageDef"/>
     <page id="view_Farmer_RegistrationPageDef" path="view.pageDefs.Farmer_RegistrationPageDef"/>
     <page id="view_Cluster_DetailPageDef" path="view.pageDefs.Cluster_DetailPageDef"/>
+    <page id="view_Team_SetupPageDef" path="view.pageDefs.Team_SetupPageDef"/>
+    <page id="view_TrainerPageDef" path="view.pageDefs.TrainerPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"
