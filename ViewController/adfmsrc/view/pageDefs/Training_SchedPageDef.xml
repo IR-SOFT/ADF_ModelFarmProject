@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Training_SchedPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Tbl_TrainingSchMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="Tbl_TrainingSchMasterView1Iterator"/>
+    <searchRegion Binds="Tbl_TrainingSchMasterView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainingSchMasterView1Query"/>
+    <iterator Binds="Tbl_TrainingSchDetailView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="Tbl_TrainingSchDetailView3Iterator"/>
+    <searchRegion Binds="Tbl_TrainingSchDetailView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainingSchDetailView3Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Tbl_TrainingSchMasterView1">
+      <nodeDefinition DefName="model.vo.Tbl_TrainingSchMasterView" Name="Tbl_TrainingSchMasterView10">
+        <AttrNames>
+          <Item Value="TrainingSchMasterId"/>
+          <Item Value="ProjCompId"/>
+          <Item Value="CourseId"/>
+          <Item Value="ModuleId"/>
+          <Item Value="ClusterId"/>
+          <Item Value="TeamId"/>
+          <Item Value="TrainerId"/>
+          <Item Value="Dated"/>
+          <Item Value="Status"/>
+          <Item Value="Mon"/>
+          <Item Value="StDate"/>
+          <Item Value="EnDate"/>
+          <Item Value="Remarks"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="Tbl_TrainingSchDetailView3Iterator" id="Tbl_TrainingSchDetailView3">
+      <nodeDefinition DefName="model.vo.Tbl_TrainingSchDetailView" Name="Tbl_TrainingSchDetailView30">
+        <AttrNames>
+          <Item Value="TrainingSchDetailId"/>
+          <Item Value="TrainingSchMasterId"/>
+          <Item Value="DatedD"/>
+          <Item Value="ClusterId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="Tbl_TrainingSchDetailView3Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="Tbl_TrainingSchDetailView3Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="Tbl_TrainingSchDetailView3Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

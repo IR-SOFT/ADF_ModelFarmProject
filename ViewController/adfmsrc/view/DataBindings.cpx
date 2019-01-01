@@ -24,6 +24,8 @@
     <page path="/Cluster_Detail.jsf" usageId="view_Cluster_DetailPageDef"/>
     <page path="/Team_Setup.jsf" usageId="view_Team_SetupPageDef"/>
     <page path="/Trainer.jsf" usageId="view_TrainerPageDef"/>
+    <page path="/Training_Setup.jsf" usageId="view_Training_SetupPageDef"/>
+    <page path="/Training_Sched.jsf" usageId="view_Training_SchedPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -46,6 +48,8 @@
     <page id="view_Cluster_DetailPageDef" path="view.pageDefs.Cluster_DetailPageDef"/>
     <page id="view_Team_SetupPageDef" path="view.pageDefs.Team_SetupPageDef"/>
     <page id="view_TrainerPageDef" path="view.pageDefs.TrainerPageDef"/>
+    <page id="view_Training_SetupPageDef" path="view.pageDefs.Training_SetupPageDef"/>
+    <page id="view_Training_SchedPageDef" path="view.pageDefs.Training_SchedPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

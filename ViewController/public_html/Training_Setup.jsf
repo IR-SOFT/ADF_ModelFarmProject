@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <af:document title="Team_Setup.jsf" id="d1">
+    <af:document title="Training_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
@@ -41,80 +41,66 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
-                                    <af:showDetailItem id="pane2" text="Team Setup">
+                                    <af:showDetailItem id="pane2" text="Training Setup">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1013px;">
-                                                        <af:showDetailItem id="tab1" text="Team Setup">
-                                                            <af:table value="#{bindings.Tbl_TeamView1.collectionModel}"
+                                                        <af:showDetailItem id="tab1" text="Training Setup">
+                                                            <af:table value="#{bindings.Tbl_TrainingView1.collectionModel}"
                                                                       var="row"
-                                                                      rows="#{bindings.Tbl_TeamView1.rangeSize}"
-                                                                      emptyText="#{bindings.Tbl_TeamView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rows="#{bindings.Tbl_TrainingView1.rangeSize}"
+                                                                      emptyText="#{bindings.Tbl_TrainingView1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                                                       rowBandingInterval="0"
-                                                                      selectedRowKeys="#{bindings.Tbl_TeamView1.collectionModel.selectedRow}"
-                                                                      selectionListener="#{bindings.Tbl_TeamView1.collectionModel.makeCurrent}"
+                                                                      selectedRowKeys="#{bindings.Tbl_TrainingView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.Tbl_TrainingView1.collectionModel.makeCurrent}"
                                                                       rowSelection="single"
-                                                                      fetchSize="#{bindings.Tbl_TeamView1.rangeSize}"
-                                                                      filterModel="#{bindings.Tbl_TeamView1Query.queryDescriptor}"
+                                                                      fetchSize="#{bindings.Tbl_TrainingView1.rangeSize}"
+                                                                      filterModel="#{bindings.Tbl_TrainingView1Query.queryDescriptor}"
                                                                       filterVisible="true"
-                                                                      queryListener="#{bindings.Tbl_TeamView1Query.processQuery}"
+                                                                      queryListener="#{bindings.Tbl_TrainingView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b6 ::b7 ::b8">
-                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.TeamId.name}"
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingView1.hints.TrainingId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TeamView1.hints.TeamId.label}"
+                                                                           headerText="#{bindings.Tbl_TrainingView1.hints.TrainingId.label}"
                                                                            id="c1">
-                                                                    <af:inputText value="#{row.bindings.TeamId.inputValue}"
-                                                                                  label="#{bindings.Tbl_TeamView1.hints.TeamId.label}"
-                                                                                  required="#{bindings.Tbl_TeamView1.hints.TeamId.mandatory}"
-                                                                                  columns="#{bindings.Tbl_TeamView1.hints.TeamId.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_TeamView1.hints.TeamId.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_TeamView1.hints.TeamId.tooltip}"
+                                                                    <af:inputText value="#{row.bindings.TrainingId.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingView1.hints.TrainingId.label}"
+                                                                                  required="#{bindings.Tbl_TrainingView1.hints.TrainingId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingView1.hints.TrainingId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingView1.hints.TrainingId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingView1.hints.TrainingId.tooltip}"
                                                                                   id="it1">
-                                                                        <f:validator binding="#{row.bindings.TeamId.validator}"/>
+                                                                        <f:validator binding="#{row.bindings.TrainingId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.TrainerId.name}"
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TeamView1.hints.TrainerId.label}"
+                                                                           headerText="#{bindings.Tbl_TrainingView1.hints.Name.label}"
                                                                            id="c2">
-                                                                    <af:inputText value="#{row.bindings.TrainerId.inputValue}"
-                                                                                  label="#{bindings.Tbl_TeamView1.hints.TrainerId.label}"
-                                                                                  required="#{bindings.Tbl_TeamView1.hints.TrainerId.mandatory}"
-                                                                                  columns="#{bindings.Tbl_TeamView1.hints.TrainerId.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_TeamView1.hints.TrainerId.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_TeamView1.hints.TrainerId.tooltip}"
-                                                                                  id="it2">
-                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TeamView1.hints.Name.label}"
-                                                                           id="c3">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
-                                                                                  label="#{bindings.Tbl_TeamView1.hints.Name.label}"
-                                                                                  required="#{bindings.Tbl_TeamView1.hints.Name.mandatory}"
-                                                                                  columns="#{bindings.Tbl_TeamView1.hints.Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_TeamView1.hints.Name.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_TeamView1.hints.Name.tooltip}"
-                                                                                  id="it3">
+                                                                                  label="#{bindings.Tbl_TrainingView1.hints.Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingView1.hints.Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingView1.hints.Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingView1.hints.Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingView1.hints.Name.tooltip}"
+                                                                                  id="it2">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.Ast.name}"
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TeamView1.hints.Ast.label}"
-                                                                           id="c4">
+                                                                           headerText="#{bindings.Tbl_TrainingView1.hints.Ast.label}"
+                                                                           id="c3">
                                                                     <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.Tbl_TeamView1.hints.Ast.label}"
-                                                                                  required="#{bindings.Tbl_TeamView1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.Tbl_TeamView1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_TeamView1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_TeamView1.hints.Ast.tooltip}"
-                                                                                  id="it4">
+                                                                                  label="#{bindings.Tbl_TrainingView1.hints.Ast.label}"
+                                                                                  required="#{bindings.Tbl_TrainingView1.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingView1.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingView1.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingView1.hints.Ast.tooltip}"
+                                                                                  id="it3">
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

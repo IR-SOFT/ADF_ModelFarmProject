@@ -14,7 +14,7 @@
   </af:xmlContent>
   <af:panelGridLayout id="pt_pgl1">
     <af:gridRow height="120px" id="pt_gr1">
-      <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1">
+      <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1" inlineStyle=" background-color:White; ">
         <!-- Header -->
         <h:panelGroup id="pt_pg1" style=" margin-top:10px; background-color:White; ">
           <af:spacer width="21" height="30" id="pt_s1"/>
