@@ -15,7 +15,8 @@
                                     <af:showDetailItem id="sdi1" text="Cert / Expo">
                                         <af:spacer width="190" height="10" id="s1"/>
                                         <af:button text="Certification Setup" id="b1" inlineStyle="width:190px;"
-                                                   destination="Certification_Setup.jsf"/>
+                                                   destination="Certification_Setup.jsf"
+                                                   icon="#{resource['images:policy.png']}"/>
                                         <af:spacer width="190" height="10" id="s3"/>
                                         <af:button id="b3" inlineStyle="width:190px;"/>
                                         <af:spacer width="190" height="10" id="s5"/>
@@ -99,16 +100,23 @@
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b4"
-                                                                   icon="#{resource['images:add.png']}"/>
-                                                    <af:button actionListener="#{bindings.Execute.execute}"
+                                                                   icon="#{resource['images:add.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b6" icon="#{resource['images:edit.png']}"/>
-                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               id="b6" icon="#{resource['images:edit.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}" id="b7"
-                                                               icon="#{resource['images:delete.png']}"/>
-                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                               icon="#{resource['images:delete.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="10" id="s7"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                disabled="#{!bindings.Commit.enabled}" id="b8"
-                                                               icon="#{resource['images:save.png']}"/>
+                                                               icon="#{resource['images:save.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
                                                     
                                                 </af:gridCell>
