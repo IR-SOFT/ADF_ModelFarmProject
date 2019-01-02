@@ -403,19 +403,17 @@
                                                                         <f:validator binding="#{row.bindings.Vtp.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_BeneficiaryView1.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.Tbl_BeneficiaryView1.hints.Ast.label}"
                                                                            id="c17">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.Tbl_BeneficiaryView1.hints.Ast.label}"
-                                                                                  required="#{bindings.Tbl_BeneficiaryView1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.Tbl_BeneficiaryView1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_BeneficiaryView1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_BeneficiaryView1.hints.Ast.tooltip}"
-                                                                                  id="it14">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.Tbl_BeneficiaryView1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_BeneficiaryView1.hints.Ast.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si4"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:spacer width="30" height="40" id="s14"/>

@@ -104,19 +104,17 @@
                                                                         <f:validator binding="#{row.bindings.FatherName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TrainerView1.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.Tbl_TrainerView1.hints.Ast.label}"
                                                                            id="c4">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.Tbl_TrainerView1.hints.Ast.label}"
-                                                                                  required="#{bindings.Tbl_TrainerView1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.Tbl_TrainerView1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_TrainerView1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_TrainerView1.hints.Ast.tooltip}"
-                                                                                  id="it4">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.Tbl_TrainerView1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TrainerView1.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
@@ -535,19 +533,17 @@
                                                                         <f:validator binding="#{row.bindings.Remarks.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TrainerPercView3.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.Tbl_TrainerPercView3.hints.Ast.label}"
                                                                            id="c18">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.Tbl_TrainerPercView3.hints.Ast.label}"
-                                                                                  required="#{bindings.Tbl_TrainerPercView3.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.Tbl_TrainerPercView3.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_TrainerPercView3.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_TrainerPercView3.hints.Ast.tooltip}"
-                                                                                  id="it29">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.Tbl_TrainerPercView3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TrainerPercView3.hints.Ast.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si2"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:spacer width="30" height="20" id="s11"/>
