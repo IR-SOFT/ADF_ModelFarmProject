@@ -16,6 +16,7 @@
           <Item Value="TrainerId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="Trainer_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

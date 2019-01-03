@@ -90,6 +90,18 @@
                                                                         <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Proj_Comp_Name.label}"
+                                                                           id="c24">
+                                                                    <af:inputText value="#{row.bindings.Proj_Comp_Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchMasterView1.hints.Proj_Comp_Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchMasterView1.hints.Proj_Comp_Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchMasterView1.hints.Proj_Comp_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchMasterView1.hints.Proj_Comp_Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.Proj_Comp_Name.tooltip}"
+                                                                                  id="it20">
+                                                                        <f:validator binding="#{row.bindings.Proj_Comp_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.label}"
@@ -102,6 +114,18 @@
                                                                                   shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.tooltip}"
                                                                                   id="it3">
                                                                         <f:validator binding="#{row.bindings.CourseId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Course_Name.label}"
+                                                                           id="c23">
+                                                                    <af:inputText value="#{row.bindings.Course_Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchMasterView1.hints.Course_Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchMasterView1.hints.Course_Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchMasterView1.hints.Course_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchMasterView1.hints.Course_Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.Course_Name.tooltip}"
+                                                                                  id="it19">
+                                                                        <f:validator binding="#{row.bindings.Course_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.ModuleId.name}"
@@ -118,6 +142,18 @@
                                                                         <f:validator binding="#{row.bindings.ModuleId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Module_Name.label}"
+                                                                           id="c22">
+                                                                    <af:inputText value="#{row.bindings.Module_Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchMasterView1.hints.Module_Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchMasterView1.hints.Module_Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchMasterView1.hints.Module_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchMasterView1.hints.Module_Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.Module_Name.tooltip}"
+                                                                                  id="it18">
+                                                                        <f:validator binding="#{row.bindings.Module_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.label}"
@@ -130,6 +166,18 @@
                                                                                   shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.tooltip}"
                                                                                   id="it5">
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Cluster_Name.label}"
+                                                                           id="c21">
+                                                                    <af:inputText value="#{row.bindings.Cluster_Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchMasterView1.hints.Cluster_Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchMasterView1.hints.Cluster_Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchMasterView1.hints.Cluster_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchMasterView1.hints.Cluster_Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.Cluster_Name.tooltip}"
+                                                                                  id="it17">
+                                                                        <f:validator binding="#{row.bindings.Cluster_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.TeamId.name}"
@@ -146,6 +194,18 @@
                                                                         <f:validator binding="#{row.bindings.TeamId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Team_Name.label}"
+                                                                           id="c20">
+                                                                    <af:inputText value="#{row.bindings.Team_Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchMasterView1.hints.Team_Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchMasterView1.hints.Team_Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchMasterView1.hints.Team_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchMasterView1.hints.Team_Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.Team_Name.tooltip}"
+                                                                                  id="it16">
+                                                                        <f:validator binding="#{row.bindings.Team_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainerId.label}"
@@ -158,6 +218,18 @@
                                                                                   shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainerId.tooltip}"
                                                                                   id="it7">
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.label}"
+                                                                           id="c19">
+                                                                    <af:inputText value="#{row.bindings.Trainer_Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.tooltip}"
+                                                                                  id="it15">
+                                                                        <f:validator binding="#{row.bindings.Trainer_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.Dated.name}"
@@ -311,6 +383,32 @@
                                                                       queryListener="#{bindings.Tbl_TrainingSchDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15">
+                                                               <af:column sortProperty="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.label}"
+                                                                           id="c17">
+                                                                    <af:inputText value="#{row.bindings.ClusterId.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.tooltip}"
+                                                                                  id="it13">
+                                                                        <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchDetailView3.hints.Cluster_Name.label}"
+                                                                           id="c18">
+                                                                    <af:inputText value="#{row.bindings.Cluster_Name.inputValue}"
+                                                                                  label="#{bindings.Tbl_TrainingSchDetailView3.hints.Cluster_Name.label}"
+                                                                                  required="#{bindings.Tbl_TrainingSchDetailView3.hints.Cluster_Name.mandatory}"
+                                                                                  columns="#{bindings.Tbl_TrainingSchDetailView3.hints.Cluster_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_TrainingSchDetailView3.hints.Cluster_Name.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_TrainingSchDetailView3.hints.Cluster_Name.tooltip}"
+                                                                                  id="it14">
+                                                                        <f:validator binding="#{row.bindings.Cluster_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchDetailView3.hints.TrainingSchDetailId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_TrainingSchDetailView3.hints.TrainingSchDetailId.label}"
@@ -359,20 +457,7 @@
                                                                         <af:convertDateTime pattern="#{bindings.Tbl_TrainingSchDetailView3.hints.DatedD.format}"/>
                                                                     </af:inputDate>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.label}"
-                                                                           id="c17">
-                                                                    <af:inputText value="#{row.bindings.ClusterId.inputValue}"
-                                                                                  label="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.label}"
-                                                                                  required="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.mandatory}"
-                                                                                  columns="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.tooltip}"
-                                                                                  id="it13">
-                                                                        <f:validator binding="#{row.bindings.ClusterId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
+                                                                
                                                             </af:table>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>

@@ -39,6 +39,25 @@
   <EntityUsage
     Name="Tbl_Team"
     Entity="model.eo.Tbl_Team"/>
+  <EntityUsage
+    Name="Tbl_Trainer"
+    Entity="model.eo.Tbl_Trainer"
+    Association="model.eo.FkTblTeamFkAssoc"
+    AssociationEnd="model.eo.FkTblTeamFkAssoc.Tbl_Trainer"
+    SourceUsage="model.vo.Tbl_TeamView.Tbl_Team"
+    Reference="true"
+    JoinType="INNER JOIN"
+    DeleteParticipant="false"
+    ReadOnly="true">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_Trainer.TrainerId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_Team.TrainerId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="TeamId"
     IsNotNull="true"
@@ -76,6 +95,23 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Trainer_Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_Trainer"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="TrainerId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TrainerId"
+    EntityUsage="Tbl_Trainer"
+    AliasName="TRAINER_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="TeamId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="Tbl_TrainingSchMasterView"
     ViewLink="model.vo.Fk5TblTrainingSchMasterFkLink"

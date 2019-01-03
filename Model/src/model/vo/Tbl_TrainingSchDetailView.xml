@@ -16,6 +16,25 @@
   <EntityUsage
     Name="Tbl_TrainingSchDetail"
     Entity="model.eo.Tbl_TrainingSchDetail"/>
+  <EntityUsage
+    Name="Tbl_Cluster"
+    Entity="model.eo.Tbl_Cluster"
+    Association="model.eo.Fk2TblTrainingSchDetailFkAssoc"
+    AssociationEnd="model.eo.Fk2TblTrainingSchDetailFkAssoc.Tbl_Cluster"
+    SourceUsage="model.vo.Tbl_TrainingSchDetailView.Tbl_TrainingSchDetail"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_Cluster.ClusterId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_TrainingSchDetail.ClusterId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="TrainingSchDetailId"
     IsNotNull="true"
@@ -44,6 +63,24 @@
     EntityAttrName="ClusterId"
     EntityUsage="Tbl_TrainingSchDetail"
     AliasName="CLUSTER_ID"/>
+  <ViewAttribute
+    Name="Cluster_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_Cluster"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="ClusterId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ClusterId"
+    EntityUsage="Tbl_Cluster"
+    AliasName="CLUSTER_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="TrainingSchDetailId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblClusterView"
     ViewLink="model.vo.FKTblTrainingSchDetailFKLink2"
