@@ -22,6 +22,7 @@
           <Item Value="Dated"/>
           <Item Value="Status"/>
           <Item Value="Remarks"/>
+          <Item Value="Supplier_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -33,6 +34,7 @@
           <Item Value="ItemL4Id"/>
           <Item Value="Rate"/>
           <Item Value="Ast"/>
+          <Item Value="L4_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

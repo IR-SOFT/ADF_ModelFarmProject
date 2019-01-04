@@ -165,19 +165,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblItemL1View1.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL1View1.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblItemL1View1.hints.Ast.label}"
                                                                            id="c24">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblItemL1View1.hints.Ast.label}"
-                                                                                  required="#{bindings.TblItemL1View1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblItemL1View1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblItemL1View1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblItemL1View1.hints.Ast.tooltip}"
-                                                                                  id="it18">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblItemL1View1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblItemL1View1.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                              <af:spacer width="50" height="30" id="s13"/>
@@ -260,19 +258,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblItemL2View3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL2View3.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblItemL2View3.hints.Ast.label}"
                                                                            id="c21">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblItemL2View3.hints.Ast.label}"
-                                                                                  required="#{bindings.TblItemL2View3.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblItemL2View3.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblItemL2View3.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblItemL2View3.hints.Ast.tooltip}"
-                                                                                  id="it15">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblItemL2View3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblItemL2View3.hints.Ast.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si2"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                              <af:spacer width="50" height="30" id="s12"/>
@@ -369,19 +365,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblItemL3View3.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL3View3.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblItemL3View3.hints.Ast.label}"
                                                                            id="c17">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblItemL3View3.hints.Ast.label}"
-                                                                                  required="#{bindings.TblItemL3View3.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblItemL3View3.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblItemL3View3.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblItemL3View3.hints.Ast.tooltip}"
-                                                                                  id="it11">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblItemL3View3.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblItemL3View3.hints.Ast.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si3"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                              <af:spacer width="50" height="30" id="s10"/>
@@ -492,19 +486,17 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblItemL4View41.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL4View41.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblItemL4View41.hints.Ast.label}"
                                                                            id="c12">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblItemL4View41.hints.Ast.label}"
-                                                                                  required="#{bindings.TblItemL4View41.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblItemL4View41.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblItemL4View41.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblItemL4View41.hints.Ast.tooltip}"
-                                                                                  id="it6">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblItemL4View41.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblItemL4View41.hints.Ast.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si4"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:spacer width="50" height="30" id="s7"/>

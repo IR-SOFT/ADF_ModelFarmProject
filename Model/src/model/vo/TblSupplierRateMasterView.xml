@@ -16,6 +16,25 @@
   <EntityUsage
     Name="TblSupplierRateMaster"
     Entity="model.eo.TblSupplierRateMaster"/>
+  <EntityUsage
+    Name="TblSupplier"
+    Entity="model.eo.TblSupplier"
+    Association="model.eo.FkTblSupplierRateMasterFkAssoc"
+    AssociationEnd="model.eo.FkTblSupplierRateMasterFkAssoc.TblSupplier"
+    SourceUsage="model.vo.TblSupplierRateMasterView.TblSupplierRateMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblSupplier.SupplierId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblSupplierRateMaster.SupplierId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="SupplierRateMasterId"
     IsNotNull="true"
@@ -49,6 +68,24 @@
     EntityAttrName="Remarks"
     EntityUsage="TblSupplierRateMaster"
     AliasName="REMARKS"/>
+  <ViewAttribute
+    Name="Supplier_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblSupplier"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="SupplierId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="SupplierId"
+    EntityUsage="TblSupplier"
+    AliasName="SUPPLIER_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="SupplierRateMasterId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblSupplierRateDetailView"
     ViewLink="model.vo.FkTblSupplierRateDetailFkLink"

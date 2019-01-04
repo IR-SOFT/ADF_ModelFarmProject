@@ -13,9 +13,51 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Active_Status1_1"
+    ViewObjectName="model.lov.Active_Status"
+    AMUsageName="AppModule"
+    ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="AppModule_Active_Status1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="astDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblSupplierRateDetail"
     Entity="model.eo.TblSupplierRateDetail"/>
+  <EntityUsage
+    Name="TblItemL4"
+    Entity="model.eo.TblItemL4"
+    Association="model.eo.Fk2TblSuplierRateDetailFkAssoc"
+    AssociationEnd="model.eo.Fk2TblSuplierRateDetailFkAssoc.TblItemL4"
+    SourceUsage="model.vo.TblSupplierRateDetailView.TblSupplierRateDetail"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblItemL4.ItemL4Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblSupplierRateDetail.ItemL4Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="SupplierRateDetailId"
     IsNotNull="true"
@@ -50,5 +92,31 @@
     PrecisionRule="true"
     EntityAttrName="Ast"
     EntityUsage="TblSupplierRateDetail"
-    AliasName="AST"/>
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="L4_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblItemL4"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="ItemL4Id1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL4Id"
+    EntityUsage="TblItemL4"
+    AliasName="ITEM_L4ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="SupplierRateDetailId"/>
+  </AttrArray>
 </ViewObject>

@@ -59,6 +59,32 @@
                                                                       queryListener="#{bindings.TblSupplierRateMasterView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b9 ::b10 ::b11">
+                                                                      <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
+                                                                           id="c2">
+                                                                    <af:inputText value="#{row.bindings.SupplierId.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
+                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.SupplierId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.label}"
+                                                                           id="c11">
+                                                                    <af:inputText value="#{row.bindings.Supplier_Name.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.label}"
+                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.tooltip}"
+                                                                                  id="it10">
+                                                                        <f:validator binding="#{row.bindings.Supplier_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.label}"
@@ -73,20 +99,7 @@
                                                                         <f:validator binding="#{row.bindings.SupplierRateMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
-                                                                           id="c2">
-                                                                    <af:inputText value="#{row.bindings.SupplierId.inputValue}"
-                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
-                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.mandatory}"
-                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.precision}"
-                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.tooltip}"
-                                                                                  id="it2">
-                                                                        <f:validator binding="#{row.bindings.SupplierId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Dated.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblSupplierRateMasterView1.hints.Dated.label}"
@@ -231,6 +244,18 @@
                                                                         <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.label}"
+                                                                           id="c12">
+                                                                    <af:inputText value="#{row.bindings.L4_Name.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.label}"
+                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.tooltip}"
+                                                                                  id="it9">
+                                                                        <f:validator binding="#{row.bindings.L4_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Rate.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblSupplierRateDetailView4.hints.Rate.label}"
@@ -247,19 +272,17 @@
                                                                                           pattern="#{bindings.TblSupplierRateDetailView4.hints.Rate.format}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Ast.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblSupplierRateDetailView4.hints.Ast.label}"
                                                                            id="c10">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.Ast.label}"
-                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.Ast.tooltip}"
-                                                                                  id="it9">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblSupplierRateDetailView4.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblSupplierRateDetailView4.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
