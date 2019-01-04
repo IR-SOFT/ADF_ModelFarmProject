@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblItemL3"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_ITEM_L3"
+  AliasName="TblItemL3"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ItemL3Id"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ITEM_L3_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L3"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ItemL2Id"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ITEM_L2_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L3">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ItemL1Id"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ITEM_L1_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L3">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L3">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_ITEM_L3"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblItemL1"
+    Association="model.eo.Fk2TblItemL2FkAssoc"
+    AssociationEnd="model.eo.Fk2TblItemL2FkAssoc.TblItemL1"
+    AssociationOtherEnd="model.eo.Fk2TblItemL2FkAssoc.TblItemL3"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblItemL2"
+    Association="model.eo.FkTblItemL3FkAssoc"
+    AssociationEnd="model.eo.FkTblItemL3FkAssoc.TblItemL2"
+    AssociationOtherEnd="model.eo.FkTblItemL3FkAssoc.TblItemL3"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblItemL4"
+    Association="model.eo.FkTblItemL4FkAssoc"
+    AssociationEnd="model.eo.FkTblItemL4FkAssoc.TblItemL4"
+    AssociationOtherEnd="model.eo.FkTblItemL4FkAssoc.TblItemL3"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblItemL3Pk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_ITEM_L3_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL3.ItemL3Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblItemL3Uk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_ITEM_L3_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL3.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Fk2TblItemL2Fk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_ITEM_L1_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK2_TBL_ITEM_L2_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL3.ItemL1Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblItemL3Fk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_ITEM_L2_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_ITEM_L3_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL3.ItemL2Id"/>
+    </AttrArray>
+  </Key>
+</Entity>

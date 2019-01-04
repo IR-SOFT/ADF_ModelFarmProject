@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblItemL4"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_ITEM_L4"
+  AliasName="TblItemL4"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ItemL4Id"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ITEM_L4_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L4"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ItemL3Id"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ITEM_L3_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L4">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ItemL2Id"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ITEM_L2_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L4">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ItemL1Id"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ITEM_L1_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L4">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ITEM_L4">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_ITEM_L4"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblItemL2"
+    Association="model.eo.Fk2TblItemL3FkAssoc"
+    AssociationEnd="model.eo.Fk2TblItemL3FkAssoc.TblItemL2"
+    AssociationOtherEnd="model.eo.Fk2TblItemL3FkAssoc.TblItemL4"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblItemL1"
+    Association="model.eo.Fk3TblItemL2FkAssoc"
+    AssociationEnd="model.eo.Fk3TblItemL2FkAssoc.TblItemL1"
+    AssociationOtherEnd="model.eo.Fk3TblItemL2FkAssoc.TblItemL4"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblItemL3"
+    Association="model.eo.FkTblItemL4FkAssoc"
+    AssociationEnd="model.eo.FkTblItemL4FkAssoc.TblItemL3"
+    AssociationOtherEnd="model.eo.FkTblItemL4FkAssoc.TblItemL4"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblSupplierRateDetail"
+    Association="model.eo.Fk2TblSuplierRateDetailFkAssoc"
+    AssociationEnd="model.eo.Fk2TblSuplierRateDetailFkAssoc.TblSupplierRateDetail"
+    AssociationOtherEnd="model.eo.Fk2TblSuplierRateDetailFkAssoc.TblItemL4"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblItemL4Pk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_ITEM_L4_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL4.ItemL4Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblItemL4Uk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_ITEM_L4_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL4.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Fk2TblItemL3Fk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_ITEM_L2_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK2_TBL_ITEM_L3_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL4.ItemL2Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Fk3TblItemL2Fk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_ITEM_L1_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK3_TBL_ITEM_L2_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL4.ItemL1Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblItemL4Fk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_ITEM_L3_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_ITEM_L4_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblItemL4.ItemL3Id"/>
+    </AttrArray>
+  </Key>
+</Entity>

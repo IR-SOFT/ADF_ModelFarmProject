@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblLibrMaster"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_LIBR_MASTER"
+  AliasName="TblLibrMaster"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="LibrMasterId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="LIBR_MASTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_LIBR_MASTER"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Name"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_LIBR_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblLibrDetail"
+    Association="model.eo.Fk2TblLibrDetailFkAssoc"
+    AssociationEnd="model.eo.Fk2TblLibrDetailFkAssoc.TblLibrDetail"
+    AssociationOtherEnd="model.eo.Fk2TblLibrDetailFkAssoc.TblLibrMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblLibrMasterPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_LIBR_MASTER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblLibrMaster.LibrMasterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblLibrMasterUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_LIBR_MASTER_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblLibrMaster.Name"/>
+    </AttrArray>
+  </Key>
+</Entity>

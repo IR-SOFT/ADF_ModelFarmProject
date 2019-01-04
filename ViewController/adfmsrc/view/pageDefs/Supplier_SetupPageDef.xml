@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Supplier_SetupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblSupplierView1" RangeSize="25" DataControl="AppModuleDataControl" id="TblSupplierView1Iterator"/>
+    <searchRegion Binds="TblSupplierView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSupplierView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblSupplierView1Iterator" id="TblSupplierView1">
+      <nodeDefinition DefName="model.vo.TblSupplierView" Name="TblSupplierView10">
+        <AttrNames>
+          <Item Value="SupplierId"/>
+          <Item Value="Name"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Payee">
+      <AttrNames>
+        <Item Value="Payee"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="ConPer">
+      <AttrNames>
+        <Item Value="ConPer"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Designation">
+      <AttrNames>
+        <Item Value="Designation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Cnic">
+      <AttrNames>
+        <Item Value="Cnic"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Ntn">
+      <AttrNames>
+        <Item Value="Ntn"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Telephone">
+      <AttrNames>
+        <Item Value="Telephone"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Mobile">
+      <AttrNames>
+        <Item Value="Mobile"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Email">
+      <AttrNames>
+        <Item Value="Email"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Url">
+      <AttrNames>
+        <Item Value="Url"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="Address">
+      <AttrNames>
+        <Item Value="Address"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="TblSupplierView1Iterator" id="LibrDetailId">
+      <AttrNames>
+        <Item Value="LibrDetailId"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="TblSupplierView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="TblSupplierView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="TblSupplierView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="TblSupplierView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action IterBinding="TblSupplierView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblSupplierView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

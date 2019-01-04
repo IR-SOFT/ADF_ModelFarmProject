@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="Supplier_Rate_Setup.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
+                           <af:panelAccordion discloseMany="false" id="pa4" inlineStyle="width:195px; height:431px;">
+                        <af:showDetailItem id="sdi1" text="Setups">
+                            <af:spacer width="190" height="10" id="s1"/>
+                            <af:button text="Program" id="b1" inlineStyle="width:190px;"
+                                       destination="Program.jsf" icon="#{resource['images:program.png']}"/>
+                            <af:spacer width="190" height="10" id="s3"/>
+                            <af:button text="Project" id="b3" inlineStyle="width:190px;" destination="Project.jsf"
+                                       icon="#{resource['images:projects.png']}"/>
+                            <af:spacer width="190" height="10" id="s5"/>
+                            <af:button text="Project Crops" id="b5" inlineStyle="width:190px;"
+                                       destination="Project_Crops.jsf" icon="#{resource['images:crops.png']}"/>
+                            <af:spacer width="190" height="10" id="s2"/>
+                            <af:button text="Machinery Setup" id="b2" inlineStyle="width:190px;"
+                                       destination="Machinery_Setup.jsf" icon="#{resource['images:crops.png']}"/>
+                            <af:spacer width="190" height="10" id="s4"/>
+                            <af:button text="Supplier Setup" id="b4" inlineStyle="width:190px;"
+                                       destination="Supplier_Setup.jsf" icon="#{resource['images:crops.png']}"/>
+                            <af:spacer width="190" height="10" id="s6"/>
+                            <af:button text="Supplier Rate Setup" id="b6" inlineStyle="width:190px;"
+                                       destination="Supplier_Rate_Setup.jsf" icon="#{resource['images:crops.png']}"/>
+                        </af:showDetailItem>
+                    </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   inlineStyle="height:811px; width:1050px;">
+                                    <af:showDetailItem id="pane2" text="Supplier_Rate_Setup">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1030px;">
+                                                        <af:showDetailItem id="tab1" text="Supplier Rate Master">
+                                                            <af:table value="#{bindings.TblSupplierRateMasterView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblSupplierRateMasterView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblSupplierRateMasterView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblSupplierRateMasterView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblSupplierRateMasterView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblSupplierRateMasterView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblSupplierRateMasterView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblSupplierRateMasterView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      partialTriggers="::b9 ::b10 ::b11">
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.label}"
+                                                                           id="c1">
+                                                                    <af:inputText value="#{row.bindings.SupplierRateMasterId.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.label}"
+                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.SupplierRateMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
+                                                                           id="c2">
+                                                                    <af:inputText value="#{row.bindings.SupplierId.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
+                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.SupplierId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Dated.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.Dated.label}"
+                                                                           id="c3">
+                                                                    <f:facet name="filter">
+                                                                        <af:inputDate value="#{bindings.TblSupplierRateMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
+                                                                                      id="id1">
+                                                                            <af:convertDateTime pattern="#{bindings.TblSupplierRateMasterView1.hints.Dated.format}"/>
+                                                                        </af:inputDate>
+                                                                    </f:facet>
+                                                                    <af:inputDate value="#{row.bindings.Dated.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.Dated.label}"
+                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.Dated.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.Dated.displayWidth}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.Dated.tooltip}"
+                                                                                  id="id2">
+                                                                        <f:validator binding="#{row.bindings.Dated.validator}"/>
+                                                                        <af:convertDateTime pattern="#{bindings.TblSupplierRateMasterView1.hints.Dated.format}"/>
+                                                                    </af:inputDate>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Status.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.Status.label}"
+                                                                           id="c4">
+                                                                    <af:inputText value="#{row.bindings.Status.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.Status.label}"
+                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.Status.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.Status.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateMasterView1.hints.Status.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.Status.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.Status.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblSupplierRateMasterView1.hints.Status.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Remarks.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.Remarks.label}"
+                                                                           id="c5">
+                                                                    <af:inputText value="#{row.bindings.Remarks.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateMasterView1.hints.Remarks.label}"
+                                                                                  required="#{bindings.TblSupplierRateMasterView1.hints.Remarks.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateMasterView1.hints.Remarks.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateMasterView1.hints.Remarks.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateMasterView1.hints.Remarks.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Remarks.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                    <af:spacer width="200" height="20" id="s8"/>
+                                                    <h:panelGroup id="pg1">
+                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="Add"
+                                                               icon="#{resource['images:add.png']}"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b9"/>
+                                                        <af:spacer width="5" height="10" id="s9"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                               icon="#{resource['images:edit.png']}"
+                                                               id="b10"/>
+                                                        <af:spacer width="5" height="10" id="s10"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                    icon="#{resource['images:delete.png']}"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b11"/>
+                                                        <af:spacer width="5" height="10" id="s11"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                    icon="#{resource['images:save.png']}"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b12"/>
+                                                    </h:panelGroup>
+                                                   
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"/>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:1032px;">
+                                                        <af:showDetailItem id="tab2" text="Supplier Rate Detail">
+                                                            <af:table value="#{bindings.TblSupplierRateDetailView4.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblSupplierRateDetailView4.rangeSize}"
+                                                                      emptyText="#{bindings.TblSupplierRateDetailView4.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblSupplierRateDetailView4.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblSupplierRateDetailView4.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblSupplierRateDetailView4.rangeSize}"
+                                                                      filterModel="#{bindings.TblSupplierRateDetailView4Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblSupplierRateDetailView4Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b13 ::b14 ::b15">
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.label}"
+                                                                           id="c6">
+                                                                    <af:inputText value="#{row.bindings.SupplierRateDetailId.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.label}"
+                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.SupplierRateDetailId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.label}"
+                                                                           id="c7">
+                                                                    <af:inputText value="#{row.bindings.SupplierRateMasterId.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.label}"
+                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.tooltip}"
+                                                                                  id="it6">
+                                                                        <f:validator binding="#{row.bindings.SupplierRateMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.label}"
+                                                                           id="c8">
+                                                                    <af:inputText value="#{row.bindings.ItemL4Id.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.label}"
+                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.tooltip}"
+                                                                                  id="it7">
+                                                                        <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Rate.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.Rate.label}"
+                                                                           id="c9">
+                                                                    <af:inputText value="#{row.bindings.Rate.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.Rate.label}"
+                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.Rate.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.Rate.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.Rate.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.Rate.tooltip}"
+                                                                                  id="it8">
+                                                                        <f:validator binding="#{row.bindings.Rate.validator}"/>
+                                                                        <af:convertNumber groupingUsed="false"
+                                                                                          pattern="#{bindings.TblSupplierRateDetailView4.hints.Rate.format}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.Ast.label}"
+                                                                           id="c10">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblSupplierRateDetailView4.hints.Ast.label}"
+                                                                                  required="#{bindings.TblSupplierRateDetailView4.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblSupplierRateDetailView4.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblSupplierRateDetailView4.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblSupplierRateDetailView4.hints.Ast.tooltip}"
+                                                                                  id="it9">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
+                                                    <af:spacer width="200" height="20" id="s7"/>
+                                                    <h:panelGroup id="pg2">
+                                                        <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                               text="Add"
+                                                               icon="#{resource['images:add.png']}"
+                                                               disabled="#{!bindings.CreateInsert1.enabled}" id="b13"/>
+                                                        <af:spacer width="5" height="10" id="s12"/>
+                                                        <af:button actionListener="#{bindings.Execute1.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute1.enabled}"
+                                                               icon="#{resource['images:edit.png']}"
+                                                               id="b14"/>
+                                                        <af:spacer width="5" height="10" id="s13"/>
+                                                        <af:button actionListener="#{bindings.Delete1.execute}"
+                                                               text="Delete" disabled="#{!bindings.Delete1.enabled}"
+                                                               icon="#{resource['images:delete.png']}"
+                                                               id="b15"/>
+                                                        <af:spacer width="5" height="10" id="s14"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                    icon="#{resource['images:save.png']}"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b16"/>
+                                                    </h:panelGroup>
+                                                    
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                        
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

@@ -26,6 +26,9 @@
     <page path="/Trainer.jsf" usageId="view_TrainerPageDef"/>
     <page path="/Training_Setup.jsf" usageId="view_Training_SetupPageDef"/>
     <page path="/Training_Sched.jsf" usageId="view_Training_SchedPageDef"/>
+    <page path="/Supplier_Setup.jsf" usageId="view_Supplier_SetupPageDef"/>
+    <page path="/Supplier_Rate_Setup.jsf" usageId="view_Supplier_Rate_SetupPageDef"/>
+    <page path="/Machinery_Setup.jsf" usageId="view_Machinery_SetupPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -50,6 +53,9 @@
     <page id="view_TrainerPageDef" path="view.pageDefs.TrainerPageDef"/>
     <page id="view_Training_SetupPageDef" path="view.pageDefs.Training_SetupPageDef"/>
     <page id="view_Training_SchedPageDef" path="view.pageDefs.Training_SchedPageDef"/>
+    <page id="view_Supplier_SetupPageDef" path="view.pageDefs.Supplier_SetupPageDef"/>
+    <page id="view_Supplier_Rate_SetupPageDef" path="view.pageDefs.Supplier_Rate_SetupPageDef"/>
+    <page id="view_Machinery_SetupPageDef" path="view.pageDefs.Machinery_SetupPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Supplier_Rate_SetupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblSupplierRateMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblSupplierRateMasterView1Iterator"/>
+    <searchRegion Binds="TblSupplierRateMasterView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSupplierRateMasterView1Query"/>
+    <iterator Binds="TblSupplierRateDetailView4" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblSupplierRateDetailView4Iterator"/>
+    <searchRegion Binds="TblSupplierRateDetailView4Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblSupplierRateDetailView4Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="TblSupplierRateMasterView1Iterator" id="TblSupplierRateMasterView1">
+      <nodeDefinition DefName="model.vo.TblSupplierRateMasterView" Name="TblSupplierRateMasterView10">
+        <AttrNames>
+          <Item Value="SupplierRateMasterId"/>
+          <Item Value="SupplierId"/>
+          <Item Value="Dated"/>
+          <Item Value="Status"/>
+          <Item Value="Remarks"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblSupplierRateDetailView4Iterator" id="TblSupplierRateDetailView4">
+      <nodeDefinition DefName="model.vo.TblSupplierRateDetailView" Name="TblSupplierRateDetailView40">
+        <AttrNames>
+          <Item Value="SupplierRateDetailId"/>
+          <Item Value="SupplierRateMasterId"/>
+          <Item Value="ItemL4Id"/>
+          <Item Value="Rate"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblSupplierRateMasterView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblSupplierRateMasterView1Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblSupplierRateMasterView1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblSupplierRateDetailView4Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblSupplierRateDetailView4Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblSupplierRateDetailView4Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>
