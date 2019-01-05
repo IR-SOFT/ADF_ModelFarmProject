@@ -39,6 +39,44 @@
   <EntityUsage
     Name="TblItemL3"
     Entity="model.eo.TblItemL3"/>
+  <EntityUsage
+    Name="TblItemL2"
+    Entity="model.eo.TblItemL2"
+    Association="model.eo.FkTblItemL3FkAssoc"
+    AssociationEnd="model.eo.FkTblItemL3FkAssoc.TblItemL2"
+    SourceUsage="model.vo.TblItemL3View.TblItemL3"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblItemL2.ItemL2Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblItemL3.ItemL2Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblItemL1"
+    Entity="model.eo.TblItemL1"
+    Association="model.eo.Fk2TblItemL2FkAssoc"
+    AssociationEnd="model.eo.Fk2TblItemL2FkAssoc.TblItemL1"
+    SourceUsage="model.vo.TblItemL3View.TblItemL3"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblItemL1.ItemL1Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblItemL3.ItemL1Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ItemL3Id"
     IsNotNull="true"
@@ -83,6 +121,39 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="L2_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblItemL2"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ItemL2Id1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL2Id"
+    EntityUsage="TblItemL2"
+    AliasName="ITEM_L2ID1"/>
+  <ViewAttribute
+    Name="L1_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblItemL1"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ItemL1Id1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL1Id"
+    EntityUsage="TblItemL1"
+    AliasName="ITEM_L1ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ItemL3Id"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblItemL4View"
     ViewLink="model.vo.FkTblItemL4FkLink"

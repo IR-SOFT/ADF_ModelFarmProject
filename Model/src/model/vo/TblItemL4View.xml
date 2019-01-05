@@ -39,6 +39,63 @@
   <EntityUsage
     Name="TblItemL4"
     Entity="model.eo.TblItemL4"/>
+  <EntityUsage
+    Name="TblItemL1"
+    Entity="model.eo.TblItemL1"
+    Association="model.eo.Fk3TblItemL2FkAssoc"
+    AssociationEnd="model.eo.Fk3TblItemL2FkAssoc.TblItemL1"
+    SourceUsage="model.vo.TblItemL4View.TblItemL4"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblItemL1.ItemL1Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblItemL4.ItemL1Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblItemL2"
+    Entity="model.eo.TblItemL2"
+    Association="model.eo.Fk2TblItemL3FkAssoc"
+    AssociationEnd="model.eo.Fk2TblItemL3FkAssoc.TblItemL2"
+    SourceUsage="model.vo.TblItemL4View.TblItemL4"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblItemL2.ItemL2Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblItemL4.ItemL2Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblItemL3"
+    Entity="model.eo.TblItemL3"
+    Association="model.eo.FkTblItemL4FkAssoc"
+    AssociationEnd="model.eo.FkTblItemL4FkAssoc.TblItemL3"
+    SourceUsage="model.vo.TblItemL4View.TblItemL4"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblItemL3.ItemL3Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblItemL4.ItemL3Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ItemL4Id"
     IsNotNull="true"
@@ -90,6 +147,54 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="L1_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblItemL1"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ItemL1Id1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL1Id"
+    EntityUsage="TblItemL1"
+    AliasName="ITEM_L1ID1"/>
+  <ViewAttribute
+    Name="L2_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblItemL2"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ItemL2Id1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL2Id"
+    EntityUsage="TblItemL2"
+    AliasName="ITEM_L2ID1"/>
+  <ViewAttribute
+    Name="L3_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblItemL3"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ItemL3Id1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL3Id"
+    EntityUsage="TblItemL3"
+    AliasName="ITEM_L3ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ItemL4Id"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblSupplierRateDetailView"
     ViewLink="model.vo.Fk2TblSuplierRateDetailFkLink"

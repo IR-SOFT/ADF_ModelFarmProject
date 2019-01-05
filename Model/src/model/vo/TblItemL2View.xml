@@ -39,6 +39,25 @@
   <EntityUsage
     Name="TblItemL2"
     Entity="model.eo.TblItemL2"/>
+  <EntityUsage
+    Name="TblItemL1"
+    Entity="model.eo.TblItemL1"
+    Association="model.eo.FkTblItemL2FkAssoc"
+    AssociationEnd="model.eo.FkTblItemL2FkAssoc.TblItemL1"
+    SourceUsage="model.vo.TblItemL2View.TblItemL2"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblItemL1.ItemL1Id"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblItemL2.ItemL1Id"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="ItemL2Id"
     IsNotNull="true"
@@ -76,6 +95,24 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="L1_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblItemL1"
+    AliasName="NAME1"/>
+  <ViewAttribute
+    Name="ItemL1Id1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ItemL1Id"
+    EntityUsage="TblItemL1"
+    AliasName="ITEM_L1ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ItemL2Id"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblItemL3View"
     ViewLink="model.vo.FkTblItemL3FkLink"
