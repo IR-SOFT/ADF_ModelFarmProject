@@ -39,6 +39,44 @@
   <EntityUsage
     Name="TblClusterTargetCrops"
     Entity="model.eo.TblClusterTargetCrops"/>
+  <EntityUsage
+    Name="TblClusterProjOff"
+    Entity="model.eo.TblClusterProjOff"
+    Association="model.eo.FkTblTargetCropsFkAssoc"
+    AssociationEnd="model.eo.FkTblTargetCropsFkAssoc.TblClusterProjOff"
+    SourceUsage="model.vo.TblClusterTargetCropsView.TblClusterTargetCrops"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblClusterProjOff.ProjOffId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblClusterTargetCrops.ProjOffId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <EntityUsage
+    Name="TblClusterCrop"
+    Entity="model.eo.TblClusterCrop"
+    Association="model.eo.Fk2TblTargetCropsFkAssoc"
+    AssociationEnd="model.eo.Fk2TblTargetCropsFkAssoc.TblClusterCrop"
+    SourceUsage="model.vo.TblClusterTargetCropsView.TblClusterTargetCrops"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.TblClusterCrop.CropId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.TblClusterTargetCrops.CropId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
   <ViewAttribute
     Name="TargetCropsId"
     IsNotNull="true"
@@ -82,6 +120,39 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="Project_Office_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblClusterProjOff"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="ProjOffId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjOffId"
+    EntityUsage="TblClusterProjOff"
+    AliasName="PROJ_OFF_ID1"/>
+  <ViewAttribute
+    Name="Crop_Name"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="TblClusterCrop"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="CropId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CropId"
+    EntityUsage="TblClusterCrop"
+    AliasName="CROP_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="TargetCropsId"/>
+  </AttrArray>
   <ViewLinkAccessor
     Name="TblCropView"
     ViewLink="model.vo.FKTblClusterTargetCropsFKLink"

@@ -39,6 +39,8 @@
           <Item Value="CropId"/>
           <Item Value="TarDis"/>
           <Item Value="Ast"/>
+          <Item Value="Project_Office_Name"/>
+          <Item Value="Crop_Name"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

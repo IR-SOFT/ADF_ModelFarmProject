@@ -61,8 +61,8 @@
                                                                       partialTriggers="::b9 ::b10 ::b11">
                                                                       <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
-                                                                           id="c2">
+                                                                           headerText="Supplier ID" align="center"
+                                                                           id="c2" width="70">
                                                                     <af:inputText value="#{row.bindings.SupplierId.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.label}"
                                                                                   required="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.mandatory}"
@@ -74,7 +74,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.label}"
-                                                                           id="c11">
+                                                                           id="c11" width="130" align="center">
                                                                     <af:inputText value="#{row.bindings.Supplier_Name.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.label}"
                                                                                   required="#{bindings.TblSupplierRateMasterView1.hints.Supplier_Name.mandatory}"
@@ -86,9 +86,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.label}"
-                                                                           id="c1">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Suuplier Rate Master ID"
+                                                                           id="c1" width="86">
                                                                     <af:inputText value="#{row.bindings.SupplierRateMasterId.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.label}"
                                                                                   required="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.mandatory}"
@@ -101,9 +101,9 @@
                                                                 </af:column>
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Dated.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblSupplierRateMasterView1.hints.Dated.label}"
-                                                                           id="c3">
+                                                                           id="c3" width="114">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.TblSupplierRateMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                                                       id="id1">
@@ -121,9 +121,9 @@
                                                                     </af:inputDate>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Status.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblSupplierRateMasterView1.hints.Status.label}"
-                                                                           id="c4">
+                                                                           id="c4" width="100">
                                                                     <af:inputText value="#{row.bindings.Status.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateMasterView1.hints.Status.label}"
                                                                                   required="#{bindings.TblSupplierRateMasterView1.hints.Status.mandatory}"
@@ -137,9 +137,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Remarks.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblSupplierRateMasterView1.hints.Remarks.label}"
-                                                                           id="c5">
+                                                                           id="c5" width="259">
                                                                     <af:inputText value="#{row.bindings.Remarks.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateMasterView1.hints.Remarks.label}"
                                                                                   required="#{bindings.TblSupplierRateMasterView1.hints.Remarks.mandatory}"
@@ -203,9 +203,9 @@
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15">
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.label}"
-                                                                           id="c6">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Supplier Rate Detail ID"
+                                                                           id="c6" width="85">
                                                                     <af:inputText value="#{row.bindings.SupplierRateDetailId.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.label}"
                                                                                   required="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.mandatory}"
@@ -217,9 +217,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.label}"
-                                                                           id="c7">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Supplier Rate Master ID"
+                                                                           id="c7" width="85">
                                                                     <af:inputText value="#{row.bindings.SupplierRateMasterId.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.label}"
                                                                                   required="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateMasterId.mandatory}"
@@ -232,8 +232,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.label}"
-                                                                           id="c8">
+                                                                           headerText="L4 ID" align="center"
+                                                                           id="c8" width="55">
                                                                     <af:inputText value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.label}"
                                                                                   required="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.mandatory}"
@@ -244,8 +244,8 @@
                                                                         <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.label}"
-                                                                           id="c12">
+                                                                <af:column headerText="L4 Name" align="center"
+                                                                           id="c12" width="175">
                                                                     <af:inputText value="#{row.bindings.L4_Name.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.label}"
                                                                                   required="#{bindings.TblSupplierRateDetailView4.hints.L4_Name.mandatory}"
@@ -257,9 +257,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Rate.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblSupplierRateDetailView4.hints.Rate.label}"
-                                                                           id="c9">
+                                                                           id="c9" width="91">
                                                                     <af:inputText value="#{row.bindings.Rate.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateDetailView4.hints.Rate.label}"
                                                                                   required="#{bindings.TblSupplierRateDetailView4.hints.Rate.mandatory}"
@@ -273,7 +273,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblSupplierRateDetailView4.hints.Ast.label}"
-                                                                           id="c10">
+                                                                           id="c10" width="109" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblSupplierRateDetailView4.hints.Ast.mandatory}"

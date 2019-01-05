@@ -61,43 +61,44 @@
                                                                       partialTriggers="::b8 ::b9 ::b10">
                                                                       
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL1Id.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblItemL4View4.hints.ItemL1Id.label}"
-                                                                           id="c4">
+                                                                           filterable="true" align="center"
+                                                                           headerText="L1 ID"
+                                                                           id="c4" width="54">
                                                                     <af:outputText value="#{row.ItemL1Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL1Id.tooltip}"
                                                                                    id="ot4"/>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL4View4.hints.L1_Name.label}"
-                                                                           id="c33">
+                                                                <af:column headerText="L1 Name"
+                                                                           id="c33" width="105" align="center">
                                                                     <af:outputText value="#{row.L1_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L1_Name.tooltip}"
                                                                                    id="ot9"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL2Id.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblItemL4View4.hints.ItemL2Id.label}"
-                                                                           id="c3">
+                                                                           filterable="true" align="center"
+                                                                           headerText="L2 ID"
+                                                                           id="c3" width="65">
                                                                     <af:outputText value="#{row.ItemL2Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL2Id.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL4View4.hints.L2_Name.label}"
-                                                                           id="c32">
+                                                                <af:column headerText="L2 Name"
+                                                                           id="c32" width="109" align="center">
                                                                     <af:outputText value="#{row.L2_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L2_Name.tooltip}"
                                                                                    id="ot8"/>
                                                                 </af:column>
                                                                       <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL3Id.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblItemL4View4.hints.ItemL3Id.label}"
-                                                                           id="c2">
+                                                                           headerText="L3 ID"
+                                                                            align="center"
+                                                                           id="c2" width="53">
                                                                     <af:outputText value="#{row.ItemL3Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL3Id.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL4View4.hints.L3_Name.label}"
-                                                                           id="c31">
+                                                                <af:column headerText="L3 Name"
+                                                                           id="c31" width="116" align="center">
                                                                     <af:outputText value="#{row.L3_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L3_Name.tooltip}"
                                                                                    id="ot7"/>
@@ -105,8 +106,9 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL4Id.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblItemL4View4.hints.ItemL4Id.label}"
-                                                                           id="c1">
+                                                                            align="center"
+                                                                           headerText="L4 ID"
+                                                                           id="c1" width="65">
                                                                     <af:outputText value="#{row.ItemL4Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL4Id.tooltip}"
                                                                                    id="ot1"/>
@@ -114,16 +116,18 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblItemL4View4.hints.Name.label}"
-                                                                           id="c5">
+                                                                           headerText="L4 Name"
+                                                                            align="center"
+                                                                           id="c5" width="126">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Name.tooltip}"
                                                                                    id="ot5"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Ast.name}"
                                                                            filterable="true"
+                                                                            align="center"
                                                                            headerText="#{bindings.TblItemL4View4.hints.Ast.label}"
-                                                                           id="c6">
+                                                                           id="c6" width="62">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Ast.tooltip}"
                                                                                    id="ot6"/>
@@ -160,7 +164,7 @@
                                                                       partialTriggers="::b20 ::b21 ::b22">
                                                                 <af:column sortProperty="#{bindings.TblItemL1View1.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL1View1.hints.ItemL1Id.label}"
+                                                                           headerText="L1 ID" align="center"
                                                                            id="c22">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL1View1.hints.ItemL1Id.label}"
@@ -173,7 +177,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL1View1.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblItemL1View1.hints.Name.label}"
                                                                            id="c23">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
@@ -187,7 +191,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblItemL1View1.hints.Ast.label}"
-                                                                           id="c24">
+                                                                           id="c24" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL1View1.hints.Ast.mandatory}"
@@ -239,8 +243,8 @@
                                                                       partialTriggers="::b16 ::b17 ::b18">
                                                                <af:column sortProperty="#{bindings.TblItemL2View3.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL2View3.hints.ItemL1Id.label}"
-                                                                           id="c19">
+                                                                           headerText="L1 ID"
+                                                                           id="c19" width="58" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.ItemL1Id.mandatory}"
@@ -251,8 +255,8 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL2View3.hints.L1_Name.label}"
-                                                                           id="c25">
+                                                                <af:column headerText="L1 Name"
+                                                                           id="c25" width="142" align="center">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.L1_Name.mandatory}"
@@ -265,8 +269,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL2View3.hints.ItemL2Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL2View3.hints.ItemL2Id.label}"
-                                                                           id="c18">
+                                                                           headerText="L2 ID"
+                                                                           id="c18" width="55" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.ItemL2Id.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.ItemL2Id.mandatory}"
@@ -280,8 +284,8 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL2View3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL2View3.hints.Name.label}"
-                                                                           id="c20">
+                                                                           headerText="L2 Name"
+                                                                           id="c20" width="145" align="center">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.Name.mandatory}"
@@ -293,7 +297,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblItemL2View3.hints.Ast.label}"
-                                                                           id="c21">
+                                                                           id="c21" width="100" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL2View3.hints.Ast.mandatory}"
@@ -345,8 +349,8 @@
                                                                       partialTriggers="::b12 ::b13 ::b14">
                                                                       <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL3View3.hints.ItemL1Id.label}"
-                                                                           id="c15">
+                                                                           headerText="L1 ID"
+                                                                           id="c15" width="47" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.ItemL1Id.mandatory}"
@@ -357,8 +361,8 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL3View3.hints.L1_Name.label}"
-                                                                           id="c27">
+                                                                <af:column headerText="L1 Name"
+                                                                           id="c27" width="153" align="center">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.L1_Name.mandatory}"
@@ -371,8 +375,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL2Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL3View3.hints.ItemL2Id.label}"
-                                                                           id="c14">
+                                                                           headerText="L2 ID"
+                                                                           id="c14" width="52" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL2Id.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.ItemL2Id.mandatory}"
@@ -383,8 +387,8 @@
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL3View3.hints.L2_Name.label}"
-                                                                           id="c26">
+                                                                <af:column headerText="L2 Name"
+                                                                           id="c26" width="148" align="center">
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L2_Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.L2_Name.mandatory}"
@@ -398,8 +402,8 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL3Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL3View3.hints.ItemL3Id.label}"
-                                                                           id="c13">
+                                                                           headerText="L3 ID"
+                                                                           id="c13" width="64" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL3Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL3Id.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.ItemL3Id.mandatory}"
@@ -412,8 +416,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL3View3.hints.Name.label}"
-                                                                           id="c16">
+                                                                           headerText="L3 Name"
+                                                                           id="c16" width="136" align="center">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.Name.mandatory}"
@@ -425,7 +429,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblItemL3View3.hints.Ast.label}"
-                                                                           id="c17">
+                                                                           id="c17" width="100" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL3View3.hints.Ast.mandatory}"
@@ -477,7 +481,7 @@
                                                                       partialTriggers="::b8 ::b9 ::b10">
                                                                        <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL4View41.hints.ItemL1Id.label}"
+                                                                           headerText="L1 ID" align="center"
                                                                            id="c10">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL1Id.label}"
@@ -489,8 +493,8 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL4View41.hints.L1_Name.label}"
-                                                                           id="c28">
+                                                                <af:column headerText="L1 Name"
+                                                                           id="c28" align="center">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.L1_Name.mandatory}"
@@ -503,7 +507,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL2Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL4View41.hints.ItemL2Id.label}"
+                                                                           headerText="L2 ID" align="center"
                                                                            id="c9">
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL2Id.label}"
@@ -515,7 +519,7 @@
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL4View41.hints.L2_Name.label}"
+                                                                <af:column headerText="L2 Name" align="center"
                                                                            id="c29">
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L2_Name.label}"
@@ -529,7 +533,7 @@
                                                                 </af:column>
                                                                       <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL3Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL4View41.hints.ItemL3Id.label}"
+                                                                           headerText="L3 ID" align="center"
                                                                            id="c8">
                                                                     <af:inputText value="#{row.bindings.ItemL3Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL3Id.label}"
@@ -541,7 +545,7 @@
                                                                         <f:validator binding="#{row.bindings.ItemL3Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL4View41.hints.L3_Name.label}"
+                                                                <af:column headerText="L3 Name" align="center"
                                                                            id="c30">
                                                                     <af:inputText value="#{row.bindings.L3_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L3_Name.label}"
@@ -556,8 +560,8 @@
                                                                 
                                                                
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL4Id.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL4View41.hints.ItemL4Id.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="L4 ID"
                                                                            id="c7">
                                                                     <af:inputText value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL4Id.label}"
@@ -572,7 +576,7 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblItemL4View41.hints.Name.label}"
+                                                                           headerText="L4 Name" align="center"
                                                                            id="c11">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.Name.label}"
@@ -585,7 +589,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblItemL4View41.hints.Ast.label}"
-                                                                           id="c12">
+                                                                           id="c12" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL4View41.hints.Ast.mandatory}"

@@ -77,7 +77,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProgView12.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Programe Name"
+                                                                           headerText="Program Name"
                                                                            id="c2" width="450">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProgView12.hints.Name.label}"
@@ -92,7 +92,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblProgView12.hints.Ast.label}"
-                                                                           id="c3">
+                                                                           id="c3"  align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProgView12.hints.Ast.mandatory}"
@@ -117,12 +117,12 @@
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b9"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                icon="#{resource['images:add.png']}"/>
-                                                        <af:spacer width="5" height="10" id="s2"/>
+                                                        <af:spacer width="5" height="10" id="s13"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                id="b8" inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                           icon="#{resource['images:edit.png']}"/>
-                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:spacer width="5" height="10" id="s14"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}" id="b7"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"
@@ -138,7 +138,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6"
                                                              halign="stretch">
-<af:spacer width="100" height="30" id="s6"/>
+<af:spacer width="100" height="30" id="s15"/>
                                                      
                                                 </af:gridCell>
                                             </af:gridRow>
@@ -164,8 +164,8 @@
                                                                       partialTriggers="::b12 ::b13 ::b14">
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Programe ID" align="center"
-                                                                           id="c5" width="60">
+                                                                           headerText="Program ID" align="center"
+                                                                           id="c5" width="74">
                                                                     <af:inputText value="#{row.bindings.ProgId.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.ProgId.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.ProgId.mandatory}"
@@ -181,7 +181,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgOffId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Office ID" align="center"
-                                                                           id="c4" width="50">
+                                                                           id="c4" width="55">
                                                                     <af:inputText value="#{row.bindings.ProgOffId.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.ProgOffId.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.ProgOffId.mandatory}"
@@ -196,7 +196,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Office Name" align="center"
-                                                                           id="c6" width="180">
+                                                                           id="c6" width="161">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.Name.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.Name.mandatory}"
@@ -267,7 +267,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.Email.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="E-mail" align="center"
-                                                                           id="c11" width="70">
+                                                                           id="c11" width="115">
                                                                     <af:inputText value="#{row.bindings.Email.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.Email.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.Email.mandatory}"
@@ -281,7 +281,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.Category.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Category" align="center"
-                                                                           id="c12" width="80">
+                                                                           id="c12" width="35">
                                                                     <af:inputText value="#{row.bindings.Category.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.Category.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.Category.mandatory}"
@@ -293,7 +293,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblProgOffView3.hints.Ast.label}"
-                                                                           id="c13">
+                                                                           id="c13" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProgOffView3.hints.Ast.mandatory}"

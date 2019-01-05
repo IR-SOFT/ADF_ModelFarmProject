@@ -10,7 +10,7 @@
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
                             <af:panelAccordion discloseMany="false" id="pa2"
-                                                   inlineStyle="width:195px; height:396px;">
+                                                   inlineStyle="width:195px; height:519px;">
                                     <af:showDetailItem id="sdi1" text="Course Training">
                                         <af:spacer width="190" height="10" id="s1"/>
                                         <af:button text="Course Setup" id="b1" inlineStyle="width:190px;"
@@ -38,6 +38,10 @@
                                         <af:button id="b11" inlineStyle="width:190px;" text="Training Schedule"
                                                    destination="Training_Sched.jsf"
                                                    icon="#{resource['images:schedule.png']}"/>
+                                        <af:spacer width="190" height="10" id="s4"/>
+                                        <af:button id="b6" inlineStyle="width:190px;" text="Attendance Detail"
+                                                   destination="Attendance_Detail.jsf"
+                                                   icon="#{resource['images:attendance.png']}"/>
                                     </af:showDetailItem>
                                 </af:panelAccordion>
                             </af:gridCell>

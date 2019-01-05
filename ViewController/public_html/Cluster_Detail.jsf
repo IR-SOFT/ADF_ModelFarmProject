@@ -195,7 +195,7 @@
                                                                       partialTriggers="::b11 ::b12 ::b13">
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
+                                                                           headerText="Cluster Detail ID"
                                                                            id="c1">
                                                                     <af:inputText value="#{row.bindings.ClusterDetailId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
@@ -209,7 +209,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.label}"
+                                                                           headerText="Cluster Master ID"
                                                                            id="c2">
                                                                     <af:inputText value="#{row.bindings.ClusterMasterId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.label}"
@@ -223,7 +223,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblClusterDetailView3.hints.FarmerRegId.label}"
+                                                                           headerText="Farmer Reg ID"
                                                                            id="c3">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.FarmerRegId.label}"

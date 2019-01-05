@@ -60,9 +60,9 @@
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b7 ::b8 ::b9 ::b10 ::b13 ::b14">
                                                                 <af:column sortProperty="#{bindings.TblSupplierView1.hints.SupplierId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierView1.hints.SupplierId.label}"
-                                                                           id="c1">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Supplier ID"
+                                                                           id="c1" width="75">
                                                                     <af:inputText value="#{row.bindings.SupplierId.inputValue}"
                                                                                   label="#{bindings.TblSupplierView1.hints.SupplierId.label}"
                                                                                   required="#{bindings.TblSupplierView1.hints.SupplierId.mandatory}"
@@ -74,9 +74,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierView1.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblSupplierView1.hints.Name.label}"
-                                                                           id="c2">
+                                                                           id="c2" width="125">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblSupplierView1.hints.Name.label}"
                                                                                   required="#{bindings.TblSupplierView1.hints.Name.mandatory}"
@@ -88,7 +88,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblSupplierView1.hints.Ast.label}"
-                                                                           id="c3">
+                                                                           id="c3" align="center" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblSupplierView1.hints.Ast.mandatory}"

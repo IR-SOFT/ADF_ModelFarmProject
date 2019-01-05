@@ -89,7 +89,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblCropView1.hints.Ast.label}"
-                                                                           id="c3">
+                                                                           id="c3" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblCropView1.hints.Ast.mandatory}"
@@ -111,20 +111,20 @@
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b2"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b8"
                                                                    icon="#{resource['images:add.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s2"/>
+                                                        <af:spacer width="5" height="10" id="s7"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b4" icon="#{resource['images:edit.png']}"
+                                                               id="b9" icon="#{resource['images:edit.png']}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:spacer width="5" height="10" id="s9"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b6"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b10"
                                                                icon="#{resource['images:delete.png']}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                disabled="#{!bindings.Commit.enabled}" id="b7"
                                                                icon="#{resource['images:save.png']}"

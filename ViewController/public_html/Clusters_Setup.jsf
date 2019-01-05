@@ -56,13 +56,13 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.ProjCompId.name}"
                                                                            filterable="true"
                                                                            headerText="Component ID"
-                                                                           id="c2" align="center" width="80">
+                                                                           id="c2" align="center" width="75">
                                                                     <af:outputText value="#{row.ProjCompId}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.ProjCompId.tooltip}"
                                                                                    id="ot2" contentStyle='text-align:center'/>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblProjCompInput1View1.hints.Proj_Comp_Name.label}"
-                                                                           id="c13">
+                                                                <af:column headerText="Project Component Name"
+                                                                           id="c13" width="178">
                                                                     <af:outputText value="#{row.Proj_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Proj_Comp_Name.tooltip}"
                                                                                    id="ot5"/>
@@ -70,7 +70,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.ProjCompInputId.name}"
                                                                            filterable="true"
                                                                            headerText="Input Component ID"
-                                                                           id="c1" align="center" width="110">
+                                                                           id="c1" align="center" width="68">
                                                                     <af:outputText value="#{row.ProjCompInputId}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.ProjCompInputId.tooltip}"
                                                                                    id="ot1" contentStyle='text-align:center'/>
@@ -78,13 +78,13 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.Name.name}"
                                                                            filterable="true"
                                                                            headerText="Input Component Name"
-                                                                           id="c3" align="center" width="250">
+                                                                           id="c3" align="center" width="219">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Name.tooltip}"
                                                                                    id="ot3" contentStyle='text-align:left'/>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblProjCompInput1View1.hints.Ast.label}"
-                                                                           id="c4">
+                                                                           id="c4" width="100">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>

@@ -52,22 +52,22 @@
                                                                       queryListener="#{bindings.TblMonitoringProjCompOutputView1Query.processQuery}"
                                                                       varStatus="vs" id="t1">
                                                                 <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.ProjCompId.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblMonitoringProjCompOutputView1.hints.ProjCompId.label}"
+                                                                           filterable="true" align="center"
+                                                                           headerText="Project Comp ID"
                                                                            id="c2">
                                                                     <af:outputText value="#{row.ProjCompId}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.ProjCompId.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.label}"
+                                                                <af:column headerText="Project Comp Name" align="center"
                                                                            id="c9">
                                                                     <af:outputText value="#{row.Proj_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.tooltip}"
                                                                                    id="ot5"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.ProjCompOutputId.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblMonitoringProjCompOutputView1.hints.ProjCompOutputId.label}"
+                                                                           filterable="true" align="center"
+                                                                           headerText="Project Comp Output ID"
                                                                            id="c1">
                                                                     <af:outputText value="#{row.ProjCompOutputId}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.ProjCompOutputId.tooltip}"
@@ -75,15 +75,15 @@
                                                                 </af:column>
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.name}"
-                                                                           filterable="true"
-                                                                           headerText="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.label}"
+                                                                           filterable="true" align="center"
+                                                                           headerText="Project Comp Output Name"
                                                                            id="c3">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.label}"
-                                                                           id="c4">
+                                                                           id="c4" align="center">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -116,8 +116,8 @@
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b4 ::b6 ::b7">
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Output Indicator ID"
                                                                            id="c5">
                                                                     <af:inputText value="#{row.bindings.OutputIndId.inputValue}"
                                                                                   label="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.label}"
@@ -130,8 +130,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="ProjectComp Output ID"
                                                                            id="c6">
                                                                     <af:inputText value="#{row.bindings.ProjCompOutputId.inputValue}"
                                                                                   label="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.label}"
@@ -144,8 +144,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblMonitoringOutputIndView3.hints.Name.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Output Indicator Name"
                                                                            id="c7">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblMonitoringOutputIndView3.hints.Name.label}"
@@ -157,7 +157,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblMonitoringOutputIndView3.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblMonitoringOutputIndView3.hints.Ast.label}" align="center"
                                                                            id="c8">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

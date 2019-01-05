@@ -56,8 +56,8 @@
                                                                       partialTriggers="::b4 ::b6 ::b7 ::b8 ::b11 ::b12 ::b13">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegView5.hints.FarmerRegId.label}"
-                                                                           id="c1">
+                                                                           headerText="Farmer Reg ID" align="center"
+                                                                           id="c1" width="85">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.FarmerRegId.mandatory}"
@@ -70,8 +70,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegView5.hints.Name.label}"
-                                                                           id="c2">
+                                                                           headerText="Farmer Name" align="center"
+                                                                           id="c2" width="124">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.Name.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.Name.mandatory}"
@@ -84,8 +84,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.FatherName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegView5.hints.FatherName.label}"
-                                                                           id="c3">
+                                                                           headerText="Father Name" align="center"
+                                                                           id="c3" width="114">
                                                                     <af:inputText value="#{row.bindings.FatherName.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.FatherName.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.FatherName.mandatory}"
@@ -97,7 +97,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblFarmerRegView5.hints.Ast.label}"
-                                                                           id="c4">
+                                                                           id="c4" width="77" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblFarmerRegView5.hints.Ast.mandatory}"
@@ -322,8 +322,8 @@
                                                                       partialTriggers="::b15 ::b16 ::b17">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.label}"
-                                                                           id="c5">
+                                                                           headerText="Farmer Reg Land ID" align="center"
+                                                                           id="c5" width="85">
                                                                     <af:inputText value="#{row.bindings.FarmerRegLandId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.mandatory}"
@@ -336,8 +336,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.label}"
-                                                                           id="c6">
+                                                                           headerText="Farmer Reg ID" align="center"
+                                                                           id="c6" width="80">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.mandatory}"
@@ -350,8 +350,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.LandAcre.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.LandAcre.label}"
-                                                                           id="c7">
+                                                                           headerText="Land Acre" align="center"
+                                                                           id="c7" width="135">
                                                                     <af:inputText value="#{row.bindings.LandAcre.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.LandAcre.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.LandAcre.mandatory}"
@@ -365,9 +365,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.LandKanal.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.LandKanal.label}"
-                                                                           id="c8">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Land Kanal"
+                                                                           id="c8" width="100">
                                                                     <af:inputText value="#{row.bindings.LandKanal.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.LandKanal.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.LandKanal.mandatory}"
@@ -381,9 +381,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.PresentProd.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.PresentProd.label}"
-                                                                           id="c9">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Present Prod"
+                                                                           id="c9" width="100">
                                                                     <af:inputText value="#{row.bindings.PresentProd.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.PresentProd.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.PresentProd.mandatory}"
@@ -397,9 +397,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.label}"
-                                                                           id="c10">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Land Under Orch"
+                                                                           id="c10" width="100">
                                                                     <af:inputText value="#{row.bindings.LandUnderOrch.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.mandatory}"
@@ -413,9 +413,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
-                                                                           id="c11">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Selfish Type"
+                                                                           id="c11" width="100">
                                                                     <af:inputText value="#{row.bindings.SelfshipType.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.mandatory}"
@@ -427,9 +427,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.SelfLocalMark.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.SelfLocalMark.label}"
-                                                                           id="c12">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Self Local Mark"
+                                                                           id="c12" width="100">
                                                                     <af:inputText value="#{row.bindings.SelfLocalMark.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.SelfLocalMark.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.SelfLocalMark.mandatory}"
@@ -441,9 +441,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.SelfExportMark.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.SelfExportMark.label}"
-                                                                           id="c13">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Self Export Mark"
+                                                                           id="c13" width="100">
                                                                     <af:inputText value="#{row.bindings.SelfExportMark.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.SelfExportMark.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.SelfExportMark.mandatory}"
@@ -455,8 +455,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.ContractMark.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.ContractMark.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Contract Mark"
                                                                            id="c14">
                                                                     <af:inputText value="#{row.bindings.ContractMark.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.ContractMark.label}"
@@ -469,7 +469,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.KhatooniNo.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegLandView7.hints.KhatooniNo.label}"
                                                                            id="c15">
                                                                     <af:inputText value="#{row.bindings.KhatooniNo.inputValue}"
@@ -485,7 +485,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.KhauuetNo.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegLandView7.hints.KhauuetNo.label}"
                                                                            id="c16">
                                                                     <af:inputText value="#{row.bindings.KhauuetNo.inputValue}"
@@ -501,8 +501,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.QittaNo.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.QittaNo.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Qitta No."
                                                                            id="c17">
                                                                     <af:inputText value="#{row.bindings.QittaNo.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.QittaNo.label}"
@@ -517,8 +517,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.KhasraNo.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.KhasraNo.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Khasra No."
                                                                            id="c18">
                                                                     <af:inputText value="#{row.bindings.KhasraNo.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.KhasraNo.label}"
@@ -572,23 +572,9 @@
                                                                       queryListener="#{bindings.TblFarmerRegMemView7Query.processQuery}"
                                                                       varStatus="vs" id="t3"
                                                                       partialTriggers="::b19 ::b20 ::b21">
-                                                                <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.label}"
-                                                                           id="c19">
-                                                                    <af:inputText value="#{row.bindings.FarmerRegMemId.inputValue}"
-                                                                                  label="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.label}"
-                                                                                  required="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.mandatory}"
-                                                                                  columns="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.precision}"
-                                                                                  shortDesc="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.tooltip}"
-                                                                                  id="it30">
-                                                                        <f:validator binding="#{row.bindings.FarmerRegMemId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.FarmerRegId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegMemView7.hints.FarmerRegId.label}"
+                                                                      <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.FarmerRegId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Farmer Reg ID"
                                                                            id="c20">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegMemView7.hints.FarmerRegId.label}"
@@ -600,9 +586,24 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Farmer Reg Member ID"
+                                                                           id="c19">
+                                                                    <af:inputText value="#{row.bindings.FarmerRegMemId.inputValue}"
+                                                                                  label="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.label}"
+                                                                                  required="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.mandatory}"
+                                                                                  columns="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.precision}"
+                                                                                  shortDesc="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.tooltip}"
+                                                                                  id="it30">
+                                                                        <f:validator binding="#{row.bindings.FarmerRegMemId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Name.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegMemView7.hints.Name.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Member Name"
                                                                            id="c21">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegMemView7.hints.Name.label}"
@@ -615,8 +616,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.FatherName.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegMemView7.hints.FatherName.label}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Father Name"
                                                                            id="c22">
                                                                     <af:inputText value="#{row.bindings.FatherName.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegMemView7.hints.FatherName.label}"
@@ -629,7 +630,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Dob.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegMemView7.hints.Dob.label}"
                                                                            id="c23">
                                                                     <f:facet name="filter">
@@ -649,7 +650,7 @@
                                                                     </af:inputDate>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Cnic.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegMemView7.hints.Cnic.label}"
                                                                            id="c24">
                                                                     <af:inputText value="#{row.bindings.Cnic.inputValue}"
@@ -663,7 +664,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Telephone.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegMemView7.hints.Telephone.label}"
                                                                            id="c25">
                                                                     <af:inputText value="#{row.bindings.Telephone.inputValue}"
@@ -677,7 +678,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Mobile.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegMemView7.hints.Mobile.label}"
                                                                            id="c26">
                                                                     <af:inputText value="#{row.bindings.Mobile.inputValue}"
@@ -691,7 +692,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Relation.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegMemView7.hints.Relation.label}"
                                                                            id="c27">
                                                                     <af:inputText value="#{row.bindings.Relation.inputValue}"
@@ -705,7 +706,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Religion.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegMemView7.hints.Religion.label}"
                                                                            id="c28">
                                                                     <af:inputText value="#{row.bindings.Religion.inputValue}"
@@ -758,9 +759,9 @@
                                                                       varStatus="vs" id="t4"
                                                                       partialTriggers="::b23 ::b24 ::b25">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.label}"
-                                                                           id="c29">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Farmer Reg Crops ID"
+                                                                           id="c29" width="100">
                                                                     <af:inputText value="#{row.bindings.FarmerRegCropsId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.label}"
                                                                                   required="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.mandatory}"
@@ -772,9 +773,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.label}"
-                                                                           id="c30">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Farmer Reg ID"
+                                                                           id="c30" width="100">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.mandatory}"
@@ -786,9 +787,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.CropId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblFarmerRegCropsView7.hints.CropId.label}"
-                                                                           id="c31">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Crop ID"
+                                                                           id="c31" width="65">
                                                                     <af:inputText value="#{row.bindings.CropId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegCropsView7.hints.CropId.label}"
                                                                                   required="#{bindings.TblFarmerRegCropsView7.hints.CropId.mandatory}"

@@ -67,7 +67,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.ProgId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Program ID" align="center"
-                                                                           id="c2" width="50">
+                                                                           id="c2" width="77">
                                                                     <af:inputText value="#{row.bindings.ProgId.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.ProgId.label}"
                                                                                   required="#{bindings.TblProjView1.hints.ProgId.mandatory}"
@@ -79,8 +79,8 @@
                                                                         <f:validator binding="#{row.bindings.ProgId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblProjView1.hints.Program_Name.label}"
-                                                                           id="c15">
+                                                                <af:column headerText="Program Name"
+                                                                           id="c15" width="106">
                                                                     <af:inputText value="#{row.bindings.Program_Name.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.Program_Name.label}"
                                                                                   required="#{bindings.TblProjView1.hints.Program_Name.mandatory}"
@@ -94,7 +94,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project ID" align="center"
-                                                                           id="c1" width="50">
+                                                                           id="c1" width="78">
                                                                     <af:inputText value="#{row.bindings.ProjId.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.ProjId.label}"
                                                                                   required="#{bindings.TblProjView1.hints.ProjId.mandatory}"
@@ -109,7 +109,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project Name" 
-                                                                           id="c3" width="395">
+                                                                           id="c3" width="213">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.Name.label}"
                                                                                   required="#{bindings.TblProjView1.hints.Name.mandatory}"
@@ -122,7 +122,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblProjView1.hints.Ast.label}"
-                                                                           id="c4">
+                                                                           id="c4" width="221">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjView1.hints.Ast.mandatory}"
@@ -147,7 +147,7 @@
                                                                disabled="#{!bindings.CreateInsert1.enabled}" id="b11"
                                                                   icon="#{resource['images:add.png']}"
                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Execute1.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute1.enabled}"
                                                                id="b12" icon="#{resource['images:edit.png']}"
@@ -334,13 +334,13 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr7">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc8">
-                                                    <af:spacer width="360" height="15" id="s4"/>
+                                                    <af:spacer width="360" height="15" id="s13"/>
                                                     <h:panelGroup id="pg1">
  <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b7"
             icon="#{resource['images:add.png']}" inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s2"/>
+                                                        <af:spacer width="5" height="10" id="s14"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                id="b8" icon="#{resource['images:edit.png']}"
