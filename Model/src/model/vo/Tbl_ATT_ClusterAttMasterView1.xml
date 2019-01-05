@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_ATT_ClusterAttMasterView1"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Tbl_ATT_ClusterAttMaster"
+    Entity="model.eo.Tbl_ATT_ClusterAttMaster"/>
+  <EntityUsage
+    Name="Tbl_ATT_Trainer"
+    Entity="model.eo.Tbl_ATT_Trainer"
+    Association="model.eo.FkTblClusterAttMasterFkAssoc"
+    AssociationEnd="model.eo.FkTblClusterAttMasterFkAssoc.Tbl_ATT_Trainer"
+    SourceUsage="model.vo.Tbl_ATT_ClusterAttMasterView1.Tbl_ATT_ClusterAttMaster"
+    ReadOnly="true"
+    Reference="true"
+    DeleteParticipant="false"
+    JoinType="INNER JOIN">
+    <DesignTime>
+      <AttrArray Name="_dstAttributes">
+        <Item Value="model.eo.Tbl_ATT_Trainer.TrainerId"/>
+      </AttrArray>
+      <AttrArray Name="_srcAttributes">
+        <Item Value="model.eo.Tbl_ATT_ClusterAttMaster.TrainerId"/>
+      </AttrArray>
+    </DesignTime>
+  </EntityUsage>
+  <ViewAttribute
+    Name="ClusterAttMasterId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ClusterAttMasterId"
+    EntityUsage="Tbl_ATT_ClusterAttMaster"
+    AliasName="CLUSTER_ATT_MASTER_ID"/>
+  <ViewAttribute
+    Name="TrainerId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TrainerId"
+    EntityUsage="Tbl_ATT_ClusterAttMaster"
+    AliasName="TRAINER_ID"/>
+  <ViewAttribute
+    Name="Dated"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Dated"
+    EntityUsage="Tbl_ATT_ClusterAttMaster"
+    AliasName="DATED"/>
+  <ViewAttribute
+    Name="Status"
+    PrecisionRule="true"
+    EntityAttrName="Status"
+    EntityUsage="Tbl_ATT_ClusterAttMaster"
+    AliasName="STATUS"/>
+  <ViewAttribute
+    Name="Remarks"
+    PrecisionRule="true"
+    EntityAttrName="Remarks"
+    EntityUsage="Tbl_ATT_ClusterAttMaster"
+    AliasName="REMARKS"/>
+  <ViewAttribute
+    Name="Trainer_Name"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Name"
+    EntityUsage="Tbl_ATT_Trainer"
+    AliasName="NAME"/>
+  <ViewAttribute
+    Name="TrainerId1"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TrainerId"
+    EntityUsage="Tbl_ATT_Trainer"
+    AliasName="TRAINER_ID1"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="ClusterAttMasterId"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="Tbl_ATT_ClusterAttDetailView1"
+    ViewLink="model.vo.FkTblClusterAttDetailFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

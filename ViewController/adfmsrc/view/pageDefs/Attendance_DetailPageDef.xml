@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.3" id="Attendance_DetailPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Tbl_ATT_ClusterAttMasterView1_1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="Tbl_ATT_ClusterAttMasterView1_1Iterator"/>
+    <searchRegion Binds="Tbl_ATT_ClusterAttMasterView1_1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="Tbl_ATT_ClusterAttMasterView1_1Query"/>
+    <iterator Binds="Tbl_ATT_ClusterAttDetailView1_2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="Tbl_ATT_ClusterAttDetailView1_2Iterator"/>
+    <searchRegion Binds="Tbl_ATT_ClusterAttDetailView1_2Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="Tbl_ATT_ClusterAttDetailView1_2Query"/>
+  </executables>
+  <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="Tbl_ATT_ClusterAttMasterView1_1Iterator" id="Tbl_ATT_ClusterAttMasterView1_1">
+      <nodeDefinition DefName="model.vo.Tbl_ATT_ClusterAttMasterView1" Name="Tbl_ATT_ClusterAttMasterView1_10">
+        <AttrNames>
+          <Item Value="ClusterAttMasterId"/>
+          <Item Value="TrainerId"/>
+          <Item Value="Dated"/>
+          <Item Value="Status"/>
+          <Item Value="Remarks"/>
+          <Item Value="Trainer_Name"/>
+          <Item Value="TrainerId1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="Tbl_ATT_ClusterAttDetailView1_2Iterator" id="Tbl_ATT_ClusterAttDetailView1_2">
+      <nodeDefinition DefName="model.vo.Tbl_ATT_ClusterAttDetailView1" Name="Tbl_ATT_ClusterAttDetailView1_20">
+        <AttrNames>
+          <Item Value="ClusterAttDetailId"/>
+          <Item Value="ClusterAttMasterId"/>
+          <Item Value="FarmerRegId"/>
+          <Item Value="Farmer_Name"/>
+          <Item Value="FarmerRegId1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="Tbl_ATT_ClusterAttMasterView1_1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="Tbl_ATT_ClusterAttMasterView1_1Iterator" id="Execute" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="Tbl_ATT_ClusterAttMasterView1_1Iterator" id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <action IterBinding="Tbl_ATT_ClusterAttDetailView1_2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="Tbl_ATT_ClusterAttDetailView1_2Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="Tbl_ATT_ClusterAttDetailView1_2Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Tbl_ATT_ClusterAttDetail"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_CLUSTER_ATT_DETAIL"
+  AliasName="Tbl_ATT_ClusterAttDetail"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ClusterAttDetailId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CLUSTER_ATT_DETAIL_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER_ATT_DETAIL"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ClusterAttMasterId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CLUSTER_ATT_MASTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER_ATT_DETAIL">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FarmerRegId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="FARMER_REG_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER_ATT_DETAIL">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Tbl_ATT_ClusterAttMaster"
+    Association="model.eo.FkTblClusterAttDetailFkAssoc"
+    AssociationEnd="model.eo.FkTblClusterAttDetailFkAssoc.Tbl_ATT_ClusterAttMaster"
+    AssociationOtherEnd="model.eo.FkTblClusterAttDetailFkAssoc.Tbl_ATT_ClusterAttDetail"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Tbl_ATT_FarmerReg"
+    Association="model.eo.Fk2TblClusterAttDetailFkAssoc"
+    AssociationEnd="model.eo.Fk2TblClusterAttDetailFkAssoc.Tbl_ATT_FarmerReg"
+    AssociationOtherEnd="model.eo.Fk2TblClusterAttDetailFkAssoc.Tbl_ATT_ClusterAttDetail"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblClusterAttDetailPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_CLUSTER_ATT_DETAIL_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_ATT_ClusterAttDetail.ClusterAttDetailId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Fk2TblClusterAttDetailFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_FARMER_REG_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK2_TBL_CLUSTER_ATT_DETAIL_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_ATT_ClusterAttDetail.FarmerRegId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblClusterAttDetailFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_CLUSTER_ATT_MASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_CLUSTER_ATT_DETAIL_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_ATT_ClusterAttDetail.ClusterAttMasterId"/>
+    </AttrArray>
+  </Key>
+</Entity>

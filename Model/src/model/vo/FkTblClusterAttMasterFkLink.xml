@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblClusterAttMasterFkLink"
+  Version="12.2.1.11.3"
+  InheritPersonalization="merge"
+  EntityAssociation="model.eo.FkTblClusterAttMasterFkAssoc">
+  <ViewLinkDefEnd
+    Name="Tbl_ATT_TrainerView1_1"
+    Cardinality="1"
+    Source="true"
+    Owner="model.vo.Tbl_ATT_TrainerView1">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="Tbl_ATT_TrainerView1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.Tbl_ATT_TrainerView1.TrainerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="Tbl_ATT_ClusterAttMasterView1"
+    Cardinality="-1"
+    Owner="model.vo.Tbl_ATT_ClusterAttMasterView1">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Tbl_ATT_ClusterAttMasterView1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.Tbl_ATT_ClusterAttMasterView1.TrainerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

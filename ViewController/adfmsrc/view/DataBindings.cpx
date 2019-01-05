@@ -29,6 +29,7 @@
     <page path="/Supplier_Setup.jsf" usageId="view_Supplier_SetupPageDef"/>
     <page path="/Supplier_Rate_Setup.jsf" usageId="view_Supplier_Rate_SetupPageDef"/>
     <page path="/Machinery_Setup.jsf" usageId="view_Machinery_SetupPageDef"/>
+    <page path="/Attendance_Detail.jsf" usageId="view_Attendance_DetailPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -56,6 +57,7 @@
     <page id="view_Supplier_SetupPageDef" path="view.pageDefs.Supplier_SetupPageDef"/>
     <page id="view_Supplier_Rate_SetupPageDef" path="view.pageDefs.Supplier_Rate_SetupPageDef"/>
     <page id="view_Machinery_SetupPageDef" path="view.pageDefs.Machinery_SetupPageDef"/>
+    <page id="view_Attendance_DetailPageDef" path="view.pageDefs.Attendance_DetailPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

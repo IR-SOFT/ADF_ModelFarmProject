@@ -565,6 +565,48 @@
   <ViewUsage
     Name="TblSupplierRateDetailView6"
     ViewObjectName="model.queryBasedVO.TblSupplierRateDetailView"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttDetailView1_1"
+    ViewObjectName="model.vo.Tbl_ATT_ClusterAttDetailView1"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttMasterView1_1"
+    ViewObjectName="model.vo.Tbl_ATT_ClusterAttMasterView1"/>
+  <ViewUsage
+    Name="Tbl_ATT_FarmerRegView1_1"
+    ViewObjectName="model.vo.Tbl_ATT_FarmerRegView1"/>
+  <ViewUsage
+    Name="Tbl_ATT_TrainerView1_1"
+    ViewObjectName="model.vo.Tbl_ATT_TrainerView1"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttDetailView1"
+    ViewObjectName="model.queryBasedVO.Tbl_ATT_ClusterAttDetailView"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttMasterView1"
+    ViewObjectName="model.queryBasedVO.Tbl_ATT_ClusterAttMasterView"/>
+  <ViewUsage
+    Name="Tbl_ATT_FarmerRegView1"
+    ViewObjectName="model.queryBasedVO.Tbl_ATT_FarmerRegView"/>
+  <ViewUsage
+    Name="Tbl_ATT_TrainerView1"
+    ViewObjectName="model.queryBasedVO.Tbl_ATT_TrainerView"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttDetailView1_2"
+    ViewObjectName="model.vo.Tbl_ATT_ClusterAttDetailView1"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttMasterView1_2"
+    ViewObjectName="model.vo.Tbl_ATT_ClusterAttMasterView1"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttDetailView1_3"
+    ViewObjectName="model.vo.Tbl_ATT_ClusterAttDetailView1"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttDetailView2"
+    ViewObjectName="model.queryBasedVO.Tbl_ATT_ClusterAttDetailView"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttDetailView3"
+    ViewObjectName="model.queryBasedVO.Tbl_ATT_ClusterAttDetailView"/>
+  <ViewUsage
+    Name="Tbl_ATT_ClusterAttMasterView2"
+    ViewObjectName="model.queryBasedVO.Tbl_ATT_ClusterAttMasterView"/>
   <ViewLinkUsage
     Name="FkTblProgOffTblProgFkLink1"
     ViewLinkObjectName="model.vo.FkTblProgOffTblProgFkLink"
@@ -1068,5 +1110,41 @@
     ViewLinkObjectName="model.queryBasedVO.FkTblSupplierRateDetailFkLink"
     SrcViewUsageName="model.eo.AppModule.TblSupplierRateMasterView2"
     DstViewUsageName="model.eo.AppModule.TblSupplierRateDetailView6"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkTblClusterAttDetailFkLink1"
+    ViewLinkObjectName="model.vo.FkTblClusterAttDetailFkLink"
+    SrcViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttMasterView1_1"
+    DstViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttDetailView1_2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkTblClusterAttMasterFkLink1"
+    ViewLinkObjectName="model.vo.FkTblClusterAttMasterFkLink"
+    SrcViewUsageName="model.eo.AppModule.Tbl_ATT_TrainerView1_1"
+    DstViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttMasterView1_2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="Fk2TblClusterAttDetailFkLink1"
+    ViewLinkObjectName="model.vo.Fk2TblClusterAttDetailFkLink"
+    SrcViewUsageName="model.eo.AppModule.Tbl_ATT_FarmerRegView1_1"
+    DstViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttDetailView1_3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkTblClusterAttDetailFkLink2"
+    ViewLinkObjectName="model.queryBasedVO.FkTblClusterAttDetailFkLink"
+    SrcViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttMasterView1"
+    DstViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttDetailView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="Fk2TblClusterAttDetailFkLink2"
+    ViewLinkObjectName="model.queryBasedVO.Fk2TblClusterAttDetailFkLink"
+    SrcViewUsageName="model.eo.AppModule.Tbl_ATT_FarmerRegView1"
+    DstViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttDetailView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="FkTblClusterAttMasterFkLink2"
+    ViewLinkObjectName="model.queryBasedVO.FkTblClusterAttMasterFkLink"
+    SrcViewUsageName="model.eo.AppModule.Tbl_ATT_TrainerView1"
+    DstViewUsageName="model.eo.AppModule.Tbl_ATT_ClusterAttMasterView2"
     Reversed="false"/>
 </AppModule>
