@@ -30,6 +30,9 @@
                             <af:button text="Supplier Rate Setup" id="b6" inlineStyle="width:190px;"
                                        destination="Supplier_Rate_Setup.jsf"
                                        icon="#{resource['images:supplier_rate.png']}"/>
+                                       <af:spacer width="190" height="10" id="s7"/>
+                            <af:button text="Library" id="b7" inlineStyle="width:190px;"
+                                       destination="Library.jsf" icon="#{resource['images:library.png']}"/>
                         </af:showDetailItem>
                     </af:panelAccordion>
                             </af:gridCell>
