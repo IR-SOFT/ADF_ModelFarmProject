@@ -335,17 +335,20 @@
                                                             <h:panelGroup id="pg2">
                                                     <af:spacer width="100" height="30" id="s7"/>
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
-                                                               text="CreateInsert1"
+                                                               text="Add"
                                                                icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert1.enabled}" id="b9"/>
-                                                    <af:button actionListener="#{bindings.Execute1.execute}"
-                                                               text="Execute1" icon="#{resource['images:edit.png']}" disabled="#{!bindings.Execute1.enabled}"
+                                                                <af:spacer width="5" height="10" id="s16"/>
+                                                                <af:button actionListener="#{bindings.Execute1.execute}"
+                                                               text="Edit" icon="#{resource['images:edit.png']}" disabled="#{!bindings.Execute1.enabled}"
                                                                id="b10"/>
-                                                    <af:button actionListener="#{bindings.Delete1.execute}"
+                                                                <af:spacer width="5" height="10" id="s17"/>
+                                                                <af:button actionListener="#{bindings.Delete1.execute}"
                                                     icon="#{resource['images:delete.png']}"
-                                                               text="Delete1" disabled="#{!bindings.Delete1.enabled}"
+                                                               text="Delete" disabled="#{!bindings.Delete1.enabled}"
                                                                id="b11"/>
-                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                                <af:spacer width="5" height="10" id="s18"/>
+                                                                <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                               icon="#{resource['images:save.png']}" disabled="#{!bindings.Commit.enabled}" id="b18"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
@@ -423,15 +426,22 @@
                                                     <h:panelGroup id="pg4">
                                                         <af:spacer width="200" height="20" id="s15"/>
                                                         <af:button actionListener="#{bindings.CreateInsert3.execute}"
-                                                               text="CreateInsert3"
+                                                               text="Add"
+                                                               icon="#{resource['images:add.png']}"
                                                                disabled="#{!bindings.CreateInsert3.enabled}" id="b4"/>
-                                                    <af:button actionListener="#{bindings.Execute3.execute}"
-                                                               text="Execute3" disabled="#{!bindings.Execute3.enabled}"
+                                                                <af:spacer width="5" height="10" id="s19"/>
+                                                                <af:button actionListener="#{bindings.Execute3.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute3.enabled}"
+                                                               icon="#{resource['images:edit.png']}"
                                                                id="b12"/>
-                                                    <af:button actionListener="#{bindings.Delete3.execute}"
-                                                               text="Delete3" disabled="#{!bindings.Delete3.enabled}"
+                                                                <af:spacer width="5" height="10" id="s20"/>
+                                                                <af:button actionListener="#{bindings.Delete3.execute}"
+                                                               text="Delete" disabled="#{!bindings.Delete3.enabled}"
+                                                               icon="#{resource['images:delete.png']}"
                                                                id="b19"/>
-                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                                <af:spacer width="5" height="10" id="s21"/>
+                                                                <af:button actionListener="#{bindings.Commit.execute}" text="Save"
+                                                    icon="#{resource['images:save.png']}"
                                                                disabled="#{!bindings.Commit.enabled}" id="b20"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
