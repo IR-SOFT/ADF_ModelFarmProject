@@ -73,8 +73,8 @@
                                                                       partialTriggers="::b8 ::b9 ::b10">
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.label}"
-                                                                           id="c1">
+                                                                           headerText="Cluster Attendance Master ID"
+                                                                           id="c1" align="center">
                                                                     <af:inputText value="#{row.bindings.ClusterAttMasterId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.mandatory}"
@@ -87,7 +87,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.label}"
+                                                                           headerText="Trainer ID" align="center"
                                                                            id="c2">
                                                                     <af:inputText value="#{row.bindings.TrainerId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.label}"
@@ -170,7 +170,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:spacer width="200" height="20" id="s8"/>
+                                                    <af:spacer width="200" height="20" id="s16"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
@@ -185,7 +185,7 @@
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" icon="#{resource['images:delete.png']}"
-                                                                   disabled="#{!bindings.Delete.enabled}" id="b10"/>
+                                                                   disabled="#{!bindings.Delete.enabled}" id="b7"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
@@ -216,9 +216,9 @@
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b11 ::b12 ::b13">
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.label}"
-                                                                           id="c8">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Cluster Attendance Detail ID"
+                                                                           id="c8" width="69">
                                                                     <af:inputText value="#{row.bindings.ClusterAttDetailId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.mandatory}"
@@ -230,9 +230,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.label}"
-                                                                           id="c9">
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Cluster Attendance Master ID"
+                                                                           id="c9" width="72">
                                                                     <af:inputText value="#{row.bindings.ClusterAttMasterId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.mandatory}"
@@ -245,8 +245,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.label}"
-                                                                           id="c10">
+                                                                           headerText="Farmer Registration ID" align="center"
+                                                                           id="c10" width="65">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.mandatory}"
@@ -259,8 +259,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.label}"
-                                                                           id="c11">
+                                                                           headerText="Farmer Name"
+                                                                           id="c11" width="194">
                                                                     <af:inputText value="#{row.bindings.Farmer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.mandatory}"
@@ -283,7 +283,7 @@
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add" icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert1.enabled}"
-                                                                   id="b11"/>
+                                                                   id="b14"/>
                                                         <af:spacer width="5" height="10" id="s13"/>
                                                         <af:button actionListener="#{bindings.Execute1.execute}"
                                                                    text="Edit" disabled="#{!bindings.Execute1.enabled}"

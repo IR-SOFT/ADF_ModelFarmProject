@@ -73,8 +73,8 @@
                                                                       partialTriggers="::b6 ::b7 ::b8">
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingView1.hints.TrainingId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TrainingView1.hints.TrainingId.label}"
-                                                                           id="c1">
+                                                                           headerText="Training ID" align="center"
+                                                                           id="c1" width="63">
                                                                     <af:inputText value="#{row.bindings.TrainingId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingView1.hints.TrainingId.label}"
                                                                                   required="#{bindings.Tbl_TrainingView1.hints.TrainingId.mandatory}"
@@ -87,8 +87,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TrainingView1.hints.Name.label}"
-                                                                           id="c2">
+                                                                           headerText="Training Name"
+                                                                           id="c2" width="158">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingView1.hints.Name.label}"
                                                                                   required="#{bindings.Tbl_TrainingView1.hints.Name.mandatory}"
@@ -100,7 +100,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.Tbl_TrainingView1.hints.Ast.label}"
-                                                                           id="c3">
+                                                                           id="c3" width="101" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_TrainingView1.hints.Ast.mandatory}"

@@ -73,13 +73,13 @@
                                                                       varStatus="vs" id="t1">
                                                                       <af:column sortProperty="#{bindings.TblCourseView1.hints.ProjCompInputId.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblCourseView1.hints.ProjCompInputId.label}"
+                                                                           headerText="Project Component Input ID"
                                                                            align="center" id="c2" width="138">
                                                                     <af:outputText value="#{row.ProjCompInputId}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.ProjCompInputId.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblCourseView1.hints.Project_Comp_Name.label}"
+                                                                <af:column headerText="Project Component Name"
                                                                            id="c9" width="157">
                                                                     <af:outputText value="#{row.Project_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Project_Comp_Name.tooltip}"
@@ -87,7 +87,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.CourseId.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblCourseView1.hints.CourseId.label}"
+                                                                           headerText="Course ID"
                                                                            align="center" id="c1" width="51">
                                                                     <af:outputText value="#{row.CourseId}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.CourseId.tooltip}"
@@ -96,7 +96,7 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblCourseView1.hints.Name.label}"
+                                                                           headerText="Course Name"
                                                                            id="c3" width="74">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Name.tooltip}"
@@ -137,25 +137,9 @@
                                                                       queryListener="#{bindings.TblModuleView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b4 ::b6 ::b7">
-                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.ModuleId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblModuleView3.hints.ModuleId.label}"
-                                                                           align="center" id="c5" width="60">
-                                                                    <af:inputText value="#{row.bindings.ModuleId.inputValue}"
-                                                                                  label="#{bindings.TblModuleView3.hints.ModuleId.label}"
-                                                                                  required="#{bindings.TblModuleView3.hints.ModuleId.mandatory}"
-                                                                                  columns="#{bindings.TblModuleView3.hints.ModuleId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblModuleView3.hints.ModuleId.precision}"
-                                                                                  shortDesc="#{bindings.TblModuleView3.hints.ModuleId.tooltip}"
-                                                                                  id="it1"
-                                                                                        inlineStyle="text-align:center; vertical-align: middle;"
-                                                                                  contentStyle="text-align:center">
-                                                                        <f:validator binding="#{row.bindings.ModuleId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.CourseId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblModuleView3.hints.CourseId.label}"
+                                                                           headerText="Course ID"
                                                                            align="center" id="c6" width="60">
                                                                     <af:inputText value="#{row.bindings.CourseId.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.CourseId.label}"
@@ -169,9 +153,26 @@
                                                                         <f:validator binding="#{row.bindings.CourseId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column sortProperty="#{bindings.TblModuleView3.hints.ModuleId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Module ID"
+                                                                           align="center" id="c5" width="60">
+                                                                    <af:inputText value="#{row.bindings.ModuleId.inputValue}"
+                                                                                  label="#{bindings.TblModuleView3.hints.ModuleId.label}"
+                                                                                  required="#{bindings.TblModuleView3.hints.ModuleId.mandatory}"
+                                                                                  columns="#{bindings.TblModuleView3.hints.ModuleId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblModuleView3.hints.ModuleId.precision}"
+                                                                                  shortDesc="#{bindings.TblModuleView3.hints.ModuleId.tooltip}"
+                                                                                  id="it1"
+                                                                                        inlineStyle="text-align:center; vertical-align: middle;"
+                                                                                  contentStyle="text-align:center">
+                                                                        <f:validator binding="#{row.bindings.ModuleId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblModuleView3.hints.Name.label}"
+                                                                           headerText="Module Name"
                                                                            id="c7" width="200">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.Name.label}"
@@ -183,7 +184,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblModuleView3.hints.Ast.label}"
+                                                                <af:column headerText="#{bindings.TblModuleView3.hints.Ast.label}" align="center"
                                                                            id="c8">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -202,25 +203,25 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="200" height="20" id="s2"/>
+                                                    <af:spacer width="200" height="20" id="s9"/>
                                                     <h:panelGroup id="pg1">
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b9"
                                                                     icon="#{resource['images:add.png']}"
                                                                     inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b6"
+                                                               id="b12"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                icon="#{resource['images:edit.png']}"/>
-                                                        <af:spacer width="5" height="10" id="s7"/>
+                                                        <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}" id="b7"
                                                                icon="#{resource['images:delete.png']}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s8"/>
+                                                        <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
                                                                disabled="#{!bindings.Commit.enabled}" id="b8"
                                                                icon="#{resource['images:save.png']}"/>

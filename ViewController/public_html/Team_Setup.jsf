@@ -73,8 +73,8 @@
                                                                       partialTriggers="::b6 ::b7 ::b8">
                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TeamView1.hints.TrainerId.label}"
-                                                                           id="c2">
+                                                                           headerText="Trainer ID" align="center"
+                                                                           id="c2" width="62">
                                                                     <af:inputText value="#{row.bindings.TrainerId.inputValue}"
                                                                                   label="#{bindings.Tbl_TeamView1.hints.TrainerId.label}"
                                                                                   required="#{bindings.Tbl_TeamView1.hints.TrainerId.mandatory}"
@@ -85,8 +85,8 @@
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TeamView1.hints.Trainer_Name.label}"
-                                                                           id="c5">
+                                                                <af:column headerText="Trainer Name"
+                                                                           id="c5" width="192">
                                                                     <af:inputText value="#{row.bindings.Trainer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TeamView1.hints.Trainer_Name.label}"
                                                                                   required="#{bindings.Tbl_TeamView1.hints.Trainer_Name.mandatory}"
@@ -99,8 +99,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.TeamId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TeamView1.hints.TeamId.label}"
-                                                                           id="c1">
+                                                                           headerText="Team ID" align="center"
+                                                                           id="c1" width="60">
                                                                     <af:inputText value="#{row.bindings.TeamId.inputValue}"
                                                                                   label="#{bindings.Tbl_TeamView1.hints.TeamId.label}"
                                                                                   required="#{bindings.Tbl_TeamView1.hints.TeamId.mandatory}"
@@ -114,8 +114,8 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_TeamView1.hints.Name.label}"
-                                                                           id="c3">
+                                                                           headerText="Team Name"
+                                                                           id="c3" width="178">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TeamView1.hints.Name.label}"
                                                                                   required="#{bindings.Tbl_TeamView1.hints.Name.mandatory}"
@@ -126,8 +126,8 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TeamView1.hints.Ast.label}"
-                                                                           id="c4">
+                                                                <af:column headerText="#{bindings.Tbl_TeamView1.hints.Ast.label}" align="center"
+                                                                           id="c4" width="98">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_TeamView1.hints.Ast.mandatory}"
@@ -145,13 +145,13 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:spacer width="200" height="20" id="s4"/>
+                                                    <af:spacer width="200" height="20" id="s12"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
-                                                                   id="b6"/>
+                                                                   id="b12"/>
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                    text="Edit"
