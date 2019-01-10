@@ -47,7 +47,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1033px;">
-                                                        <af:showDetailItem id="tab1" text="Level 4">
+                                                        <af:showDetailItem id="tab1" text="All Items">
                                                             <af:table value="#{bindings.TblItemL4View4.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL4View4.rangeSize}"
@@ -65,13 +65,13 @@
                                                                       
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL1Id.name}"
                                                                            filterable="true" align="center"
-                                                                           headerText="L1 ID"
+                                                                           headerText="Level 1 ID"
                                                                            id="c4" width="54">
                                                                     <af:outputText value="#{row.ItemL1Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL1Id.tooltip}"
                                                                                    id="ot4"/>
                                                                 </af:column>
-                                                                <af:column headerText="L1 Name"
+                                                                <af:column headerText="Main Name"
                                                                            id="c33" width="105" align="center">
                                                                     <af:outputText value="#{row.L1_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L1_Name.tooltip}"
@@ -79,13 +79,13 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL2Id.name}"
                                                                            filterable="true" align="center"
-                                                                           headerText="L2 ID"
+                                                                           headerText="Sub ID"
                                                                            id="c3" width="65">
                                                                     <af:outputText value="#{row.ItemL2Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL2Id.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
-                                                                <af:column headerText="L2 Name"
+                                                                <af:column headerText="Sub Name"
                                                                            id="c32" width="109" align="center">
                                                                     <af:outputText value="#{row.L2_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L2_Name.tooltip}"
@@ -93,15 +93,15 @@
                                                                 </af:column>
                                                                       <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL3Id.name}"
                                                                            filterable="true"
-                                                                           headerText="L3 ID"
+                                                                           headerText="Sub Sub ID"
                                                                             align="center"
                                                                            id="c2" width="53">
                                                                     <af:outputText value="#{row.ItemL3Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL3Id.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
-                                                                <af:column headerText="L3 Name"
-                                                                           id="c31" width="116" align="center">
+                                                                <af:column headerText="Sub Sub Name"
+                                                                           id="c31" width="145" align="center">
                                                                     <af:outputText value="#{row.L3_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L3_Name.tooltip}"
                                                                                    id="ot7"/>
@@ -110,7 +110,7 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL4Id.name}"
                                                                            filterable="true"
                                                                             align="center"
-                                                                           headerText="L4 ID"
+                                                                           headerText="Item ID"
                                                                            id="c1" width="65">
                                                                     <af:outputText value="#{row.ItemL4Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL4Id.tooltip}"
@@ -119,9 +119,9 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="L4 Name"
+                                                                           headerText="Item Name"
                                                                             align="center"
-                                                                           id="c5" width="126">
+                                                                           id="c5" width="250">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Name.tooltip}"
                                                                                    id="ot5"/>
@@ -129,7 +129,7 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Ast.name}"
                                                                            filterable="true"
                                                                             align="center"
-                                                                           headerText="#{bindings.TblItemL4View4.hints.Ast.label}"
+                                                                           headerText="Status"
                                                                            id="c6" width="62">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Ast.tooltip}"
@@ -150,7 +150,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1036px;">
-                                                        <af:showDetailItem id="tab2" text="Level 1">
+                                                        <af:showDetailItem id="tab2" text="Main Level">
                                                             <af:table value="#{bindings.TblItemL1View1.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL1View1.rangeSize}"
@@ -229,7 +229,7 @@
                                                                disabled="#{!bindings.Commit.enabled}" id="b23"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Level 2" id="sdi2">
+                                                        <af:showDetailItem text="Sub Level" id="sdi2">
                                                             <af:table value="#{bindings.TblItemL2View3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL2View3.rangeSize}"
@@ -335,7 +335,7 @@
                                                                disabled="#{!bindings.Commit.enabled}" id="b19"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Level 3" id="sdi3">
+                                                        <af:showDetailItem text="Sub Sub Level" id="sdi3">
                                                             <af:table value="#{bindings.TblItemL3View3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL3View3.rangeSize}"
@@ -467,7 +467,7 @@
                                                                disabled="#{!bindings.Commit.enabled}" id="b15"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Level 4" id="sdi4">
+                                                        <af:showDetailItem text="Item Level" id="sdi4">
                                                             <af:table value="#{bindings.TblItemL4View41.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL4View41.rangeSize}"
@@ -591,7 +591,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL4View41.hints.Ast.label}"
+                                                                <af:column headerText="Status"
                                                                            id="c12" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -604,7 +604,7 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
-                                                            <af:spacer width="50" height="30" id="s7"/>
+                                                            <af:spacer width="50" height="30" id="s27"/>
                                                             <h:panelGroup id="pg1">
                                                                 <af:spacer width="200" height="20" id="s8"/>
                                                                 <af:button actionListener="#{bindings.CreateInsert.execute}"

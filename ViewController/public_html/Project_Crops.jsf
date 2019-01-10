@@ -80,7 +80,7 @@
                                                                 <af:column sortProperty="#{bindings.TblCropView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop Name"
-                                                                           id="c2" width="455">
+                                                                           id="c2" width="495">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblCropView1.hints.Name.label}"
                                                                                   required="#{bindings.TblCropView1.hints.Name.mandatory}"
@@ -91,8 +91,8 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblCropView1.hints.Ast.label}"
-                                                                           id="c3" align="center">
+                                                                <af:column headerText="Status"
+                                                                           id="c3" align="center" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblCropView1.hints.Ast.mandatory}"
@@ -117,7 +117,7 @@
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b8"
                                                                    icon="#{resource['images:add.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                        <af:spacer width="5" height="10" id="s7"/>
+                                                        <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                id="b9" icon="#{resource['images:edit.png']}"
@@ -129,7 +129,7 @@
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b7"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b11"
                                                                icon="#{resource['images:save.png']}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>

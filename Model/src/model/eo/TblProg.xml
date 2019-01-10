@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="ProgId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="PROG_ID"
     SQLType="VARCHAR"

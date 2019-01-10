@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblProgOffView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -18,6 +18,12 @@
     ViewObjectName="model.lov.Active_Status"
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Office_Category_LOV1_1"
+    ViewObjectName="model.lov.Office_Category_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Office_Category_LOV1"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
@@ -33,6 +39,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Category"
+    ListVOName="AppModule_Office_Category_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Category"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Cat_DB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Cat_View"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -99,7 +122,15 @@
     PrecisionRule="true"
     EntityAttrName="Category"
     EntityUsage="TblProgOff"
-    AliasName="CATEGORY"/>
+    AliasName="CATEGORY"
+    LOVName="LOV_Category">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Ast"
     IsNotNull="true"

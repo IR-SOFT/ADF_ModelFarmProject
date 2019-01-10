@@ -65,7 +65,7 @@
                                                                       partialTriggers="::b7 ::b8 ::b9" width="644">
                                                                 <af:column sortProperty="#{bindings.TblProgView12.hints.ProgId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="ID" align="center"
+                                                                           headerText="Program ID" align="center"
                                                                            id="c1" width="50">
                                                                     <af:inputText value="#{row.bindings.ProgId.inputValue}"
                                                                                   label="#{bindings.TblProgView12.hints.ProgId.label}"
@@ -94,7 +94,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblProgView12.hints.Ast.label}"
+                                                                <af:column headerText="Status"
                                                                            id="c3"  align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -113,7 +113,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                                                    <af:spacer width="174" height="15" id="s7"/>
+                                                    <af:spacer width="174" height="15" id="s17"/>
                                                     <h:panelGroup id="pg1">
                                                     <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Create"
@@ -127,7 +127,7 @@
                                                                           icon="#{resource['images:edit.png']}"/>
                                                         <af:spacer width="5" height="10" id="s14"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b7"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b15"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                icon="#{resource['images:delete.png']}"/>
                                                         <af:spacer width="5" height="10" id="s9"/>
@@ -168,7 +168,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Program ID" align="center"
-                                                                           id="c5" width="74">
+                                                                           id="c5" width="50">
                                                                     <af:inputText value="#{row.bindings.ProgId.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.ProgId.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.ProgId.mandatory}"
@@ -184,7 +184,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.ProgOffId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Office ID" align="center"
-                                                                           id="c4" width="55">
+                                                                           id="c4" width="50">
                                                                     <af:inputText value="#{row.bindings.ProgOffId.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.ProgOffId.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.ProgOffId.mandatory}"
@@ -270,7 +270,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProgOffView3.hints.Email.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="E-mail" align="center"
-                                                                           id="c11" width="115">
+                                                                           id="c11" width="78">
                                                                     <af:inputText value="#{row.bindings.Email.inputValue}"
                                                                                   label="#{bindings.TblProgOffView3.hints.Email.label}"
                                                                                   required="#{bindings.TblProgOffView3.hints.Email.mandatory}"
@@ -281,22 +281,20 @@
                                                                         <f:validator binding="#{row.bindings.Email.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProgOffView3.hints.Category.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Category" align="center"
-                                                                           id="c12" width="35">
-                                                                    <af:inputText value="#{row.bindings.Category.inputValue}"
-                                                                                  label="#{bindings.TblProgOffView3.hints.Category.label}"
-                                                                                  required="#{bindings.TblProgOffView3.hints.Category.mandatory}"
-                                                                                  columns="#{bindings.TblProgOffView3.hints.Category.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblProgOffView3.hints.Category.precision}"
-                                                                                  shortDesc="#{bindings.TblProgOffView3.hints.Category.tooltip}"
-                                                                                  id="it12">
+                                                                <af:column headerText="#{bindings.TblProgOffView3.hints.Category.label}"
+                                                                           id="c12" width="92" align="center">
+                                                                    <af:selectOneChoice value="#{row.bindings.Category.inputValue}"
+                                                                                        label="#{row.bindings.Category.label}"
+                                                                                        required="#{bindings.TblProgOffView3.hints.Category.mandatory}"
+                                                                                        shortDesc="#{bindings.TblProgOffView3.hints.Category.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.Category.items}"
+                                                                                       id="si3"/>
                                                                         <f:validator binding="#{row.bindings.Category.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblProgOffView3.hints.Ast.label}"
-                                                                           id="c13" width="100">
+                                                                <af:column headerText="Status"
+                                                                           id="c13" width="47" align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProgOffView3.hints.Ast.mandatory}"

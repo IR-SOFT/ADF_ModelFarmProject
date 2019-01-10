@@ -4,10 +4,13 @@
 <AppModule
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="AppModule"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
     Name="Active_Status1"
     ViewObjectName="model.lov.Active_Status"/>
+  <ViewUsage
+    Name="Office_Category_LOV1"
+    ViewObjectName="model.lov.Office_Category_LOV"/>
 </AppModule>
