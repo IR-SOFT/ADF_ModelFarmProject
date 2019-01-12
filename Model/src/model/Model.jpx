@@ -11,7 +11,7 @@
     <Attr Name="_DTExpressionTypeChecking" Value="true"/>
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_jprName" Value="../../Model.jpr"/>
-    <Attr Name="_NamedConnection" Value="mfp"/>
+    <Attr Name="_NamedConnection" Value="mfpDB"/>
     <Attr Name="_appModuleNames0" Value="model.eo.AppModule"/>
     <Attr Name="_appModuleNames1" Value="model.lov.AppModule"/>
     <Attr Name="_appModuleNames2" Value="model.vo.AppModule"/>
