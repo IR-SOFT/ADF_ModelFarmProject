@@ -85,7 +85,9 @@
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Trainer Name"
+                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.Trainer_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Trainer Name"
                                                                            id="c5" width="192">
                                                                     <af:inputText value="#{row.bindings.Trainer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TeamView1.hints.Trainer_Name.label}"
@@ -126,7 +128,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TeamView1.hints.Ast.label}" align="center"
+                                                                <af:column sortProperty="#{bindings.Tbl_TeamView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TeamView1.hints.Ast.label}" align="center"
                                                                            id="c4" width="98">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

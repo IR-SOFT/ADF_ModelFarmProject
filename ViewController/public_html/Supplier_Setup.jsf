@@ -90,7 +90,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column sortProperty="#{bindings.TblSupplierView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true" 
+                                                                           headerText="Status"
                                                                            id="c3" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

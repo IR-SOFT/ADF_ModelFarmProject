@@ -78,7 +78,9 @@
                                                                                    shortDesc="#{bindings.TblProjCompInput2View11.hints.ProjCompId.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
-                                                                <af:column headerText="Project Component Name"
+                                                                <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Project_Comp_Name.name}"
+                                                                           filterable="true"
+                                                                            headerText="Project Component Name"
                                                                            id="c9" width="135">
                                                                     <af:outputText value="#{row.Project_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput2View11.hints.Project_Comp_Name.tooltip}"
@@ -183,7 +185,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblCourseView3.hints.Ast.label}"
+                                                                <af:column sortProperty="#{bindings.TblCourseView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblCourseView3.hints.Ast.label}"
                                                                            id="c8"  align="center">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

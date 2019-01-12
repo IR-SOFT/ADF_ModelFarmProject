@@ -113,7 +113,9 @@
                                                                         <f:validator binding="#{row.bindings.FatherName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TrainerView1.hints.Ast.label}"
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_TrainerView1.hints.Ast.label}"
                                                                            id="c4" align="center" width="84">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

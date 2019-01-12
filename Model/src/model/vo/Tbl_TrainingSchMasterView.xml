@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_TrainingSchMasterView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,6 +13,121 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Proj_Comp_Name_LOV1_1"
+    ViewObjectName="model.lov.Proj_Comp_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Proj_Comp_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Course_Name_LOV1_1"
+    ViewObjectName="model.lov.Course_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Course_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Module_Name_LOV1_1"
+    ViewObjectName="model.lov.Module_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Module_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Cluster_Name_LOV1_1"
+    ViewObjectName="model.lov.Cluster_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Cluster_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Team_Name_LOV1_1"
+    ViewObjectName="model.lov.Team_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Team_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ProjCompId"
+    ListVOName="AppModule_Proj_Comp_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjCompId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ProjCompId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CourseId"
+    ListVOName="AppModule_Course_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CourseId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CourseId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ModuleId"
+    ListVOName="AppModule_Module_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ModuleId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ModuleId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ClusterId"
+    ListVOName="AppModule_Cluster_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TeamId"
+    ListVOName="AppModule_Team_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TeamId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="TeamId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Tbl_TrainingSchMaster"
     Entity="model.eo.Tbl_TrainingSchMaster"/>
@@ -143,35 +258,75 @@
     PrecisionRule="true"
     EntityAttrName="ProjCompId"
     EntityUsage="Tbl_TrainingSchMaster"
-    AliasName="PROJ_COMP_ID"/>
+    AliasName="PROJ_COMP_ID"
+    LOVName="LOV_ProjCompId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="CourseId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="CourseId"
     EntityUsage="Tbl_TrainingSchMaster"
-    AliasName="COURSE_ID"/>
+    AliasName="COURSE_ID"
+    LOVName="LOV_CourseId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ModuleId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="ModuleId"
     EntityUsage="Tbl_TrainingSchMaster"
-    AliasName="MODULE_ID"/>
+    AliasName="MODULE_ID"
+    LOVName="LOV_ModuleId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="ClusterId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="ClusterId"
     EntityUsage="Tbl_TrainingSchMaster"
-    AliasName="CLUSTER_ID"/>
+    AliasName="CLUSTER_ID"
+    LOVName="LOV_ClusterId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TeamId"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="TeamId"
     EntityUsage="Tbl_TrainingSchMaster"
-    AliasName="TEAM_ID"/>
+    AliasName="TEAM_ID"
+    LOVName="LOV_TeamId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TrainerId"
     IsNotNull="true"

@@ -71,7 +71,9 @@
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL1Id.tooltip}"
                                                                                    id="ot4"/>
                                                                 </af:column>
-                                                                <af:column headerText="Level-1"
+                                                                <af:column sortProperty="#{bindings.TblItemL4View4.hints.L1_Name.name}"
+                                                                           filterable="true"
+                                                                           headerText="Level-1"
                                                                            id="c33" width="105" align="left">
                                                                     <af:outputText value="#{row.L1_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L1_Name.tooltip}"
@@ -85,7 +87,8 @@
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL2Id.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
-                                                                <af:column headerText="Level-2"
+                                                                <af:column sortProperty="#{bindings.TblItemL4View4.hints.L2_Name.name}"
+                                                                           filterable="true" headerText="Level-2"
                                                                            id="c32" width="117">
                                                                     <af:outputText value="#{row.L2_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L2_Name.tooltip}"
@@ -99,7 +102,9 @@
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL3Id.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
-                                                                <af:column headerText="Level-3"
+                                                                <af:column sortProperty="#{bindings.TblItemL4View4.hints.L3_Name.name}"
+                                                                           filterable="true"
+                                                                           headerText="Level-3"
                                                                            id="c31" width="151">
                                                                     <af:outputText value="#{row.L3_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L3_Name.tooltip}"
@@ -192,7 +197,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column  sortProperty="#{bindings.TblItemL1View1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Status"
                                                                            id="c24" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

@@ -19,4 +19,22 @@
   <ViewUsage
     Name="Supplier_Name_LOV1"
     ViewObjectName="model.lov.Supplier_Name_LOV"/>
+  <ViewUsage
+    Name="L4_Name_LOV1"
+    ViewObjectName="model.lov.L4_Name_LOV"/>
+  <ViewUsage
+    Name="Proj_Comp_Name_LOV1"
+    ViewObjectName="model.lov.Proj_Comp_Name_LOV"/>
+  <ViewUsage
+    Name="Course_Name_LOV1"
+    ViewObjectName="model.lov.Course_Name_LOV"/>
+  <ViewUsage
+    Name="Module_Name_LOV1"
+    ViewObjectName="model.lov.Module_Name_LOV"/>
+  <ViewUsage
+    Name="Cluster_Name_LOV1"
+    ViewObjectName="model.lov.Cluster_Name_LOV"/>
+  <ViewUsage
+    Name="Team_Name_LOV1"
+    ViewObjectName="model.lov.Team_Name_LOV"/>
 </AppModule>
