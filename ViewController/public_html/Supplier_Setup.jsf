@@ -78,7 +78,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierView1.hints.Name.name}"
                                                                            filterable="true" sortable="true" 
-                                                                           headerText="Supplier Name"
+                                                                           headerText="Supplier"
                                                                            id="c2" width="500">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblSupplierView1.hints.Name.label}"
@@ -86,12 +86,12 @@
                                                                                   columns="#{bindings.TblSupplierView1.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblSupplierView1.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblSupplierView1.hints.Name.tooltip}"
-                                                                                  id="it2">
+                                                                                  id="it2" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="Status"
-                                                                           id="c3" align="center" width="60">
+                                                                           id="c3" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblSupplierView1.hints.Ast.mandatory}"
@@ -114,7 +114,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1030px;">
-                                                        <af:showDetailItem id="tab2" text="Supplier Detail">
+                                                        <af:showDetailItem id="tab2" text="Supplier Detail Setup">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="4">
                                                                 <af:inputText value="#{bindings.Payee.inputValue}"
                                                                               label="#{bindings.Payee.hints.label}"
@@ -122,7 +122,7 @@
                                                                               columns="#{bindings.Payee.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Payee.hints.precision}"
                                                                               shortDesc="#{bindings.Payee.hints.tooltip}"
-                                                                              id="it4" contentStyle="width:200px;">
+                                                                              id="it4" contentStyle="width:200px;" >
                                                                     <f:validator binding="#{bindings.Payee.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ConPer.inputValue}"
