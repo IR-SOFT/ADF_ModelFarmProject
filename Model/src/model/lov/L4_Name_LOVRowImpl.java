@@ -36,6 +36,7 @@ public class L4_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int ITEML4ID = AttributesEnum.ItemL4Id.index();
     public static final int NAME = AttributesEnum.Name.index();
 

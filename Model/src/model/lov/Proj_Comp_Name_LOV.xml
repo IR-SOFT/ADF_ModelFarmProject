@@ -22,7 +22,7 @@
         ResId="Proj_Comp_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select Proj_Comp_ID,name from Tbl_Proj_Comp where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select Proj_Comp_ID,name from Tbl_Proj_Comp where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="ProjCompId"
     IsUpdateable="false"

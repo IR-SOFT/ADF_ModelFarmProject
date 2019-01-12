@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="ProjCompOutputId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="PROJ_COMP_OUTPUT_ID"
     SQLType="VARCHAR"

@@ -22,7 +22,7 @@
         ResId="L4_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select item_l4_id,name from Tbl_Item_L4 where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select item_l4_id,name from Tbl_Item_L4 where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="ItemL4Id"
     IsUpdateable="false"

@@ -36,6 +36,7 @@ public class Module_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int MODULEID = AttributesEnum.ModuleId.index();
     public static final int NAME = AttributesEnum.Name.index();
 

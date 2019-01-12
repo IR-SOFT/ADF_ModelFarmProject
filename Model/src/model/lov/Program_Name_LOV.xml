@@ -22,7 +22,7 @@
         ResId="Program_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select prog_id,name from tbl_prog where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select prog_id,name from tbl_prog where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="ProgId"
     IsUpdateable="false"

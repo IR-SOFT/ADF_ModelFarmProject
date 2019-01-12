@@ -22,7 +22,7 @@
         ResId="Cluster_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select Cluster_ID,name from Tbl_Cluster where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select Cluster_ID,name from Tbl_Cluster where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="ClusterId"
     IsUpdateable="false"

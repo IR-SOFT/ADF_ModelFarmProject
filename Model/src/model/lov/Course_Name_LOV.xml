@@ -22,7 +22,7 @@
         ResId="Course_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select Course_ID,name from tbl_course where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select Course_ID,name from tbl_course where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="CourseId"
     IsUpdateable="false"

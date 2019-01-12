@@ -36,6 +36,7 @@ public class Supplier_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int SUPPLIERID = AttributesEnum.SupplierId.index();
     public static final int NAME = AttributesEnum.Name.index();
 

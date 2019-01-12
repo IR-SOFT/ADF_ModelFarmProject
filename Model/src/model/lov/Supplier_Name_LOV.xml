@@ -22,7 +22,7 @@
         ResId="Supplier_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select supplier_id,name from tbl_supplier where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select supplier_id,name from tbl_supplier where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="SupplierId"
     IsUpdateable="false"

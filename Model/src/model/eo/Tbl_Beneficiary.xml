@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="BeneficiaryId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="BENEFICIARY_ID"
     SQLType="VARCHAR"

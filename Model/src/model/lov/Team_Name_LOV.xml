@@ -22,7 +22,7 @@
         ResId="Team_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select Team_ID,name from Tbl_Team where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select Team_ID,name from Tbl_Team where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="TeamId"
     IsUpdateable="false"

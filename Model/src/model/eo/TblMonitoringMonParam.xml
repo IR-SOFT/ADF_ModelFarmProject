@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="MonParamId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="MON_PARAM_ID"
     SQLType="VARCHAR"

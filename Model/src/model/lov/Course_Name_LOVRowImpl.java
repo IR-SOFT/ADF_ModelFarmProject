@@ -36,6 +36,7 @@ public class Course_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int COURSEID = AttributesEnum.CourseId.index();
     public static final int NAME = AttributesEnum.Name.index();
 

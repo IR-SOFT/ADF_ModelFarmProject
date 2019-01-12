@@ -22,7 +22,7 @@
         ResId="Module_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select Module_ID,name from Tbl_Module where ast='y']]></SQLQuery>
+  <SQLQuery><![CDATA[select Module_ID,name from Tbl_Module where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="ModuleId"
     IsUpdateable="false"

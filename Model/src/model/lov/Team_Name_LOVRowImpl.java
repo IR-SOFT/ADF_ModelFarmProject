@@ -36,6 +36,7 @@ public class Team_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int TEAMID = AttributesEnum.TeamId.index();
     public static final int NAME = AttributesEnum.Name.index();
 

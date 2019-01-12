@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_ProjComp"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_PROJ_COMP"
@@ -12,14 +12,14 @@
   BindingStyle="OracleName">
   <Attribute
     Name="ProjCompId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="PROJ_COMP_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_PROJ_COMP"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -91,6 +91,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="model.eo.Tbl_ProjComp.Name"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="TblProjCompProjCompIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"PROJ_COMP_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="TBL_PROJ_COMP_PROJ_COMP_ID_CHE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.Tbl_ProjComp.ProjCompId"/>
     </AttrArray>
   </Key>
   <Key

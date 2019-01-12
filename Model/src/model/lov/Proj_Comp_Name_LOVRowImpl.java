@@ -36,6 +36,7 @@ public class Proj_Comp_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int PROJCOMPID = AttributesEnum.ProjCompId.index();
     public static final int NAME = AttributesEnum.Name.index();
 

@@ -37,6 +37,7 @@ public class Program_Name_LOVRowImpl extends ViewRowImpl {
         }
     }
 
+
     public static final int PROGID = AttributesEnum.ProgId.index();
     public static final int NAME = AttributesEnum.Name.index();
 

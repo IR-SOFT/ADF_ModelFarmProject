@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="OutputIndId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="OUTPUT_IND_ID"
     SQLType="VARCHAR"

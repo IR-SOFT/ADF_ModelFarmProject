@@ -36,6 +36,7 @@ public class Cluster_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int CLUSTERID = AttributesEnum.ClusterId.index();
     public static final int NAME = AttributesEnum.Name.index();
 
