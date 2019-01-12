@@ -20,16 +20,16 @@
                             <af:button text="Project" id="b3" inlineStyle="width:190px;" destination="Project.jsf"
                                        icon="#{resource['images:projects.png']}"/>
                             <af:spacer width="190" height="10" id="s5"/>
-                            <af:button text="Project Crops" id="b5" inlineStyle="width:190px;"
+                            <af:button text="Crops" id="b5" inlineStyle="width:190px;"
                                        destination="Project_Crops.jsf" icon="#{resource['images:crops.png']}"/>
                             <af:spacer width="190" height="10" id="s2"/>
-                            <af:button text="Machinery Setup" id="b2" inlineStyle="width:190px;"
+                            <af:button text="Items" id="b2" inlineStyle="width:190px;"
                                        destination="Machinery_Setup.jsf" icon="#{resource['images:machinery.png']}"/>
                             <af:spacer width="190" height="10" id="s4"/>
-                            <af:button text="Supplier Setup" id="b4" inlineStyle="width:190px;"
+                            <af:button text="Supplier" id="b4" inlineStyle="width:190px;"
                                        destination="Supplier_Setup.jsf" icon="#{resource['images:supplier.png']}"/>
                             <af:spacer width="190" height="10" id="s6"/>
-                            <af:button text="Supplier Rate Setup" id="b6" inlineStyle="width:190px;"
+                            <af:button text="Supplier Rate" id="b6" inlineStyle="width:190px;"
                                        destination="Supplier_Rate_Setup.jsf"
                                        icon="#{resource['images:supplier_rate.png']}"/>
                                        <af:spacer width="190" height="10" id="s7"/>
@@ -82,7 +82,7 @@
                                                                         <f:validator binding="#{row.bindings.ProgId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Program Name"
+                                                                <af:column headerText="Program"
                                                                            id="c15" width="250">
                                                                     <af:inputText value="#{row.bindings.Program_Name.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.Program_Name.label}"
@@ -111,7 +111,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Project Name" 
+                                                                           headerText="Project" 
                                                                            id="c3" width="330">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.Name.label}"
@@ -125,7 +125,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="Status"
-                                                                           id="c4" width="60" align="center">
+                                                                           id="c4" width="60" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjView1.hints.Ast.mandatory}"
@@ -176,7 +176,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
                                                     <af:panelTabbed position="above" id="pt4"
                                                                     inlineStyle="height:264px; width:1032px;">
-                                                        <af:showDetailItem id="tab3" text="Project Offices">
+                                                        <af:showDetailItem id="tab3" text="Project Offices Setup">
                                                             <af:table value="#{bindings.TblProjOffView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblProjOffView3.rangeSize}"
@@ -222,8 +222,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Office Name"
-                                                                           id="c7" width="173" align="center">
+                                                                           headerText="Office"
+                                                                           id="c7" width="173" align="left">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Name.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Name.mandatory}"
@@ -237,21 +237,21 @@
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.ContactPer.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Contact Person"
-                                                                           id="c8" align="center">
+                                                                           id="c8" align="left">
                                                                     <af:inputText value="#{row.bindings.ContactPer.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.ContactPer.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.ContactPer.mandatory}"
                                                                                   columns="#{bindings.TblProjOffView3.hints.ContactPer.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjOffView3.hints.ContactPer.precision}"
                                                                                   shortDesc="#{bindings.TblProjOffView3.hints.ContactPer.tooltip}"
-                                                                                  id="it8">
+                                                                                  id="it8" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.ContactPer.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.Address.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjOffView3.hints.Address.label}"
-                                                                           id="c9" align="center" width="180">
+                                                                           id="c9" align="left" width="180">
                                                                     <af:inputText value="#{row.bindings.Address.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Address.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Address.mandatory}"
@@ -272,7 +272,7 @@
                                                                                   columns="#{bindings.TblProjOffView3.hints.Tel.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjOffView3.hints.Tel.precision}"
                                                                                   shortDesc="#{bindings.TblProjOffView3.hints.Tel.tooltip}"
-                                                                                  id="it10">
+                                                                                  id="it10" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.Tel.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -286,14 +286,14 @@
                                                                                   columns="#{bindings.TblProjOffView3.hints.Fax.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjOffView3.hints.Fax.precision}"
                                                                                   shortDesc="#{bindings.TblProjOffView3.hints.Fax.tooltip}"
-                                                                                  id="it11">
+                                                                                  id="it11" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.Fax.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjOffView3.hints.Email.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="E-mail"
-                                                                           id="c12" width="70" align="center">
+                                                                           id="c12" width="70" align="left">
                                                                     <af:inputText value="#{row.bindings.Email.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Email.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Email.mandatory}"
@@ -305,7 +305,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="#{bindings.TblProjOffView3.hints.Category.label}"
-                                                                           id="c13" width="88" align="center">
+                                                                           id="c13" width="88" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Category.inputValue}"
                                                                                         label="#{row.bindings.Category.label}"
                                                                                         required="#{bindings.TblProjOffView3.hints.Category.mandatory}"
@@ -317,7 +317,7 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column headerText="Status"
-                                                                           id="c14" width="52" align="center">
+                                                                           id="c14" width="52" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjOffView3.hints.Ast.mandatory}"

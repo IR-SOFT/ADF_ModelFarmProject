@@ -18,16 +18,16 @@
                             <af:button text="Project" id="b3" inlineStyle="width:190px;" destination="Project.jsf"
                                        icon="#{resource['images:projects.png']}"/>
                             <af:spacer width="190" height="10" id="s5"/>
-                            <af:button text="Project Crops" id="b5" inlineStyle="width:190px;"
+                            <af:button text="Crops" id="b5" inlineStyle="width:190px;"
                                        destination="Project_Crops.jsf" icon="#{resource['images:crops.png']}"/>
                             <af:spacer width="190" height="10" id="s2"/>
-                            <af:button text="Machinery Setup" id="b2" inlineStyle="width:190px;"
+                            <af:button text="Items" id="b2" inlineStyle="width:190px;"
                                        destination="Machinery_Setup.jsf" icon="#{resource['images:machinery.png']}"/>
                             <af:spacer width="190" height="10" id="s4"/>
-                            <af:button text="Supplier Setup" id="b4" inlineStyle="width:190px;"
+                            <af:button text="Supplier" id="b4" inlineStyle="width:190px;"
                                        destination="Supplier_Setup.jsf" icon="#{resource['images:supplier.png']}"/>
                             <af:spacer width="190" height="10" id="s6"/>
-                            <af:button text="Supplier Rate Setup" id="b6" inlineStyle="width:190px;"
+                            <af:button text="Supplier Rate" id="b6" inlineStyle="width:190px;"
                                        destination="Supplier_Rate_Setup.jsf"
                                        icon="#{resource['images:supplier_rate.png']}"/>
                                        <af:spacer width="190" height="10" id="s7"/>

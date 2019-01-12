@@ -20,16 +20,16 @@
                             <af:button text="Project" id="b3" inlineStyle="width:190px;" destination="Project.jsf"
                                        icon="#{resource['images:projects.png']}"/>
                             <af:spacer width="190" height="10" id="s5"/>
-                            <af:button text="Project Crops" id="b5" inlineStyle="width:190px;"
+                            <af:button text="Crops" id="b5" inlineStyle="width:190px;"
                                        destination="Project_Crops.jsf" icon="#{resource['images:crops.png']}"/>
                             <af:spacer width="190" height="10" id="s2"/>
-                            <af:button text="Machinery Setup" id="b2" inlineStyle="width:190px;"
+                            <af:button text="Items" id="b2" inlineStyle="width:190px;"
                                        destination="Machinery_Setup.jsf" icon="#{resource['images:machinery.png']}"/>
                             <af:spacer width="190" height="10" id="s4"/>
-                            <af:button text="Supplier Setup" id="b4" inlineStyle="width:190px;"
+                            <af:button text="Supplier" id="b4" inlineStyle="width:190px;"
                                        destination="Supplier_Setup.jsf" icon="#{resource['images:supplier.png']}"/>
                             <af:spacer width="190" height="10" id="s6"/>
-                            <af:button text="Supplier Rate Setup" id="b6" inlineStyle="width:190px;"
+                            <af:button text="Supplier Rate" id="b6" inlineStyle="width:190px;"
                                        destination="Supplier_Rate_Setup.jsf"
                                        icon="#{resource['images:supplier_rate.png']}"/>
                                        <af:spacer width="190" height="10" id="s7"/>
@@ -41,7 +41,7 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1050px;">
-                                    <af:showDetailItem id="pane2" text="Machinery Setup">
+                                    <af:showDetailItem id="pane2" text="Items">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
@@ -65,43 +65,42 @@
                                                                       
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL1Id.name}"
                                                                            filterable="true" align="center"
-                                                                           headerText="Level 1 ID"
+                                                                           headerText="Level-1 ID"
                                                                            id="c4" width="54">
                                                                     <af:outputText value="#{row.ItemL1Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL1Id.tooltip}"
                                                                                    id="ot4"/>
                                                                 </af:column>
-                                                                <af:column headerText="Main Name"
-                                                                           id="c33" width="105" align="center">
+                                                                <af:column headerText="Level-1"
+                                                                           id="c33" width="105" align="left">
                                                                     <af:outputText value="#{row.L1_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L1_Name.tooltip}"
                                                                                    id="ot9"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL2Id.name}"
                                                                            filterable="true" align="center"
-                                                                           headerText="Sub ID"
-                                                                           id="c3" width="65">
+                                                                           headerText="Level-2 ID"
+                                                                           id="c3" width="57">
                                                                     <af:outputText value="#{row.ItemL2Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL2Id.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
-                                                                <af:column headerText="Sub Name"
-                                                                           id="c32" width="109" align="center">
+                                                                <af:column headerText="Level-2"
+                                                                           id="c32" width="117">
                                                                     <af:outputText value="#{row.L2_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L2_Name.tooltip}"
                                                                                    id="ot8"/>
                                                                 </af:column>
                                                                       <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL3Id.name}"
                                                                            filterable="true"
-                                                                           headerText="Sub Sub ID"
-                                                                            align="center"
-                                                                           id="c2" width="53">
+                                                                           headerText="Level-3 ID"
+                                                                           id="c2" width="47">
                                                                     <af:outputText value="#{row.ItemL3Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL3Id.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
-                                                                <af:column headerText="Sub Sub Name"
-                                                                           id="c31" width="145" align="center">
+                                                                <af:column headerText="Level-3"
+                                                                           id="c31" width="151">
                                                                     <af:outputText value="#{row.L3_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L3_Name.tooltip}"
                                                                                    id="ot7"/>
@@ -119,8 +118,8 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Item Name"
-                                                                            align="center"
+                                                                           headerText="Item"
+                                                                            align="left"
                                                                            id="c5" width="250">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Name.tooltip}"
@@ -128,7 +127,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Ast.name}"
                                                                            filterable="true"
-                                                                            align="center"
+                                                                            align="left"
                                                                            headerText="Status"
                                                                            id="c6" width="62">
                                                                     <af:outputText value="#{row.Ast}"
@@ -150,7 +149,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1036px;">
-                                                        <af:showDetailItem id="tab2" text="Main Level">
+                                                        <af:showDetailItem id="tab2" text="Level-1">
                                                             <af:table value="#{bindings.TblItemL1View1.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL1View1.rangeSize}"
@@ -167,8 +166,8 @@
                                                                       partialTriggers="::b20 ::b21 ::b22">
                                                                 <af:column sortProperty="#{bindings.TblItemL1View1.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L1 ID" align="center"
-                                                                           id="c22">
+                                                                           headerText="Level-1 ID" align="center"
+                                                                           id="c22" width="61">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL1View1.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL1View1.hints.ItemL1Id.mandatory}"
@@ -180,21 +179,21 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL1View1.hints.Name.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="#{bindings.TblItemL1View1.hints.Name.label}"
-                                                                           id="c23">
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Level-1"
+                                                                           id="c23" width="139">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL1View1.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL1View1.hints.Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL1View1.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL1View1.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL1View1.hints.Name.tooltip}"
-                                                                                  id="it17">
+                                                                                  id="it17" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL1View1.hints.Ast.label}"
-                                                                           id="c24" align="center">
+                                                                <af:column headerText="Status"
+                                                                           id="c24" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL1View1.hints.Ast.mandatory}"
@@ -229,7 +228,7 @@
                                                                disabled="#{!bindings.Commit.enabled}" id="b23"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Sub Level" id="sdi2">
+                                                        <af:showDetailItem text="Level-2" id="sdi2">
                                                             <af:table value="#{bindings.TblItemL2View3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL2View3.rangeSize}"
@@ -246,7 +245,7 @@
                                                                       partialTriggers="::b16 ::b17 ::b18">
                                                                <af:column sortProperty="#{bindings.TblItemL2View3.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L1 ID"
+                                                                           headerText="Level-1 ID"
                                                                            id="c19" width="58" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.ItemL1Id.label}"
@@ -258,21 +257,21 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="L1 Name"
-                                                                           id="c25" width="142" align="center">
+                                                                <af:column headerText="Level-1"
+                                                                           id="c25" width="142">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.L1_Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL2View3.hints.L1_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL2View3.hints.L1_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL2View3.hints.L1_Name.tooltip}"
-                                                                                  id="it6">
+                                                                                  id="it6" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.L1_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL2View3.hints.ItemL2Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L2 ID"
+                                                                           headerText="Level-2 ID"
                                                                            id="c18" width="55" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.ItemL2Id.label}"
@@ -287,20 +286,20 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL2View3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L2 Name"
-                                                                           id="c20" width="145" align="center">
+                                                                           headerText="Level-2"
+                                                                           id="c20" width="145">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL2View3.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL2View3.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL2View3.hints.Name.tooltip}"
-                                                                                  id="it14">
+                                                                                  id="it14" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL2View3.hints.Ast.label}"
-                                                                           id="c21" width="100" align="center">
+                                                                <af:column headerText="Status"
+                                                                           id="c21" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL2View3.hints.Ast.mandatory}"
@@ -335,7 +334,7 @@
                                                                disabled="#{!bindings.Commit.enabled}" id="b19"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Sub Sub Level" id="sdi3">
+                                                        <af:showDetailItem text="Level-3" id="sdi3">
                                                             <af:table value="#{bindings.TblItemL3View3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL3View3.rangeSize}"
@@ -352,7 +351,7 @@
                                                                       partialTriggers="::b12 ::b13 ::b14">
                                                                       <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L1 ID"
+                                                                           headerText="Level-1 ID"
                                                                            id="c15" width="47" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL1Id.label}"
@@ -364,21 +363,21 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="L1 Name"
-                                                                           id="c27" width="153" align="center">
+                                                                <af:column headerText="Level-1"
+                                                                           id="c27" width="153">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.L1_Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL3View3.hints.L1_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.L1_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.L1_Name.tooltip}"
-                                                                                  id="it15">
+                                                                                  id="it15" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.L1_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL2Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L2 ID"
+                                                                           headerText="Level-2 ID"
                                                                            id="c14" width="52" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL2Id.label}"
@@ -390,22 +389,22 @@
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="L2 Name"
-                                                                           id="c26" width="148" align="center">
+                                                                <af:column headerText="Level-2"
+                                                                           id="c26" width="148">
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L2_Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.L2_Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL3View3.hints.L2_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.L2_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.L2_Name.tooltip}"
-                                                                                  id="it11">
+                                                                                  id="it11" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.L2_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL3Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L3 ID"
+                                                                           headerText="Level-3 ID"
                                                                            id="c13" width="64" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL3Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL3Id.label}"
@@ -419,20 +418,20 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L3 Name"
-                                                                           id="c16" width="136" align="center">
+                                                                           headerText="Level-3"
+                                                                           id="c16" width="136">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL3View3.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.Name.tooltip}"
-                                                                                  id="it10">
+                                                                                  id="it10" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblItemL3View3.hints.Ast.label}"
-                                                                           id="c17" width="100" align="center">
+                                                                <af:column headerText="Status"
+                                                                           id="c17" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL3View3.hints.Ast.mandatory}"
@@ -459,7 +458,7 @@
                                                                 <af:spacer width="5" height="10" id="s19"/>
                                                                 <af:button actionListener="#{bindings.Delete1.execute}"
                                                                text="Delete" disabled="#{!bindings.Delete1.enabled}"
-                                                               icon="#{resource['images:edit.png']}"
+                                                               icon="#{resource['images:delete.png']}"
                                                                id="b14"/>
                                                                 <af:spacer width="5" height="10" id="s20"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}" text="Save"
@@ -467,7 +466,7 @@
                                                                disabled="#{!bindings.Commit.enabled}" id="b15"/>
                                                     </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Item Level" id="sdi4">
+                                                        <af:showDetailItem text="Items" id="sdi4">
                                                             <af:table value="#{bindings.TblItemL4View41.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblItemL4View41.rangeSize}"
@@ -484,8 +483,8 @@
                                                                       partialTriggers="::b8 ::b9 ::b10">
                                                                        <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL1Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L1 ID" align="center"
-                                                                           id="c10">
+                                                                           headerText="Level-1 ID" align="center"
+                                                                           id="c10" width="51">
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL1Id.mandatory}"
@@ -496,22 +495,22 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="L1 Name"
-                                                                           id="c28" align="center">
+                                                                <af:column headerText="Level-1"
+                                                                           id="c28" width="149">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.L1_Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL4View41.hints.L1_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.L1_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.L1_Name.tooltip}"
-                                                                                  id="it18">
+                                                                                  id="it18" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.L1_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL2Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L2 ID" align="center"
-                                                                           id="c9">
+                                                                           headerText="Level-2 ID" align="center"
+                                                                           id="c9" width="60">
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL2Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL2Id.mandatory}"
@@ -522,22 +521,22 @@
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="L2 Name" align="center"
-                                                                           id="c29">
+                                                                <af:column headerText="Level-2"
+                                                                           id="c29" width="140">
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L2_Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.L2_Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL4View41.hints.L2_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.L2_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.L2_Name.tooltip}"
-                                                                                  id="it19">
+                                                                                  id="it19" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.L2_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                       <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL3Id.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L3 ID" align="center"
-                                                                           id="c8">
+                                                                           headerText="Level-3 ID" align="center"
+                                                                           id="c8" width="47">
                                                                     <af:inputText value="#{row.bindings.ItemL3Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL3Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL3Id.mandatory}"
@@ -548,15 +547,15 @@
                                                                         <f:validator binding="#{row.bindings.ItemL3Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="L3 Name" align="center"
-                                                                           id="c30">
+                                                                <af:column headerText="Level-3"
+                                                                           id="c30" width="153">
                                                                     <af:inputText value="#{row.bindings.L3_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L3_Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.L3_Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL4View41.hints.L3_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.L3_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.L3_Name.tooltip}"
-                                                                                  id="it20">
+                                                                                  id="it20" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.L3_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -564,8 +563,8 @@
                                                                
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.ItemL4Id.name}"
                                                                            filterable="true" sortable="true" align="center"
-                                                                           headerText="L4 ID"
-                                                                           id="c7">
+                                                                           headerText="Item ID"
+                                                                           id="c7" width="34">
                                                                     <af:inputText value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL4Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL4Id.mandatory}"
@@ -579,20 +578,20 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="L4 Name" align="center"
-                                                                           id="c11">
+                                                                           headerText="Item"
+                                                                           id="c11" width="166">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL4View41.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.Name.tooltip}"
-                                                                                  id="it5">
+                                                                                  id="it5" contentStyle="text-transform:uppercase;">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column headerText="Status"
-                                                                           id="c12" align="center">
+                                                                           id="c12" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL4View41.hints.Ast.mandatory}"
