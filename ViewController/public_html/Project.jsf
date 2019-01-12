@@ -67,37 +67,24 @@
                                                                       queryListener="#{bindings.TblProjView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b11 ::b12 ::b13" width="832">
-                                                                <af:column sortProperty="#{bindings.TblProjView1.hints.ProgId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Program ID" align="center"
-                                                                           id="c2" width="70">
-                                                                    <af:inputText value="#{row.bindings.ProgId.inputValue}"
-                                                                                  label="#{bindings.TblProjView1.hints.ProgId.label}"
-                                                                                  required="#{bindings.TblProjView1.hints.ProgId.mandatory}"
-                                                                                  columns="#{bindings.TblProjView1.hints.ProgId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblProjView1.hints.ProgId.precision}"
-                                                                                  shortDesc="#{bindings.TblProjView1.hints.ProgId.tooltip}"
-                                                                                  id="it2"
-                                                                                  contentStyle='text-align:center'>
+                                                                <af:column  sortProperty="#{bindings.TblProjView1.hints.ProgId.name}"
+                                                                headerText="Program Name"
+                                                                filterable="true" sortable="true"
+                                                                           id="c16" width="248">
+                                                                    <af:selectOneChoice value="#{row.bindings.ProgId.inputValue}"
+                                                                                        label="#{row.bindings.ProgId.label}"
+                                                                                        required="#{bindings.TblProjView1.hints.ProgId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblProjView1.hints.ProgId.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.ProgId.items}"
+                                                                                       id="si4"/>
                                                                         <f:validator binding="#{row.bindings.ProgId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column headerText="Program"
-                                                                           id="c15" width="250">
-                                                                    <af:inputText value="#{row.bindings.Program_Name.inputValue}"
-                                                                                  label="#{bindings.TblProjView1.hints.Program_Name.label}"
-                                                                                  required="#{bindings.TblProjView1.hints.Program_Name.mandatory}"
-                                                                                  columns="#{bindings.TblProjView1.hints.Program_Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblProjView1.hints.Program_Name.precision}"
-                                                                                  shortDesc="#{bindings.TblProjView1.hints.Program_Name.tooltip}"
-                                                                                  id="it4">
-                                                                        <f:validator binding="#{row.bindings.Program_Name.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.ProjId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project ID" align="center"
-                                                                           id="c1" width="60">
+                                                                           id="c1" width="-88">
                                                                     <af:inputText value="#{row.bindings.ProjId.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.ProjId.label}"
                                                                                   required="#{bindings.TblProjView1.hints.ProjId.mandatory}"
@@ -124,7 +111,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column  sortProperty="#{bindings.TblProjView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                headerText="Status"
                                                                            id="c4" width="60" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblSupplierRateMasterView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Supplier_Name_LOV1_1"
+    ViewObjectName="model.lov.Supplier_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Supplier_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_SupplierId"
+    ListVOName="AppModule_Supplier_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="SupplierId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="SupplierId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblSupplierRateMaster"
     Entity="model.eo.TblSupplierRateMaster"/>
@@ -48,7 +71,15 @@
     PrecisionRule="true"
     EntityAttrName="SupplierId"
     EntityUsage="TblSupplierRateMaster"
-    AliasName="SUPPLIER_ID"/>
+    AliasName="SUPPLIER_ID"
+    LOVName="LOV_SupplierId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Dated"
     IsNotNull="true"

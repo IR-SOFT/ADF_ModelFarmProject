@@ -13,4 +13,10 @@
   <ViewUsage
     Name="Office_Category_LOV1"
     ViewObjectName="model.lov.Office_Category_LOV"/>
+  <ViewUsage
+    Name="Program_Name_LOV1"
+    ViewObjectName="model.lov.Program_Name_LOV"/>
+  <ViewUsage
+    Name="Supplier_Name_LOV1"
+    ViewObjectName="model.lov.Supplier_Name_LOV"/>
 </AppModule>
