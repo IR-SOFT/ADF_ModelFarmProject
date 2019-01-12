@@ -85,6 +85,66 @@
                                                                         <f:validator binding="#{row.bindings.TrainingSchMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.ProjCompId.label}"
+                                                                           id="c25">
+                                                                    <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
+                                                                                        label="#{row.bindings.ProjCompId.label}"
+                                                                                        required="#{bindings.Tbl_TrainingSchMasterView1.hints.ProjCompId.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.ProjCompId.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.ProjCompId.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.label}"
+                                                                           id="c26">
+                                                                    <af:selectOneChoice value="#{row.bindings.CourseId.inputValue}"
+                                                                                        label="#{row.bindings.CourseId.label}"
+                                                                                        required="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.CourseId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.CourseId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.ModuleId.label}"
+                                                                           id="c27">
+                                                                    <af:selectOneChoice value="#{row.bindings.ModuleId.inputValue}"
+                                                                                        label="#{row.bindings.ModuleId.label}"
+                                                                                        required="#{bindings.Tbl_TrainingSchMasterView1.hints.ModuleId.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.ModuleId.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.ModuleId.items}"
+                                                                                       id="si3"/>
+                                                                        <f:validator binding="#{row.bindings.ModuleId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.label}"
+                                                                           id="c28">
+                                                                    <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
+                                                                                        label="#{row.bindings.ClusterId.label}"
+                                                                                        required="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.ClusterId.items}"
+                                                                                       id="si4"/>
+                                                                        <f:validator binding="#{row.bindings.ClusterId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.TeamId.label}"
+                                                                           id="c29">
+                                                                    <af:selectOneChoice value="#{row.bindings.TeamId.inputValue}"
+                                                                                        label="#{row.bindings.TeamId.label}"
+                                                                                        required="#{bindings.Tbl_TrainingSchMasterView1.hints.TeamId.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_TrainingSchMasterView1.hints.TeamId.tooltip}"
+                                                                                        id="soc5">
+                                                                        <f:selectItems value="#{row.bindings.TeamId.items}"
+                                                                                       id="si5"/>
+                                                                        <f:validator binding="#{row.bindings.TeamId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.ProjCompId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Component ID"

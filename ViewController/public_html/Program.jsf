@@ -94,7 +94,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column  sortProperty="#{bindings.TblProgView12.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Status"
                                                                            id="c3"  align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -287,7 +289,9 @@
                                                                         <f:validator binding="#{row.bindings.Email.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblProgOffView3.hints.Category.label}"
+                                                                <af:column  sortProperty="#{bindings.TblProgOffView3.hints.Category.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblProgOffView3.hints.Category.label}"
                                                                            id="c12" width="92" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Category.inputValue}"
                                                                                         label="#{row.bindings.Category.label}"
@@ -299,7 +303,9 @@
                                                                         <f:validator binding="#{row.bindings.Category.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column  sortProperty="#{bindings.TblProgOffView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Status"
                                                                            id="c13" width="47" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
