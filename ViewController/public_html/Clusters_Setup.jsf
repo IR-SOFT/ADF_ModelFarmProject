@@ -33,13 +33,13 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
-                                    <af:showDetailItem id="pane2" text="Clusters Setup">
+                                    <af:showDetailItem id="pane2" text="Cluster Setup">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1012px;">
-                                                        <af:showDetailItem id="tab1" text="Input Component">
+                                                        <af:showDetailItem id="tab1" text="Component Input">
                                                             <af:table value="#{bindings.TblProjCompInput1View1.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblProjCompInput1View1.rangeSize}"
@@ -61,7 +61,7 @@
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.ProjCompId.tooltip}"
                                                                                    id="ot2" contentStyle='text-align:center'/>
                                                                 </af:column>
-                                                                <af:column headerText="Project Component Name"
+                                                                <af:column headerText="Project Component"
                                                                            id="c13" width="178">
                                                                     <af:outputText value="#{row.Proj_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Proj_Comp_Name.tooltip}"
@@ -69,21 +69,21 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.ProjCompInputId.name}"
                                                                            filterable="true"
-                                                                           headerText="Input Component ID"
-                                                                           id="c1" align="center" width="68">
+                                                                           headerText="Component Input ID"
+                                                                           id="c1" align="center" width="72">
                                                                     <af:outputText value="#{row.ProjCompInputId}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.ProjCompInputId.tooltip}"
                                                                                    id="ot1" contentStyle='text-align:center'/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput1View1.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Input Component Name"
-                                                                           id="c3" align="center" width="219">
+                                                                           headerText="Component Input"
+                                                                           id="c3" width="215">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Name.tooltip}"
                                                                                    id="ot3" contentStyle='text-align:left'/>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblProjCompInput1View1.hints.Ast.label}"
+                                                                <af:column headerText="Status"
                                                                            id="c4" width="100">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Ast.tooltip}"
@@ -118,8 +118,8 @@
                                                                       partialTriggers="::b2 ::b6 ::b7">
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.ProjCompInputId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Input ID"
-                                                                           id="c6" align="center" width="40">
+                                                                           headerText="Component Input ID"
+                                                                           id="c6" align="center" width="72">
                                                                     <af:inputText value="#{row.bindings.ProjCompInputId.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.ProjCompInputId.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.ProjCompInputId.mandatory}"
@@ -133,7 +133,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.ClusterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster ID"
-                                                                           id="c5" align="center" width="60">
+                                                                           id="c5" align="center" width="44">
                                                                     <af:inputText value="#{row.bindings.ClusterId.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.ClusterId.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.ClusterId.mandatory}"
@@ -146,22 +146,22 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Cluster Name"
-                                                                           id="c7" align="center" width="325">
+                                                                           headerText="Cluster"
+                                                                           id="c7" width="309">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.Name.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.Name.mandatory}"
                                                                                   columns="#{bindings.TblClusterView2.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterView2.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblClusterView2.hints.Name.tooltip}"
-                                                                                  id="it3" contentStyle="text-transform:uppercase;">
+                                                                                  id="it3">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.District.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="District"
-                                                                           id="c8" align="center">
+                                                                           id="c8" width="100">
                                                                     <af:inputText value="#{row.bindings.District.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.District.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.District.mandatory}"
@@ -175,7 +175,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.Tehsil.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Tehsil"
-                                                                           id="c9" align="center">
+                                                                           id="c9" width="100">
                                                                     <af:inputText value="#{row.bindings.Tehsil.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.Tehsil.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.Tehsil.mandatory}"
@@ -189,7 +189,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.Mauza.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Mauza"
-                                                                           id="c10" align="center">
+                                                                           id="c10" width="100">
                                                                     <af:inputText value="#{row.bindings.Mauza.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.Mauza.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.Mauza.mandatory}"
@@ -203,7 +203,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.Village.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Village"
-                                                                           id="c11" align="center" width="120">
+                                                                           id="c11" width="120">
                                                                     <af:inputText value="#{row.bindings.Village.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.Village.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.Village.mandatory}"
@@ -214,8 +214,8 @@
                                                                         <f:validator binding="#{row.bindings.Village.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblClusterView2.hints.Ast.label}"
-                                                                           id="c12">
+                                                                <af:column headerText="Status"
+                                                                           id="c12" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblClusterView2.hints.Ast.mandatory}"
