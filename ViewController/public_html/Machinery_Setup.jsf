@@ -133,7 +133,7 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Ast.name}"
                                                                            filterable="true"
                                                                             align="left"
-                                                                           headerText="Status"
+                                                                           headerText="Active"
                                                                            id="c6" width="62">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Ast.tooltip}"
@@ -199,7 +199,7 @@
                                                                 </af:column>
                                                                 <af:column  sortProperty="#{bindings.TblItemL1View1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Status"
+                                                                           headerText="Active"
                                                                            id="c24" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -305,7 +305,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column headerText="Active"
                                                                            id="c21" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -437,7 +437,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column headerText="Active"
                                                                            id="c17" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -597,7 +597,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column headerText="Active"
                                                                            id="c12" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

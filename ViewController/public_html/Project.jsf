@@ -113,7 +113,7 @@
                                                                 </af:column>
                                                                 <af:column  sortProperty="#{bindings.TblProjView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                headerText="Status"
+                                                                headerText="Active"
                                                                            id="c4" width="60" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -309,7 +309,7 @@
                                                                 </af:column>
                                                                 <af:column  sortProperty="#{bindings.TblProjOffView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                            headerText="Status"
+                                                                            headerText="Active"
                                                                            id="c14" width="52" align="left">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

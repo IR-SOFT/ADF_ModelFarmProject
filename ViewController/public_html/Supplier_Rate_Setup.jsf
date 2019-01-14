@@ -113,7 +113,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Status.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.Status.label}"
+                                                                           headerText="Active"
                                                                            id="c4" width="100">
                                                                     <af:inputText value="#{row.bindings.Status.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateMasterView1.hints.Status.label}"
@@ -255,7 +255,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Status"
+                                                                           headerText="Active"
                                                                            id="c10" width="109">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

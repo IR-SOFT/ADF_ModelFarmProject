@@ -93,7 +93,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCropView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Status"
+                                                                           headerText="Active"
                                                                            id="c3" align="left" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
