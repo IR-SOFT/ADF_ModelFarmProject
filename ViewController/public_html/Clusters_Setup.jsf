@@ -83,7 +83,7 @@
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Name.tooltip}"
                                                                                    id="ot3" contentStyle='text-align:left'/>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column headerText="Active"
                                                                            id="c4" width="100">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblProjCompInput1View1.hints.Ast.tooltip}"
@@ -214,7 +214,7 @@
                                                                         <f:validator binding="#{row.bindings.Village.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column headerText="Active"
                                                                            id="c12" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
