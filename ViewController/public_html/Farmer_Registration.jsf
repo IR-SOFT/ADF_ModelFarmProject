@@ -413,19 +413,17 @@
                                                                                           pattern="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.format}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Selfship Type"
-                                                                           id="c11" width="100">
-                                                                    <af:inputText value="#{row.bindings.SelfshipType.inputValue}"
-                                                                                  label="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
-                                                                                  required="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.mandatory}"
-                                                                                  columns="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.precision}"
-                                                                                  shortDesc="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.tooltip}"
-                                                                                  id="it22">
+                                                                <af:column headerText="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
+                                                                           id="c31">
+                                                                    <af:selectOneChoice value="#{row.bindings.SelfshipType.inputValue}"
+                                                                                        label="#{row.bindings.SelfshipType.label}"
+                                                                                        required="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.mandatory}"
+                                                                                        shortDesc="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.SelfshipType.items}"
+                                                                                       id="si4"/>
                                                                         <f:validator binding="#{row.bindings.SelfshipType.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.SelfLocalMark.name}"
                                                                            filterable="true" sortable="true" align="center"

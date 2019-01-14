@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblFarmerRegLandView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_SelfishType_LOV1_1"
+    ViewObjectName="model.lov.SelfishType_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="SelfishType_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_SelfshipType"
+    ListVOName="AppModule_SelfishType_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="SelfshipType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="SelfishDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="SelfishView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblFarmerRegLand"
     Entity="model.eo.TblFarmerRegLand"/>
@@ -63,7 +86,15 @@
     PrecisionRule="true"
     EntityAttrName="SelfshipType"
     EntityUsage="TblFarmerRegLand"
-    AliasName="SELFSHIP_TYPE"/>
+    AliasName="SELFSHIP_TYPE"
+    LOVName="LOV_SelfshipType">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="SelfLocalMark"
     PrecisionRule="true"

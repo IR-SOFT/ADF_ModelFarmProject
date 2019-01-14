@@ -46,4 +46,7 @@
   <ViewUsage
     Name="Project_Name_LOV1"
     ViewObjectName="model.lov.Project_Name_LOV"/>
+  <ViewUsage
+    Name="SelfishType_LOV1"
+    ViewObjectName="model.lov.SelfishType_LOV"/>
 </AppModule>
