@@ -195,31 +195,17 @@
                                                                         <f:validator binding="#{row.bindings.Project_Office_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.CropId.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="Crop ID"
-                                                                           id="c13" width="54">
-                                                                    <af:inputText value="#{row.bindings.CropId.inputValue}"
-                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.CropId.label}"
-                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.CropId.mandatory}"
-                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.CropId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.CropId.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.CropId.tooltip}"
-                                                                                  id="it3">
+                                                                <af:column headerText="#{bindings.TblClusterTargetCropsView3.hints.CropId.label}"
+                                                                           id="c19">
+                                                                    <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
+                                                                                        label="#{row.bindings.CropId.label}"
+                                                                                        required="#{bindings.TblClusterTargetCropsView3.hints.CropId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterTargetCropsView3.hints.CropId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.CropId.items}"
+                                                                                       id="si2"/>
                                                                         <f:validator binding="#{row.bindings.CropId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column headerText="Crop"
-                                                                           id="c18" width="110">
-                                                                    <af:inputText value="#{row.bindings.Crop_Name.inputValue}"
-                                                                                  label="#{bindings.TblClusterTargetCropsView3.hints.Crop_Name.label}"
-                                                                                  required="#{bindings.TblClusterTargetCropsView3.hints.Crop_Name.mandatory}"
-                                                                                  columns="#{bindings.TblClusterTargetCropsView3.hints.Crop_Name.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterTargetCropsView3.hints.Crop_Name.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterTargetCropsView3.hints.Crop_Name.tooltip}"
-                                                                                  id="it6">
-                                                                        <f:validator binding="#{row.bindings.Crop_Name.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.name}"
                                                                            filterable="true" sortable="true" align="center"

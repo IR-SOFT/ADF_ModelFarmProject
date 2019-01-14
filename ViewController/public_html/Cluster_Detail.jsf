@@ -235,6 +235,18 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.TblClusterDetailView3.hints.FarmerRegId.label}"
+                                                                           id="c4">
+                                                                    <af:selectOneChoice value="#{row.bindings.FarmerRegId.inputValue}"
+                                                                                        label="#{row.bindings.FarmerRegId.label}"
+                                                                                        required="#{bindings.TblClusterDetailView3.hints.FarmerRegId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterDetailView3.hints.FarmerRegId.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.FarmerRegId.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>

@@ -37,4 +37,13 @@
   <ViewUsage
     Name="Team_Name_LOV1"
     ViewObjectName="model.lov.Team_Name_LOV"/>
+  <ViewUsage
+    Name="Crops_Name_LOV1"
+    ViewObjectName="model.lov.Crops_Name_LOV"/>
+  <ViewUsage
+    Name="Farmer_Reg_id_LOV1"
+    ViewObjectName="model.lov.Farmer_Reg_id_LOV"/>
+  <ViewUsage
+    Name="Project_Name_LOV1"
+    ViewObjectName="model.lov.Project_Name_LOV"/>
 </AppModule>

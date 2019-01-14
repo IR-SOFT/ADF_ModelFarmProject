@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblFarmerRegCropsView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Crops_Name_LOV1_1"
+    ViewObjectName="model.lov.Crops_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Crops_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_CropId"
+    ListVOName="AppModule_Crops_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CropId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CropId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblFarmerRegCrops"
     Entity="model.eo.TblFarmerRegCrops"/>
@@ -36,7 +59,15 @@
     PrecisionRule="true"
     EntityAttrName="CropId"
     EntityUsage="TblFarmerRegCrops"
-    AliasName="CROP_ID"/>
+    AliasName="CROP_ID"
+    LOVName="LOV_CropId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblCropView"
     ViewLink="model.vo.FKTblFarmerRegCropsFKLink2"

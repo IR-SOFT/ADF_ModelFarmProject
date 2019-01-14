@@ -169,5 +169,7 @@
             Action="iteratorExecute"/>
     <action IterBinding="TblFarmerRegCropsView7Iterator" id="Delete3" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <list IterBinding="TblFarmerRegView5Iterator" StaticList="false" Uses="LOV_ClusterId" id="ClusterId1"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

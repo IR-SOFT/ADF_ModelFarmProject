@@ -122,15 +122,15 @@
                                                                     inlineStyle="width:1011px;">
                                                         <af:showDetailItem id="tab2" text="Other Detail">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
-                                                                <af:inputText value="#{bindings.ClusterId.inputValue}"
-                                                                              label="#{bindings.ClusterId.hints.label}"
-                                                                              required="#{bindings.ClusterId.hints.mandatory}"
-                                                                              columns="#{bindings.ClusterId.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.ClusterId.hints.precision}"
-                                                                              shortDesc="#{bindings.ClusterId.hints.tooltip}"
-                                                                              id="it5">
-                                                                    <f:validator binding="#{bindings.ClusterId.validator}"/>
-                                                                </af:inputText>
+                                                                <af:selectOneChoice value="#{bindings.ClusterId1.inputValue}"
+                                                                                    label="#{bindings.ClusterId1.label}"
+                                                                                    required="#{bindings.ClusterId1.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.ClusterId1.hints.tooltip}"
+                                                                                    id="soc3">
+                                                                    <f:selectItems value="#{bindings.ClusterId1.items}"
+                                                                                   id="si3"/>
+                                                                    <f:validator binding="#{bindings.ClusterId1.validator}"/>
+                                                                </af:selectOneChoice>
                                                                 <af:inputText value="#{bindings.MarStatus.inputValue}"
                                                                               label="#{bindings.MarStatus.hints.label}"
                                                                               required="#{bindings.MarStatus.hints.mandatory}"
@@ -140,6 +140,7 @@
                                                                               id="it6">
                                                                     <f:validator binding="#{bindings.MarStatus.validator}"/>
                                                                 </af:inputText>
+                                                                
                                                                 <af:inputDate value="#{bindings.Dob.inputValue}"
                                                                               label="#{bindings.Dob.hints.label}"
                                                                               required="#{bindings.Dob.hints.mandatory}"
@@ -772,6 +773,7 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegCropsId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Farmer Reg ID"
@@ -786,19 +788,17 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.CropId.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="Crop ID"
-                                                                           id="c31" width="80">
-                                                                    <af:inputText value="#{row.bindings.CropId.inputValue}"
-                                                                                  label="#{bindings.TblFarmerRegCropsView7.hints.CropId.label}"
-                                                                                  required="#{bindings.TblFarmerRegCropsView7.hints.CropId.mandatory}"
-                                                                                  columns="#{bindings.TblFarmerRegCropsView7.hints.CropId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblFarmerRegCropsView7.hints.CropId.precision}"
-                                                                                  shortDesc="#{bindings.TblFarmerRegCropsView7.hints.CropId.tooltip}"
-                                                                                  id="it41">
+                                                                <af:column headerText="#{bindings.TblFarmerRegCropsView7.hints.CropId.label}"
+                                                                           id="c32">
+                                                                    <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
+                                                                                        label="#{row.bindings.CropId.label}"
+                                                                                        required="#{bindings.TblFarmerRegCropsView7.hints.CropId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblFarmerRegCropsView7.hints.CropId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.CropId.items}"
+                                                                                       id="si2"/>
                                                                         <f:validator binding="#{row.bindings.CropId.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                              <af:spacer width="200" height="20" id="s10"/>

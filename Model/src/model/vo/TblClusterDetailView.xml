@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblClusterDetailView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,6 +13,30 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Farmer_Reg_id_LOV1_1"
+    ViewObjectName="model.lov.Farmer_Reg_id_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Farmer_Reg_id_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_FarmerRegId"
+    ListVOName="AppModule_Farmer_Reg_id_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="FarmerRegId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="FarmerRegId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FarmerRegId"/>
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblClusterDetail"
     Entity="model.eo.TblClusterDetail"/>
@@ -36,7 +60,15 @@
     PrecisionRule="true"
     EntityAttrName="FarmerRegId"
     EntityUsage="TblClusterDetail"
-    AliasName="FARMER_REG_ID"/>
+    AliasName="FARMER_REG_ID"
+    LOVName="LOV_FarmerRegId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblFarmerRegView"
     ViewLink="model.vo.FKTblClusterDetailFKLink2"
