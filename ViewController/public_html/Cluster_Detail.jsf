@@ -196,7 +196,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster Detail ID"
-                                                                           id="c1">
+                                                                           id="c1" width="85" align="center">
                                                                     <af:inputText value="#{row.bindings.ClusterDetailId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.mandatory}"
@@ -210,7 +210,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster Master ID"
-                                                                           id="c2">
+                                                                           id="c2" width="91" align="center">
                                                                     <af:inputText value="#{row.bindings.ClusterMasterId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.mandatory}"
@@ -221,22 +221,8 @@
                                                                         <f:validator binding="#{row.bindings.ClusterMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.FarmerRegId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Farmer Reg ID"
-                                                                           id="c3">
-                                                                    <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
-                                                                                  label="#{bindings.TblClusterDetailView3.hints.FarmerRegId.label}"
-                                                                                  required="#{bindings.TblClusterDetailView3.hints.FarmerRegId.mandatory}"
-                                                                                  columns="#{bindings.TblClusterDetailView3.hints.FarmerRegId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.FarmerRegId.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.FarmerRegId.tooltip}"
-                                                                                  id="it7">
-                                                                        <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column headerText="#{bindings.TblClusterDetailView3.hints.FarmerRegId.label}"
-                                                                           id="c4">
+                                                                <af:column headerText="Farmer"
+                                                                           id="c4" width="124">
                                                                     <af:selectOneChoice value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                         label="#{row.bindings.FarmerRegId.label}"
                                                                                         required="#{bindings.TblClusterDetailView3.hints.FarmerRegId.mandatory}"

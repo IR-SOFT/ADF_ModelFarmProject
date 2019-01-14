@@ -97,7 +97,7 @@
                                                                       <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL3Id.name}"
                                                                            filterable="true"
                                                                            headerText="Level-3 ID"
-                                                                           id="c2" width="47">
+                                                                           id="c2" width="47" align="center">
                                                                     <af:outputText value="#{row.ItemL3Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL3Id.tooltip}"
                                                                                    id="ot2"/>
@@ -193,7 +193,7 @@
                                                                                   columns="#{bindings.TblItemL1View1.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL1View1.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL1View1.hints.Name.tooltip}"
-                                                                                  id="it17" contentStyle="text-transform:uppercase;">
+                                                                                  id="it17">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -272,7 +272,7 @@
                                                                                   columns="#{bindings.TblItemL2View3.hints.L1_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL2View3.hints.L1_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL2View3.hints.L1_Name.tooltip}"
-                                                                                  id="it6" contentStyle="text-transform:uppercase;">
+                                                                                  id="it6">
                                                                         <f:validator binding="#{row.bindings.L1_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -301,7 +301,7 @@
                                                                                   columns="#{bindings.TblItemL2View3.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL2View3.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL2View3.hints.Name.tooltip}"
-                                                                                  id="it14" contentStyle="text-transform:uppercase;">
+                                                                                  id="it14">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -378,7 +378,7 @@
                                                                                   columns="#{bindings.TblItemL3View3.hints.L1_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.L1_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.L1_Name.tooltip}"
-                                                                                  id="it15" contentStyle="text-transform:uppercase;">
+                                                                                  id="it15">
                                                                         <f:validator binding="#{row.bindings.L1_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -404,7 +404,7 @@
                                                                                   columns="#{bindings.TblItemL3View3.hints.L2_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.L2_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.L2_Name.tooltip}"
-                                                                                  id="it11" contentStyle="text-transform:uppercase;">
+                                                                                  id="it11">
                                                                         <f:validator binding="#{row.bindings.L2_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -412,7 +412,7 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.ItemL3Id.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-3 ID"
-                                                                           id="c13" width="64" align="center">
+                                                                           id="c13" width="54" align="center">
                                                                     <af:inputText value="#{row.bindings.ItemL3Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL3Id.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.ItemL3Id.mandatory}"
@@ -426,14 +426,14 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-3"
-                                                                           id="c16" width="136">
+                                                                           id="c16" width="146">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.Name.mandatory}"
                                                                                   columns="#{bindings.TblItemL3View3.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.Name.tooltip}"
-                                                                                  id="it10" contentStyle="text-transform:uppercase;">
+                                                                                  id="it10">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -510,7 +510,7 @@
                                                                                   columns="#{bindings.TblItemL4View41.hints.L1_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.L1_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.L1_Name.tooltip}"
-                                                                                  id="it18" contentStyle="text-transform:uppercase;">
+                                                                                  id="it18">
                                                                         <f:validator binding="#{row.bindings.L1_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -536,7 +536,7 @@
                                                                                   columns="#{bindings.TblItemL4View41.hints.L2_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.L2_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.L2_Name.tooltip}"
-                                                                                  id="it19" contentStyle="text-transform:uppercase;">
+                                                                                  id="it19">
                                                                         <f:validator binding="#{row.bindings.L2_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -562,7 +562,7 @@
                                                                                   columns="#{bindings.TblItemL4View41.hints.L3_Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.L3_Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.L3_Name.tooltip}"
-                                                                                  id="it20" contentStyle="text-transform:uppercase;">
+                                                                                  id="it20">
                                                                         <f:validator binding="#{row.bindings.L3_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -593,7 +593,7 @@
                                                                                   columns="#{bindings.TblItemL4View41.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.Name.tooltip}"
-                                                                                  id="it5" contentStyle="text-transform:uppercase;">
+                                                                                  id="it5">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

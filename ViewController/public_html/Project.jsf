@@ -68,7 +68,7 @@
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b11 ::b12 ::b13" width="832">
                                                                 <af:column  sortProperty="#{bindings.TblProjView1.hints.ProgId.name}"
-                                                                headerText="Program Name"
+                                                                headerText="Program"
                                                                 filterable="true" sortable="true"
                                                                            id="c16" width="248">
                                                                     <af:selectOneChoice value="#{row.bindings.ProgId.inputValue}"
@@ -106,8 +106,8 @@
                                                                                   columns="#{bindings.TblProjView1.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjView1.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblProjView1.hints.Name.tooltip}"
-                                                                                  id="it3"
-                                                                                  contentStyle="text-transform:uppercase;">
+                                                                                  id="it3">
+                                                                                  
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -219,7 +219,7 @@
                                                                                   columns="#{bindings.TblProjOffView3.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjOffView3.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblProjOffView3.hints.Name.tooltip}"
-                                                                                  id="it7" contentStyle="text-transform:uppercase;">
+                                                                                  id="it7">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -233,7 +233,7 @@
                                                                                   columns="#{bindings.TblProjOffView3.hints.ContactPer.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjOffView3.hints.ContactPer.precision}"
                                                                                   shortDesc="#{bindings.TblProjOffView3.hints.ContactPer.tooltip}"
-                                                                                  id="it8" contentStyle="text-transform:uppercase;">
+                                                                                  id="it8">
                                                                         <f:validator binding="#{row.bindings.ContactPer.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

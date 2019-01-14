@@ -20,16 +20,16 @@
                             <af:button text="Project" id="b3" inlineStyle="width:190px;" destination="Project.jsf"
                                        icon="#{resource['images:projects.png']}"/>
                             <af:spacer width="190" height="10" id="s5"/>
-                            <af:button text="Project Crops" id="b5" inlineStyle="width:190px;"
+                            <af:button text="Crops" id="b5" inlineStyle="width:190px;"
                                        destination="Project_Crops.jsf" icon="#{resource['images:crops.png']}"/>
                             <af:spacer width="190" height="10" id="s2"/>
-                            <af:button text="Machinery Setup" id="b2" inlineStyle="width:190px;"
+                            <af:button text="Items" id="b2" inlineStyle="width:190px;"
                                        destination="Machinery_Setup.jsf" icon="#{resource['images:machinery.png']}"/>
                             <af:spacer width="190" height="10" id="s4"/>
-                            <af:button text="Supplier Setup" id="b4" inlineStyle="width:190px;"
+                            <af:button text="Supplier" id="b4" inlineStyle="width:190px;"
                                        destination="Supplier_Setup.jsf" icon="#{resource['images:supplier.png']}"/>
                             <af:spacer width="190" height="10" id="s6"/>
-                            <af:button text="Supplier Rate Setup" id="b6" inlineStyle="width:190px;"
+                            <af:button text="Supplier Rate" id="b6" inlineStyle="width:190px;"
                                        destination="Supplier_Rate_Setup.jsf"
                                        icon="#{resource['images:supplier_rate.png']}"/>
                                        <af:spacer width="190" height="10" id="s7"/>
@@ -41,13 +41,13 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1050px;">
-                                    <af:showDetailItem id="pane2" text="Supplier_Rate_Setup">
+                                    <af:showDetailItem id="pane2" text="Supplier Rate">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:1030px;">
-                                                        <af:showDetailItem id="tab1" text="Supplier Rate Master">
+                                                        <af:showDetailItem id="tab1" text="Supplier Rate Master Setup">
                                                             <af:table value="#{bindings.TblSupplierRateMasterView1.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblSupplierRateMasterView1.rangeSize}"
@@ -63,7 +63,7 @@
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b9 ::b10 ::b11">
                                                                 <af:column  sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierId.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
                                                                            headerText="Supplier"
                                                                            id="c13" width="200">
                                                                     <af:selectOneChoice value="#{row.bindings.SupplierId.inputValue}"
@@ -78,7 +78,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.name}"
                                                                            filterable="true" sortable="true" align="center"
-                                                                           headerText="Suuplier Rate Master ID"
+                                                                           headerText="Suplier Rate Master ID"
                                                                            id="c1" width="86">
                                                                     <af:inputText value="#{row.bindings.SupplierRateMasterId.inputValue}"
                                                                                   label="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.label}"
@@ -93,7 +93,7 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Dated.name}"
                                                                            filterable="true" sortable="true" align="center"
-                                                                           headerText="#{bindings.TblSupplierRateMasterView1.hints.Dated.label}"
+                                                                           headerText="Date"
                                                                            id="c3" width="114">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.TblSupplierRateMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
@@ -112,7 +112,7 @@
                                                                     </af:inputDate>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Status.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblSupplierRateMasterView1.hints.Status.label}"
                                                                            id="c4" width="100">
                                                                     <af:inputText value="#{row.bindings.Status.inputValue}"
@@ -128,7 +128,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateMasterView1.hints.Remarks.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblSupplierRateMasterView1.hints.Remarks.label}"
                                                                            id="c5" width="259">
                                                                     <af:inputText value="#{row.bindings.Remarks.inputValue}"
@@ -178,7 +178,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:1032px;">
-                                                        <af:showDetailItem id="tab2" text="Supplier Rate Detail">
+                                                        <af:showDetailItem id="tab2" text="Supplier Rate Detail Setup">
                                                             <af:table value="#{bindings.TblSupplierRateDetailView4.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblSupplierRateDetailView4.rangeSize}"
@@ -223,8 +223,8 @@
                                                                 </af:column>
                                                                
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.ItemL4Id.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                            headerText="Item L4"
+                                                                           filterable="true" sortable="true"
+                                                                            headerText="Item"
                                                                            id="c2" width="200">
                                                                     <af:selectOneChoice value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                         label="#{row.bindings.ItemL4Id.label}"
@@ -255,8 +255,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblSupplierRateDetailView4.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblSupplierRateDetailView4.hints.Ast.label}"
-                                                                           id="c10" width="109" align="center">
+                                                                           headerText="Status"
+                                                                           id="c10" width="109">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblSupplierRateDetailView4.hints.Ast.mandatory}"

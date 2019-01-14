@@ -195,7 +195,7 @@
                                                                         <f:validator binding="#{row.bindings.Project_Office_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblClusterTargetCropsView3.hints.CropId.label}"
+                                                                <af:column headerText="Crop"
                                                                            id="c19">
                                                                     <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
                                                                                         label="#{row.bindings.CropId.label}"

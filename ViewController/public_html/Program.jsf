@@ -88,8 +88,8 @@
                                                                                   columns="#{bindings.TblProgView12.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProgView12.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblProgView12.hints.Name.tooltip}"
-                                                                                  id="it2"
-                                                                                  contentStyle="text-transform:uppercase;">
+                                                                                  id="it2">
+            
                                                                                   
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
@@ -208,8 +208,8 @@
                                                                                   columns="#{bindings.TblProgOffView3.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProgOffView3.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblProgOffView3.hints.Name.tooltip}"
-                                                                                  id="it6"
-                                                                                  contentStyle="text-transform:uppercase;">
+                                                                                  id="it6">
+                                                                                  
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -223,8 +223,7 @@
                                                                                   columns="#{bindings.TblProgOffView3.hints.ContactPer.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProgOffView3.hints.ContactPer.precision}"
                                                                                   shortDesc="#{bindings.TblProgOffView3.hints.ContactPer.tooltip}"
-                                                                                  id="it7" contentStyle="text-transform:uppercase;"
-                                                                                  >
+                                                                                  id="it7">
                                                                         <f:validator binding="#{row.bindings.ContactPer.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -238,7 +237,7 @@
                                                                                   columns="#{bindings.TblProgOffView3.hints.Address.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProgOffView3.hints.Address.precision}"
                                                                                   shortDesc="#{bindings.TblProgOffView3.hints.Address.tooltip}"
-                                                                                  id="it8" contentStyle="text-transform:uppercase;"> 
+                                                                                  id="it8"> 
                                                                         <f:validator binding="#{row.bindings.Address.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
