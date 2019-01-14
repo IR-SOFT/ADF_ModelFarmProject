@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_TrainingSchDetailView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -13,6 +13,29 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full">
+  <ViewAccessor
+    Name="AppModule_Cluster_Name_LOV1_1"
+    ViewObjectName="model.lov.Cluster_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Cluster_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_ClusterId"
+    ListVOName="AppModule_Cluster_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ClusterId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="Tbl_TrainingSchDetail"
     Entity="model.eo.Tbl_TrainingSchDetail"/>
@@ -62,7 +85,15 @@
     PrecisionRule="true"
     EntityAttrName="ClusterId"
     EntityUsage="Tbl_TrainingSchDetail"
-    AliasName="CLUSTER_ID"/>
+    AliasName="CLUSTER_ID"
+    LOVName="LOV_ClusterId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Cluster_Name"
     IsUnique="true"
