@@ -56,7 +56,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:748px;">
-                                                        <af:showDetailItem id="tab1" text="Module Setup">
+                                                        <af:showDetailItem id="tab1" text="Module">
                                                             <af:table value="#{bindings.TblModuleView1.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblModuleView1.rangeSize}"
@@ -70,43 +70,27 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblModuleView1Query.processQuery}"
                                                                       varStatus="vs" id="t1">
-                                                                      <af:column sortProperty="#{bindings.TblModuleView1.hints.CourseId.name}"
-                                                                           filterable="true"
-                                                                           headerText="Course ID"
-                                                                            align="center" id="c2" width="54">
-                                                                    <af:outputText value="#{row.CourseId}"
-                                                                                   shortDesc="#{bindings.TblModuleView1.hints.CourseId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.Course_Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Course Name"
-                                                                           id="c9" width="110">
+                                                                           headerText="Course"
+                                                                           id="c9" width="270">
                                                                     <af:outputText value="#{row.Course_Name}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Course_Name.tooltip}"
                                                                                    id="ot5"/>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblModuleView1.hints.ModuleId.name}"
-                                                                           filterable="true"
-                                                                           headerText="Module ID"
-                                                                            align="center" id="c1" width="56">
-                                                                    <af:outputText value="#{row.ModuleId}"
-                                                                                   shortDesc="#{bindings.TblModuleView1.hints.ModuleId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Module Name"
-                                                                            align="center" id="c3" width="139">
+                                                                           headerText="Module"
+                                                                            id="c3" width="350">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblModuleView1.hints.Ast.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblModuleView1.hints.Ast.label}"
-                                                                            align="center" id="c4" width="71">
+                                                                           headerText="Active"
+                                                                            id="c4" width="60">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -122,7 +106,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:757px;">
+                                                                    inlineStyle="width:515px;">
                                                         <af:showDetailItem id="tab2" text="Topic Setup">
                                                             <af:table value="#{bindings.TblTopicsView3.collectionModel}"
                                                                       var="row"
@@ -137,7 +121,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblTopicsView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                      partialTriggers="::b4 ::b6 ::b7" width="501">
                                                                <af:column sortProperty="#{bindings.TblTopicsView3.hints.ModuleId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module ID"
@@ -173,8 +157,8 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblTopicsView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Topic Name"
-                                                                           id="c7" width="200">
+                                                                           headerText="Topic"
+                                                                           id="c7" width="270">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.Name.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.Name.mandatory}"
@@ -187,8 +171,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblTopicsView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblTopicsView3.hints.Ast.label}"
-                                                                           id="c8">
+                                                                           headerText="Active"
+                                                                           id="c8" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblTopicsView3.hints.Ast.mandatory}"
@@ -206,7 +190,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                   <af:spacer width="200" height="20" id="s9"/>
+                                                   <af:spacer width="110" height="20" id="s9"/>
                                                     <h:panelGroup id="pg1">
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"

@@ -55,8 +55,8 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1050px;">
-                                                        <af:showDetailItem id="tab1" text="Component Input">
+                                                                    inlineStyle="width:735px;">
+                                                        <af:showDetailItem id="tab1" text="Input Component">
                                                             <af:table value="#{bindings.TblProjCompInput2View11.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblProjCompInput2View11.rangeSize}"
@@ -69,44 +69,28 @@
                                                                       filterModel="#{bindings.TblProjCompInput2View11Query.queryDescriptor}"
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblProjCompInput2View11Query.processQuery}"
-                                                                      varStatus="vs" id="t1">
-                                                               <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.ProjCompId.name}"
-                                                                           filterable="true"
-                                                                           headerText="Project Component ID"
-                                                                           align="center" id="c2" width="75">
-                                                                    <af:outputText value="#{row.ProjCompId}"
-                                                                                   shortDesc="#{bindings.TblProjCompInput2View11.hints.ProjCompId.tooltip}"
-                                                                                   id="ot2"/>
-                                                                </af:column>
+                                                                      varStatus="vs" id="t1" width="719">
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Project_Comp_Name.name}"
                                                                            filterable="true"
-                                                                            headerText="Project Component Name"
-                                                                           id="c9" width="135">
+                                                                            headerText="Project Component"
+                                                                           id="c9" width="270">
                                                                     <af:outputText value="#{row.Project_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput2View11.hints.Project_Comp_Name.tooltip}"
                                                                                    id="ot5"/>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.ProjCompInputId.name}"
-                                                                           filterable="true"
-                                                                           headerText="Project Component Input ID"
-                                                                           align="center" id="c1" width="73">
-                                                                    <af:outputText value="#{row.ProjCompInputId}"
-                                                                                   shortDesc="#{bindings.TblProjCompInput2View11.hints.ProjCompInputId.tooltip}"
-                                                                                   id="ot1"/>
-                                                                </af:column>
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Project Component Input Name"
-                                                                           id="c3" width="137">
+                                                                           headerText="Project Input Component"
+                                                                           id="c3" width="350">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput2View11.hints.Name.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Ast.name}"
                                                                            filterable="true"
-                                                                           headerText="#{bindings.TblProjCompInput2View11.hints.Ast.label}"
-                                                                           align="center" id="c4" width="60">
+                                                                           headerText="Active"
+                                                                           id="c4" width="60">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblProjCompInput2View11.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -122,7 +106,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:1050px;">
+                                                                    inlineStyle="width:560px;">
                                                         <af:showDetailItem id="tab2" text="Course Setup">
                                                             <af:table value="#{bindings.TblCourseView3.collectionModel}"
                                                                       var="row"
@@ -137,11 +121,11 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCourseView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                      partialTriggers="::b4 ::b6 ::b7" width="544">
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.ProjCompInputId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Project Component Input ID"
-                                                                           align="center" id="c6" width="60">
+                                                                           headerText="Input Component ID"
+                                                                           align="center" id="c6" width="70">
                                                                     <af:inputText value="#{row.bindings.ProjCompInputId.inputValue}"
                                                                                   label="#{bindings.TblCourseView3.hints.ProjCompInputId.label}"
                                                                                   required="#{bindings.TblCourseView3.hints.ProjCompInputId.mandatory}"
@@ -173,8 +157,8 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Course Name"
-                                                                          id="c7" width="200">
+                                                                           headerText="Course"
+                                                                          id="c7" width="300">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblCourseView3.hints.Name.label}"
                                                                                   required="#{bindings.TblCourseView3.hints.Name.mandatory}"
@@ -187,8 +171,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblCourseView3.hints.Ast.label}"
-                                                                           id="c8"  align="center">
+                                                                           headerText="Active"
+                                                                           id="c8"   width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblCourseView3.hints.Ast.mandatory}"
@@ -206,7 +190,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="300" height="20" id="s9"/>
+                                                    <af:spacer width="132" height="20" id="s9"/>
                                                     <h:panelGroup id="pg1">
                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"

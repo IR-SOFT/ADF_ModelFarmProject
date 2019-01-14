@@ -29,7 +29,8 @@
     IsPersistent="false"
     PrecisionRule="true"
     Type="java.lang.String"
-    ColumnType="$none$"/>
+    ColumnType="$none$"
+    SQLType="VARCHAR"/>
   <ViewAttribute
     Name="Cat_DB"
     IsUpdateable="false"
@@ -40,15 +41,15 @@
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     SQLType="VARCHAR"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Cat_View"/>
+    <Item Value="Cat_DB"/>
+  </AttrArray>
   <StaticList
-    Rows="3"
+    Rows="5"
     Columns="2"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.lov.common.Office_Category_LOVMsgBundle"/>
   </ResourceBundle>
-  <AttrArray Name="KeyAttributes">
-    <Item Value="Cat_View"/>
-    <Item Value="Cat_DB"/>
-  </AttrArray>
 </ViewObject>

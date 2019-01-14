@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="ModuleId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="MODULE_ID"
     SQLType="VARCHAR"
