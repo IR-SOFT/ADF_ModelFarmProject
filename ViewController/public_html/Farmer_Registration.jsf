@@ -96,7 +96,7 @@
                                                                         <f:validator binding="#{row.bindings.FatherName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column headerText="Active"
                                                                            id="c4" width="77">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -693,7 +693,7 @@
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Relation.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Relationship"
-                                                                           id="c27" width="100">
+                                                                           id="c27" width="86">
                                                                     <af:inputText value="#{row.bindings.Relation.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegMemView7.hints.Relation.label}"
                                                                                   required="#{bindings.TblFarmerRegMemView7.hints.Relation.mandatory}"
@@ -705,9 +705,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegMemView7.hints.Religion.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true" align="left"
                                                                            headerText="#{bindings.TblFarmerRegMemView7.hints.Religion.label}"
-                                                                           id="c28">
+                                                                           id="c28" width="100">
                                                                     <af:inputText value="#{row.bindings.Religion.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegMemView7.hints.Religion.label}"
                                                                                   required="#{bindings.TblFarmerRegMemView7.hints.Religion.mandatory}"

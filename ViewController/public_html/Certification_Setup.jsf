@@ -51,7 +51,7 @@
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.CertificationId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Certification ID" align="center"
-                                                                           id="c1">
+                                                                           id="c1" width="74">
                                                                     <af:inputText value="#{row.bindings.CertificationId.inputValue}"
                                                                                   label="#{bindings.TblCertificationView1.hints.CertificationId.label}"
                                                                                   required="#{bindings.TblCertificationView1.hints.CertificationId.mandatory}"
@@ -63,9 +63,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.Name.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="#{bindings.TblCertificationView1.hints.Name.label}"
-                                                                           id="c2">
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Certification"
+                                                                           id="c2" width="197">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblCertificationView1.hints.Name.label}"
                                                                                   required="#{bindings.TblCertificationView1.hints.Name.mandatory}"
@@ -76,8 +76,8 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblCertificationView1.hints.Ast.label}"
-                                                                           id="c3" align="center">
+                                                                <af:column headerText="Active"
+                                                                           id="c3" width="74">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblCertificationView1.hints.Ast.mandatory}"

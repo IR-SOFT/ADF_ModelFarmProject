@@ -68,7 +68,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Ast.name}"
                                                                            filterable="true" 
-                                                                           headerText="Status"
+                                                                           headerText="Active"
                                                                            id="c4" width="60">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.Ast.tooltip}"
@@ -131,7 +131,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Name.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
                                                                            headerText="Monitoring Parameter"
                                                                            id="c7" width="350">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
@@ -145,7 +145,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Perc.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
                                                                            headerText="Perquisites"
                                                                            id="c8" width="275">
                                                                     <af:inputText value="#{row.bindings.Perc.inputValue}"
@@ -160,7 +160,7 @@
                                                                                           pattern="#{bindings.TblMonitoringMonParamView3.hints.Perc.format}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status" align="center"
+                                                                <af:column headerText="Active"
                                                                            id="c9" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

@@ -126,7 +126,7 @@
                                                                                    id="ot8"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Category.name}"
-                                                                           filterable="true" align="center"
+                                                                           filterable="true" align="left"
                                                                            headerText="#{bindings.TblClusterProjOffView1.hints.Category.label}"
                                                                            id="c9">
                                                                     <af:outputText value="#{row.Category}"
@@ -134,8 +134,8 @@
                                                                                    id="ot9"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterProjOffView1.hints.Ast.name}"
-                                                                           filterable="true" align="center"
-                                                                           headerText="#{bindings.TblClusterProjOffView1.hints.Ast.label}"
+                                                                           filterable="true" align="left"
+                                                                           headerText="Active"
                                                                            id="c10">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Ast.tooltip}"
@@ -235,7 +235,7 @@
                                                                         <f:validator binding="#{row.bindings.TarDis.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status"
+                                                                <af:column headerText="Active"
                                                                            id="c15" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

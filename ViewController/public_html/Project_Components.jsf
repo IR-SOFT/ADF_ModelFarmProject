@@ -53,7 +53,7 @@
                                                                       queryListener="#{bindings.TblProjCompView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b13 ::b14 ::b15" width="795">
-                                                                <af:column headerText="#{bindings.TblProjCompView1.hints.ProjId.label}"
+                                                                <af:column headerText="Project"
                                                                            id="c2" width="300">
                                                                     <af:selectOneChoice value="#{row.bindings.ProjId.inputValue}"
                                                                                         label="#{row.bindings.ProjId.label}"
@@ -93,7 +93,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status" 
+                                                                <af:column headerText="Active" 
                                                                            id="c4" width="65">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -211,7 +211,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status" 
+                                                                <af:column headerText="Active" 
                                                                            id="c8" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -281,7 +281,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Output Component ID"
-                                                                           id="c9" width="80">
+                                                                           id="c9" width="81">
                                                                     <af:inputText value="#{row.bindings.ProjCompOutputId.inputValue}"
                                                                                   label="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.label}"
                                                                                   required="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.mandatory}"
@@ -295,7 +295,7 @@
                                                                 <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.Name.name}"
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Project Output Component"
-                                                                           id="c11" width="300">
+                                                                           id="c11" width="299">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjCompOutputView3.hints.Name.label}"
                                                                                   required="#{bindings.TblProjCompOutputView3.hints.Name.mandatory}"
@@ -306,7 +306,7 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status" 
+                                                                <af:column headerText="Active" 
                                                                            id="c12" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -371,7 +371,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.Name.name}"
                                                                            filterable="true" sortable="true" 
-                                                                           headerText="Beneficiary Name"
+                                                                           headerText="Beneficiary"
                                                                            id="c15" width="300">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.Tbl_BeneficiaryView1.hints.Name.label}"
@@ -384,7 +384,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.label}"
                                                                            id="c16" width="80">
                                                                     <af:inputText value="#{row.bindings.Vtp.inputValue}"
@@ -397,7 +397,7 @@
                                                                         <f:validator binding="#{row.bindings.Vtp.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Status" 
+                                                                <af:column headerText="Active" 
                                                                            id="c17" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
