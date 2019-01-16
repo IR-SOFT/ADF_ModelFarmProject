@@ -51,7 +51,9 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonitoringOutputIndView1Query.processQuery}"
                                                                       varStatus="vs" id="t1" width="648">
-                                                                <af:column headerText="Output Component" 
+                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView1.hints.Project_Comp_Output_Name.name}"
+                                                                filterable="true" 
+                                                                headerText="Output Component" 
                                                                            id="c10" width="250">
                                                                     <af:outputText value="#{row.Project_Comp_Output_Name}"
                                                                                    shortDesc="#{bindings.TblMonitoringOutputIndView1.hints.Project_Comp_Output_Name.tooltip}"
@@ -160,7 +162,9 @@
                                                                                           pattern="#{bindings.TblMonitoringMonParamView3.hints.Perc.format}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
+                                                                <af:column sortProperty="#{bindings.TblMonitoringMonParamView3.hints.Perc.name}"
+                                                                filterable="true" sortable="true"
+                                                                headerText="Active"
                                                                            id="c9" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
