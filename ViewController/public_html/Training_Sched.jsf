@@ -74,7 +74,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainingSchMasterId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Training Schedule Master ID"
-                                                                           id="c1">
+                                                                           id="c1" width="100">
                                                                     <af:inputText value="#{row.bindings.TrainingSchMasterId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainingSchMasterId.label}"
                                                                                   required="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainingSchMasterId.mandatory}"
@@ -85,8 +85,10 @@
                                                                         <f:validator binding="#{row.bindings.TrainingSchMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.ProjCompId.label}"
-                                                                           id="c25">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.ProjCompId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Project Component ID"
+                                                                           id="c25" width="76">
                                                                     <af:selectOneChoice value="#{row.bindings.ProjCompId.inputValue}"
                                                                                         label="#{row.bindings.ProjCompId.label}"
                                                                                         required="#{bindings.Tbl_TrainingSchMasterView1.hints.ProjCompId.mandatory}"
@@ -97,8 +99,10 @@
                                                                         <f:validator binding="#{row.bindings.ProjCompId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.label}"
-                                                                           id="c26">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Course ID"
+                                                                           id="c26" width="87">
                                                                     <af:selectOneChoice value="#{row.bindings.CourseId.inputValue}"
                                                                                         label="#{row.bindings.CourseId.label}"
                                                                                         required="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.mandatory}"
@@ -109,8 +113,10 @@
                                                                         <f:validator binding="#{row.bindings.CourseId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.ModuleId.label}"
-                                                                           id="c27">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.ModuleId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Module ID"
+                                                                           id="c27" width="137">
                                                                     <af:selectOneChoice value="#{row.bindings.ModuleId.inputValue}"
                                                                                         label="#{row.bindings.ModuleId.label}"
                                                                                         required="#{bindings.Tbl_TrainingSchMasterView1.hints.ModuleId.mandatory}"
@@ -121,8 +127,10 @@
                                                                         <f:validator binding="#{row.bindings.ModuleId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.label}"
-                                                                           id="c28">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Cluster ID"
+                                                                           id="c28" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
                                                                                         label="#{row.bindings.ClusterId.label}"
                                                                                         required="#{bindings.Tbl_TrainingSchMasterView1.hints.ClusterId.mandatory}"
@@ -133,8 +141,10 @@
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.TeamId.label}"
-                                                                           id="c29">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.TeamId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Team ID"
+                                                                           id="c29" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.TeamId.inputValue}"
                                                                                         label="#{row.bindings.TeamId.label}"
                                                                                         required="#{bindings.Tbl_TrainingSchMasterView1.hints.TeamId.mandatory}"
@@ -148,7 +158,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
-                                                                           id="c7">
+                                                                           id="c7" width="100">
                                                                     <af:inputText value="#{row.bindings.TrainerId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainerId.label}"
                                                                                   required="#{bindings.Tbl_TrainingSchMasterView1.hints.TrainerId.mandatory}"
@@ -159,8 +169,10 @@
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Trainer Name"
-                                                                           id="c19">
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Trainer"
+                                                                           id="c19" width="100">
                                                                     <af:inputText value="#{row.bindings.Trainer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.label}"
                                                                                   required="#{bindings.Tbl_TrainingSchMasterView1.hints.Trainer_Name.mandatory}"
@@ -173,8 +185,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.Dated.name}"
                                                                            filterable="true" sortable="true" align="center"
-                                                                           headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Dated.label}"
-                                                                           id="c8">
+                                                                           headerText="Date"
+                                                                           id="c8" width="100">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.Tbl_TrainingSchMasterView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
                                                                                       id="id1">
@@ -192,8 +204,8 @@
                                                                     </af:inputDate>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.Status.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="#{bindings.Tbl_TrainingSchMasterView1.hints.Status.label}"
+                                                                           filterable="true" sortable="true" 
+                                                                           headerText="Active"
                                                                            id="c9">
                                                                     <af:inputText value="#{row.bindings.Status.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingSchMasterView1.hints.Status.label}"
@@ -329,7 +341,9 @@
                                                                       queryListener="#{bindings.Tbl_TrainingSchDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b13 ::b14 ::b15">
-                                                                <af:column headerText="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.label}"
+                                                                <af:column sortProperty="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Cluster ID"
                                                                            id="c2">
                                                                     <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
                                                                                         label="#{row.bindings.ClusterId.label}"
@@ -371,7 +385,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchDetailView3.hints.DatedD.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Dated"
+                                                                           headerText="Date"
                                                                            id="c16">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.Tbl_TrainingSchDetailView3Query.queryDescriptor.filterConjunctionCriterion.criterionMap.DatedD.value}"

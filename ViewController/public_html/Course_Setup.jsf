@@ -13,9 +13,9 @@
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
                            <af:panelAccordion discloseMany="false" id="pa2"
                                                    inlineStyle="width:195px; height:519px;">
-                                    <af:showDetailItem id="sdi1" text="Course Training">
+                                    <af:showDetailItem id="sdi1" text="Training/Courses">
                                         <af:spacer width="190" height="10" id="s1"/>
-                                        <af:button text="Course Setup" id="b1" inlineStyle="width:190px;"
+                                        <af:button text="Training Setup" id="b1" inlineStyle="width:190px;"
                                                    destination="Course_Setup.jsf"
                                                    icon="#{resource['images:course.png']}"/>
                                         <af:spacer width="190" height="10" id="s3"/>
@@ -50,13 +50,13 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1030px;">
-                                    <af:showDetailItem id="pane2" text="Course Setup">
+                                    <af:showDetailItem id="pane2" text="Training Setup">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:735px;">
-                                                        <af:showDetailItem id="tab1" text="Input Component">
+                                                        <af:showDetailItem id="tab1" text="Component Input">
                                                             <af:table value="#{bindings.TblProjCompInput2View11.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblProjCompInput2View11.rangeSize}"
@@ -81,7 +81,7 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblProjCompInput2View11.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Project Input Component"
+                                                                           headerText="Project Component Input"
                                                                            id="c3" width="350">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblProjCompInput2View11.hints.Name.tooltip}"
@@ -107,7 +107,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
                                                                     inlineStyle="width:560px;">
-                                                        <af:showDetailItem id="tab2" text="Course Setup">
+                                                        <af:showDetailItem id="tab2" text="Training Setup">
                                                             <af:table value="#{bindings.TblCourseView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblCourseView3.rangeSize}"
@@ -124,7 +124,7 @@
                                                                       partialTriggers="::b4 ::b6 ::b7" width="544">
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.ProjCompInputId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Input Component ID"
+                                                                           headerText="Component Input ID"
                                                                            align="center" id="c6" width="70">
                                                                     <af:inputText value="#{row.bindings.ProjCompInputId.inputValue}"
                                                                                   label="#{bindings.TblCourseView3.hints.ProjCompInputId.label}"
@@ -140,7 +140,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.CourseId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Course ID"
+                                                                           headerText="Training ID"
                                                                            align="center" id="c5" width="60">
                                                                     <af:inputText value="#{row.bindings.CourseId.inputValue}"
                                                                                   label="#{bindings.TblCourseView3.hints.CourseId.label}"
@@ -157,7 +157,7 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblCourseView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Course"
+                                                                           headerText="Training"
                                                                           id="c7" width="300">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblCourseView3.hints.Name.label}"

@@ -53,7 +53,9 @@
                                                                       queryListener="#{bindings.TblProjCompView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b13 ::b14 ::b15" width="795">
-                                                                <af:column headerText="Project"
+                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.ProjId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Project"
                                                                            id="c2" width="300">
                                                                     <af:selectOneChoice value="#{row.bindings.ProjId.inputValue}"
                                                                                         label="#{row.bindings.ProjId.label}"
@@ -93,7 +95,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active" 
+                                                                <af:column sortProperty="#{bindings.TblProjCompView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true" 
+                                                                           headerText="Active" 
                                                                            id="c4" width="65">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -211,7 +215,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active" 
+                                                                <af:column sortProperty="#{bindings.TblProjCompInputView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active" 
                                                                            id="c8" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -306,7 +312,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active" 
+                                                                <af:column sortProperty="#{bindings.TblProjCompOutputView3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true" 
+                                                                           headerText="Active" 
                                                                            id="c12" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -397,7 +405,9 @@
                                                                         <f:validator binding="#{row.bindings.Vtp.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active" 
+                                                                <af:column sortProperty="#{bindings.Tbl_BeneficiaryView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active" 
                                                                            id="c17" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
