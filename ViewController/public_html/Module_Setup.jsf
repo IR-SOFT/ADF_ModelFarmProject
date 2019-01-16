@@ -107,7 +107,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:595px;">
+                                                                    inlineStyle="width:735px;">
                                                         <af:showDetailItem id="tab2" text="Module Setup">
                                                             <af:table value="#{bindings.TblModuleView3.collectionModel}"
                                                                       var="row"
@@ -122,11 +122,11 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblModuleView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7" width="579">
+                                                                      partialTriggers="::b4 ::b6 ::b7" width="718">
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.CourseId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Course ID"
-                                                                           align="center" id="c6" width="60">
+                                                                           align="center" id="c6" width="80">
                                                                     <af:inputText value="#{row.bindings.CourseId.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.CourseId.label}"
                                                                                   required="#{bindings.TblModuleView3.hints.CourseId.mandatory}"
@@ -142,7 +142,7 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.ModuleId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module ID"
-                                                                           align="center" id="c5" width="60">
+                                                                           align="center" id="c5" width="80">
                                                                     <af:inputText value="#{row.bindings.ModuleId.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.ModuleId.label}"
                                                                                   required="#{bindings.TblModuleView3.hints.ModuleId.mandatory}"
@@ -159,7 +159,7 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module"
-                                                                           id="c7" width="350">
+                                                                           id="c7" width="445">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.Name.label}"
                                                                                   required="#{bindings.TblModuleView3.hints.Name.mandatory}"
@@ -191,7 +191,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="150" height="20" id="s9"/>
+                                                    <af:spacer width="220" height="20" id="s9"/>
                                                     <h:panelGroup id="pg1">
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
