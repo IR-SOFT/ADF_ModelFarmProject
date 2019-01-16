@@ -106,7 +106,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:515px;">
+                                                                    inlineStyle="width:750px;">
                                                         <af:showDetailItem id="tab2" text="Topic Setup">
                                                             <af:table value="#{bindings.TblTopicsView3.collectionModel}"
                                                                       var="row"
@@ -121,11 +121,11 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblTopicsView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b4 ::b6 ::b7" width="501">
+                                                                      partialTriggers="::b4 ::b6 ::b7" width="731">
                                                                <af:column sortProperty="#{bindings.TblTopicsView3.hints.ModuleId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module ID"
-                                                                           align="center" id="c6" width="60">
+                                                                           align="center" id="c6" width="80">
                                                                     <af:inputText value="#{row.bindings.ModuleId.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.ModuleId.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.ModuleId.mandatory}"
@@ -158,7 +158,7 @@
                                                                 <af:column sortProperty="#{bindings.TblTopicsView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Topic"
-                                                                           id="c7" width="270">
+                                                                           id="c7" width="475">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.Name.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.Name.mandatory}"
@@ -190,7 +190,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                   <af:spacer width="110" height="20" id="s9"/>
+                                                   <af:spacer width="227" height="20" id="s9"/>
                                                     <h:panelGroup id="pg1">
                                                          <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
