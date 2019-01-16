@@ -14,9 +14,9 @@
                                          inlineStyle="width:70px; text-align:center; vertical-align: middle;">
                             <af:panelAccordion discloseMany="false" id="pa2"
                                                    inlineStyle="width:195px; height:519px;">
-                                    <af:showDetailItem id="sdi1" text="Course Training">
+                                    <af:showDetailItem id="sdi1" text="Training/Course">
                                         <af:spacer width="190" height="10" id="s1"/>
-                                        <af:button text="Course Setup" id="b1" inlineStyle="width:190px;"
+                                        <af:button text="Training Setup" id="b1" inlineStyle="width:190px;"
                                                    destination="Course_Setup.jsf"
                                                    icon="#{resource['images:course.png']}"/>
                                         <af:spacer width="190" height="10" id="s3"/>
@@ -57,7 +57,7 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
                                                                     inlineStyle="width:735px;">
-                                                        <af:showDetailItem id="tab1" text="Course">
+                                                        <af:showDetailItem id="tab1" text="Training Setup">
                                                             <af:table value="#{bindings.TblCourseView1.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.TblCourseView1.rangeSize}"
@@ -73,7 +73,7 @@
                                                                       varStatus="vs" id="t1" width="721">
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Project_Comp_Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Input Component"
+                                                                           headerText="Component Input"
                                                                            id="c9" width="270">
                                                                     <af:outputText value="#{row.Project_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Project_Comp_Name.tooltip}"
@@ -82,7 +82,7 @@
                                                                 
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
                                                                            filterable="true"
-                                                                           headerText="Course"
+                                                                           headerText="Training"
                                                                            id="c3" width="350">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Name.tooltip}"
@@ -125,7 +125,7 @@
                                                                       partialTriggers="::b4 ::b6 ::b7" width="718">
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.CourseId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Course ID"
+                                                                           headerText="Training ID"
                                                                            align="center" id="c6" width="80">
                                                                     <af:inputText value="#{row.bindings.CourseId.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.CourseId.label}"
@@ -210,7 +210,8 @@
                                                                icon="#{resource['images:delete.png']}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
-                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                   text="Save"
                                                                disabled="#{!bindings.Commit.enabled}" id="b8"
                                                                icon="#{resource['images:save.png']}"/>
                                                     </h:panelGroup>

@@ -13,9 +13,9 @@
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
                                <af:panelAccordion discloseMany="false" id="pa2"
                                                    inlineStyle="width:195px; height:519px;">
-                                    <af:showDetailItem id="sdi1" text="Course Training">
+                                    <af:showDetailItem id="sdi1" text="Training/Course">
                                         <af:spacer width="190" height="10" id="s1"/>
-                                        <af:button text="Course Setup" id="b1" inlineStyle="width:190px;"
+                                        <af:button text="Training Setup" id="b1" inlineStyle="width:190px;"
                                                    destination="Course_Setup.jsf"
                                                    icon="#{resource['images:course.png']}"/>
                                         <af:spacer width="190" height="10" id="s3"/>
@@ -101,7 +101,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainingSchMasterView1.hints.CourseId.name}"
                                                                            filterable="true" sortable="true" align="center"
-                                                                           headerText="Course ID"
+                                                                           headerText="Training ID"
                                                                            id="c26" width="87">
                                                                     <af:selectOneChoice value="#{row.bindings.CourseId.inputValue}"
                                                                                         label="#{row.bindings.CourseId.label}"
