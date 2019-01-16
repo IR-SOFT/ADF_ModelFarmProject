@@ -85,23 +85,10 @@
                                                                         <f:validator binding="#{row.bindings.ClusterAttMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Trainer ID" align="center"
-                                                                           id="c2">
-                                                                    <af:inputText value="#{row.bindings.TrainerId.inputValue}"
-                                                                                  label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.label}"
-                                                                                  required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.mandatory}"
-                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.tooltip}"
-                                                                                  id="it2">
-                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Dated.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Dated.label}"
+                                                                           headerText="Date"
                                                                            id="c3">
                                                                     <f:facet name="filter">
                                                                         <af:inputDate value="#{bindings.Tbl_ATT_ClusterAttMasterView1_1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dated.value}"
@@ -135,24 +122,24 @@
                                                                                           pattern="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.format}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.name}"
+                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.label}"
-                                                                           id="c5">
-                                                                    <af:inputText value="#{row.bindings.Remarks.inputValue}"
-                                                                                  label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.label}"
-                                                                                  required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.mandatory}"
-                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.tooltip}"
-                                                                                  id="it4">
-                                                                        <f:validator binding="#{row.bindings.Remarks.validator}"/>
+                                                                           headerText="Trainer ID" align="center"
+                                                                           id="c2" width="60">
+                                                                    <af:inputText value="#{row.bindings.TrainerId.inputValue}"
+                                                                                  label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.label}"
+                                                                                  required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.label}"
-                                                                           id="c6">
+                                                                           id="c6" width="250">
                                                                     <af:inputText value="#{row.bindings.Trainer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.mandatory}"
@@ -163,6 +150,21 @@
                                                                         <f:validator binding="#{row.bindings.Trainer_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.label}"
+                                                                           id="c5" width="325">
+                                                                    <af:inputText value="#{row.bindings.Remarks.inputValue}"
+                                                                                  label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.label}"
+                                                                                  required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.mandatory}"
+                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Remarks.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                
                                                             </af:table>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
@@ -170,7 +172,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:spacer width="200" height="20" id="s16"/>
+                                                    <af:spacer width="357" height="20" id="s16"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
@@ -215,20 +217,7 @@
                                                                       queryListener="#{bindings.Tbl_ATT_ClusterAttDetailView1_2Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b11 ::b12 ::b13">
-                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="Cluster Attendance Detail ID"
-                                                                           id="c8" width="69">
-                                                                    <af:inputText value="#{row.bindings.ClusterAttDetailId.inputValue}"
-                                                                                  label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.label}"
-                                                                                  required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.mandatory}"
-                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.displayWidth}"
-                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.precision}"
-                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.tooltip}"
-                                                                                  id="it7">
-                                                                        <f:validator binding="#{row.bindings.ClusterAttDetailId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Cluster Attendance Master ID"
@@ -243,10 +232,24 @@
                                                                         <f:validator binding="#{row.bindings.ClusterAttMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Cluster Attendance Detail ID"
+                                                                           id="c8" width="69">
+                                                                    <af:inputText value="#{row.bindings.ClusterAttDetailId.inputValue}"
+                                                                                  label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.label}"
+                                                                                  required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.mandatory}"
+                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.tooltip}"
+                                                                                  id="it7">
+                                                                        <f:validator binding="#{row.bindings.ClusterAttDetailId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer Registration ID" align="center"
-                                                                           id="c10" width="65">
+                                                                           id="c10" width="80">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.mandatory}"
@@ -260,7 +263,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer Name"
-                                                                           id="c11" width="194">
+                                                                           id="c11" width="350">
                                                                     <af:inputText value="#{row.bindings.Farmer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.mandatory}"
@@ -278,7 +281,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                                                    <af:spacer width="200" height="20" id="s9"/>
+                                                    <af:spacer width="357" height="20" id="s9"/>
                                                     <h:panelGroup id="pg2">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add" icon="#{resource['images:add.png']}"

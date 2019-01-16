@@ -51,7 +51,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblMonitoringProjCompOutputView1Query.processQuery}"
                                                                       varStatus="vs" id="t1" width="651">
-                                                                <af:column headerText="Project Component"
+                                                                <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.name}"
+                                                                           filterable="true" headerText="Project Component"
                                                                            id="c9" width="250">
                                                                     <af:outputText value="#{row.Proj_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.tooltip}"
@@ -66,7 +67,8 @@
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
+                                                                <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.name}"
+                                                                           filterable="true" headerText="Active"
                                                                            id="c4"  width="60">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.tooltip}"
@@ -142,7 +144,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active" 
+                                                                <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Ast.name}"
+                                                                filterable="true" sortable="true" 
+                                                                headerText="Active" 
                                                                            id="c8" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
