@@ -42,40 +42,40 @@
                                                         <af:showDetailItem id="tab1" text="Cluster Master">
                                                             <af:panelFormLayout id="pfl1" rows="2" maxColumns="3">
                                                             <af:inputText value="#{bindings.ClusterId.inputValue}"
-                                                                              label="#{bindings.ClusterId.hints.label}"
+                                                                              label="Cluster ID"
                                                                               required="#{bindings.ClusterId.hints.mandatory}"
                                                                               columns="#{bindings.ClusterId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ClusterId.hints.precision}"
                                                                               shortDesc="#{bindings.ClusterId.hints.tooltip}"
-                                                                              id="it2">
+                                                                              id="it2" contentStyle="width:150px" >
                                                                     <f:validator binding="#{bindings.ClusterId.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Cluster_Name.inputValue}"
-                                                                              label="#{bindings.Cluster_Name.hints.label}"
+                                                                              label="Cluster"
                                                                               required="#{bindings.Cluster_Name.hints.mandatory}"
                                                                               columns="#{bindings.Cluster_Name.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Cluster_Name.hints.precision}"
                                                                               shortDesc="#{bindings.Cluster_Name.hints.tooltip}"
-                                                                              id="it8">
+                                                                              id="it8" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.Cluster_Name.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ClusterMasterId.inputValue}"
-                                                                              label="#{bindings.ClusterMasterId.hints.label}"
+                                                                              label="Master ID"
                                                                               required="#{bindings.ClusterMasterId.hints.mandatory}"
                                                                               columns="#{bindings.ClusterMasterId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ClusterMasterId.hints.precision}"
                                                                               shortDesc="#{bindings.ClusterMasterId.hints.tooltip}"
-                                                                              id="it1">
+                                                                              id="it1" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.ClusterMasterId.validator}"/>
                                                                 </af:inputText>
                                                                 
                                                                 
                                                                 <af:inputDate value="#{bindings.Dated.inputValue}"
-                                                                              label="#{bindings.Dated.hints.label}"
+                                                                              label="Date"
                                                                               required="#{bindings.Dated.hints.mandatory}"
                                                                               columns="#{bindings.Dated.hints.displayWidth}"
                                                                               shortDesc="#{bindings.Dated.hints.tooltip}"
-                                                                              id="id1">
+                                                                              id="id1" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.Dated.validator}"/>
                                                                     <af:convertDateTime pattern="#{bindings.Dated.format}"/>
                                                                 </af:inputDate>
@@ -85,7 +85,7 @@
                                                                               columns="#{bindings.Status.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Status.hints.precision}"
                                                                               shortDesc="#{bindings.Status.hints.tooltip}"
-                                                                              id="it3">
+                                                                              id="it3" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.Status.validator}"/>
                                                                     <af:convertNumber groupingUsed="false"
                                                                                       pattern="#{bindings.Status.format}"/>
@@ -96,7 +96,7 @@
                                                                               columns="#{bindings.Remarks.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Remarks.hints.precision}"
                                                                               shortDesc="#{bindings.Remarks.hints.tooltip}"
-                                                                              id="it4">
+                                                                              id="it4" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.Remarks.validator}"/>
                                                                 </af:inputText>
                                                                 <f:facet name="footer">
@@ -193,23 +193,10 @@
                                                                       queryListener="#{bindings.TblClusterDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b11 ::b12 ::b13">
-                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Cluster Detail ID"
-                                                                           id="c1" width="85" align="center">
-                                                                    <af:inputText value="#{row.bindings.ClusterDetailId.inputValue}"
-                                                                                  label="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
-                                                                                  required="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.mandatory}"
-                                                                                  columns="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.tooltip}"
-                                                                                  id="it5">
-                                                                        <f:validator binding="#{row.bindings.ClusterDetailId.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
+                                                                
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Cluster Master ID"
+                                                                           headerText="Master ID"
                                                                            id="c2" width="91" align="center">
                                                                     <af:inputText value="#{row.bindings.ClusterMasterId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.label}"
@@ -221,8 +208,24 @@
                                                                         <f:validator binding="#{row.bindings.ClusterMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Farmer"
-                                                                           id="c4" width="124">
+                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Detail ID"
+                                                                           id="c1" width="85" align="center">
+                                                                    <af:inputText value="#{row.bindings.ClusterDetailId.inputValue}"
+                                                                                  label="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
+                                                                                  required="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.mandatory}"
+                                                                                  columns="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.ClusterDetailId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.FarmerRegId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Farmer"
+                                                                           id="c4" width="450">
                                                                     <af:selectOneChoice value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                         label="#{row.bindings.FarmerRegId.label}"
                                                                                         required="#{bindings.TblClusterDetailView3.hints.FarmerRegId.mandatory}"
@@ -240,7 +243,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
-                                                    <af:spacer width="200" height="20" id="s11"/>
+                                                    <af:spacer width="356" height="20" id="s11"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
