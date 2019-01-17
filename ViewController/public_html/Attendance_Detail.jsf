@@ -13,9 +13,9 @@
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
                                 <af:panelAccordion discloseMany="false" id="pa2"
                                                    inlineStyle="width:195px; height:519px;">
-                                    <af:showDetailItem id="sdi1" text="Course Training">
+                                    <af:showDetailItem id="sdi1" text="Training/Course">
                                         <af:spacer width="190" height="10" id="s1"/>
-                                        <af:button text="Course Setup" id="b1" inlineStyle="width:190px;"
+                                        <af:button text="Training Setup" id="b1" inlineStyle="width:190px;"
                                                    destination="Course_Setup.jsf"
                                                    icon="#{resource['images:course.png']}"/>
                                         <af:spacer width="190" height="10" id="s3"/>
@@ -50,7 +50,7 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1050px;">
-                                    <af:showDetailItem id="pane2" text="Attendance">
+                                    <af:showDetailItem id="pane2" text="Attendance Detail">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
@@ -87,7 +87,7 @@
                                                                 </af:column>
                                                                 
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Dated.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" align="center"
                                                                            headerText="Date"
                                                                            id="c3">
                                                                     <f:facet name="filter">
@@ -108,7 +108,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.label}"
+                                                                           headerText="Active"
                                                                            id="c4">
                                                                     <af:inputText value="#{row.bindings.Status.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.label}"
@@ -138,7 +138,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.label}"
+                                                                           headerText="Trainer"
                                                                            id="c6" width="250">
                                                                     <af:inputText value="#{row.bindings.Trainer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.label}"
@@ -201,7 +201,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:1033px;">
+                                                                    inlineStyle="width:640px;">
                                                         <af:showDetailItem id="tab2" text="Attendance Detail">
                                                             <af:table value="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.collectionModel}"
                                                                       var="row"
@@ -216,7 +216,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_ATT_ClusterAttDetailView1_2Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b11 ::b12 ::b13">
+                                                                      partialTriggers="::b11 ::b12 ::b13" width="620">
                                                                 
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true" align="center"
@@ -262,7 +262,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Farmer Name"
+                                                                           headerText="Farmer"
                                                                            id="c11" width="350">
                                                                     <af:inputText value="#{row.bindings.Farmer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.label}"
@@ -281,7 +281,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                                                    <af:spacer width="357" height="20" id="s9"/>
+                                                    <af:spacer width="172" height="20" id="s9"/>
                                                     <h:panelGroup id="pg2">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add" icon="#{resource['images:add.png']}"
