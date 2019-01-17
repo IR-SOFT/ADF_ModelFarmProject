@@ -55,7 +55,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:672px;">
+                                                                    inlineStyle="width:1009px;">
                                                         <af:showDetailItem id="tab1" text="Team Setup">
                                                             <af:table value="#{bindings.Tbl_TeamView1.collectionModel}"
                                                                       var="row"

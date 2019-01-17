@@ -6,39 +6,12 @@
     <variableIterator id="variables"/>
     <iterator Binds="Tbl_TrainingSchMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
               id="Tbl_TrainingSchMasterView1Iterator"/>
-    <searchRegion Binds="Tbl_TrainingSchMasterView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainingSchMasterView1Query"/>
     <iterator Binds="Tbl_TrainingSchDetailView3" RangeSize="25" DataControl="AppModuleDataControl"
               id="Tbl_TrainingSchDetailView3Iterator"/>
     <searchRegion Binds="Tbl_TrainingSchDetailView3Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainingSchDetailView3Query"/>
   </executables>
   <bindings>
-    <tree IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Tbl_TrainingSchMasterView1">
-      <nodeDefinition DefName="model.vo.Tbl_TrainingSchMasterView" Name="Tbl_TrainingSchMasterView10">
-        <AttrNames>
-          <Item Value="TrainingSchMasterId"/>
-          <Item Value="ProjCompId"/>
-          <Item Value="CourseId"/>
-          <Item Value="ModuleId"/>
-          <Item Value="ClusterId"/>
-          <Item Value="TeamId"/>
-          <Item Value="TrainerId"/>
-          <Item Value="Dated"/>
-          <Item Value="Status"/>
-          <Item Value="Mon"/>
-          <Item Value="StDate"/>
-          <Item Value="EnDate"/>
-          <Item Value="Remarks"/>
-          <Item Value="Trainer_Name"/>
-          <Item Value="Team_Name"/>
-          <Item Value="Cluster_Name"/>
-          <Item Value="Module_Name"/>
-          <Item Value="Course_Name"/>
-          <Item Value="Proj_Comp_Name"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
     <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
             Action="createInsertRow"/>
     <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Execute" RequiresUpdateModel="true"
@@ -63,5 +36,120 @@
             Action="iteratorExecute"/>
     <action IterBinding="Tbl_TrainingSchDetailView3Iterator" id="Delete1" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="TrainingSchMasterId">
+      <AttrNames>
+        <Item Value="TrainingSchMasterId"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="Tbl_TrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_ProjCompId" id="ProjCompId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="Tbl_TrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_CourseId" id="CourseId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="Tbl_TrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_ModuleId" id="ModuleId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="Tbl_TrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_ClusterId" id="ClusterId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="Tbl_TrainingSchMasterView1Iterator" StaticList="false" Uses="LOV_TeamId" id="TeamId"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="TrainerId">
+      <AttrNames>
+        <Item Value="TrainerId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Dated">
+      <AttrNames>
+        <Item Value="Dated"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Status">
+      <AttrNames>
+        <Item Value="Status"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Mon">
+      <AttrNames>
+        <Item Value="Mon"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="StDate">
+      <AttrNames>
+        <Item Value="StDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="EnDate">
+      <AttrNames>
+        <Item Value="EnDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Remarks">
+      <AttrNames>
+        <Item Value="Remarks"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Proj_Comp_Name">
+      <AttrNames>
+        <Item Value="Proj_Comp_Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="ProjCompId1">
+      <AttrNames>
+        <Item Value="ProjCompId1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Course_Name">
+      <AttrNames>
+        <Item Value="Course_Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="CourseId1">
+      <AttrNames>
+        <Item Value="CourseId1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Module_Name">
+      <AttrNames>
+        <Item Value="Module_Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="ModuleId1">
+      <AttrNames>
+        <Item Value="ModuleId1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Cluster_Name">
+      <AttrNames>
+        <Item Value="Cluster_Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="ClusterId1">
+      <AttrNames>
+        <Item Value="ClusterId1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Team_Name">
+      <AttrNames>
+        <Item Value="Team_Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="TeamId1">
+      <AttrNames>
+        <Item Value="TeamId1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Trainer_Name">
+      <AttrNames>
+        <Item Value="Trainer_Name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="Tbl_TrainingSchMasterView1Iterator" id="TrainerId1">
+      <AttrNames>
+        <Item Value="TrainerId1"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Previous" RequiresUpdateModel="true"
+            Action="previous"/>
+    <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="Tbl_TrainingSchMasterView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
   </bindings>
 </pageDefinition>

@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblFarmerReg"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_FARMER_REG"
@@ -244,6 +244,13 @@
     AssociationOtherEnd="model.eo.FkTblFarmerRegMemFkAssoc1.TblFarmerReg"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblClusterDetail"
+    Association="model.eo.FKTblClusterDetailViewAssoc"
+    AssociationEnd="model.eo.FKTblClusterDetailViewAssoc.TblClusterDetail"
+    AssociationOtherEnd="model.eo.FKTblClusterDetailViewAssoc.TblFarmerReg"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <ViewLinkAccessor
     Name="TblClusterDetailView"
     ViewLink="model.vo.FKTblClusterDetailFKLink2"

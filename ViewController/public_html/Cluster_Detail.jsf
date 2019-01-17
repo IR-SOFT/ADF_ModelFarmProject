@@ -236,6 +236,30 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
+                                                                <af:column headerText="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.label}"
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
+                                                                                  label="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.label}"
+                                                                                  required="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.mandatory}"
+                                                                                  columns="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.tooltip}"
+                                                                                  id="it7">
+                                                                        <f:validator binding="#{row.bindings.Farmer_Cnic.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.label}"
+                                                                           id="c5">
+                                                                    <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
+                                                                                  label="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.label}"
+                                                                                  required="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.mandatory}"
+                                                                                  columns="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.precision}"
+                                                                                  shortDesc="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.tooltip}"
+                                                                                  id="it9">
+                                                                        <f:validator binding="#{row.bindings.Farmer_Mobile.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>

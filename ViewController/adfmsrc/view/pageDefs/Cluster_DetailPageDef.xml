@@ -49,6 +49,8 @@
           <Item Value="ClusterDetailId"/>
           <Item Value="ClusterMasterId"/>
           <Item Value="FarmerRegId"/>
+          <Item Value="Farmer_Cnic"/>
+          <Item Value="Farmer_Mobile"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

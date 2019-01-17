@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_ATT_ClusterAttDetailView1"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -70,6 +70,21 @@
     EntityAttrName="FarmerRegId"
     EntityUsage="Tbl_ATT_FarmerReg"
     AliasName="FARMER_REG_ID1"/>
+  <ViewAttribute
+    Name="Farmer_Cnic"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Cnic"
+    EntityUsage="Tbl_ATT_FarmerReg"
+    AliasName="CNIC"/>
+  <ViewAttribute
+    Name="Farmer_Mobile"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Mobile"
+    EntityUsage="Tbl_ATT_FarmerReg"
+    AliasName="MOBILE"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="ClusterAttDetailId"/>
   </AttrArray>

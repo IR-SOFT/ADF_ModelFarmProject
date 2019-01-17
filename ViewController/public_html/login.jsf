@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="login.jsf" id="d1" binding="#{backingBeanScope.backing_login.d1}">
+        <af:form id="f1" binding="#{backingBeanScope.backing_login.f1}">
+            <f:facet name="center"/>
+            <af:panelAccordion discloseMany="false" id="pa1" binding="#{backingBeanScope.backing_login.pa1}">
+                <af:showDetailItem id="pane1" text="Panel Label 1" binding="#{backingBeanScope.backing_login.pane1}">
+                    <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_login.pgl1}">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1"
+                                    binding="#{backingBeanScope.backing_login.gr1}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc1"
+                                         binding="#{backingBeanScope.backing_login.gc1}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc2"
+                                         binding="#{backingBeanScope.backing_login.gc2}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc3"
+                                         binding="#{backingBeanScope.backing_login.gc3}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc4"
+                                         binding="#{backingBeanScope.backing_login.gc4}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc5"
+                                         binding="#{backingBeanScope.backing_login.gc5}"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr2"
+                                    binding="#{backingBeanScope.backing_login.gr2}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc6"
+                                         binding="#{backingBeanScope.backing_login.gc6}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc7"
+                                         binding="#{backingBeanScope.backing_login.gc7}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc8"
+                                         binding="#{backingBeanScope.backing_login.gc8}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc9"
+                                         binding="#{backingBeanScope.backing_login.gc9}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc10"
+                                         binding="#{backingBeanScope.backing_login.gc10}"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr3"
+                                    binding="#{backingBeanScope.backing_login.gr3}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc11"
+                                         binding="#{backingBeanScope.backing_login.gc11}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc12"
+                                         binding="#{backingBeanScope.backing_login.gc12}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc13"
+                                         binding="#{backingBeanScope.backing_login.gc13}">
+                                <af:inputText label="User Name" id="it1" binding="#{backingBeanScope.backing_login.it1}"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="20%" id="gc14"
+                                         binding="#{backingBeanScope.backing_login.gc14}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc15"
+                                         binding="#{backingBeanScope.backing_login.gc15}"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr4"
+                                    binding="#{backingBeanScope.backing_login.gr4}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc16"
+                                         binding="#{backingBeanScope.backing_login.gc16}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc17"
+                                         binding="#{backingBeanScope.backing_login.gc17}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc18"
+                                         binding="#{backingBeanScope.backing_login.gc18}">
+                                <af:inputText label="Password   " id="it2" binding="#{backingBeanScope.backing_login.it2}"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="20%" id="gc19"
+                                         binding="#{backingBeanScope.backing_login.gc19}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc20"
+                                         binding="#{backingBeanScope.backing_login.gc20}"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr5"
+                                    binding="#{backingBeanScope.backing_login.gr5}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc21"
+                                         binding="#{backingBeanScope.backing_login.gc21}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc22"
+                                         binding="#{backingBeanScope.backing_login.gc22}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc23"
+                                         binding="#{backingBeanScope.backing_login.gc23}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc24"
+                                         binding="#{backingBeanScope.backing_login.gc24}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc25"
+                                         binding="#{backingBeanScope.backing_login.gc25}"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr6"
+                                    binding="#{backingBeanScope.backing_login.gr6}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc26"
+                                         binding="#{backingBeanScope.backing_login.gc26}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc27"
+                                         binding="#{backingBeanScope.backing_login.gc27}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc28"
+                                         binding="#{backingBeanScope.backing_login.gc28}">
+                                <af:button text="Login" id="b1" binding="#{backingBeanScope.backing_login.b1}"
+                                           action="#{backingBeanScope.backing_login.login_action}"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="20%" id="gc29"
+                                         binding="#{backingBeanScope.backing_login.gc29}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc30"
+                                         binding="#{backingBeanScope.backing_login.gc30}"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr7"
+                                    binding="#{backingBeanScope.backing_login.gr7}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc31"
+                                         binding="#{backingBeanScope.backing_login.gc31}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc32"
+                                         binding="#{backingBeanScope.backing_login.gc32}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc33"
+                                         binding="#{backingBeanScope.backing_login.gc33}">
+                                <af:button text="Logout" id="b2" binding="#{backingBeanScope.backing_login.b2}"
+                                           action="#{Logout.logout_action}"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="20%" id="gc34"
+                                         binding="#{backingBeanScope.backing_login.gc34}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc35"
+                                         binding="#{backingBeanScope.backing_login.gc35}"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr8"
+                                    binding="#{backingBeanScope.backing_login.gr8}">
+                            <af:gridCell marginStart="5px" width="20%" id="gc36"
+                                         binding="#{backingBeanScope.backing_login.gc36}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc37"
+                                         binding="#{backingBeanScope.backing_login.gc37}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc38"
+                                         binding="#{backingBeanScope.backing_login.gc38}"/>
+                            <af:gridCell marginStart="5px" width="20%" id="gc39"
+                                         binding="#{backingBeanScope.backing_login.gc39}"/>
+                            <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc40"
+                                         binding="#{backingBeanScope.backing_login.gc40}"/>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_login-->
+</f:view>

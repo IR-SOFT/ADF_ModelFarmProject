@@ -201,7 +201,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr5">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:640px;">
+                                                                    inlineStyle="width:1029px;">
                                                         <af:showDetailItem id="tab2" text="Attendance Detail">
                                                             <af:table value="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.collectionModel}"
                                                                       var="row"
@@ -216,7 +216,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_ATT_ClusterAttDetailView1_2Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b11 ::b12 ::b13" width="620">
+                                                                      partialTriggers="::b11 ::b12 ::b13" width="1011">
                                                                 
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.name}"
                                                                            filterable="true" sortable="true" align="center"
@@ -263,7 +263,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer"
-                                                                           id="c11" width="350">
+                                                                           id="c11" width="354">
                                                                     <af:inputText value="#{row.bindings.Farmer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.mandatory}"
@@ -272,6 +272,30 @@
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.tooltip}"
                                                                                   id="it10">
                                                                         <f:validator binding="#{row.bindings.Farmer_Name.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.label}"
+                                                                           id="c7">
+                                                                    <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
+                                                                                  label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.label}"
+                                                                                  required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.mandatory}"
+                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.tooltip}"
+                                                                                  id="it6">
+                                                                        <f:validator binding="#{row.bindings.Farmer_Cnic.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.label}"
+                                                                           id="c12">
+                                                                    <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
+                                                                                  label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.label}"
+                                                                                  required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.mandatory}"
+                                                                                  columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.displayWidth}"
+                                                                                  maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.precision}"
+                                                                                  shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.tooltip}"
+                                                                                  id="it11">
+                                                                        <f:validator binding="#{row.bindings.Farmer_Mobile.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                             </af:table>

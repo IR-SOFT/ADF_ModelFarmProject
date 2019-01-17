@@ -69,6 +69,11 @@
       <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
    </list>
    <value n="defaultPackage" v="model"/>
+   <hash n="ejbModuleContainer">
+      <value n="ejbVersion" v="3.0"/>
+      <value n="ejbVersionMinor" v="0.1"/>
+      <url n="weblogicEjbJarNodeURL" path="src/META-INF/weblogic-ejb-jar.xml"/>
+   </hash>
    <value n="jbo.JpxName" v="model.Model"/>
    <value n="jbo.NoAttrEnumClasses" v="true"/>
    <value n="JboProject" v="true"/>
@@ -280,6 +285,14 @@
             <value n="id" v="Resource Bundle Variable Resolver"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EJB"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -332,6 +345,14 @@
          </hash>
          <hash>
             <value n="id" v="Resource Bundle Variable Resolver"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Java EE"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="EJB"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -438,6 +459,11 @@
             <value n="version" v="2.2"/>
          </hash>
       </list>
+   </hash>
+   <hash n="oracle.toplink.workbench.addin">
+      <hash n="persistence-list">
+         <value n="jpa-version" v="2.0"/>
+      </hash>
    </hash>
    <hash n="ResourceBundleOptions">
       <value n="BundleCreationPolicy" v="2"/>
