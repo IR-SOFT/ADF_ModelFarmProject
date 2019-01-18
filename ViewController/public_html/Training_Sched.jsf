@@ -343,7 +343,8 @@
                                                     icon="#{resource['images:delete.png']}"
                                                                disabled="#{!bindings.Delete.enabled}" id="b9"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
-                                                        <af:button text="Submit" id="b21"/>
+                                                        <af:button text="Save" id="b21"
+                                                                   icon="#{resource['images:save.png']}"/>
                                                     </h:panelGroup>
                                                     
                                                 </af:gridCell>
