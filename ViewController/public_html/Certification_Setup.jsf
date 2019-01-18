@@ -76,7 +76,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
+                                                                <af:column sortProperty="#{bindings.TblCertificationView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
                                                                            id="c3" width="74">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

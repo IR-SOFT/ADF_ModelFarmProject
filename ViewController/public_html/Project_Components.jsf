@@ -31,7 +31,7 @@
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
                                                    inlineStyle="height:811px; width:1025px;">
-                                    <af:showDetailItem id="pane2" text="Components">
+                                    <af:showDetailItem id="pane2" text="Project Components">
                                         
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">

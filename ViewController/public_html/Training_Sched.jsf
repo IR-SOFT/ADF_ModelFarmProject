@@ -60,19 +60,20 @@
                                                                            inflexibleHeight="100">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="9">
                                                                 <af:inputText value="#{bindings.TrainingSchMasterId.inputValue}"
-                                                                              label="#{bindings.TrainingSchMasterId.hints.label}"
+                                                                              label="Master"
                                                                               required="#{bindings.TrainingSchMasterId.hints.mandatory}"
                                                                               columns="#{bindings.TrainingSchMasterId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.TrainingSchMasterId.hints.precision}"
                                                                               shortDesc="#{bindings.TrainingSchMasterId.hints.tooltip}"
-                                                                              id="it1">
+                                                                              id="it1" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.TrainingSchMasterId.validator}"/>
                                                                 </af:inputText>
                                                                 <af:selectOneChoice value="#{bindings.ProjCompId.inputValue}"
                                                                                     label="#{bindings.ProjCompId.label}"
                                                                                     required="#{bindings.ProjCompId.hints.mandatory}"
                                                                                     shortDesc="#{bindings.ProjCompId.hints.tooltip}"
-                                                                                    id="soc1">
+                                                                                    id="soc1"
+                                                                                    contentStyle="width:150px">
                                                                     <f:selectItems value="#{bindings.ProjCompId.items}"
                                                                                    id="si1"/>
                                                                     <f:validator binding="#{bindings.ProjCompId.validator}"/>
@@ -81,7 +82,8 @@
                                                                                     label="#{bindings.CourseId.label}"
                                                                                     required="#{bindings.CourseId.hints.mandatory}"
                                                                                     shortDesc="#{bindings.CourseId.hints.tooltip}"
-                                                                                    id="soc2">
+                                                                                    id="soc2"
+                                                                                    contentStyle="width:150px">
                                                                     <f:selectItems value="#{bindings.CourseId.items}"
                                                                                    id="si2"/>
                                                                     <f:validator binding="#{bindings.CourseId.validator}"/>
@@ -90,7 +92,8 @@
                                                                                     label="#{bindings.ModuleId.label}"
                                                                                     required="#{bindings.ModuleId.hints.mandatory}"
                                                                                     shortDesc="#{bindings.ModuleId.hints.tooltip}"
-                                                                                    id="soc3">
+                                                                                    id="soc3"
+                                                                                    contentStyle="width:150px">
                                                                     <f:selectItems value="#{bindings.ModuleId.items}"
                                                                                    id="si3"/>
                                                                     <f:validator binding="#{bindings.ModuleId.validator}"/>
@@ -99,7 +102,8 @@
                                                                                     label="#{bindings.ClusterId.label}"
                                                                                     required="#{bindings.ClusterId.hints.mandatory}"
                                                                                     shortDesc="#{bindings.ClusterId.hints.tooltip}"
-                                                                                    id="soc4">
+                                                                                    id="soc4"
+                                                                                    contentStyle="width:150px">
                                                                     <f:selectItems value="#{bindings.ClusterId.items}"
                                                                                    id="si4"/>
                                                                     <f:validator binding="#{bindings.ClusterId.validator}"/>
@@ -108,7 +112,8 @@
                                                                                     label="#{bindings.TeamId.label}"
                                                                                     required="#{bindings.TeamId.hints.mandatory}"
                                                                                     shortDesc="#{bindings.TeamId.hints.tooltip}"
-                                                                                    id="soc5">
+                                                                                    id="soc5"
+                                                                                    contentStyle="width:150px">
                                                                     <f:selectItems value="#{bindings.TeamId.items}"
                                                                                    id="si5"/>
                                                                     <f:validator binding="#{bindings.TeamId.validator}"/>
@@ -119,7 +124,7 @@
                                                                               columns="#{bindings.TrainerId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.TrainerId.hints.precision}"
                                                                               shortDesc="#{bindings.TrainerId.hints.tooltip}"
-                                                                              id="it2">
+                                                                              id="it2" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.TrainerId.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputDate value="#{bindings.Dated.inputValue}"
@@ -127,7 +132,7 @@
                                                                               required="#{bindings.Dated.hints.mandatory}"
                                                                               columns="#{bindings.Dated.hints.displayWidth}"
                                                                               shortDesc="#{bindings.Dated.hints.tooltip}"
-                                                                              id="id1">
+                                                                              id="id1" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.Dated.validator}"/>
                                                                     <af:convertDateTime pattern="#{bindings.Dated.format}"/>
                                                                 </af:inputDate>
@@ -137,7 +142,7 @@
                                                                               columns="#{bindings.Status.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Status.hints.precision}"
                                                                               shortDesc="#{bindings.Status.hints.tooltip}"
-                                                                              id="it3">
+                                                                              id="it3" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.Status.validator}"/>
                                                                     <af:convertNumber groupingUsed="false"
                                                                                       pattern="#{bindings.Status.format}"/>
@@ -148,7 +153,7 @@
                                                                               columns="#{bindings.Mon.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Mon.hints.precision}"
                                                                               shortDesc="#{bindings.Mon.hints.tooltip}"
-                                                                              id="it4">
+                                                                              id="it4" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.Mon.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputDate value="#{bindings.StDate.inputValue}"
@@ -156,7 +161,7 @@
                                                                               required="#{bindings.StDate.hints.mandatory}"
                                                                               columns="#{bindings.StDate.hints.displayWidth}"
                                                                               shortDesc="#{bindings.StDate.hints.tooltip}"
-                                                                              id="id2">
+                                                                              id="id2" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.StDate.validator}"/>
                                                                     <af:convertDateTime pattern="#{bindings.StDate.format}"/>
                                                                 </af:inputDate>
@@ -165,7 +170,7 @@
                                                                               required="#{bindings.EnDate.hints.mandatory}"
                                                                               columns="#{bindings.EnDate.hints.displayWidth}"
                                                                               shortDesc="#{bindings.EnDate.hints.tooltip}"
-                                                                              id="id3">
+                                                                              id="id3" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.EnDate.validator}"/>
                                                                     <af:convertDateTime pattern="#{bindings.EnDate.format}"/>
                                                                 </af:inputDate>
@@ -175,7 +180,7 @@
                                                                               columns="#{bindings.Remarks.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Remarks.hints.precision}"
                                                                               shortDesc="#{bindings.Remarks.hints.tooltip}"
-                                                                              id="it5">
+                                                                              id="it5" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.Remarks.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Proj_Comp_Name.inputValue}"
@@ -184,7 +189,7 @@
                                                                               columns="#{bindings.Proj_Comp_Name.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Proj_Comp_Name.hints.precision}"
                                                                               shortDesc="#{bindings.Proj_Comp_Name.hints.tooltip}"
-                                                                              id="it6">
+                                                                              id="it6" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.Proj_Comp_Name.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ProjCompId1.inputValue}"
@@ -193,7 +198,7 @@
                                                                               columns="#{bindings.ProjCompId1.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ProjCompId1.hints.precision}"
                                                                               shortDesc="#{bindings.ProjCompId1.hints.tooltip}"
-                                                                              id="it7">
+                                                                              id="it7" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.ProjCompId1.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Course_Name.inputValue}"
@@ -202,7 +207,7 @@
                                                                               columns="#{bindings.Course_Name.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Course_Name.hints.precision}"
                                                                               shortDesc="#{bindings.Course_Name.hints.tooltip}"
-                                                                              id="it8">
+                                                                              id="it8" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.Course_Name.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.CourseId1.inputValue}"
@@ -211,7 +216,7 @@
                                                                               columns="#{bindings.CourseId1.hints.displayWidth}"
                                                                               maximumLength="#{bindings.CourseId1.hints.precision}"
                                                                               shortDesc="#{bindings.CourseId1.hints.tooltip}"
-                                                                              id="it9">
+                                                                              id="it9" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.CourseId1.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Module_Name.inputValue}"
@@ -220,7 +225,7 @@
                                                                               columns="#{bindings.Module_Name.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Module_Name.hints.precision}"
                                                                               shortDesc="#{bindings.Module_Name.hints.tooltip}"
-                                                                              id="it10">
+                                                                              id="it10" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.Module_Name.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ModuleId1.inputValue}"
@@ -229,7 +234,7 @@
                                                                               columns="#{bindings.ModuleId1.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ModuleId1.hints.precision}"
                                                                               shortDesc="#{bindings.ModuleId1.hints.tooltip}"
-                                                                              id="it13">
+                                                                              id="it13" contentStyle="width:160px">
                                                                     <f:validator binding="#{bindings.ModuleId1.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Cluster_Name.inputValue}"
@@ -238,7 +243,7 @@
                                                                               columns="#{bindings.Cluster_Name.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Cluster_Name.hints.precision}"
                                                                               shortDesc="#{bindings.Cluster_Name.hints.tooltip}"
-                                                                              id="it14">
+                                                                              id="it14" contentStyle="width:160px">
                                                                     <f:validator binding="#{bindings.Cluster_Name.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.ClusterId1.inputValue}"
@@ -247,7 +252,7 @@
                                                                               columns="#{bindings.ClusterId1.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ClusterId1.hints.precision}"
                                                                               shortDesc="#{bindings.ClusterId1.hints.tooltip}"
-                                                                              id="it15">
+                                                                              id="it15" contentStyle="width:160px">
                                                                     <f:validator binding="#{bindings.ClusterId1.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Team_Name.inputValue}"
@@ -256,7 +261,7 @@
                                                                               columns="#{bindings.Team_Name.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Team_Name.hints.precision}"
                                                                               shortDesc="#{bindings.Team_Name.hints.tooltip}"
-                                                                              id="it16">
+                                                                              id="it16" contentStyle="width:160px">
                                                                     <f:validator binding="#{bindings.Team_Name.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.TeamId1.inputValue}"
@@ -265,7 +270,7 @@
                                                                               columns="#{bindings.TeamId1.hints.displayWidth}"
                                                                               maximumLength="#{bindings.TeamId1.hints.precision}"
                                                                               shortDesc="#{bindings.TeamId1.hints.tooltip}"
-                                                                              id="it17">
+                                                                              id="it17" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.TeamId1.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Trainer_Name.inputValue}"
@@ -274,7 +279,7 @@
                                                                               columns="#{bindings.Trainer_Name.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Trainer_Name.hints.precision}"
                                                                               shortDesc="#{bindings.Trainer_Name.hints.tooltip}"
-                                                                              id="it18">
+                                                                              id="it18" contentStyle="width:160px">
                                                                     <f:validator binding="#{bindings.Trainer_Name.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.TrainerId1.inputValue}"
@@ -283,7 +288,7 @@
                                                                               columns="#{bindings.TrainerId1.hints.displayWidth}"
                                                                               maximumLength="#{bindings.TrainerId1.hints.precision}"
                                                                               shortDesc="#{bindings.TrainerId1.hints.tooltip}"
-                                                                              id="it19">
+                                                                              id="it19" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.TrainerId1.validator}"/>
                                                                 </af:inputText>
                                                                 <f:facet name="footer">
