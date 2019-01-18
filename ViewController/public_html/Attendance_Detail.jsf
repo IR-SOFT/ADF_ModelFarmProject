@@ -302,7 +302,8 @@
                                                                         <f:validator binding="#{row.bindings.Farmer_Mobile.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Attendance"
+                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Ast.name}"
+                                                                           filterable="true" sortable="true" headerText="Attendance"
                                                                            id="c13" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

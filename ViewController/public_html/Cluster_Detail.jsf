@@ -225,7 +225,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer"
-                                                                           id="c4" width="450">
+                                                                           id="c4" width="510">
                                                                     <af:selectOneChoice value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                         label="#{row.bindings.FarmerRegId.label}"
                                                                                         required="#{bindings.TblClusterDetailView3.hints.FarmerRegId.mandatory}"
@@ -239,7 +239,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="CNIC"
-                                                                           id="c3">
+                                                                           id="c3" width="120">
                                                                     <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.mandatory}"
@@ -253,7 +253,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Mobile"
-                                                                           id="c5">
+                                                                           id="c5" width="115">
                                                                     <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.mandatory}"
