@@ -263,7 +263,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer"
-                                                                           id="c11" width="354">
+                                                                           id="c11" width="405">
                                                                     <af:inputText value="#{row.bindings.Farmer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.mandatory}"
@@ -277,7 +277,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="CNIC"
-                                                                           id="c7">
+                                                                           id="c7" width="110">
                                                                     <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.mandatory}"
@@ -291,7 +291,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Mobile"
-                                                                           id="c12">
+                                                                           id="c12" width="110">
                                                                     <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.mandatory}"
@@ -302,6 +302,18 @@
                                                                         <f:validator binding="#{row.bindings.Farmer_Mobile.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column headerText="Attendance"
+                                                                           id="c13" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
@@ -309,7 +321,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7">
-                                                    <af:spacer width="172" height="20" id="s9"/>
+                                                    <af:spacer width="367" height="20" id="s9"/>
                                                     <h:panelGroup id="pg2">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add" icon="#{resource['images:add.png']}"

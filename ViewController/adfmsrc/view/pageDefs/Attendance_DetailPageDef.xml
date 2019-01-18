@@ -40,6 +40,7 @@
           <Item Value="FarmerRegId1"/>
           <Item Value="Farmer_Cnic"/>
           <Item Value="Farmer_Mobile"/>
+          <Item Value="Ast"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
