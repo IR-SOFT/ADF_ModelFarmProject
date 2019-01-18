@@ -264,7 +264,9 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Level-1"
+                                                                <af:column sortProperty="#{bindings.TblItemL2View3.hints.L1_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Level-1"
                                                                            id="c25" width="142">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.L1_Name.label}"
@@ -305,7 +307,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
+                                                                <af:column sortProperty="#{bindings.TblItemL2View3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
                                                                            id="c21" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -370,7 +374,9 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Level-1"
+                                                                <af:column sortProperty="#{bindings.TblItemL3View3.hints.L1_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Level-1"
                                                                            id="c27" width="153">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L1_Name.label}"
@@ -396,7 +402,9 @@
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Level-2"
+                                                                <af:column sortProperty="#{bindings.TblItemL3View3.hints.L2_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Level-2"
                                                                            id="c26" width="148">
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L2_Name.label}"
@@ -437,7 +445,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
+                                                                <af:column sortProperty="#{bindings.TblItemL3View3.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
                                                                            id="c17" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
@@ -502,7 +512,9 @@
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Level-1"
+                                                                <af:column sortProperty="#{bindings.TblItemL4View41.hints.L1_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Level-1"
                                                                            id="c28" width="149">
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L1_Name.label}"
@@ -528,7 +540,9 @@
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Level-2"
+                                                                <af:column sortProperty="#{bindings.TblItemL4View41.hints.L2_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Level-2"
                                                                            id="c29" width="140">
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L2_Name.label}"
@@ -554,7 +568,9 @@
                                                                         <f:validator binding="#{row.bindings.ItemL3Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Level-3"
+                                                                <af:column sortProperty="#{bindings.TblItemL4View41.hints.L3_Name.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Level-3"
                                                                            id="c30" width="153">
                                                                     <af:inputText value="#{row.bindings.L3_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L3_Name.label}"
@@ -597,7 +613,9 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
+                                                                <af:column sortProperty="#{bindings.TblItemL4View41.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
                                                                            id="c12" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"

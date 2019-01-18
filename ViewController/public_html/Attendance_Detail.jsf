@@ -247,7 +247,7 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.name}"
-                                                                           filterable="true" sortable="true"
+                                                                           filterable="true" sortable="true" 
                                                                            headerText="Farmer Registration ID" align="center"
                                                                            id="c10" width="80">
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
@@ -274,7 +274,9 @@
                                                                         <f:validator binding="#{row.bindings.Farmer_Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.label}"
+                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="CNIC"
                                                                            id="c7">
                                                                     <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.label}"
@@ -286,7 +288,9 @@
                                                                         <f:validator binding="#{row.bindings.Farmer_Cnic.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.label}"
+                                                                <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Mobile"
                                                                            id="c12">
                                                                     <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.label}"

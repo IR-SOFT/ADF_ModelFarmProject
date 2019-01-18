@@ -96,8 +96,10 @@
                                                                         <f:validator binding="#{row.bindings.FatherName.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Active"
-                                                                           id="c4" width="77">
+                                                                <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active"
+                                                                           id="c4" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblFarmerRegView5.hints.Ast.mandatory}"
@@ -413,7 +415,9 @@
                                                                                           pattern="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.format}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
+                                                                <af:column sortProperty="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
                                                                            id="c31">
                                                                     <af:selectOneChoice value="#{row.bindings.SelfshipType.inputValue}"
                                                                                         label="#{row.bindings.SelfshipType.label}"
@@ -786,7 +790,9 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="Crop"
+                                                                <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.CropId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Crop"
                                                                            id="c32">
                                                                     <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
                                                                                         label="#{row.bindings.CropId.label}"

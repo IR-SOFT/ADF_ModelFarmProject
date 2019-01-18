@@ -236,7 +236,9 @@
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.label}"
+                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="CNIC"
                                                                            id="c3">
                                                                     <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.label}"
@@ -248,7 +250,9 @@
                                                                         <f:validator binding="#{row.bindings.Farmer_Cnic.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column headerText="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.label}"
+                                                                <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.name}"
+                                                                           filterable="true" sortable="true" align="center"
+                                                                           headerText="Mobile"
                                                                            id="c5">
                                                                     <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.label}"
