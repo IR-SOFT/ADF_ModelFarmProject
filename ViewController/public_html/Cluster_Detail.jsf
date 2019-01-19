@@ -80,7 +80,7 @@
                                                                     <af:convertDateTime pattern="#{bindings.Dated.format}"/>
                                                                 </af:inputDate>
                                                                 <af:inputText value="#{bindings.Status.inputValue}"
-                                                                              label="#{bindings.Status.hints.label}"
+                                                                              label="Active"
                                                                               required="#{bindings.Status.hints.mandatory}"
                                                                               columns="#{bindings.Status.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Status.hints.precision}"

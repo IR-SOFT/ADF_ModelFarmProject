@@ -143,66 +143,66 @@
                                                         <af:showDetailItem id="tab2" text="Detail">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
                                                                 <af:inputText value="#{bindings.MarStatus.inputValue}"
-                                                                              label="#{bindings.MarStatus.hints.label}"
+                                                                              label="Marital Status"
                                                                               required="#{bindings.MarStatus.hints.mandatory}"
                                                                               columns="#{bindings.MarStatus.hints.displayWidth}"
                                                                               maximumLength="#{bindings.MarStatus.hints.precision}"
                                                                               shortDesc="#{bindings.MarStatus.hints.tooltip}"
-                                                                              id="it5">
+                                                                              id="it5" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.MarStatus.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputDate value="#{bindings.Dob.inputValue}"
-                                                                              label="#{bindings.Dob.hints.label}"
+                                                                              label="DOB"
                                                                               required="#{bindings.Dob.hints.mandatory}"
                                                                               columns="#{bindings.Dob.hints.displayWidth}"
                                                                               shortDesc="#{bindings.Dob.hints.tooltip}"
-                                                                              id="id1">
+                                                                              id="id1" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.Dob.validator}"/>
                                                                     <af:convertDateTime pattern="#{bindings.Dob.format}"/>
                                                                 </af:inputDate>
                                                                 <af:inputDate value="#{bindings.Doj.inputValue}"
-                                                                              label="#{bindings.Doj.hints.label}"
+                                                                              label="DOJ"
                                                                               required="#{bindings.Doj.hints.mandatory}"
                                                                               columns="#{bindings.Doj.hints.displayWidth}"
                                                                               shortDesc="#{bindings.Doj.hints.tooltip}"
-                                                                              id="id2">
+                                                                              id="id2" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.Doj.validator}"/>
                                                                     <af:convertDateTime pattern="#{bindings.Doj.format}"/>
                                                                 </af:inputDate>
                                                                 <af:inputText value="#{bindings.Ntn.inputValue}"
-                                                                              label="#{bindings.Ntn.hints.label}"
+                                                                              label="NTN"
                                                                               required="#{bindings.Ntn.hints.mandatory}"
                                                                               columns="#{bindings.Ntn.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Ntn.hints.precision}"
                                                                               shortDesc="#{bindings.Ntn.hints.tooltip}"
-                                                                              id="it6">
+                                                                              id="it6" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.Ntn.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.PassNo.inputValue}"
-                                                                              label="#{bindings.PassNo.hints.label}"
+                                                                              label="Passport"
                                                                               required="#{bindings.PassNo.hints.mandatory}"
                                                                               columns="#{bindings.PassNo.hints.displayWidth}"
                                                                               maximumLength="#{bindings.PassNo.hints.precision}"
                                                                               shortDesc="#{bindings.PassNo.hints.tooltip}"
-                                                                              id="it7">
+                                                                              id="it7" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.PassNo.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Cnic.inputValue}"
-                                                                              label="#{bindings.Cnic.hints.label}"
+                                                                              label="CNIC"
                                                                               required="#{bindings.Cnic.hints.mandatory}"
                                                                               columns="#{bindings.Cnic.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Cnic.hints.precision}"
                                                                               shortDesc="#{bindings.Cnic.hints.tooltip}"
-                                                                              id="it8">
+                                                                              id="it8" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.Cnic.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.DrLicNo.inputValue}"
-                                                                              label="#{bindings.DrLicNo.hints.label}"
+                                                                              label="Driving License"
                                                                               required="#{bindings.DrLicNo.hints.mandatory}"
                                                                               columns="#{bindings.DrLicNo.hints.displayWidth}"
                                                                               maximumLength="#{bindings.DrLicNo.hints.precision}"
                                                                               shortDesc="#{bindings.DrLicNo.hints.tooltip}"
-                                                                              id="it9">
+                                                                              id="it9" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.DrLicNo.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Telephone.inputValue}"
@@ -211,7 +211,7 @@
                                                                               columns="#{bindings.Telephone.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Telephone.hints.precision}"
                                                                               shortDesc="#{bindings.Telephone.hints.tooltip}"
-                                                                              id="it10">
+                                                                              id="it10" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.Telephone.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Mobile.inputValue}"
@@ -220,7 +220,7 @@
                                                                               columns="#{bindings.Mobile.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Mobile.hints.precision}"
                                                                               shortDesc="#{bindings.Mobile.hints.tooltip}"
-                                                                              id="it11">
+                                                                              id="it11" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.Mobile.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Email.inputValue}"
@@ -229,34 +229,34 @@
                                                                               columns="#{bindings.Email.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Email.hints.precision}"
                                                                               shortDesc="#{bindings.Email.hints.tooltip}"
-                                                                              id="it12">
+                                                                              id="it12" contentStyle="width:200px">
                                                                     <f:validator binding="#{bindings.Email.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Url.inputValue}"
-                                                                              label="#{bindings.Url.hints.label}"
+                                                                              label="URL"
                                                                               required="#{bindings.Url.hints.mandatory}"
                                                                               columns="#{bindings.Url.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Url.hints.precision}"
                                                                               shortDesc="#{bindings.Url.hints.tooltip}"
-                                                                              id="it13">
+                                                                              id="it13" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.Url.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.PreAddress.inputValue}"
-                                                                              label="#{bindings.PreAddress.hints.label}"
+                                                                              label="Present Address"
                                                                               required="#{bindings.PreAddress.hints.mandatory}"
                                                                               columns="#{bindings.PreAddress.hints.displayWidth}"
                                                                               maximumLength="#{bindings.PreAddress.hints.precision}"
                                                                               shortDesc="#{bindings.PreAddress.hints.tooltip}"
-                                                                              id="it14">
+                                                                              id="it14" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.PreAddress.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.PerAddress.inputValue}"
-                                                                              label="#{bindings.PerAddress.hints.label}"
+                                                                              label="Permanent Address"
                                                                               required="#{bindings.PerAddress.hints.mandatory}"
                                                                               columns="#{bindings.PerAddress.hints.displayWidth}"
                                                                               maximumLength="#{bindings.PerAddress.hints.precision}"
                                                                               shortDesc="#{bindings.PerAddress.hints.tooltip}"
-                                                                              id="it15">
+                                                                              id="it15" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.PerAddress.validator}"/>
                                                                 </af:inputText>
                                                                 <f:facet name="footer">
@@ -316,7 +316,7 @@
                                                                     </af:panelGroupLayout>
                                                                 </f:facet>
                                                             </af:panelFormLayout>
-                                                            <af:button text="button 1" id="b25"/>
+                                                          
                                                         </af:showDetailItem>
                                                         <af:showDetailItem text="Trainer Academy" id="sdi2">
                                                             <af:table value="#{bindings.Tbl_TrainerAcaView3.collectionModel}"
@@ -332,7 +332,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.Tbl_TrainerAcaView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b15 ::b16 ::b17" width="988">
+                                                                      partialTriggers="::b15 ::b16 ::b17" width="989">
                                                                 
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"

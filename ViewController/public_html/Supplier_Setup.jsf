@@ -146,7 +146,7 @@
                                                                     <f:validator binding="#{bindings.Designation.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Cnic.inputValue}"
-                                                                              label="CNIC #"
+                                                                              label="CNIC"
                                                                               required="#{bindings.Cnic.hints.mandatory}"
                                                                               columns="#{bindings.Cnic.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Cnic.hints.precision}"
@@ -155,7 +155,7 @@
                                                                     <f:validator binding="#{bindings.Cnic.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Ntn.inputValue}"
-                                                                              label="NTN #"
+                                                                              label="NTN"
                                                                               required="#{bindings.Ntn.hints.mandatory}"
                                                                               columns="#{bindings.Ntn.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Ntn.hints.precision}"
@@ -164,7 +164,7 @@
                                                                     <f:validator binding="#{bindings.Ntn.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Telephone.inputValue}"
-                                                                              label="Telephone #"
+                                                                              label="Telephone"
                                                                               required="#{bindings.Telephone.hints.mandatory}"
                                                                               columns="#{bindings.Telephone.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Telephone.hints.precision}"
@@ -173,7 +173,7 @@
                                                                     <f:validator binding="#{bindings.Telephone.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Mobile.inputValue}"
-                                                                              label="Mobile #"
+                                                                              label="Mobile"
                                                                               required="#{bindings.Mobile.hints.mandatory}"
                                                                               columns="#{bindings.Mobile.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Mobile.hints.precision}"
@@ -182,7 +182,7 @@
                                                                     <f:validator binding="#{bindings.Mobile.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Email.inputValue}"
-                                                                              label="E-mail"
+                                                                              label="Email"
                                                                               required="#{bindings.Email.hints.mandatory}"
                                                                               columns="#{bindings.Email.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Email.hints.precision}"
@@ -196,7 +196,7 @@
                                                                               columns="#{bindings.Url.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Url.hints.precision}"
                                                                               shortDesc="#{bindings.Url.hints.tooltip}"
-                                                                              id="it12" contentStyle="width:200px;">
+                                                                              id="it12" contentStyle="width:250px;">
                                                                     <f:validator binding="#{bindings.Url.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Address.inputValue}"
@@ -205,7 +205,7 @@
                                                                               columns="#{bindings.Address.hints.displayWidth}"
                                                                               maximumLength="#{bindings.Address.hints.precision}"
                                                                               shortDesc="#{bindings.Address.hints.tooltip}"
-                                                                              id="it13" contentStyle="width:200px;">
+                                                                              id="it13" contentStyle="width:250px;">
                                                                     <f:validator binding="#{bindings.Address.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.LibrDetailId.inputValue}"
@@ -214,7 +214,7 @@
                                                                               columns="#{bindings.LibrDetailId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.LibrDetailId.hints.precision}"
                                                                               shortDesc="#{bindings.LibrDetailId.hints.tooltip}"
-                                                                              id="it14" contentStyle="width:200px;">
+                                                                              id="it14" contentStyle="width:250px;">
                                                                     <f:validator binding="#{bindings.LibrDetailId.validator}"/>
                                                                 </af:inputText>
                                                                 <f:facet name="footer">
