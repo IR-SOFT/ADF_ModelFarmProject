@@ -38,7 +38,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1006px;">
+                                                                    inlineStyle="width:664px;">
                                                         <af:showDetailItem id="tab1" text="Farmer Registration">
                                                             <af:table value="#{bindings.TblFarmerRegView5.collectionModel}"
                                                                       var="row"
@@ -53,7 +53,8 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegView5Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b4 ::b6 ::b7 ::b8 ::b11 ::b12 ::b13">
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b8 ::b11 ::b12 ::b13"
+                                                                      width="641">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer Reg ID" align="center"
@@ -71,7 +72,7 @@
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer"
-                                                                           id="c2" width="124">
+                                                                           id="c2" width="226">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.Name.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.Name.mandatory}"
@@ -85,7 +86,7 @@
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.FatherName.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Father"
-                                                                           id="c3" width="114">
+                                                                           id="c3" width="177">
                                                                     <af:inputText value="#{row.bindings.FatherName.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.FatherName.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.FatherName.mandatory}"
@@ -99,7 +100,7 @@
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegView5.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
-                                                                           id="c4" width="60">
+                                                                           id="c4" width="-105">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblFarmerRegView5.hints.Ast.mandatory}"
@@ -761,7 +762,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblFarmerRegCropsView7Query.processQuery}"
                                                                       varStatus="vs" id="t4"
-                                                                      partialTriggers="::b23 ::b24 ::b25">
+                                                                      partialTriggers="::b23 ::b24 ::b25" width="323">
                                                                 <af:column sortProperty="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.name}"
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Farmer Reg Crops ID"
