@@ -1,33 +1,27 @@
 package view.backing;
 
-import javax.annotation.PostConstruct;
-
 import javax.faces.context.FacesContext;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import oracle.adf.share.http.HttpServletRequestScopeAdapter;
-
-public class Logout {
-    public Logout() {
+public class CheckPriviliges {
+    public CheckPriviliges() {
+        super();
+        HttpSession session= null;
     }
-
-    @PostConstruct
-    public String logout_action() {
-        // Add event code here...
-        FacesContext.getCurrentInstance().getExternalContext().invalidateSession();  
-        System.out.println("User logged out successfully... Session Cleared");
-//            return "/faces/login.jsf?faces-redirect=true";
-        
+    
+    public String checkSession() {
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         HttpSession session = request.getSession(false);
         if (session == null) {
+            
             System.out.println("No session available");
+            return "good";
         } else {
+         
             System.out.println("This is old session");
+           return "bad";
         }
-
-        return "logged out";
     }
 }

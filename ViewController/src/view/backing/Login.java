@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.annotation.PostConstruct;
+
 import javax.faces.context.FacesContext;
 
 import javax.servlet.http.HttpServletRequest;
@@ -82,6 +84,7 @@ public class Login {
     private RichInputText it2;
     private RichButton b1;
     private RichButton b2;
+    private RichButton b3;
 
     public void setF1(RichForm f1) {
         this.f1 = f1;
@@ -611,19 +614,29 @@ public class Login {
     }
 
 
+    @PostConstruct
     public String checkSession() {
         HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
         HttpSession session = request.getSession(false);
         if (session == null) {
+            
             System.out.println("No session available");
-            return "/faces/login.jsf?faces-redirect=true";
+            return "good";
         } else {
+         
             System.out.println("This is old session");
-            return "/faces/mainPage.jsf?faces-redirect=true";
+           return "bad";
         }
     }
 
-    
+
+    public void setB3(RichButton b3) {
+        this.b3 = b3;
+    }
+
+    public RichButton getB3() {
+        return b3;
+    }
 }
 
 

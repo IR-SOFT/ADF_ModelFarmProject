@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
+
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    
     <af:document title="login.jsf" id="d1" binding="#{backingBeanScope.backing_login.d1}">
         <af:form id="f1" binding="#{backingBeanScope.backing_login.f1}">
             <f:facet name="center"/>
@@ -115,7 +117,10 @@
                             <af:gridCell marginStart="5px" width="20%" id="gc37"
                                          binding="#{backingBeanScope.backing_login.gc37}"/>
                             <af:gridCell marginStart="5px" width="20%" id="gc38"
-                                         binding="#{backingBeanScope.backing_login.gc38}"/>
+                                         binding="#{backingBeanScope.backing_login.gc38}">
+                                <af:button text="Check Session" id="b3" binding="#{backingBeanScope.backing_login.b3}"
+                                           action="#{backingBeanScope.backing_login.checkSession}"/>
+                            </af:gridCell>
                             <af:gridCell marginStart="5px" width="20%" id="gc39"
                                          binding="#{backingBeanScope.backing_login.gc39}"/>
                             <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc40"

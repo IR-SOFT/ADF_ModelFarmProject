@@ -74,6 +74,7 @@
                                                                                   maximumLength="#{bindings.TblProgView12.hints.ProgId.precision}"
                                                                                   shortDesc="#{bindings.TblProgView12.hints.ProgId.tooltip}"
                                                                                   id="it1"
+                                                                                  readOnly="true"
                                                                                   contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProgId.validator}"/>
                                                                     </af:inputText>

@@ -31,6 +31,7 @@
     <page path="/Machinery_Setup.jsf" usageId="view_Machinery_SetupPageDef"/>
     <page path="/Attendance_Detail.jsf" usageId="view_Attendance_DetailPageDef"/>
     <page path="/Library.jsf" usageId="view_LibraryPageDef"/>
+    
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_mainMenuPageDef" path="view.pageDefs.mainMenuPageDef"/>
@@ -60,6 +61,7 @@
     <page id="view_Machinery_SetupPageDef" path="view.pageDefs.Machinery_SetupPageDef"/>
     <page id="view_Attendance_DetailPageDef" path="view.pageDefs.Attendance_DetailPageDef"/>
     <page id="view_LibraryPageDef" path="view.pageDefs.LibraryPageDef"/>
+    
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

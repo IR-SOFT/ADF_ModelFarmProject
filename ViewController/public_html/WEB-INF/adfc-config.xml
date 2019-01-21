@@ -11,4 +11,5 @@
     <managed-bean-class>view.backing.Logout</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
   </managed-bean>
+  
 </adfc-config>
