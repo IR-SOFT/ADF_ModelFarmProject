@@ -112,7 +112,7 @@
                                                                                   columns="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.tooltip}"
-                                                                                  id="it2" contentStyle='text-align:center'>
+                                                                                  id="it2" readOnly="true" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProjCompOutputId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -126,7 +126,8 @@
                                                                                   columns="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.tooltip}"
-                                                                                  id="it1" contentStyle='text-align:center'>
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

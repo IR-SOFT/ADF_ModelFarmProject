@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="ClusterDetailId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="CLUSTER_DETAIL_ID"
     SQLType="VARCHAR"

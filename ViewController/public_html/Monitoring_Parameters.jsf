@@ -110,11 +110,12 @@
                                                                            id="c6" width="80">
                                                                     <af:inputText value="#{row.bindings.OutputIndId.inputValue}"
                                                                                   label="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.label}"
+                                                                                 
                                                                                   required="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.mandatory}"
                                                                                   columns="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.tooltip}"
-                                                                                  id="it2">
+                                                                                  id="it2" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -128,7 +129,7 @@
                                                                                   columns="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringMonParamView3.hints.MonParamId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.MonParamId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

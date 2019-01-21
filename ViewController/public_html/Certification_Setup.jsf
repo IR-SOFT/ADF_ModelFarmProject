@@ -58,7 +58,7 @@
                                                                                   columns="#{bindings.TblCertificationView1.hints.CertificationId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblCertificationView1.hints.CertificationId.precision}"
                                                                                   shortDesc="#{bindings.TblCertificationView1.hints.CertificationId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.CertificationId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

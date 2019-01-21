@@ -228,7 +228,7 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.tooltip}"
-                                                                                  id="it8">
+                                                                                  id="it8" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.ClusterAttMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
