@@ -65,7 +65,7 @@
                                                                                   columns="#{bindings.TblFarmerRegView5.hints.FarmerRegId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegView5.hints.FarmerRegId.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegView5.hints.FarmerRegId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -335,7 +335,7 @@
                                                                                   columns="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.tooltip}"
-                                                                                  id="it16">
+                                                                                  id="it16" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegLandId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -349,7 +349,7 @@
                                                                                   columns="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.tooltip}"
-                                                                                  id="it17">
+                                                                                  id="it17" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -587,7 +587,7 @@
                                                                                   columns="#{bindings.TblFarmerRegMemView7.hints.FarmerRegId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegMemView7.hints.FarmerRegId.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegMemView7.hints.FarmerRegId.tooltip}"
-                                                                                  id="it31">
+                                                                                  id="it31" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -601,7 +601,7 @@
                                                                                   columns="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegMemView7.hints.FarmerRegMemId.tooltip}"
-                                                                                  id="it30">
+                                                                                  id="it30" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegMemId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -773,7 +773,7 @@
                                                                                   columns="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegCropsId.tooltip}"
-                                                                                  id="it39">
+                                                                                  id="it39" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegCropsId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -788,7 +788,7 @@
                                                                                   columns="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegCropsView7.hints.FarmerRegId.tooltip}"
-                                                                                  id="it40">
+                                                                                  id="it40" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

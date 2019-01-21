@@ -81,7 +81,7 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.ClusterAttMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -132,7 +132,7 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.tooltip}"
-                                                                                  id="it2">
+                                                                                  id="it2" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -242,7 +242,7 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.tooltip}"
-                                                                                  id="it7">
+                                                                                  id="it7" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.ClusterAttDetailId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -256,7 +256,7 @@
                                                                                   columns="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.tooltip}"
-                                                                                  id="it9">
+                                                                                  id="it9" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.FarmerRegId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

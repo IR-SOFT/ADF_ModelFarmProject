@@ -132,7 +132,7 @@
                                                                                   columns="#{bindings.TblTopicsView3.hints.ModuleId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTopicsView3.hints.ModuleId.precision}"
                                                                                   shortDesc="#{bindings.TblTopicsView3.hints.ModuleId.tooltip}"
-                                                                                  id="it2"
+                                                                                  id="it2" readOnly="true"
                                                                                    inlineStyle="text-align:center; vertical-align: middle;"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.ModuleId.validator}"/>
@@ -148,7 +148,7 @@
                                                                                   columns="#{bindings.TblTopicsView3.hints.TopicsId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblTopicsView3.hints.TopicsId.precision}"
                                                                                   shortDesc="#{bindings.TblTopicsView3.hints.TopicsId.tooltip}"
-                                                                                  id="it1"
+                                                                                  id="it1" readOnly="true"
                                                                                    inlineStyle="text-align:center; vertical-align: middle;"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.TopicsId.validator}"/>

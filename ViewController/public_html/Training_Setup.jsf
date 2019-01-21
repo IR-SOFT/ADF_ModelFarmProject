@@ -81,7 +81,7 @@
                                                                                   columns="#{bindings.Tbl_TrainingView1.hints.TrainingId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_TrainingView1.hints.TrainingId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_TrainingView1.hints.TrainingId.tooltip}"
-                                                                                  id="it1" contentstyle='text-align:center'>
+                                                                                  id="it1" readOnly="true" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.TrainingId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

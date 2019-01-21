@@ -13,7 +13,7 @@
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
                            <af:panelAccordion discloseMany="false" id="pa2"
                                                    inlineStyle="width:195px; height:519px;">
-                                    <af:showDetailItem id="sdi1" text="Training/Courses">
+                                    <af:showDetailItem id="sdi1" text="Training/Course">
                                         <af:spacer width="190" height="10" id="s1"/>
                                         <af:button text="Training Setup" id="b1" inlineStyle="width:190px;"
                                                    destination="Course_Setup.jsf"
@@ -132,7 +132,7 @@
                                                                                   columns="#{bindings.TblCourseView3.hints.ProjCompInputId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblCourseView3.hints.ProjCompInputId.precision}"
                                                                                   shortDesc="#{bindings.TblCourseView3.hints.ProjCompInputId.tooltip}"
-                                                                                  id="it6"
+                                                                                  id="it6" readOnly="true"
                                                                                        inlineStyle="text-align:center; vertical-align: middle;"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.ProjCompInputId.validator}"/>
@@ -148,7 +148,7 @@
                                                                                   columns="#{bindings.TblCourseView3.hints.CourseId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblCourseView3.hints.CourseId.precision}"
                                                                                   shortDesc="#{bindings.TblCourseView3.hints.CourseId.tooltip}"
-                                                                                  id="it5"
+                                                                                  id="it5" readOnly="true"
                                                                                        inlineStyle="text-align:center; vertical-align: middle;"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.CourseId.validator}"/>

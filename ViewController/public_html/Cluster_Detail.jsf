@@ -47,7 +47,8 @@
                                                                               columns="#{bindings.ClusterId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ClusterId.hints.precision}"
                                                                               shortDesc="#{bindings.ClusterId.hints.tooltip}"
-                                                                              id="it2" contentStyle="width:150px" >
+                                                                              id="it2" readOnly="true"
+                                                                              contentStyle="width:150px" >
                                                                     <f:validator binding="#{bindings.ClusterId.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Cluster_Name.inputValue}"
@@ -65,7 +66,7 @@
                                                                               columns="#{bindings.ClusterMasterId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ClusterMasterId.hints.precision}"
                                                                               shortDesc="#{bindings.ClusterMasterId.hints.tooltip}"
-                                                                              id="it1" contentStyle="width:150px">
+                                                                              id="it1" readOnly="true" contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.ClusterMasterId.validator}"/>
                                                                 </af:inputText>
                                                                 
@@ -204,7 +205,7 @@
                                                                                   columns="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.tooltip}"
-                                                                                  id="it6">
+                                                                                  id="it6" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.ClusterMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -218,7 +219,7 @@
                                                                                   columns="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.precision}"
                                                                                   shortDesc="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.tooltip}"
-                                                                                  id="it5">
+                                                                                  id="it5" readOnly="true">
                                                                         <f:validator binding="#{row.bindings.ClusterDetailId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

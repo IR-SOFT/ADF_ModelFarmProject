@@ -114,7 +114,7 @@
                                                                                   columns="#{bindings.TblClusterView2.hints.ProjCompInputId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterView2.hints.ProjCompInputId.precision}"
                                                                                   shortDesc="#{bindings.TblClusterView2.hints.ProjCompInputId.tooltip}"
-                                                                                  id="it2" contentStyle='text-align:center'>
+                                                                                  id="it2" readOnly="true" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProjCompInputId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -128,7 +128,7 @@
                                                                                   columns="#{bindings.TblClusterView2.hints.ClusterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterView2.hints.ClusterId.precision}"
                                                                                   shortDesc="#{bindings.TblClusterView2.hints.ClusterId.tooltip}"
-                                                                                  id="it1" contentStyle='text-align:center'>
+                                                                                  id="it1" readOnly="true" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ClusterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
