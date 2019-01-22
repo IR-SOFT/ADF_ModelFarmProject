@@ -6,6 +6,6 @@
   <managed-bean>
     <managed-bean-name>CheckUserPriviliges</managed-bean-name>
     <managed-bean-class>view.backing.CheckPriviliges</managed-bean-class>
-    <managed-bean-scope>request</managed-bean-scope>
+    <managed-bean-scope>application</managed-bean-scope>
   </managed-bean>
 </faces-config>

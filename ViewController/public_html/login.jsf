@@ -103,7 +103,7 @@
                             <af:gridCell marginStart="5px" width="20%" id="gc33"
                                          binding="#{backingBeanScope.backing_login.gc33}">
                                 <af:button text="Logout" id="b2" binding="#{backingBeanScope.backing_login.b2}"
-                                           action="#{Logout.logout_action}"/>
+                                           action="#{backingBeanScope.backing_login.logout_action}"/>
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="20%" id="gc34"
                                          binding="#{backingBeanScope.backing_login.gc34}"/>

@@ -13,7 +13,6 @@ public class Logout {
     public Logout() {
     }
 
-    @PostConstruct
     public String logout_action() {
         // Add event code here...
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();  

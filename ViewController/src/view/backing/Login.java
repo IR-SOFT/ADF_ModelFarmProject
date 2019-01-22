@@ -27,6 +27,7 @@ import oracle.jdbc.OracleDriver;
 
 
 public class Login {
+    private static String userrole;
     private RichForm f1;
     private RichDocument d1;
     private RichPanelAccordion pa1;
@@ -564,31 +565,19 @@ public class Login {
             if (rset.next()) {
                 //                conn.close();
 
-                String userrole = (rset.getString("user_role")).toString();
+                userrole = (rset.getString("user_role")).toString();
 
                 //Storing value in session username from input text field and userRole from DB
-                FacesContext facesContext = FacesContext.getCurrentInstance();
-                HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
-                session.setAttribute("userName", username);
-                session.setAttribute("userRole", userrole);
-
-                //Testing/Getting value from session and printing in console
-                String usrName = (FacesContext.getCurrentInstance()
-                                              .getExternalContext()
-                                              .getSessionMap()
-                                              .get("userName")).toString();
-                String usrRole = (FacesContext.getCurrentInstance()
-                                              .getExternalContext()
-                                              .getSessionMap()
-                                              .get("userRole")).toString();
-                System.out.println(".........User Name stored in session is :..." + usrName + "...");
-                System.out.println(".........User Role stored in session is :..." + usrRole + "...");
+                
+                System.out.println(".........User Name stored in session is :..." + username + "...");
+                System.out.println(".........User Password stored in session is :..." + password + "...");
+                System.out.println(".........User Role stored in session is :..." + userrole + "...");
 
                 //Redirecting to home page after successfull authentication
                 //System.out.println("....... here we go /// you are redirecting now to DASHBOARD ......");
                 //                return "good";
                 //return "/faces/mainPage.jsf?faces-redirect=true";
-
+                return userrole;
             } else {
                 System.out.println("........wrong login credentials........");
 
@@ -599,7 +588,7 @@ public class Login {
             System.out.println(e);
         }
 
-        return "bad";
+        return userrole;
         //        return "/faces/login.jsf?faces-redirect=true";
     }
 
@@ -614,19 +603,19 @@ public class Login {
     }
 
 
-    @PostConstruct
+
+    public String logout_action() {
+        // Add event code here...
+        userrole = "";
+        return "logged out";
+    }
+   
     public String checkSession() {
-        HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
-        HttpSession session = request.getSession(false);
-        if (session == null) {
-            
-            System.out.println("No session available");
-            return "good";
-        } else {
-         
-            System.out.println("This is old session");
-           return "bad";
-        }
+       
+       //String checkRole = login_action();
+//        System.out.println(checkRole);
+        System.out.println(userrole+"....yahoooooo");
+     return "good";
     }
 
 
