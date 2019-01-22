@@ -49,4 +49,7 @@
   <ViewUsage
     Name="SelfishType_LOV1"
     ViewObjectName="model.lov.SelfishType_LOV"/>
+  <ViewUsage
+    Name="Month_lov1"
+    ViewObjectName="model.lov.Month_lov"/>
 </AppModule>

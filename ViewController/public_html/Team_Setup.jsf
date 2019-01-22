@@ -81,7 +81,7 @@
                                                                                   columns="#{bindings.Tbl_TeamView1.hints.TrainerId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_TeamView1.hints.TrainerId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_TeamView1.hints.TrainerId.tooltip}"
-                                                                                  id="it2" readOnly="true">
+                                                                                  id="it2">
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
