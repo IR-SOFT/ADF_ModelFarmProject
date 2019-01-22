@@ -27,7 +27,17 @@ import oracle.jdbc.OracleDriver;
 
 
 public class Login {
-    private static String userrole;
+    
+    // generating static variables to use in different scopes
+    private static String role_master_id;
+    private static String role_detail_id;
+    private static String role_master_name;
+    private static String pages_id;
+    private static String view_rights;
+    private static String add_rights;
+    private static String edit_rights;
+    private static String delete_rights;
+    
     private RichForm f1;
     private RichDocument d1;
     private RichPanelAccordion pa1;
@@ -545,6 +555,18 @@ public class Login {
         return b2;
     }
 
+    public void setB3(RichButton b3) {
+        this.b3 = b3;
+    }
+
+    public RichButton getB3() {
+        return b3;
+    }
+    
+    
+    
+
+    //user logging in
     public String login_action() {
         // Add event code here...
         String username = this.getIt1()
@@ -559,25 +581,24 @@ public class Login {
             conn = getConnection();
             Statement stmt = conn.createStatement();
             ResultSet rset =
-                stmt.executeQuery("SELECT * FROM tbl_user where name = '" + username + "' and password = '" + password +
-                                  "'");
+                stmt.executeQuery("SELECT * FROM tbl_user_master where user_master_name = '" + username + "' and user_master_pwd = '" + password +"'");
 
             if (rset.next()) {
                 //                conn.close();
+                //getting data against column from table
+                role_master_id = (rset.getString("role_master_id")).toString();
 
-                userrole = (rset.getString("user_role")).toString();
-
-                //Storing value in session username from input text field and userRole from DB
+                //Storing value in session username from input text field and role_master_id from DB
                 
                 System.out.println(".........User Name stored in session is :..." + username + "...");
                 System.out.println(".........User Password stored in session is :..." + password + "...");
-                System.out.println(".........User Role stored in session is :..." + userrole + "...");
+                System.out.println(".........User Role stored in session is :..." + role_master_id + "...");
 
                 //Redirecting to home page after successfull authentication
                 //System.out.println("....... here we go /// you are redirecting now to DASHBOARD ......");
                 //                return "good";
                 //return "/faces/mainPage.jsf?faces-redirect=true";
-                return userrole;
+                return role_master_id;
             } else {
                 System.out.println("........wrong login credentials........");
 
@@ -588,10 +609,12 @@ public class Login {
             System.out.println(e);
         }
 
-        return userrole;
+        return role_master_id;
         //        return "/faces/login.jsf?faces-redirect=true";
     }
 
+
+    // creating generic database connection
     public static Connection getConnection() throws SQLException {
         String username = "mfp";
         String password = "mfp";
@@ -602,30 +625,203 @@ public class Login {
         return conn;
     }
 
-
-
+    //logging out and clearing all variables data
     public String logout_action() {
         // Add event code here...
-        userrole = "";
+        role_master_id = "";
+        role_detail_id = "";
+        role_master_name = "";
+        pages_id = "";
+        view_rights = "";
+        add_rights = "";
+        edit_rights = "";
+        delete_rights = "";
+        
+        System.out.println("You are logged out successfully");
         return "logged out";
     }
    
-    public String checkSession() {
+   //testing all functions
+    public String checkSession(String pageName) {
        
        //String checkRole = login_action();
 //        System.out.println(checkRole);
-        System.out.println(userrole+"....yahoooooo");
+        
+        //Gettting user role master name by role master id
+        String Role_Name = get_user_role_master_name();
+        System.out.println("Role Name is : "+ Role_Name);
+        
+        //Gettting page id by page name
+        String Page_Id = get_page_id(pageName);
+        System.out.println("Page Id is : "+ Page_Id);
+        
+        //Gettting role detail id by page id and role master id
+        String Role_Detail_Id = get_role_detail_id();
+        System.out.println("Role Detail Id is : "+ Role_Detail_Id);
+        
+        //Gettting view rights by role detail id
+        String View_Rights = get_view_rights();
+        System.out.println("View Rights is : "+ View_Rights);
+        
+        
+        System.out.println(role_master_id+"....Role Master ID");
+        System.out.println(pageName+"..........Page Name");
      return "good";
     }
+    
 
-
-    public void setB3(RichButton b3) {
-        this.b3 = b3;
+    // returning view privilidges to page
+    public String viewPrivilidge(String pageName) {
+        
+        //Gettting user role master name by role master id
+        get_user_role_master_name();
+        
+        //Gettting page id by page name
+        get_page_id(pageName);
+        
+        //Gettting role detail id by page id and role master id
+        get_role_detail_id();
+        
+        //Gettting view rights by role detail id
+        String View_Rights = get_view_rights();
+        System.out.println("View Rights is : "+ View_Rights);
+        
+        System.out.println(role_master_id+"....Role Master ID");
+        System.out.println(pageName+"..........Page Name");
+        
+     return View_Rights;
     }
+    
+    
+    //Gettting user role master name by role master id
+    public String get_user_role_master_name() {
+        
+        Connection conn;
 
-    public RichButton getB3() {
-        return b3;
+        try {
+            conn = getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rset =
+                stmt.executeQuery("SELECT * FROM tbl_role_master where role_master_id = '" + role_master_id +  "'");
+
+            if (rset.next()) {
+                
+                role_master_name = (rset.getString("role_master_name")).toString();
+                
+                System.out.println(".........get_user_role_master_name.........function called");
+                System.out.println(".........Role Master ID is :..." + role_master_id + "...");
+                System.out.println(".........Role Master NAME is :..." + role_master_name + "...");
+                return role_master_name;
+            } else {
+                System.out.println("........NO ROLE FOUND........");
+            }
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+
+        return role_master_name;
     }
+    
+    
+    //Gettting page id by page name
+    public String get_page_id(String page_name) {
+        
+        Connection conn;
+
+        try {
+            conn = getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rset =
+                stmt.executeQuery("SELECT * FROM tbl_pages where pages_name = '" + page_name +  "'");
+
+            if (rset.next()) {
+                
+                pages_id = (rset.getString("pages_id")).toString();
+
+                System.out.println(".........get_page_id.........function called");
+                System.out.println(".........Page ID is :..." + pages_id + "...");
+                System.out.println(".........Page NAME is :..." + page_name + "...");
+
+                return pages_id;
+            } else {
+                System.out.println("........NO PAGE FOUND........");
+            }
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+
+        return pages_id;
+    }
+    
+    
+    //Gettting role detail id by page id and role master id
+    public String get_role_detail_id() {
+        
+        Connection conn;
+
+        try {
+            conn = getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rset =
+            stmt.executeQuery("SELECT * FROM tbl_role_detail where pages_id = '" + pages_id + "' and role_master_id = '" + role_master_id +"'");
+
+            if (rset.next()) {
+                
+                role_detail_id = (rset.getString("role_detail_id")).toString();
+
+                System.out.println(".........get_role_detail_id.........function called");
+                System.out.println(".........Page ID is :..." + pages_id + "...");
+                System.out.println(".........Role Master ID is :..." + role_master_id + "...");
+                System.out.println(".........Role Detail ID is :..." + role_detail_id + "...");
+
+                return role_detail_id;
+            } else {
+                System.out.println("........NO ROLE DETAIL FOUND........");
+            }
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+
+        return role_detail_id;
+    }
+    
+    //Gettting view rights by role detail id
+    public String get_view_rights() {
+        
+        Connection conn;
+
+        try {
+            conn = getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rset =
+            stmt.executeQuery("SELECT * FROM tbl_role_detail where role_detail_id = '" + role_detail_id + "'");
+
+            if (rset.next()) {
+                
+                view_rights = (rset.getString("r_view")).toString();
+
+                System.out.println(".........get_view_rights.........function called");
+                System.out.println(".........View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
+
+                return view_rights;
+            } else {
+                System.out.println("........NO RIGHTS DATA FOUND........");
+            }
+            conn.close();
+
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+
+        return view_rights;
+    }
+    
 }
 
 

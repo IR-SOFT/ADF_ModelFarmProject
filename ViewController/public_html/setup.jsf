@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
        
-        <f:metadata>
+        <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{CheckUserPriviliges.checkSession}"/>
-    </f:metadata>
+    </f:metadata>-->
     
 <af:document title="setup.jsf" id="d1">
         <af:form id="f1">

@@ -119,7 +119,7 @@
                             <af:gridCell marginStart="5px" width="20%" id="gc38"
                                          binding="#{backingBeanScope.backing_login.gc38}">
                                 <af:button text="Check Session" id="b3" binding="#{backingBeanScope.backing_login.b3}"
-                                           action="#{backingBeanScope.backing_login.checkSession}"/>
+                                           action="#{backingBeanScope.backing_login.checkSession(null)}"/>
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="20%" id="gc39"
                                          binding="#{backingBeanScope.backing_login.gc39}"/>
