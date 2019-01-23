@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblCropView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -18,6 +18,18 @@
     ViewObjectName="model.lov.Active_Status"
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Month_lov1_1"
+    ViewObjectName="model.lov.Month_lov"
+    AMUsageName="AppModule"
+    ViewInstanceName="Month_lov1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Crop_Type_LOV1_1"
+    ViewObjectName="model.lov.Crop_Type_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Crop_Type_LOV1"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
@@ -33,6 +45,57 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_FrMonth"
+    ListVOName="AppModule_Month_lov1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="FrMonth"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="MonthDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="MonthView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ToMonth"
+    ListVOName="AppModule_Month_lov1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ToMonth"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="MonthDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="MonthView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CropType"
+    ListVOName="AppModule_Crop_Type_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CropType"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Crop_Type_DB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Crop_Type_View"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -62,6 +125,48 @@
     EntityUsage="TblCrop"
     AliasName="AST"
     LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FrMonth"
+    PrecisionRule="true"
+    EntityAttrName="FrMonth"
+    EntityUsage="TblCrop"
+    AliasName="FR_MONTH"
+    LOVName="LOV_FrMonth">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ToMonth"
+    PrecisionRule="true"
+    EntityAttrName="ToMonth"
+    EntityUsage="TblCrop"
+    AliasName="TO_MONTH"
+    LOVName="LOV_ToMonth">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CropType"
+    PrecisionRule="true"
+    EntityAttrName="CropType"
+    EntityUsage="TblCrop"
+    AliasName="CROP_TYPE"
+    LOVName="LOV_CropType">
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE

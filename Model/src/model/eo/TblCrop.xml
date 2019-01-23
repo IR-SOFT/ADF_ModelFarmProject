@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblCrop"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_CROP"
@@ -42,6 +42,48 @@
     IsNotNull="true"
     Precision="1"
     ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_CROP"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CropType"
+    Precision="1"
+    ColumnName="CROP_TYPE"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_CROP"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FrMonth"
+    Precision="1"
+    ColumnName="FR_MONTH"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_CROP"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ToMonth"
+    Precision="1"
+    ColumnName="TO_MONTH"
     SQLType="CHAR"
     Type="java.lang.String"
     ColumnType="CHAR"

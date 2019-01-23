@@ -47,7 +47,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
                                                     <af:panelTabbed position="above" id="pt3"
-                                                                    inlineStyle="width:665px;">
+                                                                    inlineStyle="width:950px;">
                                                         <af:showDetailItem id="tab2" text="Crops Setup">
                                                             <af:table value="#{bindings.TblCropView1.collectionModel}"
                                                                       var="row"
@@ -62,7 +62,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCropView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b2 ::b4 ::b6" width="646">
+                                                                      partialTriggers="::b2 ::b4 ::b6" width="935">
                                                                 <af:column sortProperty="#{bindings.TblCropView1.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop ID"
@@ -91,6 +91,48 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCropView1.hints.CropType.name}"
+                                                                           filterable="true" sortable="true"
+                                                                headerText="Crop Type"
+                                                                           id="c4" width="100">
+                                                                    <af:selectOneChoice value="#{row.bindings.CropType.inputValue}"
+                                                                                        label="#{row.bindings.CropType.label}"
+                                                                                        required="#{bindings.TblCropView1.hints.CropType.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCropView1.hints.CropType.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.CropType.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.CropType.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCropView1.hints.FrMonth.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="From Month"
+                                                                           id="c5" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.FrMonth.inputValue}"
+                                                                                        label="#{row.bindings.FrMonth.label}"
+                                                                                        required="#{bindings.TblCropView1.hints.FrMonth.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCropView1.hints.FrMonth.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.FrMonth.items}"
+                                                                                       id="si3"/>
+                                                                        <f:validator binding="#{row.bindings.FrMonth.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblCropView1.hints.ToMonth.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="To Month"
+                                                                           id="c6" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.ToMonth.inputValue}"
+                                                                                        label="#{row.bindings.ToMonth.label}"
+                                                                                        required="#{bindings.TblCropView1.hints.ToMonth.mandatory}"
+                                                                                        shortDesc="#{bindings.TblCropView1.hints.ToMonth.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.ToMonth.items}"
+                                                                                       id="si4"/>
+                                                                        <f:validator binding="#{row.bindings.ToMonth.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCropView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
@@ -112,7 +154,7 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
-                                                    <af:spacer width="185" height="48" id="s8"/>
+                                                    <af:spacer width="327" height="48" id="s8"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"

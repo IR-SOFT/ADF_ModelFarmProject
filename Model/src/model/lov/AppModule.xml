@@ -52,4 +52,7 @@
   <ViewUsage
     Name="Month_lov1"
     ViewObjectName="model.lov.Month_lov"/>
+  <ViewUsage
+    Name="Crop_Type_LOV1"
+    ViewObjectName="model.lov.Crop_Type_LOV"/>
 </AppModule>

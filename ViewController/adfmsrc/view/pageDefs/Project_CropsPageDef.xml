@@ -15,6 +15,9 @@
           <Item Value="CropId"/>
           <Item Value="Name"/>
           <Item Value="Ast"/>
+          <Item Value="CropType"/>
+          <Item Value="FrMonth"/>
+          <Item Value="ToMonth"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
