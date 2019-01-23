@@ -5,7 +5,7 @@
     
     <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
-        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.viewPrivilidge('Program')}"/>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Program')}"/>
     </f:metadata>
     
     <af:document title="Prog_Setup.jsf" id="d1">
@@ -46,7 +46,8 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   inlineStyle="height:811px; width:1050px;">
+                                                   inlineStyle="height:811px; width:1050px;"
+                         rendered="#{backingBeanScope.backing_login.pageViewPrivilidge() == '1'}">
                                     <af:showDetailItem id="pane2" text="Program">
                                         <af:panelGridLayout id="pgl2">
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
