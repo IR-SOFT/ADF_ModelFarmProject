@@ -116,6 +116,9 @@
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                         icon="#{resource['images:save.png']}"
                                                                disabled="#{!bindings.Commit.enabled}" id="b17"/>
+                                                        <af:link text="link 1" id="l1"
+                                                                 targetFrame="_blank"
+                                                                 destination="http://192.168.1.236:8888/reports/rwservlet?userid=mfp/mfp@orcl&amp;domain=classicdomain&amp;report=d:\\programe.jsp&amp;destype=CACHE&amp;desformat=pdf&amp;paramform=no"/>
                                                     </h:panelGroup>
                                                     
                                                 </af:gridCell>
