@@ -146,61 +146,19 @@
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.District.name}"
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="District"
-                                                                           id="c8" width="100">
-                                                                    <af:inputText value="#{row.bindings.District.inputValue}"
-                                                                                  label="#{bindings.TblClusterView2.hints.District.label}"
-                                                                                  required="#{bindings.TblClusterView2.hints.District.mandatory}"
-                                                                                  columns="#{bindings.TblClusterView2.hints.District.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterView2.hints.District.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterView2.hints.District.tooltip}"
-                                                                                  id="it4" >
-                                                                        <f:validator binding="#{row.bindings.District.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Tehsil.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Tehsil"
-                                                                           id="c9" width="100">
-                                                                    <af:inputText value="#{row.bindings.Tehsil.inputValue}"
-                                                                                  label="#{bindings.TblClusterView2.hints.Tehsil.label}"
-                                                                                  required="#{bindings.TblClusterView2.hints.Tehsil.mandatory}"
-                                                                                  columns="#{bindings.TblClusterView2.hints.Tehsil.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Tehsil.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Tehsil.tooltip}"
-                                                                                  id="it5" >
-                                                                        <f:validator binding="#{row.bindings.Tehsil.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Mauza.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Mauza"
-                                                                           id="c10" width="100">
-                                                                    <af:inputText value="#{row.bindings.Mauza.inputValue}"
-                                                                                  label="#{bindings.TblClusterView2.hints.Mauza.label}"
-                                                                                  required="#{bindings.TblClusterView2.hints.Mauza.mandatory}"
-                                                                                  columns="#{bindings.TblClusterView2.hints.Mauza.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Mauza.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Mauza.tooltip}"
-                                                                                  id="it6" >
-                                                                        <f:validator binding="#{row.bindings.Mauza.validator}"/>
-                                                                    </af:inputText>
-                                                                </af:column>
-                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.Village.name}"
-                                                                           filterable="true" sortable="true"
-                                                                           headerText="Village"
-                                                                           id="c11" width="120">
-                                                                    <af:inputText value="#{row.bindings.Village.inputValue}"
-                                                                                  label="#{bindings.TblClusterView2.hints.Village.label}"
-                                                                                  required="#{bindings.TblClusterView2.hints.Village.mandatory}"
-                                                                                  columns="#{bindings.TblClusterView2.hints.Village.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblClusterView2.hints.Village.precision}"
-                                                                                  shortDesc="#{bindings.TblClusterView2.hints.Village.tooltip}"
-                                                                                  id="it7" >
-                                                                        <f:validator binding="#{row.bindings.Village.validator}"/>
-                                                                    </af:inputText>
+                                                                           headerText="Crop"
+                                                                           id="c1">
+                                                                    <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
+                                                                                        label="#{row.bindings.CropId.label}"
+                                                                                        required="#{bindings.TblClusterView2.hints.CropId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView2.hints.CropId.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.CropId.items}"
+                                                                                       id="si2"/>
+                                                                        <f:validator binding="#{row.bindings.CropId.validator}"/>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.Ast.name}"
                                                                            filterable="true" sortable="true" headerText="Active"

@@ -55,4 +55,7 @@
   <ViewUsage
     Name="Crop_Type_LOV1"
     ViewObjectName="model.lov.Crop_Type_LOV"/>
+  <ViewUsage
+    Name="Trainer_Name_LOV1"
+    ViewObjectName="model.lov.Trainer_Name_LOV"/>
 </AppModule>

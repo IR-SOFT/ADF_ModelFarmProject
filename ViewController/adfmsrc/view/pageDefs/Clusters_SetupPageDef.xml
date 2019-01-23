@@ -72,6 +72,7 @@
           <Item Value="Mauza"/>
           <Item Value="Village"/>
           <Item Value="Ast"/>
+          <Item Value="CropId"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

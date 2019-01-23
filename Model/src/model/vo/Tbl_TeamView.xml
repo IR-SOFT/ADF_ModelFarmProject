@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_TeamView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -18,6 +18,24 @@
     ViewObjectName="model.lov.Active_Status"
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Proj_Comp_Name_LOV1_1"
+    ViewObjectName="model.lov.Proj_Comp_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Proj_Comp_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Team_Name_LOV1_1"
+    ViewObjectName="model.lov.Team_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Team_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Trainer_Name_LOV1_1"
+    ViewObjectName="model.lov.Trainer_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Trainer_Name_LOV1"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
@@ -33,6 +51,41 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ProjCompId"
+    ListVOName="AppModule_Proj_Comp_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProjCompId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ProjCompId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TrainerId"
+    ListVOName="AppModule_Trainer_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TrainerId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="TrainerId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+      <Item Value="TrainerId"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -71,7 +124,15 @@
     PrecisionRule="true"
     EntityAttrName="TrainerId"
     EntityUsage="Tbl_Team"
-    AliasName="TRAINER_ID"/>
+    AliasName="TRAINER_ID"
+    LOVName="LOV_TrainerId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Name"
     IsUnique="true"
@@ -109,6 +170,21 @@
     EntityAttrName="TrainerId"
     EntityUsage="Tbl_Trainer"
     AliasName="TRAINER_ID1"/>
+  <ViewAttribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ProjCompId"
+    EntityUsage="Tbl_Team"
+    AliasName="PROJ_COMP_ID"
+    LOVName="LOV_ProjCompId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="TeamId"/>
   </AttrArray>

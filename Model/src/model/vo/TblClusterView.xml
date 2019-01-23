@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblClusterView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -18,6 +18,12 @@
     ViewObjectName="model.lov.Active_Status"
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Crops_Name_LOV1_1"
+    ViewObjectName="model.lov.Crops_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Crops_Name_LOV1"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
@@ -33,6 +39,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CropId"
+    ListVOName="AppModule_Crops_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CropId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CropId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -62,34 +85,6 @@
     EntityUsage="TblCluster"
     AliasName="NAME"/>
   <ViewAttribute
-    Name="District"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="District"
-    EntityUsage="TblCluster"
-    AliasName="DISTRICT"/>
-  <ViewAttribute
-    Name="Tehsil"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Tehsil"
-    EntityUsage="TblCluster"
-    AliasName="TEHSIL"/>
-  <ViewAttribute
-    Name="Mauza"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Mauza"
-    EntityUsage="TblCluster"
-    AliasName="MAUZA"/>
-  <ViewAttribute
-    Name="Village"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Village"
-    EntityUsage="TblCluster"
-    AliasName="VILLAGE"/>
-  <ViewAttribute
     Name="Ast"
     IsNotNull="true"
     PrecisionRule="true"
@@ -104,6 +99,56 @@
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="CropId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CropId"
+    EntityUsage="TblCluster"
+    AliasName="CROP_ID"
+    LOVName="LOV_CropId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CityLibrDetail"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CityLibrDetail"
+    EntityUsage="TblCluster"
+    AliasName="CITY_LIBR_DETAIL"/>
+  <ViewAttribute
+    Name="DistrictLibrDetail"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="DistrictLibrDetail"
+    EntityUsage="TblCluster"
+    AliasName="DISTRICT_LIBR_DETAIL"/>
+  <ViewAttribute
+    Name="TehsilLibrDetail"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="TehsilLibrDetail"
+    EntityUsage="TblCluster"
+    AliasName="TEHSIL_LIBR_DETAIL"/>
+  <ViewAttribute
+    Name="MauzaLibrDetail"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="MauzaLibrDetail"
+    EntityUsage="TblCluster"
+    AliasName="MAUZA_LIBR_DETAIL"/>
+  <ViewAttribute
+    Name="VillageLibrDetail"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="VillageLibrDetail"
+    EntityUsage="TblCluster"
+    AliasName="VILLAGE_LIBR_DETAIL"/>
   <ViewLinkAccessor
     Name="TblProjCompInputView"
     ViewLink="model.vo.FKTblClusterFKLink2"

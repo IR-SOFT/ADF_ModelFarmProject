@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblCluster"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_CLUSTER"
@@ -51,58 +51,6 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="District"
-    IsNotNull="true"
-    Precision="150"
-    ColumnName="DISTRICT"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_CLUSTER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="150"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="Tehsil"
-    IsNotNull="true"
-    Precision="150"
-    ColumnName="TEHSIL"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_CLUSTER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="150"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="Mauza"
-    IsNotNull="true"
-    Precision="150"
-    ColumnName="MAUZA"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_CLUSTER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="150"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
-    Name="Village"
-    IsNotNull="true"
-    Precision="150"
-    ColumnName="VILLAGE"
-    SQLType="VARCHAR"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
-    TableName="TBL_CLUSTER">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="150"/>
-    </DesignTime>
-  </Attribute>
-  <Attribute
     Name="Ast"
     IsNotNull="true"
     Precision="1"
@@ -115,6 +63,84 @@
     RetrievedOnInsert="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CropId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CROP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CityLibrDetail"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="CITY_LIBR_DETAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DistrictLibrDetail"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="DISTRICT_LIBR_DETAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TehsilLibrDetail"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="TEHSIL_LIBR_DETAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MauzaLibrDetail"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="MAUZA_LIBR_DETAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="VillageLibrDetail"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="VILLAGE_LIBR_DETAIL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_CLUSTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
   <AccessorAttribute

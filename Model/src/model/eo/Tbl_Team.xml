@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_Team"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_TEAM"
@@ -64,6 +64,19 @@
     RetrievedOnInsert="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ProjCompId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PROJ_COMP_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_TEAM">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
   </Attribute>
   <AccessorAttribute
