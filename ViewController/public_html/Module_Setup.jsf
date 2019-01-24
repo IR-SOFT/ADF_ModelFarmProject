@@ -74,7 +74,7 @@
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Project_Comp_Name.name}"
                                                                            filterable="true"
                                                                            headerText="Component Input"
-                                                                           id="c9" width="270">
+                                                                           id="c9" width="270" >
                                                                     <af:outputText value="#{row.Project_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Project_Comp_Name.tooltip}"
                                                                                    id="ot5"/>

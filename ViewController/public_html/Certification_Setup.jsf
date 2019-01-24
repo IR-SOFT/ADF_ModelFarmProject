@@ -65,7 +65,7 @@
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Certification"
-                                                                           id="c2" width="197">
+                                                                           id="c2" width="197" >
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblCertificationView1.hints.Name.label}"
                                                                                   required="#{bindings.TblCertificationView1.hints.Name.mandatory}"

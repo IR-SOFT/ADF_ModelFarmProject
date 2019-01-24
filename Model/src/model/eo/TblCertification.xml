@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="CertificationId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="CERTIFICATION_ID"
     SQLType="VARCHAR"
