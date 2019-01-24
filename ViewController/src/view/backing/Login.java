@@ -667,7 +667,19 @@ public class Login {
         
         //Gettting add rights by role detail id
         String Add_Rights = get_add_view_rights();
-        System.out.println("Add  Rights is : "+ Add_Rights);
+        System.out.println("Add Rights is : "+ Add_Rights);
+        
+        //Gettting add rights by role detail id
+        String Edit_Rights = get_edit_view_rights();
+        System.out.println("Edit Rights is : "+ Edit_Rights);
+        
+        //Gettting add rights by role detail id
+        String Delete_Rights = get_delete_view_rights();
+        System.out.println("Delete Rights is : "+ Delete_Rights);
+        
+        //Gettting add rights by role detail id
+        String Save_Rights = get_save_view_rights();
+        System.out.println("Save Rights is : "+ Save_Rights);
         
         
         
@@ -765,6 +777,30 @@ public class Login {
         
      return Delete_Rights;
     }
+
+    // returning save privilidges to page
+    public String saveViewPrivilidge() {
+        
+        //Gettting user role master name by role master id
+        get_user_role_master_name();
+        
+        //Gettting page id by page name
+        get_page_id();
+        
+        //Gettting role detail id by page id and role master id
+        get_role_detail_id();
+        
+        //Gettting save rights by role detail id
+        String Save_Rights = get_save_view_rights();
+        System.out.println("Save Rights is : "+ Save_Rights);
+        
+        System.out.println(role_master_id+"....Role Master ID");
+        System.out.println(page_name+"..........Page Name");
+        
+     return Save_Rights;
+    }
+    
+    
     
     
     //Gettting user role master name by role master id
@@ -882,7 +918,8 @@ public class Login {
 
                 System.out.println(".........get_page_view_rights.........function called");
                 System.out.println(".........View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
-
+                System.out.println(".........Your Page view rights is : " + view_rights);
+                
                 return view_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
@@ -913,7 +950,8 @@ public class Login {
 
                 System.out.println(".........get_add_view_rights.........function called");
                 System.out.println(".........Add View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
-
+                System.out.println(".........Your Add rights is : " + add_rights);
+                
                 return add_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
@@ -944,7 +982,8 @@ public class Login {
 
                 System.out.println(".........get_edit_view_rights.........function called");
                 System.out.println(".........Add View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
-
+                System.out.println(".........Your Edit rights is : " + edit_rights);
+                
                 return edit_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
@@ -975,7 +1014,8 @@ public class Login {
 
                 System.out.println(".........get_delete_view_rights.........function called");
                 System.out.println(".........Add View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
-
+                System.out.println(".........Your Delete rights is : " + delete_rights);
+                
                 return delete_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
@@ -990,18 +1030,31 @@ public class Login {
     }    
     
     
-    //Gettting save button view rights > hard coded
+    //Gettting save button view rights > hard coded if add,edit or delete privilige found
     public String get_save_view_rights() {
         
-        if(get_add_view_rights()=="1" || get_edit_view_rights()=="1" || get_delete_view_rights()=="1")
-        {
-            save_rights = "1"; 
-        }
-        else 
-        {
-            save_rights = "0"; 
-        }
-        return save_rights;
+        System.out.println(">>>>>>>>>>ooooooooooooooooooooo<<<<<<<<<<<<<<");
+        System.out.println(add_rights);
+        System.out.println(">>>>>>>>>>ooooooooooooooooooooo<<<<<<<<<<<<<<");
+
+
+        String varOne = add_rights;
+ 
+         switch (varOne) {  
+         case "0": 
+             save_rights = "0";
+           System.out.println("Color is Red");  
+           break;  
+        case "1":  
+             save_rights = "1";
+          System.out.println("Color is Green");  
+           break;  
+         default:  
+             System.out.println("Color not found");  
+         } 
+         
+         return save_rights;
+
     }
     
 }
