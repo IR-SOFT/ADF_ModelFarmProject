@@ -4,7 +4,7 @@
         xmlns:h="http://java.sun.com/jsf/html">
     <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
-        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Project_Crops')}"/>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Supplier_Setup')}"/>
     </f:metadata>
     <af:document title="Supplier_Setup.jsf" id="d1">
         <af:messages id="m1"/>
@@ -48,7 +48,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   rendered="#{backingBeanScope.backing_login.pageViewPrivilidge() == '1'}"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1050px;">
                                     <af:showDetailItem id="pane2" text="Supplier">
                                         <af:panelGridLayout id="pgl2">
@@ -259,18 +259,18 @@
                                                                         <h:panelGroup id="pg1">
                                                                             <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                                        text="Add"
-                                                                                       rendered="#{backingBeanScope.backing_login.addViewPrivilidge() == '1'}"
+                                                                                       rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
                                                                                        icon="#{resource['images:add.png']}"
                                                                                        disabled="#{!bindings.CreateInsert.enabled}"
                                                                                        id="b13"/>
                                                                             <af:spacer width="5" height="10" id="s13"/>
                                                                             <af:button text="Edit" id="b11"
                                                                                        icon="#{resource['images:edit.png']}"
-                                                                                       rendered="#{backingBeanScope.backing_login.editViewPrivilidge() == '1'}"/>
+                                                                                       rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"/>
                                                                             <af:spacer width="5" height="10" id="s14"/>
                                                                             <af:button actionListener="#{bindings.Delete.execute}"
                                                                                        text="Delete"
-                                                                                       rendered="#{backingBeanScope.backing_login.deleteViewPrivilidge() == '1'}"
+                                                                                       rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
                                                                                        icon="#{resource['images:delete.png']}"
                                                                                        disabled="#{!bindings.Delete.enabled}"
                                                                                        id="b14"/>
@@ -278,7 +278,7 @@
                                                                             <af:button actionListener="#{bindings.Commit.execute}"
                                                                                        icon="#{resource['images:save.png']}"
                                                                                        text="Save"
-                                                                                       rendered="#{backingBeanScope.backing_login.saveViewPrivilidge() == '1'}"
+                                                                                       rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
                                                                                        disabled="#{!bindings.Commit.enabled}"
                                                                                        id="b15"/>
                                                                         </h:panelGroup>

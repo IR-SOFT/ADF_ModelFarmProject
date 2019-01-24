@@ -645,8 +645,9 @@ public class Login {
         return "logged out";
     }
    
+
    //testing all functions
-    public String checkSession(String pageName) {
+    public void checkSession(String pageName) {
        
        //String checkRole = login_action();
 //        System.out.println(checkRole);
@@ -663,156 +664,155 @@ public class Login {
         String Role_Detail_Id = get_role_detail_id();
         System.out.println("Role Detail Id is : "+ Role_Detail_Id);
         
-        //Gettting view rights by role detail id
+//        //Gettting view rights by role detail id
 //        String View_Rights = get_page_view_rights();
 //        System.out.println("View Rights is : "+ View_Rights);  
-        
-        //Gettting add rights by role detail id
+//        
+//        //Gettting add rights by role detail id
 //        String Add_Rights = get_add_view_rights();
 //        System.out.println("Add Rights is : "+ Add_Rights);
-        
-        //Gettting add rights by role detail id
+//        
+//        //Gettting add rights by role detail id
 //        String Edit_Rights = get_edit_view_rights();
 //        System.out.println("Edit Rights is : "+ Edit_Rights);
-        
-        //Gettting add rights by role detail id
+//        
+//        //Gettting add rights by role detail id
 //        String Delete_Rights = get_delete_view_rights();
 //        System.out.println("Delete Rights is : "+ Delete_Rights);
-        
-        //Gettting add rights by role detail id
+//        
+//        //Gettting add rights by role detail id
 //        String Save_Rights = get_save_view_rights();
 //        System.out.println("Save Rights is : "+ Save_Rights);
-        
-        
+//        
+//        
         
         System.out.println(role_master_id+"....Role Master ID");
         System.out.println(page_name+"..........Page Name");
-     return "good";
     }
     
 
     // returning view privilidges to page
-    public String pageViewPrivilidge() {
-        
-        //Gettting user role master name by role master id
-//        get_user_role_master_name();
-        
-        //Gettting page id by page name
+//    public String pageViewPrivilidge() {
+//        
+//        //Gettting user role master name by role master id
+////        get_user_role_master_name();
+//        
+//        //Gettting page id by page name
 //        get_page_id();
-        
-        //Gettting role detail id by page id and role master id
+//        
+//        //Gettting role detail id by page id and role master id
 //        get_role_detail_id();
-        
-        //Gettting view rights by role detail id
-        String View_Rights = get_page_view_rights();
-        System.out.println("View Rights is : "+ View_Rights);
-        
-        System.out.println(role_master_id+"....Role Master ID");
-        System.out.println(page_name+"..........Page Name");
-        
-     return View_Rights;
-    }
-    
-
-    // returning add privilidges to page
-    public String addViewPrivilidge() {
-        
-        //Gettting user role master name by role master id
-//        get_user_role_master_name();
-        
-        //Gettting page id by page name
-//        get_page_id();
-        
-        //Gettting role detail id by page id and role master id
-//        get_role_detail_id();
-        
-        //Gettting view rights by role detail id
-        String Add_Rights = get_add_view_rights();
-        System.out.println("Add Rights is : "+ Add_Rights);
-        
-        System.out.println(role_master_id+"....Role Master ID");
-        System.out.println(page_name+"..........Page Name");
-        
-     return Add_Rights;
-    }
-
-    // returning edit privilidges to page
-    public String editViewPrivilidge() {
-        
-        //Gettting user role master name by role master id
-//        get_user_role_master_name();
-        
-        //Gettting page id by page name
-//        get_page_id();
-        
-        //Gettting role detail id by page id and role master id
-//        get_role_detail_id();
-        
-        //Gettting view rights by role detail id
-        String Edit_Rights = get_edit_view_rights();
-        System.out.println("Edit Rights is : "+ Edit_Rights);
-        
-        System.out.println(role_master_id+"....Role Master ID");
-        System.out.println(page_name+"..........Page Name");
-        
-     return Edit_Rights;
-    }
-
-    // returning delete privilidges to page
-    public String deleteViewPrivilidge() {
-        
-        //Gettting user role master name by role master id
-//        get_user_role_master_name();
-        
-        //Gettting page id by page name
-//        get_page_id();
-        
-        //Gettting role detail id by page id and role master id
-//        get_role_detail_id();
-        
-        //Gettting view rights by role detail id
-        String Delete_Rights = get_delete_view_rights();
-        System.out.println("Delete Rights is : "+ Delete_Rights);
-        
-        System.out.println(role_master_id+"....Role Master ID");
-        System.out.println(page_name+"..........Page Name");
-        
-     return Delete_Rights;
-    }
-
-    // returning save privilidges to page
-    public String saveViewPrivilidge() {
-        
-        //Gettting user role master name by role master id
-//        get_user_role_master_name();
-        
-        //Gettting page id by page name
-//        get_page_id();
-        
-        //Gettting role detail id by page id and role master id
-//        get_role_detail_id();
-        
-        //Gettting save rights by role detail id
-        String Save_Rights = get_save_view_rights();
-        System.out.println("Save Rights is : "+ Save_Rights);
-        
-        System.out.println(role_master_id+"....Role Master ID");
-        System.out.println(page_name+"..........Page Name");
-        
-     return Save_Rights;
-    }
-    
+//        
+//        //Gettting view rights by role detail id
+//        String View_Rights = get_page_view_rights();
+//        System.out.println("View Rights is : "+ View_Rights);
+//        
+//        System.out.println(role_master_id+"....Role Master ID");
+//        System.out.println(page_name+"..........Page Name");
+//        
+//     return View_Rights;
+//    }
+//    
+//
+//    // returning add privilidges to page
+//    public String addViewPrivilidge() {
+//        
+//        //Gettting user role master name by role master id
+////        get_user_role_master_name();
+//        
+//        //Gettting page id by page name
+////        get_page_id();
+//        
+//        //Gettting role detail id by page id and role master id
+////        get_role_detail_id();
+//        
+//        //Gettting view rights by role detail id
+//        String Add_Rights = get_add_view_rights();
+//        System.out.println("Add Rights is : "+ Add_Rights);
+//        
+//        System.out.println(role_master_id+"....Role Master ID");
+//        System.out.println(page_name+"..........Page Name");
+//        
+//     return Add_Rights;
+//    }
+//
+//    // returning edit privilidges to page
+//    public String editViewPrivilidge() {
+//        
+//        //Gettting user role master name by role master id
+////        get_user_role_master_name();
+//        
+//        //Gettting page id by page name
+////        get_page_id();
+//        
+//        //Gettting role detail id by page id and role master id
+////        get_role_detail_id();
+//        
+//        //Gettting view rights by role detail id
+//        String Edit_Rights = get_edit_view_rights();
+//        System.out.println("Edit Rights is : "+ Edit_Rights);
+//        
+//        System.out.println(role_master_id+"....Role Master ID");
+//        System.out.println(page_name+"..........Page Name");
+//        
+//     return Edit_Rights;
+//    }
+//
+//    // returning delete privilidges to page
+//    public String deleteViewPrivilidge() {
+//        
+//        //Gettting user role master name by role master id
+////        get_user_role_master_name();
+//        
+//        //Gettting page id by page name
+////        get_page_id();
+//        
+//        //Gettting role detail id by page id and role master id
+////        get_role_detail_id();
+//        
+//        //Gettting view rights by role detail id
+//        String Delete_Rights = get_delete_view_rights();
+//        System.out.println("Delete Rights is : "+ Delete_Rights);
+//        
+//        System.out.println(role_master_id+"....Role Master ID");
+//        System.out.println(page_name+"..........Page Name");
+//        
+//     return Delete_Rights;
+//    }
+//
+//    // returning save privilidges to page
+//    public String saveViewPrivilidge() {
+//        
+//        //Gettting user role master name by role master id
+////        get_user_role_master_name();
+//        
+//        //Gettting page id by page name
+////        get_page_id();
+//        
+//        //Gettting role detail id by page id and role master id
+////        get_role_detail_id();
+//        
+//        //Gettting save rights by role detail id
+//        String Save_Rights = get_save_view_rights();
+//        System.out.println("Save Rights is : "+ Save_Rights);
+//        
+//        System.out.println(role_master_id+"....Role Master ID");
+//        System.out.println(page_name+"..........Page Name");
+//        
+//     return Save_Rights;
+//    }
+//    
     
     
     
     //Gettting user role master name by role master id
     public String get_user_role_master_name() {
         
-        Connection conn;
+        Connection con_role;
 
         try {
-            conn = getConnection();
-            Statement stmt = conn.createStatement();
+            con_role = getConnection();
+            Statement stmt = con_role.createStatement();
             ResultSet rset =
                 stmt.executeQuery("SELECT * FROM tbl_role_master where role_master_id = '" + role_master_id +  "'");
 
@@ -823,11 +823,14 @@ public class Login {
                 System.out.println(".........get_user_role_master_name.........function called");
                 System.out.println(".........Role Master ID is :..." + role_master_id + "...");
                 System.out.println(".........Role Master NAME is :..." + role_master_name + "...");
+                
+                con_role.close();
+                
                 return role_master_name;
             } else {
                 System.out.println("........NO ROLE FOUND........");
             }
-            conn.close();
+            con_role.close();
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -840,11 +843,11 @@ public class Login {
     //Gettting page id by page name
     public String get_page_id() {
         
-        Connection conn;
+        Connection con_pg;
 
         try {
-            conn = getConnection();
-            Statement stmt = conn.createStatement();
+            con_pg = getConnection();
+            Statement stmt = con_pg.createStatement();
             ResultSet rset =
                 stmt.executeQuery("SELECT * FROM tbl_pages where pages_name = '" + page_name +  "'");
 
@@ -856,11 +859,13 @@ public class Login {
                 System.out.println(".........Page ID is :..." + pages_id + "...");
                 System.out.println(".........Page NAME is :..." + page_name + "...");
 
+                con_pg.close();
                 return pages_id;
+                
             } else {
                 System.out.println("........NO PAGE FOUND........");
             }
-            conn.close();
+            con_pg.close();
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -873,11 +878,11 @@ public class Login {
     //Gettting role detail id by page id and role master id
     public String get_role_detail_id() {
         
-        Connection conn;
+        Connection con_det;
 
         try {
-            conn = getConnection();
-            Statement stmt = conn.createStatement();
+            con_det = getConnection();
+            Statement stmt = con_det.createStatement();
             ResultSet rset =
             stmt.executeQuery("SELECT * FROM tbl_role_detail where pages_id = '" + pages_id + "' and role_master_id = '" + role_master_id +"'");
 
@@ -889,12 +894,13 @@ public class Login {
                 System.out.println(".........Page ID is :..." + pages_id + "...");
                 System.out.println(".........Role Master ID is :..." + role_master_id + "...");
                 System.out.println(".........Role Detail ID is :..." + role_detail_id + "...");
+                con_det.close();
 
                 return role_detail_id;
             } else {
                 System.out.println("........NO ROLE DETAIL FOUND........");
             }
-            conn.close();
+            con_det.close();
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -906,11 +912,11 @@ public class Login {
     //Gettting page view rights by role detail id
     public String get_page_view_rights() {
         
-        Connection conn;
+        Connection con_right;
 
         try {
-            conn = getConnection();
-            Statement stmt = conn.createStatement();
+            con_right = getConnection();
+            Statement stmt = con_right.createStatement();
             ResultSet rset =
             stmt.executeQuery("SELECT * FROM tbl_role_detail where role_detail_id = '" + role_detail_id + "'");
 
@@ -922,11 +928,13 @@ public class Login {
                 System.out.println(".........View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
                 System.out.println(".........Your Page view rights is : " + view_rights);
                 
+                con_right.close();
+                
                 return view_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
             }
-            conn.close();
+            con_right.close();
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -938,11 +946,11 @@ public class Login {
     //Gettting add button view rights by role detail id
     public String get_add_view_rights() {
         
-        Connection conn;
+        Connection con_add;
 
         try {
-            conn = getConnection();
-            Statement stmt = conn.createStatement();
+            con_add = getConnection();
+            Statement stmt = con_add.createStatement();
             ResultSet rset =
             stmt.executeQuery("SELECT * FROM tbl_role_detail where role_detail_id = '" + role_detail_id + "'");
 
@@ -954,11 +962,12 @@ public class Login {
                 System.out.println(".........Add View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
                 System.out.println(".........Your Add rights is : " + add_rights);
                 
+                con_add.close();
                 return add_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
             }
-            conn.close();
+            con_add.close();
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -970,11 +979,11 @@ public class Login {
     //Gettting edit button view rights by role detail id
     public String get_edit_view_rights() {
         
-        Connection conn;
+        Connection con_edit;
 
         try {
-            conn = getConnection();
-            Statement stmt = conn.createStatement();
+            con_edit = getConnection();
+            Statement stmt = con_edit.createStatement();
             ResultSet rset =
             stmt.executeQuery("SELECT * FROM tbl_role_detail where role_detail_id = '" + role_detail_id + "'");
 
@@ -986,11 +995,12 @@ public class Login {
                 System.out.println(".........Add View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
                 System.out.println(".........Your Edit rights is : " + edit_rights);
                 
+                con_edit.close();
                 return edit_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
             }
-            conn.close();
+            con_edit.close();
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -1002,11 +1012,11 @@ public class Login {
     //Gettting delete button view rights by role detail id
     public String get_delete_view_rights() {
         
-        Connection conn;
+        Connection con_del;
 
         try {
-            conn = getConnection();
-            Statement stmt = conn.createStatement();
+            con_del = getConnection();
+            Statement stmt = con_del.createStatement();
             ResultSet rset =
             stmt.executeQuery("SELECT * FROM tbl_role_detail where role_detail_id = '" + role_detail_id + "'");
 
@@ -1018,11 +1028,12 @@ public class Login {
                 System.out.println(".........Add View Rights for Page ID : " + pages_id + " against Role Master ID : " + role_master_id );
                 System.out.println(".........Your Delete rights is : " + delete_rights);
                 
+                con_del.close();
                 return delete_rights;
             } else {
                 System.out.println("........NO RIGHTS DATA FOUND........");
             }
-            conn.close();
+            con_del.close();
 
         } catch (SQLException e) {
             System.out.println(e);
@@ -1055,7 +1066,8 @@ public class Login {
          return save_rights;
 
     }
-    
+
+
 }
 
 
