@@ -25,6 +25,36 @@
     AMUsageName="AppModule"
     ViewInstanceName="Crops_Name_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_City_Name_LOV1_1"
+    ViewObjectName="model.lov.City_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="City_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_District_Name_LOV1_1"
+    ViewObjectName="model.lov.District_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="District_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Tehsil_Name_LOV1_1"
+    ViewObjectName="model.lov.Tehsil_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Tehsil_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_MAUZA_Name_LOV1_1"
+    ViewObjectName="model.lov.MAUZA_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="MAUZA_Name_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Village_Name_LOV1_1"
+    ViewObjectName="model.lov.Village_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Village_Name_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="AppModule_Active_Status1_1"
@@ -53,6 +83,91 @@
     <AttrArray Name="AttrExpressions"/>
     <AttrArray Name="ListAttrNames">
       <Item Value="CropId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CityLibrDetail"
+    ListVOName="AppModule_City_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CityLibrDetail"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LibrDetailId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DistrictLibrDetail"
+    ListVOName="AppModule_District_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DistrictLibrDetail"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LibrDetailId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_TehsilLibrDetail"
+    ListVOName="AppModule_Tehsil_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="TehsilLibrDetail"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LibrDetailId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_MauzaLibrDetail"
+    ListVOName="AppModule_MAUZA_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="MauzaLibrDetail"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LibrDetailId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_VillageLibrDetail"
+    ListVOName="AppModule_Village_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="VillageLibrDetail"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="LibrDetailId"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
@@ -120,35 +235,75 @@
     PrecisionRule="true"
     EntityAttrName="CityLibrDetail"
     EntityUsage="TblCluster"
-    AliasName="CITY_LIBR_DETAIL"/>
+    AliasName="CITY_LIBR_DETAIL"
+    LOVName="LOV_CityLibrDetail">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="DistrictLibrDetail"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="DistrictLibrDetail"
     EntityUsage="TblCluster"
-    AliasName="DISTRICT_LIBR_DETAIL"/>
+    AliasName="DISTRICT_LIBR_DETAIL"
+    LOVName="LOV_DistrictLibrDetail">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="TehsilLibrDetail"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="TehsilLibrDetail"
     EntityUsage="TblCluster"
-    AliasName="TEHSIL_LIBR_DETAIL"/>
+    AliasName="TEHSIL_LIBR_DETAIL"
+    LOVName="LOV_TehsilLibrDetail">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="MauzaLibrDetail"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="MauzaLibrDetail"
     EntityUsage="TblCluster"
-    AliasName="MAUZA_LIBR_DETAIL"/>
+    AliasName="MAUZA_LIBR_DETAIL"
+    LOVName="LOV_MauzaLibrDetail">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="VillageLibrDetail"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="VillageLibrDetail"
     EntityUsage="TblCluster"
-    AliasName="VILLAGE_LIBR_DETAIL"/>
+    AliasName="VILLAGE_LIBR_DETAIL"
+    LOVName="LOV_VillageLibrDetail">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblProjCompInputView"
     ViewLink="model.vo.FKTblClusterFKLink2"

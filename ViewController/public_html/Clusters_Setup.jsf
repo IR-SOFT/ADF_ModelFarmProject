@@ -103,7 +103,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblClusterView2Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b2 ::b6 ::b7">
+                                                                      partialTriggers="::b2 ::b6 ::b7" width="996">
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.ProjCompInputId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Component Input ID"
@@ -135,7 +135,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster"
-                                                                           id="c7" width="305">
+                                                                           id="c7" width="232">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblClusterView2.hints.Name.label}"
                                                                                   required="#{bindings.TblClusterView2.hints.Name.mandatory}"
@@ -149,7 +149,7 @@
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.CropId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop"
-                                                                           id="c1">
+                                                                           id="c1" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
                                                                                         label="#{row.bindings.CropId.label}"
                                                                                         required="#{bindings.TblClusterView2.hints.CropId.mandatory}"
@@ -160,9 +160,69 @@
                                                                         <f:validator binding="#{row.bindings.CropId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
+                                                                <af:column headerText="City"
+                                                                           id="c2" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.CityLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.CityLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView2.hints.CityLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView2.hints.CityLibrDetail.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.CityLibrDetail.items}"
+                                                                                       id="si3"/>
+                                                                        <f:validator binding="#{row.bindings.CityLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="District"
+                                                                           id="c8" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.DistrictLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.DistrictLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView2.hints.DistrictLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView2.hints.DistrictLibrDetail.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.DistrictLibrDetail.items}"
+                                                                                       id="si4"/>
+                                                                        <f:validator binding="#{row.bindings.DistrictLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="Tehsil"
+                                                                           id="c9" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.TehsilLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.TehsilLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView2.hints.TehsilLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView2.hints.TehsilLibrDetail.tooltip}"
+                                                                                        id="soc5">
+                                                                        <f:selectItems value="#{row.bindings.TehsilLibrDetail.items}"
+                                                                                       id="si5"/>
+                                                                        <f:validator binding="#{row.bindings.TehsilLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="Mauza"
+                                                                           id="c10" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.MauzaLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.MauzaLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView2.hints.MauzaLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView2.hints.MauzaLibrDetail.tooltip}"
+                                                                                        id="soc6">
+                                                                        <f:selectItems value="#{row.bindings.MauzaLibrDetail.items}"
+                                                                                       id="si6"/>
+                                                                        <f:validator binding="#{row.bindings.MauzaLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column headerText="Village"
+                                                                           id="c11" width="80">
+                                                                    <af:selectOneChoice value="#{row.bindings.VillageLibrDetail.inputValue}"
+                                                                                        label="#{row.bindings.VillageLibrDetail.label}"
+                                                                                        required="#{bindings.TblClusterView2.hints.VillageLibrDetail.mandatory}"
+                                                                                        shortDesc="#{bindings.TblClusterView2.hints.VillageLibrDetail.tooltip}"
+                                                                                        id="soc7">
+                                                                        <f:selectItems value="#{row.bindings.VillageLibrDetail.items}"
+                                                                                       id="si7"/>
+                                                                        <f:validator binding="#{row.bindings.VillageLibrDetail.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterView2.hints.Ast.name}"
                                                                            filterable="true" sortable="true" headerText="Active"
-                                                                           id="c12" width="60">
+                                                                           id="c12" width="55">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblClusterView2.hints.Ast.mandatory}"

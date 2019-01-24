@@ -73,6 +73,11 @@
           <Item Value="Village"/>
           <Item Value="Ast"/>
           <Item Value="CropId"/>
+          <Item Value="CityLibrDetail"/>
+          <Item Value="DistrictLibrDetail"/>
+          <Item Value="TehsilLibrDetail"/>
+          <Item Value="MauzaLibrDetail"/>
+          <Item Value="VillageLibrDetail"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

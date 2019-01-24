@@ -58,4 +58,19 @@
   <ViewUsage
     Name="Trainer_Name_LOV1"
     ViewObjectName="model.lov.Trainer_Name_LOV"/>
+  <ViewUsage
+    Name="City_Name_LOV1"
+    ViewObjectName="model.lov.City_Name_LOV"/>
+  <ViewUsage
+    Name="District_Name_LOV1"
+    ViewObjectName="model.lov.District_Name_LOV"/>
+  <ViewUsage
+    Name="Tehsil_Name_LOV1"
+    ViewObjectName="model.lov.Tehsil_Name_LOV"/>
+  <ViewUsage
+    Name="MAUZA_Name_LOV1"
+    ViewObjectName="model.lov.MAUZA_Name_LOV"/>
+  <ViewUsage
+    Name="Village_Name_LOV1"
+    ViewObjectName="model.lov.Village_Name_LOV"/>
 </AppModule>
