@@ -340,6 +340,7 @@
                                                     <h:panelGroup id="pg2">
                                                    <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                text="Add"
+                                                               rendered="#{backingBeanScope.backing_login.addViewPrivilidge() == '1'}"
                                                                disabled="#{!bindings.CreateInsert1.enabled}" id="b12"
                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                               icon="#{resource['images:add.png']}"/>
@@ -347,17 +348,20 @@
                                                         <af:button actionListener="#{bindings.Execute1.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute1.enabled}"
                                                                id="b14"
+                                                               rendered="#{backingBeanScope.backing_login.editViewPrivilidge() == '1'}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                icon="#{resource['images:edit.png']}"/>
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Delete1.execute}"
                                                                text="Delete" disabled="#{!bindings.Delete1.enabled}"
                                                                id="b13"
+                                                               rendered="#{backingBeanScope.backing_login.deleteViewPrivilidge() == '1'}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                icon="#{resource['images:delete.png']}"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                           text="Save"
+                                                               rendered="#{backingBeanScope.backing_login.saveViewPrivilidge() == '1'}"
                                                                disabled="#{!bindings.Commit.enabled}" id="b11"
                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                           icon="#{resource['images:save.png']}"/>
