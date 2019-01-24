@@ -160,7 +160,9 @@
                                                                         <f:validator binding="#{row.bindings.CropId.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="City"
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.CityLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="City"
                                                                            id="c2" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.CityLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.CityLibrDetail.label}"
@@ -172,7 +174,9 @@
                                                                         <f:validator binding="#{row.bindings.CityLibrDetail.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="District"
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.DistrictLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="District"
                                                                            id="c8" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.DistrictLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.DistrictLibrDetail.label}"
@@ -184,7 +188,9 @@
                                                                         <f:validator binding="#{row.bindings.DistrictLibrDetail.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Tehsil"
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.TehsilLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Tehsil"
                                                                            id="c9" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.TehsilLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.TehsilLibrDetail.label}"
@@ -196,7 +202,9 @@
                                                                         <f:validator binding="#{row.bindings.TehsilLibrDetail.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Mauza"
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.MauzaLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Mauza"
                                                                            id="c10" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.MauzaLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.MauzaLibrDetail.label}"
@@ -208,7 +216,9 @@
                                                                         <f:validator binding="#{row.bindings.MauzaLibrDetail.validator}"/>
                                                                     </af:selectOneChoice>
                                                                 </af:column>
-                                                                <af:column headerText="Village"
+                                                                <af:column sortProperty="#{bindings.TblClusterView2.hints.VillageLibrDetail.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Village"
                                                                            id="c11" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.VillageLibrDetail.inputValue}"
                                                                                         label="#{row.bindings.VillageLibrDetail.label}"
