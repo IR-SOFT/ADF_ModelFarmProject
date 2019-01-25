@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
+    <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Certification_Setup')}"/>
+    </f:metadata>
     <af:document title="Certification_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -26,6 +30,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Certification Setup">
                                         <af:panelGridLayout id="pgl2">
@@ -64,8 +69,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Certification"
-                                                                           id="c2" width="197" >
+                                                                           headerText="Certification" id="c2"
+                                                                           width="197">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblCertificationView1.hints.Name.label}"
                                                                                   required="#{bindings.TblCertificationView1.hints.Name.mandatory}"
@@ -78,8 +83,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active"
-                                                                           id="c3" width="74">
+                                                                           headerText="Active" id="c3" width="74">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblCertificationView1.hints.Ast.mandatory}"
@@ -100,27 +104,32 @@
                                                     <af:spacer width="200" height="20" id="s2"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="Add"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"
+                                                                   text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
+                                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b4"
                                                                    icon="#{resource['images:add.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
-                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               id="b6" icon="#{resource['images:edit.png']}"
+                                                                   text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
+                                                                   id="b6" icon="#{resource['images:edit.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s6"/>
-                                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}" id="b7"
-                                                               icon="#{resource['images:delete.png']}"
+                                                        <af:button actionListener="#{bindings.Delete.execute}"
+                                                                   text="Delete" disabled="#{!bindings.Delete.enabled}"
+                                                                   id="b7"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
+                                                                   icon="#{resource['images:delete.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s7"/>
-                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b8"
-                                                               icon="#{resource['images:save.png']}"
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                   text="Save" disabled="#{!bindings.Commit.enabled}"
+                                                                   id="b8"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
+                                                                   icon="#{resource['images:save.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
-                                                    
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">

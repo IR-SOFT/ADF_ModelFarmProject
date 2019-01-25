@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
+    <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Cluster_Detail')}"/>
+    </f:metadata>
     <af:document title="Cluster_Detail.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -11,27 +15,30 @@
                     <af:panelGridLayout id="pgl1">
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
-                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
-                        <af:showDetailItem id="sdi1" text="Clusters / Farmers">
-                            <af:spacer width="190" height="10" id="s1"/>
-                            <af:button text="Clusters Setup" id="b1" inlineStyle="width:190px;"
-                                       destination="Clusters_Setup.jsf" icon="#{resource['images:cluster.png']}"/>
-                            <af:spacer width="190" height="10" id="s3"/>
-                            <af:button id="b3" inlineStyle="width:190px;" text="Target Crops"
-                                       destination="Target_Crops.jsf" icon="#{resource['images:target_crops.png']}"/>
-                            <af:spacer width="190" height="10" id="s5"/>
-                            <af:button id="b5" inlineStyle="width:190px;" text="Farmer Registration"
-                                       destination="Farmer_Registration.jsf"
-                                       icon="#{resource['images:farmer_registration.png']}"/>
-                            <af:spacer width="190" height="10" id="s2"/>
-                            <af:button id="b2" inlineStyle="width:190px;" text="Cluster Detail"
-                                       destination="Cluster_Detail.jsf"
-                                       icon="#{resource['images:cluster_detail.png']}"/>
-                        </af:showDetailItem>
-                    </af:panelAccordion>
+                                <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
+                                    <af:showDetailItem id="sdi1" text="Clusters / Farmers">
+                                        <af:spacer width="190" height="10" id="s1"/>
+                                        <af:button text="Clusters Setup" id="b1" inlineStyle="width:190px;"
+                                                   destination="Clusters_Setup.jsf"
+                                                   icon="#{resource['images:cluster.png']}"/>
+                                        <af:spacer width="190" height="10" id="s3"/>
+                                        <af:button id="b3" inlineStyle="width:190px;" text="Target Crops"
+                                                   destination="Target_Crops.jsf"
+                                                   icon="#{resource['images:target_crops.png']}"/>
+                                        <af:spacer width="190" height="10" id="s5"/>
+                                        <af:button id="b5" inlineStyle="width:190px;" text="Farmer Registration"
+                                                   destination="Farmer_Registration.jsf"
+                                                   icon="#{resource['images:farmer_registration.png']}"/>
+                                        <af:spacer width="190" height="10" id="s2"/>
+                                        <af:button id="b2" inlineStyle="width:190px;" text="Cluster Detail"
+                                                   destination="Cluster_Detail.jsf"
+                                                   icon="#{resource['images:cluster_detail.png']}"/>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Clusters Detail">
                                         <af:panelGridLayout id="pgl2">
@@ -41,14 +48,14 @@
                                                                     inlineStyle="width:1009px;">
                                                         <af:showDetailItem id="tab1" text="Cluster Master">
                                                             <af:panelFormLayout id="pfl1" rows="2" maxColumns="3">
-                                                            <af:inputText value="#{bindings.ClusterId.inputValue}"
+                                                                <af:inputText value="#{bindings.ClusterId.inputValue}"
                                                                               label="Cluster ID"
                                                                               required="#{bindings.ClusterId.hints.mandatory}"
                                                                               columns="#{bindings.ClusterId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ClusterId.hints.precision}"
                                                                               shortDesc="#{bindings.ClusterId.hints.tooltip}"
                                                                               id="it2" readOnly="true"
-                                                                              contentStyle="width:150px" >
+                                                                              contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.ClusterId.validator}"/>
                                                                 </af:inputText>
                                                                 <af:inputText value="#{bindings.Cluster_Name.inputValue}"
@@ -66,11 +73,10 @@
                                                                               columns="#{bindings.ClusterMasterId.hints.displayWidth}"
                                                                               maximumLength="#{bindings.ClusterMasterId.hints.precision}"
                                                                               shortDesc="#{bindings.ClusterMasterId.hints.tooltip}"
-                                                                              id="it1" readOnly="true" contentStyle="width:150px">
+                                                                              id="it1" readOnly="true"
+                                                                              contentStyle="width:150px">
                                                                     <f:validator binding="#{bindings.ClusterMasterId.validator}"/>
                                                                 </af:inputText>
-                                                                
-                                                                
                                                                 <af:inputDate value="#{bindings.Dated.inputValue}"
                                                                               label="Date"
                                                                               required="#{bindings.Dated.hints.mandatory}"
@@ -100,9 +106,7 @@
                                                                               id="it4" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.Remarks.validator}"/>
                                                                 </af:inputText>
-                                                                <f:facet name="footer">
-                                                                    
-                                                                </f:facet>
+                                                                <f:facet name="footer"></f:facet>
                                                             </af:panelFormLayout>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
@@ -110,69 +114,61 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                   
-                                                    <af:panelGroupLayout id="pgl3"
-                                                                                         inlineStyle="width:747px;">
-                                                                        <af:panelGroupLayout layout="horizontal"
-                                                                                             id="pgl4">
-                                                                                              <af:spacer width="100" height="20" id="s6"/>
-                                                                            <af:button actionListener="#{bindings.First.execute}"
-                                                                                       text="First"
-                                                                                       icon="#{resource['images:first.png']}"
-                                                                                       disabled="#{!bindings.First.enabled}"
-                                                                                       partialSubmit="true" id="b4"/>                                                                           
-                                                                                    <af:spacer width="5" height="20"
-                                                                                               id="s13"/>
-                                                                            <af:button actionListener="#{bindings.Previous.execute}"
-                                                                                       text="Previous"
-                                                                                       icon="#{resource['images:backward.png']}"
-                                                                                       disabled="#{!bindings.Previous.enabled}"
-                                                                                       partialSubmit="true" id="b6"/>
-                                                                                       <af:spacer width="5" height="20"
-                                                                                                  id="s14"/>
-                                                                            <af:button actionListener="#{bindings.Next.execute}"
-                                                                                       text="Next"
-                                                                                       icon="#{resource['images:forward.png']}"
-                                                                                       disabled="#{!bindings.Next.enabled}"
-                                                                                       partialSubmit="true" id="b7"/>
-                                                                                       <af:spacer width="5" height="20"
-                                                                                                  id="s15"/>
-                                                                            <af:button actionListener="#{bindings.Last.execute}"
-                                                                                       text="Last"
-                                                                                       icon="#{resource['images:last.png']}"
-                                                                                       disabled="#{!bindings.Last.enabled}"
-                                                                                       partialSubmit="true" id="b8"/>
-                                                                        </af:panelGroupLayout>
-                                                                        <h:panelGroup id="pg2">
-                                                                        <af:button actionListener="#{bindings.CreateInsert1.execute}"
-                                                                                   text="Add"
-                                                                                   icon="#{resource['images:add.png']}"
-                                                                                   disabled="#{!bindings.CreateInsert1.enabled}"
-                                                                                   id="b10"
-                                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                                                   <af:spacer width="5" height="20" id="s4"/>
-                                                                            <af:button text="Edit" id="b9" icon="#{resource['images:edit.png']}"
-                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                                            <af:spacer width="5" height="20" id="s12"/>
-                                                                            <af:button actionListener="#{bindings.Delete1.execute}"
-                                                                                   text="Delete"
-                                                                                   icon="#{resource['images:delete.png']}"
-                                                                                   disabled="#{!bindings.Delete1.enabled}"
-                                                                                   id="b15"
-                                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                                                   <af:spacer width="5" height="20"
-                                                                                              id="s10"/>
-                                                                        <af:button actionListener="#{bindings.Commit.execute}"
-                                                                                   text="Save"
-                                                                                   icon="#{resource['images:save.png']}"
-                                                                                   disabled="#{!bindings.Commit.enabled}"
-                                                                                   id="b16"
-                                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                                        
-                                                                        
-                                                                        </h:panelGroup>
-                                                                        
-                                                                    </af:panelGroupLayout>
+                                                    <af:panelGroupLayout id="pgl3" inlineStyle="width:747px;">
+                                                        <af:panelGroupLayout layout="horizontal" id="pgl4">
+                                                            <af:spacer width="100" height="20" id="s6"/>
+                                                            <af:button actionListener="#{bindings.First.execute}"
+                                                                       text="First"
+                                                                       icon="#{resource['images:first.png']}"
+                                                                       disabled="#{!bindings.First.enabled}"
+                                                                       partialSubmit="true" id="b4"/>
+                                                            <af:spacer width="5" height="20" id="s13"/>
+                                                            <af:button actionListener="#{bindings.Previous.execute}"
+                                                                       text="Previous"
+                                                                       icon="#{resource['images:backward.png']}"
+                                                                       disabled="#{!bindings.Previous.enabled}"
+                                                                       partialSubmit="true" id="b6"/>
+                                                            <af:spacer width="5" height="20" id="s14"/>
+                                                            <af:button actionListener="#{bindings.Next.execute}"
+                                                                       text="Next"
+                                                                       icon="#{resource['images:forward.png']}"
+                                                                       disabled="#{!bindings.Next.enabled}"
+                                                                       partialSubmit="true" id="b7"/>
+                                                            <af:spacer width="5" height="20" id="s15"/>
+                                                            <af:button actionListener="#{bindings.Last.execute}"
+                                                                       text="Last" icon="#{resource['images:last.png']}"
+                                                                       disabled="#{!bindings.Last.enabled}"
+                                                                       partialSubmit="true" id="b8"/>
+                                                        </af:panelGroupLayout>
+                                                        <h:panelGroup id="pg2">
+                                                            <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                                       text="Add"
+                                                                       rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
+                                                                       icon="#{resource['images:add.png']}"
+                                                                       disabled="#{!bindings.CreateInsert1.enabled}"
+                                                                       id="b10"
+                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                            <af:spacer width="5" height="20" id="s4"/>
+                                                            <af:button text="Edit" id="b9"
+                                                                       icon="#{resource['images:edit.png']}"
+                                                                       rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
+                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                            <af:spacer width="5" height="20" id="s12"/>
+                                                            <af:button actionListener="#{bindings.Delete1.execute}"
+                                                                       text="Delete"
+                                                                       rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
+                                                                       icon="#{resource['images:delete.png']}"
+                                                                       disabled="#{!bindings.Delete1.enabled}" id="b15"
+                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                            <af:spacer width="5" height="20" id="s10"/>
+                                                            <af:button actionListener="#{bindings.Commit.execute}"
+                                                                       text="Save"
+                                                                       rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
+                                                                       icon="#{resource['images:save.png']}"
+                                                                       disabled="#{!bindings.Commit.enabled}" id="b16"
+                                                                       inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        </h:panelGroup>
+                                                    </af:panelGroupLayout>
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr4">
@@ -194,11 +190,10 @@
                                                                       queryListener="#{bindings.TblClusterDetailView3Query.processQuery}"
                                                                       varStatus="vs" id="t1"
                                                                       partialTriggers="::b11 ::b12 ::b13">
-                                                                
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Master ID"
-                                                                           id="c2" width="91" align="center">
+                                                                           headerText="Master ID" id="c2" width="91"
+                                                                           align="center">
                                                                     <af:inputText value="#{row.bindings.ClusterMasterId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.ClusterMasterId.mandatory}"
@@ -211,8 +206,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Detail ID"
-                                                                           id="c1" width="85" align="center">
+                                                                           headerText="Detail ID" id="c1" width="85"
+                                                                           align="center">
                                                                     <af:inputText value="#{row.bindings.ClusterDetailId.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.ClusterDetailId.mandatory}"
@@ -225,8 +220,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.FarmerRegId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Farmer"
-                                                                           id="c4" width="510">
+                                                                           headerText="Farmer" id="c4" width="510">
                                                                     <af:selectOneChoice value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                         label="#{row.bindings.FarmerRegId.label}"
                                                                                         required="#{bindings.TblClusterDetailView3.hints.FarmerRegId.mandatory}"
@@ -238,9 +232,9 @@
                                                                     </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="CNIC"
-                                                                           id="c3" width="120">
+                                                                           filterable="true" sortable="true"
+                                                                           align="center" headerText="CNIC" id="c3"
+                                                                           width="120">
                                                                     <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.Farmer_Cnic.mandatory}"
@@ -252,9 +246,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="Mobile"
-                                                                           id="c5" width="115">
+                                                                           filterable="true" sortable="true"
+                                                                           align="center" headerText="Mobile" id="c5"
+                                                                           width="115">
                                                                     <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
                                                                                   label="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.label}"
                                                                                   required="#{bindings.TblClusterDetailView3.hints.Farmer_Mobile.mandatory}"
@@ -275,28 +269,32 @@
                                                     <af:spacer width="356" height="20" id="s11"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="Add"
-                                                               icon="#{resource['images:add.png']}"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b11"
+                                                                   text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
+                                                                   icon="#{resource['images:add.png']}"
+                                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b11"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                               <af:spacer width="5" height="20" id="s7"/>
-                                                    <af:button actionListener="#{bindings.Execute.execute}"
-                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               icon="#{resource['images:edit.png']}"
-                                                               id="b12"
-                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                               <af:spacer width="5" height="20" id="s8"/>
-                                                    <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}"
-                                                               icon="#{resource['images:delete.png']}" id="b13"
-                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
-                                                               <af:spacer width="5" height="20" id="s9"/>
-                                                    <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                                               disabled="#{!bindings.Commit.enabled}"
-                                                               icon="#{resource['images:save.png']}" id="b14"
-                                                               inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="20" id="s7"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
+                                                                   text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
+                                                                   icon="#{resource['images:edit.png']}" id="b12"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="20" id="s8"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}"
+                                                                   text="Delete"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
+                                                                   disabled="#{!bindings.Delete.enabled}"
+                                                                   icon="#{resource['images:delete.png']}" id="b13"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:spacer width="5" height="20" id="s9"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                   text="Save"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
+                                                                   disabled="#{!bindings.Commit.enabled}"
+                                                                   icon="#{resource['images:save.png']}" id="b14"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
-                                                    
                                                 </af:gridCell>
                                             </af:gridRow>
                                         </af:panelGridLayout>
@@ -304,7 +302,6 @@
                                 </af:panelAccordion>
                             </af:gridCell>
                         </af:gridRow>
-                        
                     </af:panelGridLayout>
                 </af:showDetailItem>
             </af:panelAccordion>

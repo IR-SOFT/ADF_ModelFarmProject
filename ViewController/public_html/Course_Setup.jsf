@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
+    <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Course_Setup')}"/>
+    </f:metadata>
     <af:document title="Course_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -49,6 +53,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Training Setup">
                                         <af:panelGridLayout id="pgl2">
@@ -194,6 +199,7 @@
                                                     <h:panelGroup id="pg1">
                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
                                                                disabled="#{!bindings.CreateInsert.enabled}" id="b9"
                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                   icon="#{resource['images:add.png']}"/>
@@ -201,16 +207,19 @@
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                text="Edit" disabled="#{!bindings.Execute.enabled}"
                                                                id="b12"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"
                                                                icon="#{resource['images:edit.png']}"/>
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
                                                                disabled="#{!bindings.Delete.enabled}" id="b7"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
                                                                icon="#{resource['images:delete.png']}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}" text="Save"
                                                                disabled="#{!bindings.Commit.enabled}" id="b8"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
                                                                icon="#{resource['images:save.png']}"
                                                                inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>

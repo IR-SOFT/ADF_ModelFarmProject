@@ -2,11 +2,17 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('mainPage')}"/>
+    </f:metadata>
     <af:document title="mainPage.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
-            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="height:100.0%; width:100.0%;" styleClass="AFStretchWidth">
+            <af:panelAccordion discloseMany="false" id="pa1"
+                               rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                               inlineStyle="height:100.0%; width:100.0%;" styleClass="AFStretchWidth">
                 <af:showDetailItem id="pane1" text="Dashboard" flex="0" inflexibleHeight="100">
                     <dvt:map id="map" startingX="0.0" mapServerConfigId="mapConfig3" baseMapName="ELOCATION.WORLD_MAP"
                              mapZoom="0" startingY="0.0" autoZoomThemeId="mt1" inlineStyle="width:100%; height:869px;">

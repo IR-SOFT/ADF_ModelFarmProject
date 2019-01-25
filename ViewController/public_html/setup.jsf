@@ -1,13 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-       
-        <!--<f:metadata>
+    <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
-        <f:event type="preRenderView" listener="#{CheckUserPriviliges.checkSession}"/>
-    </f:metadata>-->
-    
-<af:document title="setup.jsf" id="d1">
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('setup')}"/>
+    </f:metadata>
+    <af:document title="setup.jsf" id="d1">
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
             <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
@@ -19,9 +17,7 @@
                                 <af:panelAccordion discloseMany="false" id="pa4"
                                                    inlineStyle="width:195px; height:431px;">
                                     <af:showDetailItem id="sdi1" text="Setups">
-
-
-<!--<af:resource type="javascript">
+                                        <!--<af:resource type="javascript">
 
 function sayHello()
 {
@@ -61,6 +57,7 @@ window.onload = sayHello();
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1050px;">
                                     <af:showDetailItem id="pane2" text="Setup"/>
                                 </af:panelAccordion>

@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
+    <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Output_Indicators')}"/>
+    </f:metadata>
     <af:document title="Output_Indicators.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -11,25 +15,26 @@
                     <af:panelGridLayout id="pgl1">
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
-                            <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
-                        <af:showDetailItem id="sdi1" text="Monitoring">
-                            <af:spacer width="190" height="10" id="s1"/>
-                            <af:button text="Project Components" id="b1" inlineStyle="width:190px;"
-                                       destination="Project_Components.jsf"
-                                       icon="#{resource['images:project_components.png']}"/>
-                            <af:spacer width="190" height="10" id="s3"/>
-                            <af:button id="b3" inlineStyle="width:190px;" text="Output Indicators"
-                                       destination="Output_Indicators.jsf"
-                                       icon="#{resource['images:output_indicator.png']}"/>
-                            <af:spacer width="190" height="10" id="s5"/>
-                           <af:button id="b5" inlineStyle="width:190px;" text="Monitoring Parameters"
-                                       destination="Monitoring_Parameters.jsf"
-                                      icon="#{resource['images:monitoring_parameteres.png']}"/>
-                        </af:showDetailItem>
-                    </af:panelAccordion>
+                                <af:panelAccordion discloseMany="false" id="pa2" inlineStyle="width:195px;">
+                                    <af:showDetailItem id="sdi1" text="Monitoring">
+                                        <af:spacer width="190" height="10" id="s1"/>
+                                        <af:button text="Project Components" id="b1" inlineStyle="width:190px;"
+                                                   destination="Project_Components.jsf"
+                                                   icon="#{resource['images:project_components.png']}"/>
+                                        <af:spacer width="190" height="10" id="s3"/>
+                                        <af:button id="b3" inlineStyle="width:190px;" text="Output Indicators"
+                                                   destination="Output_Indicators.jsf"
+                                                   icon="#{resource['images:output_indicator.png']}"/>
+                                        <af:spacer width="190" height="10" id="s5"/>
+                                        <af:button id="b5" inlineStyle="width:190px;" text="Monitoring Parameters"
+                                                   destination="Monitoring_Parameters.jsf"
+                                                   icon="#{resource['images:monitoring_parameteres.png']}"/>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Output Indicators">
                                         <af:panelGridLayout id="pgl2">
@@ -52,24 +57,24 @@
                                                                       queryListener="#{bindings.TblMonitoringProjCompOutputView1Query.processQuery}"
                                                                       varStatus="vs" id="t1" width="651">
                                                                 <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.name}"
-                                                                           filterable="true" headerText="Project Component"
-                                                                           id="c9" width="250">
+                                                                           filterable="true"
+                                                                           headerText="Project Component" id="c9"
+                                                                           width="250">
                                                                     <af:outputText value="#{row.Proj_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Proj_Comp_Name.tooltip}"
                                                                                    id="ot5"/>
                                                                 </af:column>
-                                                                
                                                                 <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.name}"
-                                                                           filterable="true" 
-                                                                           headerText="Project Output Component"
-                                                                           id="c3" width="300">
+                                                                           filterable="true"
+                                                                           headerText="Project Output Component" id="c3"
+                                                                           width="300">
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.name}"
-                                                                           filterable="true" headerText="Active"
-                                                                           id="c4"  width="60">
+                                                                           filterable="true" headerText="Active" id="c4"
+                                                                           width="60">
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblMonitoringProjCompOutputView1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -101,9 +106,9 @@
                                                                       queryListener="#{bindings.TblMonitoringOutputIndView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b4 ::b6 ::b7" width="653">
-                                                                
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
+                                                                           align="center"
                                                                            headerText="Project Output Component ID"
                                                                            id="c6" width="100">
                                                                     <af:inputText value="#{row.bindings.ProjCompOutputId.inputValue}"
@@ -112,14 +117,16 @@
                                                                                   columns="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringOutputIndView3.hints.ProjCompOutputId.tooltip}"
-                                                                                  id="it2" readOnly="true" contentStyle='text-align:center'>
+                                                                                  id="it2" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProjCompOutputId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="Output Indicator ID"
-                                                                           id="c5" width="80">
+                                                                           filterable="true" sortable="true"
+                                                                           align="center"
+                                                                           headerText="Output Indicator ID" id="c5"
+                                                                           width="80">
                                                                     <af:inputText value="#{row.bindings.OutputIndId.inputValue}"
                                                                                   label="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.label}"
                                                                                   required="#{bindings.TblMonitoringOutputIndView3.hints.OutputIndId.mandatory}"
@@ -132,9 +139,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Name.name}"
-                                                                           filterable="true" sortable="true" 
-                                                                           headerText="Output Indicator"
-                                                                           id="c7" width="360">
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Output Indicator" id="c7"
+                                                                           width="360">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblMonitoringOutputIndView3.hints.Name.label}"
                                                                                   required="#{bindings.TblMonitoringOutputIndView3.hints.Name.mandatory}"
@@ -146,9 +153,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblMonitoringOutputIndView3.hints.Ast.name}"
-                                                                filterable="true" sortable="true" 
-                                                                headerText="Active" 
-                                                                           id="c8" width="60">
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="Active" id="c8" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblMonitoringOutputIndView3.hints.Ast.mandatory}"
@@ -168,29 +174,31 @@
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
                                                     <af:spacer width="187" height="20" id="s2"/>
                                                     <h:panelGroup id="pg1">
-                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
-                                                               text="Add"
-                                                               icon="#{resource['images:add.png']}"
-                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"
-                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                                   text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
+                                                                   icon="#{resource['images:add.png']}"
+                                                                   disabled="#{!bindings.CreateInsert.enabled}" id="b4"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
-                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                               icon="#{resource['images:edit.png']}"
-                                                               id="b6"
+                                                                   text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
+                                                                   icon="#{resource['images:edit.png']}" id="b6"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s6"/>
-                                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
-                                                               disabled="#{!bindings.Delete.enabled}"
-                                                               icon="#{resource['images:delete.png']}" id="b7"
+                                                        <af:button actionListener="#{bindings.Delete.execute}"
+                                                                   text="Delete" disabled="#{!bindings.Delete.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
+                                                                   icon="#{resource['images:delete.png']}" id="b7"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s7"/>
-                                                        <af:button actionListener="#{bindings.Commit.execute}" text="Save"
-                                                    icon="#{resource['images:save.png']}"
-                                                               disabled="#{!bindings.Commit.enabled}" id="b8"
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                   text="Save" icon="#{resource['images:save.png']}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
+                                                                   disabled="#{!bindings.Commit.enabled}" id="b8"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
-                                                   
                                                 </af:gridCell>
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
@@ -201,7 +209,6 @@
                                 </af:panelAccordion>
                             </af:gridCell>
                         </af:gridRow>
-                        
                     </af:panelGridLayout>
                 </af:showDetailItem>
             </af:panelAccordion>

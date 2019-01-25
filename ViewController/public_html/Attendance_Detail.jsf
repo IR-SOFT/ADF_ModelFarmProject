@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
+        <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Attendance_Detail')}"/>
+    </f:metadata>
     <af:document title="Attendance_Detail.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -49,6 +53,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1050px;">
                                     <af:showDetailItem id="pane2" text="Attendance Detail">
                                         <af:panelGridLayout id="pgl2">
@@ -176,21 +181,25 @@
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
                                                                    icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
                                                                    id="b8"/>
                                                         <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                    text="Edit"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
                                                                    disabled="#{!bindings.Execute.enabled}"
                                                                    icon="#{resource['images:edit.png']}" id="b9"/>
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" icon="#{resource['images:delete.png']}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
                                                                    disabled="#{!bindings.Delete.enabled}" id="b7"/>
                                                         <af:spacer width="5" height="10" id="s12"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
                                                                    disabled="#{!bindings.Commit.enabled}" id="b16"/>
                                                     </h:panelGroup>
                                                 </af:gridCell>
@@ -327,18 +336,22 @@
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add" icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert1.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
                                                                    id="b14"/>
                                                         <af:spacer width="5" height="10" id="s13"/>
                                                         <af:button actionListener="#{bindings.Execute1.execute}"
                                                                    text="Edit" disabled="#{!bindings.Execute1.enabled}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
                                                                    icon="#{resource['images:edit.png']}" id="b12"/>
                                                         <af:spacer width="5" height="10" id="s14"/>
                                                         <af:button actionListener="#{bindings.Delete1.execute}"
                                                                    icon="#{resource['images:delete.png']}" text="Delete"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
                                                                    disabled="#{!bindings.Delete1.enabled}" id="b13"/>
                                                         <af:spacer width="5" height="10" id="s15"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
                                                                    disabled="#{!bindings.Commit.enabled}" id="b17"/>
                                                     </h:panelGroup>
                                                 </af:gridCell>

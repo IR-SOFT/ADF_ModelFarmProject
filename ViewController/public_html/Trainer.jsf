@@ -2,6 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
+    <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Trainer')}"/>
+    </f:metadata>
     <af:document title="Trainer.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -11,7 +15,7 @@
                     <af:panelGridLayout id="pgl1">
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
-                               <af:panelAccordion discloseMany="false" id="pa2"
+                                <af:panelAccordion discloseMany="false" id="pa2"
                                                    inlineStyle="width:195px; height:519px;">
                                     <af:showDetailItem id="sdi1" text="Training/Course">
                                         <af:spacer width="190" height="10" id="s1"/>
@@ -49,6 +53,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Trainer">
                                         <af:panelGridLayout id="pgl2">
@@ -88,8 +93,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Trainer"
-                                                                           id="c2" width="250">
+                                                                           headerText="Trainer" id="c2" width="250">
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerView1.hints.Name.label}"
                                                                                   required="#{bindings.Tbl_TrainerView1.hints.Name.mandatory}"
@@ -102,8 +106,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.FatherName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Father"
-                                                                           id="c3" width="250">
+                                                                           headerText="Father" id="c3" width="250">
                                                                     <af:inputText value="#{row.bindings.FatherName.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerView1.hints.FatherName.label}"
                                                                                   required="#{bindings.Tbl_TrainerView1.hints.FatherName.mandatory}"
@@ -116,8 +119,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active"
-                                                                           id="c4" width="60">
+                                                                           headerText="Active" id="c4" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_TrainerView1.hints.Ast.mandatory}"
@@ -291,16 +293,20 @@
                                                                                            id="s14"/>
                                                                                 <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                                            text="Add"
+                                                                                           rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
                                                                                            icon="#{resource['images:add.png']}"
                                                                                            disabled="#{!bindings.CreateInsert.enabled}"
                                                                                            id="b12"/>
                                                                                 <af:spacer width="10" height="10"
                                                                                            id="s21"/>
-                                                                                <af:button text="Edit" id="b23" icon="#{resource['images:edit.png']}"/>
+                                                                                <af:button text="Edit" id="b23"
+                                                                                           icon="#{resource['images:edit.png']}"
+                                                                                           rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"/>
                                                                                 <af:spacer width="5" height="10"
                                                                                            id="s22"/>
                                                                                 <af:button actionListener="#{bindings.Delete.execute}"
                                                                                            text="Delete"
+                                                                                           rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
                                                                                            icon="#{resource['images:delete.png']}"
                                                                                            disabled="#{!bindings.Delete.enabled}"
                                                                                            id="b13"/>
@@ -308,6 +314,7 @@
                                                                                            id="s23"/>
                                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                                            text="Save"
+                                                                                           rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
                                                                                            icon="#{resource['images:save.png']}"
                                                                                            disabled="#{!bindings.Commit.enabled}"
                                                                                            id="b14"/>
@@ -316,7 +323,6 @@
                                                                     </af:panelGroupLayout>
                                                                 </f:facet>
                                                             </af:panelFormLayout>
-                                                          
                                                         </af:showDetailItem>
                                                         <af:showDetailItem text="Trainer Academy" id="sdi2">
                                                             <af:table value="#{bindings.Tbl_TrainerAcaView3.collectionModel}"
@@ -333,7 +339,6 @@
                                                                       queryListener="#{bindings.Tbl_TrainerAcaView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
                                                                       partialTriggers="::b15 ::b16 ::b17" width="989">
-                                                                
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
@@ -377,7 +382,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
+                                                                           align="center"
                                                                            headerText="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.label}"
                                                                            id="c8" width="70">
                                                                     <af:inputText value="#{row.bindings.PassYear.inputValue}"
@@ -394,8 +400,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Major Subject"
-                                                                           id="c9" width="150">
+                                                                           headerText="Major Subject" id="c9"
+                                                                           width="150">
                                                                     <af:inputText value="#{row.bindings.MajSub.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.mandatory}"
@@ -408,8 +414,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="University/Board"
-                                                                           id="c10" width="270">
+                                                                           headerText="University/Board" id="c10"
+                                                                           width="270">
                                                                     <af:inputText value="#{row.bindings.UniBoard.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.mandatory}"
@@ -421,8 +427,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.Perc.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="Percentage"
+                                                                           filterable="true" sortable="true"
+                                                                           align="center" headerText="Percentage"
                                                                            id="c11" width="70">
                                                                     <af:inputText value="#{row.bindings.Perc.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.Perc.label}"
@@ -437,9 +443,9 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="CGPA"
-                                                                           id="c12" width="55">
+                                                                           filterable="true" sortable="true"
+                                                                           align="center" headerText="CGPA" id="c12"
+                                                                           width="55">
                                                                     <af:inputText value="#{row.bindings.Cgpa.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.mandatory}"
@@ -456,24 +462,28 @@
                                                                 <af:spacer width="346" height="20" id="s10"/>
                                                                 <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                            text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
                                                                            icon="#{resource['images:add.png']}"
                                                                            disabled="#{!bindings.CreateInsert1.enabled}"
                                                                            id="b15"/>
                                                                 <af:spacer width="5" height="10" id="s20"/>
                                                                 <af:button actionListener="#{bindings.Execute.execute}"
                                                                            text="Edit"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
                                                                            icon="#{resource['images:edit.png']}"
                                                                            disabled="#{!bindings.Execute.enabled}"
                                                                            id="b16"/>
                                                                 <af:spacer width="5" height="10" id="s19"/>
                                                                 <af:button actionListener="#{bindings.Delete1.execute}"
                                                                            text="Delete"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
                                                                            icon="#{resource['images:delete.png']}"
                                                                            disabled="#{!bindings.Delete1.enabled}"
                                                                            id="b17"/>
                                                                 <af:spacer width="5" height="10" id="s18"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                            text="Save"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
                                                                            icon="#{resource['images:save.png']}"
                                                                            disabled="#{!bindings.Commit.enabled}"
                                                                            id="b18"/>
@@ -509,9 +519,10 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.name}"
-                                                                           filterable="true" sortable="true" align="center"
-                                                                           headerText="Trainer Percquisites ID"
-                                                                           id="c13" width="80">
+                                                                           filterable="true" sortable="true"
+                                                                           align="center"
+                                                                           headerText="Trainer Percquisites ID" id="c13"
+                                                                           width="80">
                                                                     <af:inputText value="#{row.bindings.TrainerPercId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.label}"
                                                                                   required="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.mandatory}"
@@ -522,11 +533,10 @@
                                                                         <f:validator binding="#{row.bindings.TrainerPercId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
-                                                                
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.PercName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Percquisites"
-                                                                           id="c15" width="150">
+                                                                           headerText="Percquisites" id="c15"
+                                                                           width="150">
                                                                     <af:inputText value="#{row.bindings.PercName.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.PercName.label}"
                                                                                   required="#{bindings.Tbl_TrainerPercView3.hints.PercName.mandatory}"
@@ -538,7 +548,8 @@
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.Amount.name}"
-                                                                           filterable="true" sortable="true" align="center"
+                                                                           filterable="true" sortable="true"
+                                                                           align="center"
                                                                            headerText="#{bindings.Tbl_TrainerPercView3.hints.Amount.label}"
                                                                            id="c16" width="80">
                                                                     <af:inputText value="#{row.bindings.Amount.inputValue}"
@@ -569,8 +580,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Active"
-                                                                           id="c18" width="60">
+                                                                           headerText="Active" id="c18" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_TrainerPercView3.hints.Ast.mandatory}"
@@ -587,24 +597,28 @@
                                                                 <af:spacer width="346" height="20" id="s12"/>
                                                                 <af:button actionListener="#{bindings.CreateInsert2.execute}"
                                                                            text="Add"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
                                                                            icon="#{resource['images:add.png']}"
                                                                            disabled="#{!bindings.CreateInsert2.enabled}"
                                                                            id="b19"/>
                                                                 <af:spacer width="5" height="10" id="s17"/>
                                                                 <af:button actionListener="#{bindings.Execute1.execute}"
                                                                            text="Edit"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
                                                                            icon="#{resource['images:edit.png']}"
                                                                            disabled="#{!bindings.Execute1.enabled}"
                                                                            id="b20"/>
                                                                 <af:spacer width="5" height="10" id="s16"/>
                                                                 <af:button actionListener="#{bindings.Delete2.execute}"
                                                                            text="Delete"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
                                                                            icon="#{resource['images:delete.png']}"
                                                                            disabled="#{!bindings.Delete2.enabled}"
                                                                            id="b21"/>
                                                                 <af:spacer width="5" height="10" id="s15"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                            text="Save"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
                                                                            icon="#{resource['images:save.png']}"
                                                                            disabled="#{!bindings.Commit.enabled}"
                                                                            id="b22"/>
