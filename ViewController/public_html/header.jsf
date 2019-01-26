@@ -13,14 +13,28 @@
     </afc:component>
   </af:xmlContent>
   <af:panelGridLayout id="pt_pgl1">
-    <af:gridRow height="120px" id="pt_gr1">
-      <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1" inlineStyle=" background-color:White; ">
+    <!--<af:gridRow height="240px" id="pt_gr1">-->
+    <af:gridRow id="pt_gr1">
+      <af:gridCell width="1275px" halign="stretch" valign="stretch" id="pt_gc1" inlineStyle=" background-color:White; ">
         <!-- Header -->
-        <h:panelGroup id="pt_pg1" style=" margin-top:10px; background-color:White; ">
-          <af:spacer width="21" height="30" id="pt_s1"/>
-          <af:image source="#{resource['images:CABI.png']}" id="pt_i1" inlineStyle="width:226px; height:87px;"/>
-          <af:spacer width="10" height="30" id="pt_s6"/>
-          <af:button text="Home" id="pt_b2" destination="mainPage.jsf"
+        <af:panelGridLayout id="pt_pgl3" inlineStyle="width:1275px;">
+          <af:gridRow marginTop="5px" height="auto" id="pt_gr3">
+            <af:gridCell marginStart="5px" width="18%" id="pt_gc3">
+              <af:image source="#{resource['images:CABI.png']}" id="pt_i1" inlineStyle="width:226px; height:87px;"/>
+            </af:gridCell>
+            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc4" halign="end" valign="middle">
+              <h:panelGroup id="pt_pg1">
+                <af:button text="Logout" id="pt_b1" action="#{backingBeanScope.backing_login.logout_action}"
+                           icon="#{resource['images:logout.png']}"/>
+                <af:spacer width="10" height="10" id="pt_s1"/>
+              </h:panelGroup>
+            </af:gridCell>
+          </af:gridRow>
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr4">
+            <af:gridCell marginStart="5px" width="18%" id="pt_gc5"/>
+            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc6">
+              <h:panelGroup id="pt_pg2">
+                <af:button text="Home" id="pt_b2" destination="mainPage.jsf"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Home')=='1'}"
                      inlineStyle="height:40px;width:140px !important; text-align:center; vertical-align: middle;"
                      icon="#{resource['images:home.png']}"/>
@@ -32,7 +46,7 @@
                      icon="#{resource['images:admin.png']}"/>
           <af:spacer width="5" height="30" id="pt_s8"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Admin')=='1'}"/>           
-          <af:button text="Setup" id="pt_b1" destination="setup.jsf"
+          <af:button text="Setup" id="pt_b8" destination="setup.jsf"
                      inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Setup')=='1'}"
                      icon="#{resource['images:settings.png']}"/>
@@ -60,11 +74,18 @@
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='1'}"
                      inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
                      icon="#{resource['images:monitoring.png']}"/>
-        </h:panelGroup>
+              </h:panelGroup>
+            </af:gridCell>
+          </af:gridRow>
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr5">
+            <af:gridCell marginStart="5px" width="18%" id="pt_gc7"/>
+            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc8"/>
+          </af:gridRow>
+        </af:panelGridLayout>
       </af:gridCell>
     </af:gridRow>
     <af:gridRow height="100%" id="pt_gr2">
-      <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc2" >
+      <af:gridCell halign="stretch" valign="stretch" id="pt_gc2" >
         <af:panelGroupLayout layout="scroll" id="pt_pgl2" inlineStyle="background-color:white;">
           <!-- Content -->
           <af:facetRef facetName="body">

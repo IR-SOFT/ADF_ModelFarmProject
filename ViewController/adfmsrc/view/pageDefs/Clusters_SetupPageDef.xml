@@ -67,10 +67,6 @@
           <Item Value="ClusterId"/>
           <Item Value="ProjCompInputId"/>
           <Item Value="Name"/>
-          <Item Value="District"/>
-          <Item Value="Tehsil"/>
-          <Item Value="Mauza"/>
-          <Item Value="Village"/>
           <Item Value="Ast"/>
           <Item Value="CropId"/>
           <Item Value="CityLibrDetail"/>

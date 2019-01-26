@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 import javax.annotation.PostConstruct;
 
+import javax.faces.component.html.HtmlPanelGroup;
 import javax.faces.context.FacesContext;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +23,8 @@ import oracle.adf.view.rich.component.rich.layout.RichPanelAccordion;
 import oracle.adf.view.rich.component.rich.layout.RichPanelGridLayout;
 import oracle.adf.view.rich.component.rich.layout.RichShowDetailItem;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
+
+import oracle.adf.view.rich.component.rich.output.RichSpacer;
 
 import oracle.jdbc.OracleDriver;
 
@@ -103,6 +106,14 @@ public class Login {
     private RichButton b1;
     private RichButton b2;
     private RichButton b3;
+    private RichPanelAccordion pa2;
+    private RichShowDetailItem pane2;
+    private RichSpacer s1;
+    private RichSpacer s2;
+    private RichSpacer s3;
+    private HtmlPanelGroup pg1;
+    private RichButton b4;
+    private RichSpacer s4;
 
     public void setF1(RichForm f1) {
         this.f1 = f1;
@@ -1057,7 +1068,7 @@ public class Login {
  
         if(add_rights.equals("1")){
             save_rights = "1";
-            System.out.println("Save right sue to add is : 1");
+            System.out.println("Save right due to add is : 1");
         }
         else if(edit_rights.equals("1")){
             save_rights = "1";
@@ -1077,6 +1088,70 @@ public class Login {
     }
 
 
+    public void setPa2(RichPanelAccordion pa2) {
+        this.pa2 = pa2;
+    }
+
+    public RichPanelAccordion getPa2() {
+        return pa2;
+    }
+
+    public void setPane2(RichShowDetailItem pane2) {
+        this.pane2 = pane2;
+    }
+
+    public RichShowDetailItem getPane2() {
+        return pane2;
+    }
+
+
+    public void setS1(RichSpacer s1) {
+        this.s1 = s1;
+    }
+
+    public RichSpacer getS1() {
+        return s1;
+    }
+
+    public void setS2(RichSpacer s2) {
+        this.s2 = s2;
+    }
+
+    public RichSpacer getS2() {
+        return s2;
+    }
+
+    public void setS3(RichSpacer s3) {
+        this.s3 = s3;
+    }
+
+    public RichSpacer getS3() {
+        return s3;
+    }
+
+    public void setPg1(HtmlPanelGroup pg1) {
+        this.pg1 = pg1;
+    }
+
+    public HtmlPanelGroup getPg1() {
+        return pg1;
+    }
+
+    public void setB4(RichButton b4) {
+        this.b4 = b4;
+    }
+
+    public RichButton getB4() {
+        return b4;
+    }
+
+    public void setS4(RichSpacer s4) {
+        this.s4 = s4;
+    }
+
+    public RichSpacer getS4() {
+        return s4;
+    }
 }
 
 

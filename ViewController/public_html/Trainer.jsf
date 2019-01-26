@@ -490,7 +490,7 @@
                                                                            id="b18"/>
                                                             </h:panelGroup>
                                                         </af:showDetailItem>
-                                                        <af:showDetailItem text="Trainer Percquisites" id="sdi3">
+                                                        <af:showDetailItem text="Trainer Perquisites" id="sdi3">
                                                             <af:table value="#{bindings.Tbl_TrainerPercView3.collectionModel}"
                                                                       var="row"
                                                                       rows="#{bindings.Tbl_TrainerPercView3.rangeSize}"
@@ -522,7 +522,7 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.name}"
                                                                            filterable="true" sortable="true"
                                                                            align="center"
-                                                                           headerText="Trainer Percquisites ID" id="c13"
+                                                                           headerText="Trainer Perquisites ID" id="c13"
                                                                            width="80">
                                                                     <af:inputText value="#{row.bindings.TrainerPercId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.label}"
@@ -536,7 +536,7 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.PercName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Percquisites" id="c15"
+                                                                           headerText="Perquisites" id="c15"
                                                                            width="150">
                                                                     <af:inputText value="#{row.bindings.PercName.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.PercName.label}"
