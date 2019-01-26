@@ -218,7 +218,7 @@
             <value n="custom" v="false"/>
             <value n="name" v="Default"/>
             <value n="runActiveFile" v="false"/>
-            <url n="targetURL" path="public_html/mainPage.jsf"/>
+            <url n="targetURL" path="public_html/login.jsf"/>
          </hash>
       </hash>
    </hash>

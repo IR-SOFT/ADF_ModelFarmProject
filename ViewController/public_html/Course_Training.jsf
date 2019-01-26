@@ -14,7 +14,8 @@
                         <af:gridRow marginTop="5px" height="auto" id="gr1">
                             <af:gridCell marginStart="5px" width="16%" id="gc1">
                             <af:panelAccordion discloseMany="false" id="pa2"
-                                                   inlineStyle="width:195px; height:519px;">
+                                                   inlineStyle="width:195px; height:519px;"
+                                                   rendered="#{backingBeanScope.backing_login.get_user_role_master_name() != null}">
                                     <af:showDetailItem id="sdi1" text="Training/Course">
                                         <af:spacer width="190" height="10" id="s1"/>
                                         <af:button text="Training Setup" id="b1" inlineStyle="width:190px;"

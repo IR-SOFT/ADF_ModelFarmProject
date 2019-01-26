@@ -634,17 +634,21 @@ public class Login {
 
     //logging out and clearing all variables data
     public String logout_action() {
-        // Add event code here...
-        role_master_id = "";
-        role_detail_pages_id = "";
-        role_master_name = "";
-        pages_id = "";
-        view_rights = "";
-        add_rights = "";
-        edit_rights = "";
-        delete_rights = "";
-        save_rights = "";
-        page_name = "";
+        // Clearing all variable data here...
+        role_master_id = null;
+        role_detail_pages_id = null;
+        role_detail_modules_id = null;
+        role_master_name = null;
+        pages_id = null;
+        module_menu_id = null;
+        module_name = null;
+        view_rights = null;
+        module_view_rights = null;
+        add_rights = null;
+        edit_rights = null;
+        delete_rights = null;
+        save_rights = null;
+        page_name = null;
         
         System.out.println("You are logged out successfully");
         return "logged out";
