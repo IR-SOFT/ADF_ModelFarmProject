@@ -615,8 +615,9 @@ public class Login {
                 //Redirecting to home page after successfull authentication
                 //System.out.println("....... here we go /// you are redirecting now to DASHBOARD ......");
                 //                return "good";
-                //return "/faces/mainPage.jsf?faces-redirect=true";
-                return role_master_id;
+                
+                conn.close();
+                return "/faces/mainPage.jsf?faces-redirect=true";
             } else {
                 System.out.println("........wrong login credentials........");
 
@@ -662,7 +663,7 @@ public class Login {
         page_name = null;
         
         System.out.println("You are logged out successfully");
-        return "logged out";
+        return "/faces/login.jsf?faces-redirect=true";
     }
    
 
