@@ -76,4 +76,13 @@
   <ViewUsage
     Name="Role_Master_Name_LOV1"
     ViewObjectName="model.lov.Role_Master_Name_LOV"/>
+  <ViewUsage
+    Name="Pages_Name_LOV1"
+    ViewObjectName="model.lov.Pages_Name_LOV"/>
+  <ViewUsage
+    Name="Modules_Names_LOV1"
+    ViewObjectName="model.lov.Modules_Names_LOV"/>
+  <ViewUsage
+    Name="Reports_Names_LOV1"
+    ViewObjectName="model.lov.Reports_Names_LOV"/>
 </AppModule>
