@@ -54,7 +54,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == 'Y'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Team Setup">
                                         <af:panelGridLayout id="pgl2">
@@ -160,26 +160,26 @@
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
-                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
                                                                    id="b12"/>
                                                         <af:spacer width="5" height="10" id="s11"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                    text="Edit"
-                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:edit.png']}"
                                                                    disabled="#{!bindings.Execute.enabled}" id="b7"/>
                                                         <af:spacer width="5" height="10" id="s10"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
-                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}"
                                                                    id="b8"/>
                                                         <af:spacer width="5" height="10" id="s9"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                         icon="#{resource['images:save.png']}"
-                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
                                                                    id="b9"/>
                                                     </h:panelGroup>

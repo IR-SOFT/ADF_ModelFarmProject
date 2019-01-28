@@ -33,7 +33,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == 'Y'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Monitoring"></af:showDetailItem>
                                 </af:panelAccordion>

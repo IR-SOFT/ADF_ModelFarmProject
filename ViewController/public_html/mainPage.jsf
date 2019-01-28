@@ -11,7 +11,7 @@
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>
             <af:panelAccordion discloseMany="false" id="pa1"
-                               rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                               rendered="#{backingBeanScope.backing_login.get_page_view_rights() == 'Y'}"
                                inlineStyle="height:100.0%; width:100.0%;" styleClass="AFStretchWidth">
                 <af:showDetailItem id="pane1" text="Dashboard" flex="0" inflexibleHeight="100">
                     <dvt:map id="map" startingX="0.0" mapServerConfigId="mapConfig3" baseMapName="ELOCATION.WORLD_MAP"

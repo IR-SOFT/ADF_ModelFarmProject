@@ -39,7 +39,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == 'Y'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Cluster Setup">
                                         <af:panelGridLayout id="pgl2">
@@ -256,27 +256,27 @@
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                    text="Add"
-                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
                                                                    disabled="#{!bindings.CreateInsert1.enabled}" id="b4"
                                                                    icon="#{resource['images:add.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Execute1.execute}"
                                                                    text="Edit" disabled="#{!bindings.Execute1.enabled}"
-                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
                                                                    id="b6" icon="#{resource['images:edit.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s6"/>
                                                         <af:button actionListener="#{bindings.Delete1.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete1.enabled}"
-                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    id="b7" icon="#{resource['images:delete.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s8"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
                                                                    id="b8"
-                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:save.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>

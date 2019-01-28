@@ -35,7 +35,7 @@
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="84%" id="gc3">
                                 <af:panelAccordion discloseMany="false" id="pa3"
-                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == 'Y'}"
                                                    inlineStyle="height:811px; width:1030px;">
                                     <af:showDetailItem id="pane2" text="Output Indicators">
                                         <af:panelGridLayout id="pgl2">
@@ -177,26 +177,26 @@
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
-                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_add_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:add.png']}"
                                                                    disabled="#{!bindings.CreateInsert.enabled}" id="b4"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                    text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_edit_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:edit.png']}" id="b6"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s6"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
-                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_delete_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:delete.png']}" id="b7"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s7"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" icon="#{resource['images:save.png']}"
-                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == '1'}"
+                                                                   rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    disabled="#{!bindings.Commit.enabled}" id="b8"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
