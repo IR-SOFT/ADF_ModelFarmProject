@@ -19,6 +19,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Modules_Names_LOV1_1"
+    ViewObjectName="model.lov.Modules_Menu_Names_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Modules_Names_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_RView"
     ListVOName="AppModule_Active_Status1_1"
@@ -33,6 +39,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ModuleMenuId"
+    ListVOName="AppModule_Modules_Names_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ModuleMenuId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ModuleMenuId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ModuleMenuName"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -59,7 +82,15 @@
     PrecisionRule="true"
     EntityAttrName="ModuleMenuId"
     EntityUsage="TblRoleDetailModules"
-    AliasName="MODULE_MENU_ID"/>
+    AliasName="MODULE_MENU_ID"
+    LOVName="LOV_ModuleMenuId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RView"
     IsNotNull="true"

@@ -32,7 +32,7 @@
           </af:gridRow>
           <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr4">
             <af:gridCell marginStart="5px" width="18%" id="pt_gc5"/>
-            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc6">
+            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc6" valign="middle" halign="center">
               <h:panelGroup id="pt_pg2">
                 <af:button text="Home" id="pt_b2" destination="mainPage.jsf"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Home')=='Y'}"
@@ -50,9 +50,15 @@
                      inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Setup')=='Y'}"
                      icon="#{resource['images:settings.png']}"/>
-          <af:spacer width="5" height="30" id="pt_s3"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Setup')=='Y'}"/>
-          <af:button text="Cluster/Farmers" id="pt_b3" destination="Clusters.jsf"
+          
+          
+              </h:panelGroup>
+            </af:gridCell>
+          </af:gridRow>
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr5">
+            <af:gridCell marginStart="5px" width="18%" id="pt_gc7"/>
+            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc8" valign="middle" halign="center">
+              <af:button text="Cluster/Farmers" id="pt_b3" destination="Clusters.jsf"
                      inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cluster/Farmers')=='Y'}"
                      icon="#{resource['images:farmers.png']}"/>
@@ -74,12 +80,9 @@
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
                      inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
                      icon="#{resource['images:monitoring.png']}"/>
-              </h:panelGroup>
+                     <af:spacer width="5" height="30" id="pt_s3"
+          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
             </af:gridCell>
-          </af:gridRow>
-          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr5">
-            <af:gridCell marginStart="5px" width="18%" id="pt_gc7"/>
-            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc8"/>
           </af:gridRow>
         </af:panelGridLayout>
       </af:gridCell>

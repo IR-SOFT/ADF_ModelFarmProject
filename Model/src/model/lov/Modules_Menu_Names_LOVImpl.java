@@ -7,11 +7,11 @@ import oracle.jbo.server.ViewObjectImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class Modules_Names_LOVImpl extends ViewObjectImpl {
+public class Modules_Menu_Names_LOVImpl extends ViewObjectImpl {
     /**
      * This is the default constructor (do not remove).
      */
-    public Modules_Names_LOVImpl() {
+    public Modules_Menu_Names_LOVImpl() {
     }
 }
 

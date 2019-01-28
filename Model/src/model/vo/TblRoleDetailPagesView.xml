@@ -19,6 +19,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Pages_Name_LOV1_1"
+    ViewObjectName="model.lov.Pages_Name_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Pages_Name_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_RView"
     ListVOName="AppModule_Active_Status1_1"
@@ -121,6 +127,23 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
+  <ListBinding
+    Name="LOV_PagesId"
+    ListVOName="AppModule_Pages_Name_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="PagesId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="PagesId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="PagesName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
   <EntityUsage
     Name="TblRoleDetailPages"
     Entity="model.eo.TblRoleDetailPages"/>
@@ -144,7 +167,15 @@
     PrecisionRule="true"
     EntityAttrName="PagesId"
     EntityUsage="TblRoleDetailPages"
-    AliasName="PAGES_ID"/>
+    AliasName="PAGES_ID"
+    LOVName="LOV_PagesId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RView"
     PrecisionRule="true"

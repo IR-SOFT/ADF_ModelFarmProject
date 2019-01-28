@@ -81,7 +81,7 @@
     ViewObjectName="model.lov.Pages_Name_LOV"/>
   <ViewUsage
     Name="Modules_Names_LOV1"
-    ViewObjectName="model.lov.Modules_Names_LOV"/>
+    ViewObjectName="model.lov.Modules_Menu_Names_LOV"/>
   <ViewUsage
     Name="Reports_Names_LOV1"
     ViewObjectName="model.lov.Reports_Names_LOV"/>

@@ -7,7 +7,7 @@ import oracle.jbo.server.ViewRowImpl;
 // ---    Custom code may be added to this class.
 // ---    Warning: Do not modify method signatures of generated methods.
 // ---------------------------------------------------------------------
-public class Modules_Names_LOVRowImpl extends ViewRowImpl {
+public class Modules_Menu_Names_LOVRowImpl extends ViewRowImpl {
     /**
      * AttributesEnum: generated enum for identifying attributes and accessors. DO NOT MODIFY.
      */
@@ -18,7 +18,7 @@ public class Modules_Names_LOVRowImpl extends ViewRowImpl {
         private static final int firstIndex = 0;
 
         protected int index() {
-            return AttributesEnum.firstIndex() + ordinal();
+            return Modules_Menu_Names_LOVRowImpl.AttributesEnum.firstIndex() + ordinal();
         }
 
         protected static final int firstIndex() {
@@ -26,12 +26,13 @@ public class Modules_Names_LOVRowImpl extends ViewRowImpl {
         }
 
         protected static int count() {
-            return AttributesEnum.firstIndex() + AttributesEnum.staticValues().length;
+            return Modules_Menu_Names_LOVRowImpl.AttributesEnum.firstIndex() + Modules_Menu_Names_LOVRowImpl.AttributesEnum
+                                                                                                            .staticValues().length;
         }
 
         protected static final AttributesEnum[] staticValues() {
             if (vals == null) {
-                vals = AttributesEnum.values();
+                vals = Modules_Menu_Names_LOVRowImpl.AttributesEnum.values();
             }
             return vals;
         }
@@ -42,7 +43,7 @@ public class Modules_Names_LOVRowImpl extends ViewRowImpl {
     /**
      * This is the default constructor (do not remove).
      */
-    public Modules_Names_LOVRowImpl() {
+    public Modules_Menu_Names_LOVRowImpl() {
     }
 }
 

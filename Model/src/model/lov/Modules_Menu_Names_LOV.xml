@@ -3,13 +3,13 @@
 <!---->
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
-  Name="Modules_Names_LOV"
+  Name="Modules_Menu_Names_LOV"
   Version="12.2.1.9.14"
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
-  RowClass="model.lov.Modules_Names_LOVRowImpl"
-  ComponentClass="model.lov.Modules_Names_LOVImpl"
+  RowClass="model.lov.Modules_Menu_Names_LOVRowImpl"
+  ComponentClass="model.lov.Modules_Menu_Names_LOVImpl"
   PageIterMode="Full">
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Coll"/>
@@ -58,6 +58,6 @@
   </AttrArray>
   <ResourceBundle>
     <PropertiesBundle
-      PropertiesFile="model.lov.common.Modules_Names_LOVMsgBundle"/>
+      PropertiesFile="model.lov.common.Modules_Menu_Names_LOVMsgBundle"/>
   </ResourceBundle>
 </ViewObject>

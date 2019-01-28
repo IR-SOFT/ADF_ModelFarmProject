@@ -19,6 +19,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Reports_Names_LOV1_1"
+    ViewObjectName="model.lov.Reports_Names_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Reports_Names_LOV1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_RView"
     ListVOName="AppModule_Active_Status1_1"
@@ -33,6 +39,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ReportsId"
+    ListVOName="AppModule_Reports_Names_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ReportsId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ReportsId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="ReportsName"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -59,7 +82,15 @@
     PrecisionRule="true"
     EntityAttrName="ReportsId"
     EntityUsage="TblRoleDetailReports"
-    AliasName="REPORTS_ID"/>
+    AliasName="REPORTS_ID"
+    LOVName="LOV_ReportsId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="RView"
     PrecisionRule="true"
