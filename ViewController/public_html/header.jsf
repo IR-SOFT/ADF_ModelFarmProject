@@ -43,7 +43,7 @@
           <af:button text="Admin" id="pt_b7"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Admin')=='1'}"
           inlineStyle="height:40px;width:140px !important; text-align:center; vertical-align: middle;"
-                     icon="#{resource['images:admin.png']}"/>
+                     icon="#{resource['images:admin.png']}" destination="Admin.jsf"/>
           <af:spacer width="5" height="30" id="pt_s8"
           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Admin')=='1'}"/>           
           <af:button text="Setup" id="pt_b8" destination="setup.jsf"
