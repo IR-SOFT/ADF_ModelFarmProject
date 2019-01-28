@@ -50,6 +50,9 @@
                                                                       rows="#{bindings.TblRoleMasterView1.rangeSize}"
                                                                       emptyText="#{bindings.TblRoleMasterView1.viewable ? 'No data to display.' : 'Access Denied.'}"
                                                                       rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblRoleMasterView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblRoleMasterView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
                                                                       fetchSize="#{bindings.TblRoleMasterView1.rangeSize}"
                                                                       filterModel="#{bindings.TblRoleMasterView1Query.queryDescriptor}"
                                                                       filterVisible="true"
@@ -88,15 +91,15 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleMasterView1.hints.Ast.label}"
                                                                            id="c3">
-                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
-                                                                                  label="#{bindings.TblRoleMasterView1.hints.Ast.label}"
-                                                                                  required="#{bindings.TblRoleMasterView1.hints.Ast.mandatory}"
-                                                                                  columns="#{bindings.TblRoleMasterView1.hints.Ast.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleMasterView1.hints.Ast.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleMasterView1.hints.Ast.tooltip}"
-                                                                                  id="it3">
+                                                                    <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
+                                                                                        label="#{row.bindings.Ast.label}"
+                                                                                        required="#{bindings.TblRoleMasterView1.hints.Ast.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleMasterView1.hints.Ast.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.Ast.items}"
+                                                                                       id="si1"/>
                                                                         <f:validator binding="#{row.bindings.Ast.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>
@@ -160,7 +163,7 @@
                                                                                   columns="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.tooltip}"
-                                                                                  id="it4">
+                                                                                  id="it3">
                                                                         <f:validator binding="#{row.bindings.RoleDetailModulesId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -174,7 +177,7 @@
                                                                                   columns="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.tooltip}"
-                                                                                  id="it5">
+                                                                                  id="it4">
                                                                         <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -188,7 +191,7 @@
                                                                                   columns="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.tooltip}"
-                                                                                  id="it6">
+                                                                                  id="it5">
                                                                         <f:validator binding="#{row.bindings.ModuleMenuId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -196,15 +199,15 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailModulesView3.hints.RView.label}"
                                                                            id="c7">
-                                                                    <af:inputText value="#{row.bindings.RView.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailModulesView3.hints.RView.label}"
-                                                                                  required="#{bindings.TblRoleDetailModulesView3.hints.RView.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailModulesView3.hints.RView.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailModulesView3.hints.RView.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RView.tooltip}"
-                                                                                  id="it7">
+                                                                    <af:selectOneChoice value="#{row.bindings.RView.inputValue}"
+                                                                                        label="#{row.bindings.RView.label}"
+                                                                                        required="#{bindings.TblRoleDetailModulesView3.hints.RView.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RView.tooltip}"
+                                                                                        id="soc2">
+                                                                        <f:selectItems value="#{row.bindings.RView.items}"
+                                                                                       id="si2"/>
                                                                         <f:validator binding="#{row.bindings.RView.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:spacer width="200" height="40" id="s8"/>
@@ -260,7 +263,7 @@
                                                                                   columns="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.tooltip}"
-                                                                                  id="it8">
+                                                                                  id="it6">
                                                                         <f:validator binding="#{row.bindings.RoleDetailPagesId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -274,7 +277,7 @@
                                                                                   columns="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.tooltip}"
-                                                                                  id="it9">
+                                                                                  id="it7">
                                                                         <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -288,7 +291,7 @@
                                                                                   columns="#{bindings.TblRoleDetailPagesView3.hints.PagesId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailPagesView3.hints.PagesId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailPagesView3.hints.PagesId.tooltip}"
-                                                                                  id="it10">
+                                                                                  id="it8">
                                                                         <f:validator binding="#{row.bindings.PagesId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -296,85 +299,85 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailPagesView3.hints.RView.label}"
                                                                            id="c11">
-                                                                    <af:inputText value="#{row.bindings.RView.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RView.label}"
-                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RView.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RView.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RView.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RView.tooltip}"
-                                                                                  id="it11">
+                                                                    <af:selectOneChoice value="#{row.bindings.RView.inputValue}"
+                                                                                        label="#{row.bindings.RView.label}"
+                                                                                        required="#{bindings.TblRoleDetailPagesView3.hints.RView.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RView.tooltip}"
+                                                                                        id="soc3">
+                                                                        <f:selectItems value="#{row.bindings.RView.items}"
+                                                                                       id="si3"/>
                                                                         <f:validator binding="#{row.bindings.RView.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RAdd.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailPagesView3.hints.RAdd.label}"
                                                                            id="c12">
-                                                                    <af:inputText value="#{row.bindings.RAdd.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RAdd.label}"
-                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RAdd.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RAdd.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RAdd.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RAdd.tooltip}"
-                                                                                  id="it12">
+                                                                    <af:selectOneChoice value="#{row.bindings.RAdd.inputValue}"
+                                                                                        label="#{row.bindings.RAdd.label}"
+                                                                                        required="#{bindings.TblRoleDetailPagesView3.hints.RAdd.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RAdd.tooltip}"
+                                                                                        id="soc4">
+                                                                        <f:selectItems value="#{row.bindings.RAdd.items}"
+                                                                                       id="si4"/>
                                                                         <f:validator binding="#{row.bindings.RAdd.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.REdit.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailPagesView3.hints.REdit.label}"
                                                                            id="c13">
-                                                                    <af:inputText value="#{row.bindings.REdit.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.REdit.label}"
-                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.REdit.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.REdit.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.REdit.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.REdit.tooltip}"
-                                                                                  id="it13">
+                                                                    <af:selectOneChoice value="#{row.bindings.REdit.inputValue}"
+                                                                                        label="#{row.bindings.REdit.label}"
+                                                                                        required="#{bindings.TblRoleDetailPagesView3.hints.REdit.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailPagesView3.hints.REdit.tooltip}"
+                                                                                        id="soc5">
+                                                                        <f:selectItems value="#{row.bindings.REdit.items}"
+                                                                                       id="si5"/>
                                                                         <f:validator binding="#{row.bindings.REdit.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RDelete.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailPagesView3.hints.RDelete.label}"
                                                                            id="c14">
-                                                                    <af:inputText value="#{row.bindings.RDelete.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RDelete.label}"
-                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RDelete.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RDelete.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RDelete.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RDelete.tooltip}"
-                                                                                  id="it14">
+                                                                    <af:selectOneChoice value="#{row.bindings.RDelete.inputValue}"
+                                                                                        label="#{row.bindings.RDelete.label}"
+                                                                                        required="#{bindings.TblRoleDetailPagesView3.hints.RDelete.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RDelete.tooltip}"
+                                                                                        id="soc6">
+                                                                        <f:selectItems value="#{row.bindings.RDelete.items}"
+                                                                                       id="si6"/>
                                                                         <f:validator binding="#{row.bindings.RDelete.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RPrint.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailPagesView3.hints.RPrint.label}"
                                                                            id="c15">
-                                                                    <af:inputText value="#{row.bindings.RPrint.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RPrint.label}"
-                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RPrint.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RPrint.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RPrint.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RPrint.tooltip}"
-                                                                                  id="it15">
+                                                                    <af:selectOneChoice value="#{row.bindings.RPrint.inputValue}"
+                                                                                        label="#{row.bindings.RPrint.label}"
+                                                                                        required="#{bindings.TblRoleDetailPagesView3.hints.RPrint.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RPrint.tooltip}"
+                                                                                        id="soc7">
+                                                                        <f:selectItems value="#{row.bindings.RPrint.items}"
+                                                                                       id="si7"/>
                                                                         <f:validator binding="#{row.bindings.RPrint.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RPost.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailPagesView3.hints.RPost.label}"
                                                                            id="c16">
-                                                                    <af:inputText value="#{row.bindings.RPost.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RPost.label}"
-                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RPost.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RPost.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RPost.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RPost.tooltip}"
-                                                                                  id="it16">
+                                                                    <af:selectOneChoice value="#{row.bindings.RPost.inputValue}"
+                                                                                        label="#{row.bindings.RPost.label}"
+                                                                                        required="#{bindings.TblRoleDetailPagesView3.hints.RPost.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RPost.tooltip}"
+                                                                                        id="soc8">
+                                                                        <f:selectItems value="#{row.bindings.RPost.items}"
+                                                                                       id="si8"/>
                                                                         <f:validator binding="#{row.bindings.RPost.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:spacer width="40" height="40" id="s14"/>
@@ -430,7 +433,7 @@
                                                                                   columns="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.tooltip}"
-                                                                                  id="it17">
+                                                                                  id="it9">
                                                                         <f:validator binding="#{row.bindings.RoleDetailReportsId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -444,7 +447,7 @@
                                                                                   columns="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.tooltip}"
-                                                                                  id="it18">
+                                                                                  id="it10">
                                                                         <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -458,7 +461,7 @@
                                                                                   columns="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.tooltip}"
-                                                                                  id="it19">
+                                                                                  id="it11">
                                                                         <f:validator binding="#{row.bindings.ReportsId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -466,15 +469,15 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblRoleDetailReportsView3.hints.RView.label}"
                                                                            id="c20">
-                                                                    <af:inputText value="#{row.bindings.RView.inputValue}"
-                                                                                  label="#{bindings.TblRoleDetailReportsView3.hints.RView.label}"
-                                                                                  required="#{bindings.TblRoleDetailReportsView3.hints.RView.mandatory}"
-                                                                                  columns="#{bindings.TblRoleDetailReportsView3.hints.RView.displayWidth}"
-                                                                                  maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RView.precision}"
-                                                                                  shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RView.tooltip}"
-                                                                                  id="it20">
+                                                                    <af:selectOneChoice value="#{row.bindings.RView.inputValue}"
+                                                                                        label="#{row.bindings.RView.label}"
+                                                                                        required="#{bindings.TblRoleDetailReportsView3.hints.RView.mandatory}"
+                                                                                        shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RView.tooltip}"
+                                                                                        id="soc9">
+                                                                        <f:selectItems value="#{row.bindings.RView.items}"
+                                                                                       id="si9"/>
                                                                         <f:validator binding="#{row.bindings.RView.validator}"/>
-                                                                    </af:inputText>
+                                                                    </af:selectOneChoice>
                                                                 </af:column>
                                                             </af:table>
                                                             <af:spacer width="40" height="40" id="s22"/>

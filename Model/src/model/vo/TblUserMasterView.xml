@@ -19,6 +19,12 @@
     AMUsageName="AppModule"
     ViewInstanceName="Role_Master_Name_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Active_Status1_1"
+    ViewObjectName="model.lov.Active_Status"
+    AMUsageName="AppModule"
+    ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_RoleMasterId"
     ListVOName="AppModule_Role_Master_Name_LOV1_1"
@@ -33,6 +39,23 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="RoleMasterName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Ast"
+    ListVOName="AppModule_Active_Status1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Ast"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="astDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="astView"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -83,5 +106,13 @@
     PrecisionRule="true"
     EntityAttrName="Ast"
     EntityUsage="TblUserMaster"
-    AliasName="AST"/>
+    AliasName="AST"
+    LOVName="LOV_Ast">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
 </ViewObject>
