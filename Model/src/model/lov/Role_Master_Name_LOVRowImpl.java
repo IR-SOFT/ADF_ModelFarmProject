@@ -36,6 +36,7 @@ public class Role_Master_Name_LOVRowImpl extends ViewRowImpl {
             return vals;
         }
     }
+
     public static final int ROLEMASTERID = AttributesEnum.RoleMasterId.index();
     public static final int ROLEMASTERNAME = AttributesEnum.RoleMasterName.index();
 

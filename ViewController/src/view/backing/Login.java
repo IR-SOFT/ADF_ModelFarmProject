@@ -1067,21 +1067,21 @@ public class Login {
     //Gettting save button view rights > hard coded if add,edit or delete privilige found
     public String get_save_view_rights() {
  
-        if(add_rights.equals("1")){
-            save_rights = "1";
-            System.out.println("Save right due to add is : 1");
+        if(add_rights.equals("Y")){
+            save_rights = "Y";
+            System.out.println("Save right due to add is : Y");
         }
-        else if(edit_rights.equals("1")){
-            save_rights = "1";
-            System.out.println("Save right due to edit is : 1");
+        else if(edit_rights.equals("Y")){
+            save_rights = "Y";
+            System.out.println("Save right due to edit is : Y");
         }
-        else if(delete_rights.equals("1")){
-            save_rights = "1";
-            System.out.println("Save right due to delete is : 1");
+        else if(delete_rights.equals("Y")){
+            save_rights = "Y";
+            System.out.println("Save right due to delete is : Y");
         }
         else {
-            save_rights = "0";
-            System.out.println("Save right due to nothing is : 0");
+            save_rights = "N";
+            System.out.println("Save right due to nothing is : N");
         }
          
          return save_rights;

@@ -22,7 +22,7 @@
         ResId="Role_Master_Name_LOV_LABEL"/>
     </SchemaBasedProperties>
   </Properties>
-  <SQLQuery><![CDATA[select role_master_id,role_master_name from tbl_role_master where ast='1']]></SQLQuery>
+  <SQLQuery><![CDATA[select role_master_id,role_master_name from tbl_role_master where ast='Y']]></SQLQuery>
   <ViewAttribute
     Name="RoleMasterId"
     IsUpdateable="false"
