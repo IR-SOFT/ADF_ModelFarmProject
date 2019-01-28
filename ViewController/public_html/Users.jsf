@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+   <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Users')}"/>
+    </f:metadata>
+    <af:document title="Users.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <?audit suppress oracle.adf.faces.compreqtextorshortdesc?>
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
+                                <af:panelAccordion discloseMany="false" id="pa4"
+                                                   inlineStyle="width:195px; height:431px;"
+                                                   rendered="#{backingBeanScope.backing_login.get_user_role_master_name() != null}">
+                                    <af:showDetailItem id="sdi1" text="Admin">
+                            
+                                        <af:spacer width="190" height="10" id="s1"/>
+                                        <af:button text="Users" id="b1" inlineStyle="width:190px;"
+                                                   destination="Users.jsf" icon="#{resource['images:users.png']}"/>
+                                        <af:spacer width="190" height="10" id="s3"/>
+                                        <af:button text="Users Role" id="b3" inlineStyle="width:190px;"
+                                                   destination="Users_Role.jsf"
+                                                   icon="#{resource['images:user_roles.png']}"/>
+                                        <af:spacer width="190" height="10" id="s5"/>
+                                        <af:button text="Company Profile" id="b5" inlineStyle="width:190px;"
+                                                   destination="Company_Profile.jsf"
+                                                   icon="#{resource['images:company_profile.png']}"/>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                                                   inlineStyle="height:811px; width:1050px;">
+                                    <af:showDetailItem id="pane2" text="Users">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1033px;">
+                                                        <af:showDetailItem id="tab1" text="Users">
+                                                            <af:table value="#{bindings.TblUserMasterView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblUserMasterView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblUserMasterView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblUserMasterView1.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblUserMasterView1.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblUserMasterView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblUserMasterView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblUserMasterView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                <af:column sortProperty="#{bindings.TblUserMasterView1.hints.UserMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblUserMasterView1.hints.UserMasterId.label}"
+                                                                           id="c1">
+                                                                    <af:inputText value="#{row.bindings.UserMasterId.inputValue}"
+                                                                                  label="#{bindings.TblUserMasterView1.hints.UserMasterId.label}"
+                                                                                  required="#{bindings.TblUserMasterView1.hints.UserMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblUserMasterView1.hints.UserMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblUserMasterView1.hints.UserMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblUserMasterView1.hints.UserMasterId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.UserMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblUserMasterView1.hints.RoleMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblUserMasterView1.hints.RoleMasterId.label}"
+                                                                           id="c2">
+                                                                    <af:selectOneChoice value="#{row.bindings.RoleMasterId.inputValue}"
+                                                                                        label="#{row.bindings.RoleMasterId.label}"
+                                                                                        required="#{bindings.TblUserMasterView1.hints.RoleMasterId.mandatory}"
+                                                                                        shortDesc="#{bindings.TblUserMasterView1.hints.RoleMasterId.tooltip}"
+                                                                                        id="soc1">
+                                                                        <f:selectItems value="#{row.bindings.RoleMasterId.items}"
+                                                                                       id="si1"/>
+                                                                        <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
+                                                                    </af:selectOneChoice>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblUserMasterView1.hints.UserMasterName.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblUserMasterView1.hints.UserMasterName.label}"
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.UserMasterName.inputValue}"
+                                                                                  label="#{bindings.TblUserMasterView1.hints.UserMasterName.label}"
+                                                                                  required="#{bindings.TblUserMasterView1.hints.UserMasterName.mandatory}"
+                                                                                  columns="#{bindings.TblUserMasterView1.hints.UserMasterName.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblUserMasterView1.hints.UserMasterName.precision}"
+                                                                                  shortDesc="#{bindings.TblUserMasterView1.hints.UserMasterName.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.UserMasterName.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblUserMasterView1.hints.UserMasterPwd.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblUserMasterView1.hints.UserMasterPwd.label}"
+                                                                           id="c4">
+                                                                    <af:inputText value="#{row.bindings.UserMasterPwd.inputValue}"
+                                                                                  label="#{bindings.TblUserMasterView1.hints.UserMasterPwd.label}"
+                                                                                  required="#{bindings.TblUserMasterView1.hints.UserMasterPwd.mandatory}"
+                                                                                  columns="#{bindings.TblUserMasterView1.hints.UserMasterPwd.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblUserMasterView1.hints.UserMasterPwd.precision}"
+                                                                                  shortDesc="#{bindings.TblUserMasterView1.hints.UserMasterPwd.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.UserMasterPwd.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblUserMasterView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblUserMasterView1.hints.Ast.label}"
+                                                                           id="c5">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblUserMasterView1.hints.Ast.label}"
+                                                                                  required="#{bindings.TblUserMasterView1.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblUserMasterView1.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblUserMasterView1.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblUserMasterView1.hints.Ast.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                    <af:spacer width="200" height="10" id="s2"/>
+                                                    <h:panelGroup id="pg1">
+                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                               text="Add"
+                                                               disabled="#{!bindings.CreateInsert.enabled}" id="b4"
+                                                                   icon="#{resource['images:add.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
+                                                               text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                               id="b6" icon="#{resource['images:edit.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}" text="Delete"
+                                                               disabled="#{!bindings.Delete.enabled}" id="b7"
+                                                                   icon="#{resource['images:delete.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s7"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                   text="Save"
+                                                               disabled="#{!bindings.Commit.enabled}" id="b8"
+                                                                   icon="#{resource['images:save.png']}"/>
+                                                    </h:panelGroup>
+                                                    
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5"/>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblRoleDetailModules"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_ROLE_DETAIL_MODULES"
+  AliasName="TblRoleDetailModules"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="RoleDetailModulesId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ROLE_DETAIL_MODULES_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ROLE_DETAIL_MODULES"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleMasterId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ROLE_MASTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ROLE_DETAIL_MODULES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModuleMenuId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="MODULE_MENU_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ROLE_DETAIL_MODULES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RView"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="R_VIEW"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_ROLE_DETAIL_MODULES"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblRoleMaster"
+    Association="model.eo.FkTblRoleDetailModulesFkAssoc"
+    AssociationEnd="model.eo.FkTblRoleDetailModulesFkAssoc.TblRoleMaster"
+    AssociationOtherEnd="model.eo.FkTblRoleDetailModulesFkAssoc.TblRoleDetailModules"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblModuleMenu"
+    Association="model.eo.Fk2TblRoleDetailModulesFkAssoc"
+    AssociationEnd="model.eo.Fk2TblRoleDetailModulesFkAssoc.TblModuleMenu"
+    AssociationOtherEnd="model.eo.Fk2TblRoleDetailModulesFkAssoc.TblRoleDetailModules"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblRoleDetailModulesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_ROLE_DETAIL_MODULES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblRoleDetailModules.RoleDetailModulesId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Fk2TblRoleDetailModulesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_MODULE_MENU_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK2_TBL_ROLE_DETAIL_MODULES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblRoleDetailModules.ModuleMenuId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblRoleDetailModulesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_ROLE_MASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_ROLE_DETAIL_MODULES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblRoleDetailModules.RoleMasterId"/>
+    </AttrArray>
+  </Key>
+</Entity>

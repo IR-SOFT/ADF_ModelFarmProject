@@ -73,4 +73,7 @@
   <ViewUsage
     Name="Village_Name_LOV1"
     ViewObjectName="model.lov.Village_Name_LOV"/>
+  <ViewUsage
+    Name="Role_Master_Name_LOV1"
+    ViewObjectName="model.lov.Role_Master_Name_LOV"/>
 </AppModule>

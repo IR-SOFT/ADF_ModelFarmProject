@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Fk2TblRoleDetailModulesFkLink"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  EntityAssociation="model.eo.Fk2TblRoleDetailModulesFkAssoc">
+  <ViewLinkDefEnd
+    Name="TblModuleMenuView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.vo.TblModuleMenuView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="TblModuleMenuView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblModuleMenuView.ModuleMenuId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblRoleDetailModulesView"
+    Cardinality="-1"
+    Owner="model.vo.TblRoleDetailModulesView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblRoleDetailModulesView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.vo.TblRoleDetailModulesView.ModuleMenuId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

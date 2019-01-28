@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="Users_RolePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblRoleMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblRoleMasterView1Iterator"/>
+    <iterator Binds="TblRoleDetailModulesView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblRoleDetailModulesView3Iterator"/>
+    <searchRegion Binds="TblRoleMasterView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblRoleMasterView1Query"/>
+    <searchRegion Binds="TblRoleDetailModulesView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblRoleDetailModulesView3Query"/>
+    <iterator Binds="TblRoleDetailPagesView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblRoleDetailPagesView3Iterator"/>
+    <searchRegion Binds="TblRoleDetailPagesView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblRoleDetailPagesView3Query"/>
+    <iterator Binds="TblRoleDetailReportsView3" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblRoleDetailReportsView3Iterator"/>
+    <searchRegion Binds="TblRoleDetailReportsView3Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblRoleDetailReportsView3Query"/>
+  </executables>
+  <bindings>
+    <action IterBinding="TblRoleMasterView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblRoleMasterView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblRoleMasterView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblRoleDetailModulesView3Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblRoleDetailModulesView3Iterator" id="Execute1" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblRoleDetailModulesView3Iterator" id="Delete1" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <tree IterBinding="TblRoleMasterView1Iterator" id="TblRoleMasterView1">
+      <nodeDefinition DefName="model.vo.TblRoleMasterView" Name="TblRoleMasterView10">
+        <AttrNames>
+          <Item Value="RoleMasterId"/>
+          <Item Value="RoleMasterName"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblRoleDetailModulesView3Iterator" id="TblRoleDetailModulesView3">
+      <nodeDefinition DefName="model.vo.TblRoleDetailModulesView" Name="TblRoleDetailModulesView30">
+        <AttrNames>
+          <Item Value="RoleDetailModulesId"/>
+          <Item Value="RoleMasterId"/>
+          <Item Value="ModuleMenuId"/>
+          <Item Value="RView"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="TblRoleDetailPagesView3Iterator" id="TblRoleDetailPagesView3">
+      <nodeDefinition DefName="model.vo.TblRoleDetailPagesView" Name="TblRoleDetailPagesView30">
+        <AttrNames>
+          <Item Value="RoleDetailPagesId"/>
+          <Item Value="RoleMasterId"/>
+          <Item Value="PagesId"/>
+          <Item Value="RView"/>
+          <Item Value="RAdd"/>
+          <Item Value="REdit"/>
+          <Item Value="RDelete"/>
+          <Item Value="RPrint"/>
+          <Item Value="RPost"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblRoleDetailPagesView3Iterator" id="CreateInsert2" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblRoleDetailPagesView3Iterator" id="Execute2" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblRoleDetailPagesView3Iterator" id="Delete2" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+    <tree IterBinding="TblRoleDetailReportsView3Iterator" id="TblRoleDetailReportsView3">
+      <nodeDefinition DefName="model.vo.TblRoleDetailReportsView" Name="TblRoleDetailReportsView30">
+        <AttrNames>
+          <Item Value="RoleDetailReportsId"/>
+          <Item Value="RoleMasterId"/>
+          <Item Value="ReportsId"/>
+          <Item Value="RView"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="TblRoleDetailReportsView3Iterator" id="CreateInsert3" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblRoleDetailReportsView3Iterator" id="Execute3" RequiresUpdateModel="true"
+            Action="iteratorExecute"/>
+    <action IterBinding="TblRoleDetailReportsView3Iterator" id="Delete3" RequiresUpdateModel="false"
+            Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

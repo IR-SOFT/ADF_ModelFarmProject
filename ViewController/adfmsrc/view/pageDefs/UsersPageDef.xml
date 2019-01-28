@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="UsersPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="TblUserMasterView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="TblUserMasterView1Iterator"/>
+    <searchRegion Binds="TblUserMasterView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="TblUserMasterView1Query"/>
+  </executables>
+  <bindings>
+    <action IterBinding="TblUserMasterView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="TblUserMasterView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action IterBinding="TblUserMasterView1Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="TblUserMasterView1Iterator" id="TblUserMasterView1">
+      <nodeDefinition DefName="model.vo.TblUserMasterView" Name="TblUserMasterView10">
+        <AttrNames>
+          <Item Value="UserMasterId"/>
+          <Item Value="RoleMasterId"/>
+          <Item Value="UserMasterName"/>
+          <Item Value="UserMasterPwd"/>
+          <Item Value="Ast"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

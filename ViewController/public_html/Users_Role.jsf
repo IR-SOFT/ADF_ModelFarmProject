@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+        <f:metadata>
+        <?audit suppress oracle.ide.xml.validation-error?>
+        <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Users_Role')}"/>
+    </f:metadata>
+    <af:document title="Users_Role.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/header.jsf" id="pt1"/>
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1275px; height:878px;">
+                <af:showDetailItem id="pane1">
+                    <?audit suppress oracle.adf.faces.compreqtextorshortdesc?>
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="16%" id="gc1">
+                                <af:panelAccordion discloseMany="false" id="pa4"
+                                                   inlineStyle="width:195px; height:431px;"
+                                                   rendered="#{backingBeanScope.backing_login.get_user_role_master_name() != null}">
+                                    <af:showDetailItem id="sdi1" text="Admin">
+                                        <af:spacer width="190" height="10" id="s1"/>
+                                        <af:button text="Users" id="b1" inlineStyle="width:190px;"
+                                                   destination="Users.jsf" icon="#{resource['images:users.png']}"/>
+                                        <af:spacer width="190" height="10" id="s3"/>
+                                        <af:button text="Users Role" id="b3" inlineStyle="width:190px;"
+                                                   destination="Users_Role.jsf"
+                                                   icon="#{resource['images:user_roles.png']}"/>
+                                        <af:spacer width="190" height="10" id="s5"/>
+                                        <af:button text="Company Profile" id="b5" inlineStyle="width:190px;"
+                                                   destination="Company_Profile.jsf"
+                                                   icon="#{resource['images:company_profile.png']}"/>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="84%" id="gc3">
+                                <af:panelAccordion discloseMany="false" id="pa3"
+                                                   rendered="#{backingBeanScope.backing_login.get_page_view_rights() == '1'}"
+                                                   inlineStyle="height:811px; width:1050px;">
+                                    <af:showDetailItem id="pane2" text="Users Roles">
+                                        <af:panelGridLayout id="pgl2">
+                                            <af:gridRow marginTop="5px" height="auto" id="gr2">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
+                                                    <af:panelTabbed position="above" id="pt2"
+                                                                    inlineStyle="width:1034px;">
+                                                        <af:showDetailItem id="tab1" text="Roles Master">
+                                                            <af:table value="#{bindings.TblRoleMasterView1.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblRoleMasterView1.rangeSize}"
+                                                                      emptyText="#{bindings.TblRoleMasterView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      fetchSize="#{bindings.TblRoleMasterView1.rangeSize}"
+                                                                      filterModel="#{bindings.TblRoleMasterView1Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblRoleMasterView1Query.processQuery}"
+                                                                      varStatus="vs" id="t1"
+                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                <af:column sortProperty="#{bindings.TblRoleMasterView1.hints.RoleMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleMasterView1.hints.RoleMasterId.label}"
+                                                                           id="c1">
+                                                                    <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
+                                                                                  label="#{bindings.TblRoleMasterView1.hints.RoleMasterId.label}"
+                                                                                  required="#{bindings.TblRoleMasterView1.hints.RoleMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleMasterView1.hints.RoleMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleMasterView1.hints.RoleMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleMasterView1.hints.RoleMasterId.tooltip}"
+                                                                                  id="it1">
+                                                                        <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleMasterView1.hints.RoleMasterName.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleMasterView1.hints.RoleMasterName.label}"
+                                                                           id="c2">
+                                                                    <af:inputText value="#{row.bindings.RoleMasterName.inputValue}"
+                                                                                  label="#{bindings.TblRoleMasterView1.hints.RoleMasterName.label}"
+                                                                                  required="#{bindings.TblRoleMasterView1.hints.RoleMasterName.mandatory}"
+                                                                                  columns="#{bindings.TblRoleMasterView1.hints.RoleMasterName.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleMasterView1.hints.RoleMasterName.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleMasterView1.hints.RoleMasterName.tooltip}"
+                                                                                  id="it2">
+                                                                        <f:validator binding="#{row.bindings.RoleMasterName.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleMasterView1.hints.Ast.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleMasterView1.hints.Ast.label}"
+                                                                           id="c3">
+                                                                    <af:inputText value="#{row.bindings.Ast.inputValue}"
+                                                                                  label="#{bindings.TblRoleMasterView1.hints.Ast.label}"
+                                                                                  required="#{bindings.TblRoleMasterView1.hints.Ast.mandatory}"
+                                                                                  columns="#{bindings.TblRoleMasterView1.hints.Ast.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleMasterView1.hints.Ast.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleMasterView1.hints.Ast.tooltip}"
+                                                                                  id="it3">
+                                                                        <f:validator binding="#{row.bindings.Ast.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr3">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
+                                                    <af:spacer width="200" height="10" id="s2"/>
+                                                    <h:panelGroup id="pg1">
+                                                        <af:button actionListener="#{bindings.CreateInsert.execute}"
+                                                                   text="Add"
+                                                                   disabled="#{!bindings.CreateInsert.enabled}"
+                                                                   id="b4" icon="#{resource['images:add.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s4"/>
+                                                        <af:button actionListener="#{bindings.Execute.execute}"
+                                                                   text="Edit" disabled="#{!bindings.Execute.enabled}"
+                                                                   id="b6" icon="#{resource['images:edit.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s6"/>
+                                                        <af:button actionListener="#{bindings.Delete.execute}"
+                                                                   text="Delete" disabled="#{!bindings.Delete.enabled}"
+                                                                   id="b7" icon="#{resource['images:delete.png']}"/>
+                                                        <af:spacer width="5" height="10" id="s7"/>
+                                                        <af:button actionListener="#{bindings.Commit.execute}"
+                                                                   text="Save" disabled="#{!bindings.Commit.enabled}"
+                                                                   id="b8" icon="#{resource['images:save.png']}"/>
+                                                    </h:panelGroup>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr4">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc5">
+                                                    <af:spacer width="100" height="30" id="s23"/>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" id="gr5">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc6">
+                                                    <af:panelTabbed position="above" id="pt3"
+                                                                    inlineStyle="width:1033px;">
+                                                        <af:showDetailItem id="tab2" text="Modules Role">
+                                                            <af:table value="#{bindings.TblRoleDetailModulesView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblRoleDetailModulesView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblRoleDetailModulesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblRoleDetailModulesView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblRoleDetailModulesView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblRoleDetailModulesView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblRoleDetailModulesView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblRoleDetailModulesView3Query.processQuery}"
+                                                                      varStatus="vs" id="t2"
+                                                                      partialTriggers="::b9 ::b10 ::b11">
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.label}"
+                                                                           id="c4">
+                                                                    <af:inputText value="#{row.bindings.RoleDetailModulesId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.label}"
+                                                                                  required="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.tooltip}"
+                                                                                  id="it4">
+                                                                        <f:validator binding="#{row.bindings.RoleDetailModulesId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.label}"
+                                                                           id="c5">
+                                                                    <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.label}"
+                                                                                  required="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.tooltip}"
+                                                                                  id="it5">
+                                                                        <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.label}"
+                                                                           id="c6">
+                                                                    <af:inputText value="#{row.bindings.ModuleMenuId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.label}"
+                                                                                  required="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.tooltip}"
+                                                                                  id="it6">
+                                                                        <f:validator binding="#{row.bindings.ModuleMenuId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.RView.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.RView.label}"
+                                                                           id="c7">
+                                                                    <af:inputText value="#{row.bindings.RView.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailModulesView3.hints.RView.label}"
+                                                                                  required="#{bindings.TblRoleDetailModulesView3.hints.RView.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailModulesView3.hints.RView.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailModulesView3.hints.RView.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RView.tooltip}"
+                                                                                  id="it7">
+                                                                        <f:validator binding="#{row.bindings.RView.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:spacer width="200" height="40" id="s8"/>
+                                                            <h:panelGroup id="pg2">
+                                                                <af:spacer width="200" height="20" id="s12"/>
+                                                                <af:button actionListener="#{bindings.CreateInsert1.execute}"
+                                                                           text="Add"
+                                                                           disabled="#{!bindings.CreateInsert1.enabled}"
+                                                                           id="b9"
+                                                                           icon="#{resource['images:add.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s9"/>
+                                                                <af:button actionListener="#{bindings.Execute1.execute}"
+                                                                           text="Edit"
+                                                                           disabled="#{!bindings.Execute1.enabled}"
+                                                                           id="b10"
+                                                                           icon="#{resource['images:edit.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s10"/>
+                                                                <af:button actionListener="#{bindings.Delete1.execute}"
+                                                                           text="Delete"
+                                                                           disabled="#{!bindings.Delete1.enabled}"
+                                                                           id="b11"
+                                                                           icon="#{resource['images:delete.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s11"/>
+                                                                <af:button actionListener="#{bindings.Commit.execute}"
+                                                                           text="Save"
+                                                                           disabled="#{!bindings.Commit.enabled}"
+                                                                           id="b12"
+                                                                           icon="#{resource['images:save.png']}"/>
+                                                            </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                        <af:showDetailItem text="Pages Role" id="sdi2">
+                                                            <af:table value="#{bindings.TblRoleDetailPagesView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblRoleDetailPagesView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblRoleDetailPagesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblRoleDetailPagesView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblRoleDetailPagesView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblRoleDetailPagesView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblRoleDetailPagesView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblRoleDetailPagesView3Query.processQuery}"
+                                                                      varStatus="vs" id="t3"
+                                                                      partialTriggers="::b13 ::b14 ::b15">
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.label}"
+                                                                           id="c8">
+                                                                    <af:inputText value="#{row.bindings.RoleDetailPagesId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.tooltip}"
+                                                                                  id="it8">
+                                                                        <f:validator binding="#{row.bindings.RoleDetailPagesId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.label}"
+                                                                           id="c9">
+                                                                    <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.tooltip}"
+                                                                                  id="it9">
+                                                                        <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.PagesId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.PagesId.label}"
+                                                                           id="c10">
+                                                                    <af:inputText value="#{row.bindings.PagesId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.PagesId.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.PagesId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.PagesId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.PagesId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.PagesId.tooltip}"
+                                                                                  id="it10">
+                                                                        <f:validator binding="#{row.bindings.PagesId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RView.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RView.label}"
+                                                                           id="c11">
+                                                                    <af:inputText value="#{row.bindings.RView.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RView.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RView.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RView.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RView.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RView.tooltip}"
+                                                                                  id="it11">
+                                                                        <f:validator binding="#{row.bindings.RView.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RAdd.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RAdd.label}"
+                                                                           id="c12">
+                                                                    <af:inputText value="#{row.bindings.RAdd.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RAdd.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RAdd.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RAdd.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RAdd.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RAdd.tooltip}"
+                                                                                  id="it12">
+                                                                        <f:validator binding="#{row.bindings.RAdd.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.REdit.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.REdit.label}"
+                                                                           id="c13">
+                                                                    <af:inputText value="#{row.bindings.REdit.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.REdit.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.REdit.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.REdit.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.REdit.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.REdit.tooltip}"
+                                                                                  id="it13">
+                                                                        <f:validator binding="#{row.bindings.REdit.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RDelete.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RDelete.label}"
+                                                                           id="c14">
+                                                                    <af:inputText value="#{row.bindings.RDelete.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RDelete.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RDelete.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RDelete.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RDelete.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RDelete.tooltip}"
+                                                                                  id="it14">
+                                                                        <f:validator binding="#{row.bindings.RDelete.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RPrint.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RPrint.label}"
+                                                                           id="c15">
+                                                                    <af:inputText value="#{row.bindings.RPrint.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RPrint.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RPrint.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RPrint.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RPrint.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RPrint.tooltip}"
+                                                                                  id="it15">
+                                                                        <f:validator binding="#{row.bindings.RPrint.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RPost.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RPost.label}"
+                                                                           id="c16">
+                                                                    <af:inputText value="#{row.bindings.RPost.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailPagesView3.hints.RPost.label}"
+                                                                                  required="#{bindings.TblRoleDetailPagesView3.hints.RPost.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailPagesView3.hints.RPost.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RPost.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RPost.tooltip}"
+                                                                                  id="it16">
+                                                                        <f:validator binding="#{row.bindings.RPost.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:spacer width="40" height="40" id="s14"/>
+                                                            <h:panelGroup id="pg3">
+                                                                <af:spacer width="200" height="20" id="s13"/>
+                                                                <af:button actionListener="#{bindings.CreateInsert2.execute}"
+                                                                           text="Add"
+                                                                           disabled="#{!bindings.CreateInsert2.enabled}"
+                                                                           id="b13"
+                                                                           icon="#{resource['images:add.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s15"/>
+                                                                <af:button actionListener="#{bindings.Execute2.execute}"
+                                                                           text="Edit"
+                                                                           disabled="#{!bindings.Execute2.enabled}"
+                                                                           id="b14"
+                                                                           icon="#{resource['images:edit.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s16"/>
+                                                                <af:button actionListener="#{bindings.Delete2.execute}"
+                                                                           text="Delete"
+                                                                           disabled="#{!bindings.Delete2.enabled}"
+                                                                           id="b15"
+                                                                           icon="#{resource['images:delete.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s17"/>
+                                                                <af:button actionListener="#{bindings.Commit.execute}"
+                                                                           text="Save"
+                                                                           disabled="#{!bindings.Commit.enabled}"
+                                                                           id="b16"
+                                                                           icon="#{resource['images:save.png']}"/>
+                                                            </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                        <af:showDetailItem text="Reports Role" id="sdi3">
+                                                            <af:table value="#{bindings.TblRoleDetailReportsView3.collectionModel}"
+                                                                      var="row"
+                                                                      rows="#{bindings.TblRoleDetailReportsView3.rangeSize}"
+                                                                      emptyText="#{bindings.TblRoleDetailReportsView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                                                      rowBandingInterval="0"
+                                                                      selectedRowKeys="#{bindings.TblRoleDetailReportsView3.collectionModel.selectedRow}"
+                                                                      selectionListener="#{bindings.TblRoleDetailReportsView3.collectionModel.makeCurrent}"
+                                                                      rowSelection="single"
+                                                                      fetchSize="#{bindings.TblRoleDetailReportsView3.rangeSize}"
+                                                                      filterModel="#{bindings.TblRoleDetailReportsView3Query.queryDescriptor}"
+                                                                      filterVisible="true"
+                                                                      queryListener="#{bindings.TblRoleDetailReportsView3Query.processQuery}"
+                                                                      varStatus="vs" id="t4"
+                                                                      partialTriggers="::b17 ::b18 ::b19">
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.label}"
+                                                                           id="c17">
+                                                                    <af:inputText value="#{row.bindings.RoleDetailReportsId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.label}"
+                                                                                  required="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.tooltip}"
+                                                                                  id="it17">
+                                                                        <f:validator binding="#{row.bindings.RoleDetailReportsId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.label}"
+                                                                           id="c18">
+                                                                    <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.label}"
+                                                                                  required="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.tooltip}"
+                                                                                  id="it18">
+                                                                        <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.label}"
+                                                                           id="c19">
+                                                                    <af:inputText value="#{row.bindings.ReportsId.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.label}"
+                                                                                  required="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.tooltip}"
+                                                                                  id="it19">
+                                                                        <f:validator binding="#{row.bindings.ReportsId.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                                <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.RView.name}"
+                                                                           filterable="true" sortable="true"
+                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.RView.label}"
+                                                                           id="c20">
+                                                                    <af:inputText value="#{row.bindings.RView.inputValue}"
+                                                                                  label="#{bindings.TblRoleDetailReportsView3.hints.RView.label}"
+                                                                                  required="#{bindings.TblRoleDetailReportsView3.hints.RView.mandatory}"
+                                                                                  columns="#{bindings.TblRoleDetailReportsView3.hints.RView.displayWidth}"
+                                                                                  maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RView.precision}"
+                                                                                  shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RView.tooltip}"
+                                                                                  id="it20">
+                                                                        <f:validator binding="#{row.bindings.RView.validator}"/>
+                                                                    </af:inputText>
+                                                                </af:column>
+                                                            </af:table>
+                                                            <af:spacer width="40" height="40" id="s22"/>
+                                                            <h:panelGroup id="pg4">
+                                                                <af:spacer width="200" height="20" id="s18"/>
+                                                                <af:button actionListener="#{bindings.CreateInsert3.execute}"
+                                                                           text="Add"
+                                                                           disabled="#{!bindings.CreateInsert3.enabled}"
+                                                                           id="b17"
+                                                                           icon="#{resource['images:add.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s19"/>
+                                                                <af:button actionListener="#{bindings.Execute3.execute}"
+                                                                           text="Edit"
+                                                                           disabled="#{!bindings.Execute3.enabled}"
+                                                                           id="b18"
+                                                                           icon="#{resource['images:edit.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s20"/>
+                                                                <af:button actionListener="#{bindings.Delete3.execute}"
+                                                                           text="Delete"
+                                                                           disabled="#{!bindings.Delete3.enabled}"
+                                                                           id="b19"
+                                                                           icon="#{resource['images:delete.png']}"/>
+                                                                <af:spacer width="5" height="10" id="s21"/>
+                                                                <af:button actionListener="#{bindings.Commit.execute}"
+                                                                           text="Save"
+                                                                           disabled="#{!bindings.Commit.enabled}"
+                                                                           id="b20"
+                                                                           icon="#{resource['images:save.png']}"/>
+                                                            </h:panelGroup>
+                                                        </af:showDetailItem>
+                                                    </af:panelTabbed>
+                                                </af:gridCell>
+                                            </af:gridRow>
+                                            <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr6">
+                                                <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc7"></af:gridCell>
+                                            </af:gridRow>
+                                        </af:panelGridLayout>
+                                    </af:showDetailItem>
+                                </af:panelAccordion>
+                            </af:gridCell>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </af:showDetailItem>
+            </af:panelAccordion>
+        </af:form>
+    </af:document>
+</f:view>

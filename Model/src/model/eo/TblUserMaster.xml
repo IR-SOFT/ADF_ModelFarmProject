@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblUserMaster"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_USER_MASTER"
+  AliasName="TblUserMaster"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="UserMasterId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="USER_MASTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_USER_MASTER"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleMasterId"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ROLE_MASTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_USER_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserMasterName"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="USER_MASTER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_USER_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserMasterPwd"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="USER_MASTER_PWD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_USER_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_USER_MASTER"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblRoleMaster"
+    Association="model.eo.FkTblUserMasterFkAssoc"
+    AssociationEnd="model.eo.FkTblUserMasterFkAssoc.TblRoleMaster"
+    AssociationOtherEnd="model.eo.FkTblUserMasterFkAssoc.TblUserMaster"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblUserMasterPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_USER_MASTER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblUserMaster.UserMasterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblUserMasterUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_USER_MASTER_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblUserMaster.UserMasterName"/>
+      <Item Value="model.eo.TblUserMaster.RoleMasterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblUserMasterFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_ROLE_MASTER_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_USER_MASTER_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblUserMaster.RoleMasterId"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblPages"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_PAGES"
+  AliasName="TblPages"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="PagesId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="PAGES_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PAGES"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PagesName"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="PAGES_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PAGES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModuleMenuId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="MODULE_MENU_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_PAGES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_PAGES"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblRoleDetailPages"
+    Association="model.eo.Fk2TblRoleDetailFkAssoc"
+    AssociationEnd="model.eo.Fk2TblRoleDetailFkAssoc.TblRoleDetailPages"
+    AssociationOtherEnd="model.eo.Fk2TblRoleDetailFkAssoc.TblPages"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblModuleMenu"
+    Association="model.eo.FkTblPagesFkAssoc"
+    AssociationEnd="model.eo.FkTblPagesFkAssoc.TblModuleMenu"
+    AssociationOtherEnd="model.eo.FkTblPagesFkAssoc.TblPages"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkTblPagesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_PAGES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblPages.PagesId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblPagesUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_PAGES_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblPages.PagesName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FkTblPagesFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_TBL_MODULE_MENU_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_TBL_PAGES_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblPages.ModuleMenuId"/>
+    </AttrArray>
+  </Key>
+</Entity>

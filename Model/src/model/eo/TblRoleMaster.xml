@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblRoleMaster"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_ROLE_MASTER"
+  AliasName="TblRoleMaster"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="RoleMasterId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ROLE_MASTER_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ROLE_MASTER"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RoleMasterName"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="ROLE_MASTER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_ROLE_MASTER">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_ROLE_MASTER"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblRoleDetailPages"
+    Association="model.eo.FkTblRoleDetailFkAssoc"
+    AssociationEnd="model.eo.FkTblRoleDetailFkAssoc.TblRoleDetailPages"
+    AssociationOtherEnd="model.eo.FkTblRoleDetailFkAssoc.TblRoleMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblRoleDetailModules"
+    Association="model.eo.FkTblRoleDetailModulesFkAssoc"
+    AssociationEnd="model.eo.FkTblRoleDetailModulesFkAssoc.TblRoleDetailModules"
+    AssociationOtherEnd="model.eo.FkTblRoleDetailModulesFkAssoc.TblRoleMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblUserMaster"
+    Association="model.eo.FkTblUserMasterFkAssoc"
+    AssociationEnd="model.eo.FkTblUserMasterFkAssoc.TblUserMaster"
+    AssociationOtherEnd="model.eo.FkTblUserMasterFkAssoc.TblRoleMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblRoleDetailReports"
+    Association="model.eo.TblRoleDetailReportsTFk1Assoc"
+    AssociationEnd="model.eo.TblRoleDetailReportsTFk1Assoc.TblRoleDetailReports"
+    AssociationOtherEnd="model.eo.TblRoleDetailReportsTFk1Assoc.TblRoleMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblRoleMasterPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_ROLE_MASTER_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblRoleMaster.RoleMasterId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblRoleMasterUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_ROLE_MASTER_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblRoleMaster.RoleMasterName"/>
+    </AttrArray>
+  </Key>
+</Entity>

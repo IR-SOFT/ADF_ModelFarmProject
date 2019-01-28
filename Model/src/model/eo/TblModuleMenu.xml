@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="TblModuleMenu"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TBL_MODULE_MENU"
+  AliasName="TblModuleMenu"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="ModuleMenuId"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="MODULE_MENU_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MODULE_MENU"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModuleMenuName"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="150"
+    ColumnName="MODULE_MENU_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TBL_MODULE_MENU">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="150"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ast"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="AST"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_MODULE_MENU"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="TblPages"
+    Association="model.eo.FkTblPagesFkAssoc"
+    AssociationEnd="model.eo.FkTblPagesFkAssoc.TblPages"
+    AssociationOtherEnd="model.eo.FkTblPagesFkAssoc.TblModuleMenu"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblRoleDetailModules"
+    Association="model.eo.Fk2TblRoleDetailModulesFkAssoc"
+    AssociationEnd="model.eo.Fk2TblRoleDetailModulesFkAssoc.TblRoleDetailModules"
+    AssociationOtherEnd="model.eo.Fk2TblRoleDetailModulesFkAssoc.TblModuleMenu"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="TblReports"
+    Association="model.eo.FkTblReportsFkAssoc"
+    AssociationEnd="model.eo.FkTblReportsFkAssoc.TblReports"
+    AssociationOtherEnd="model.eo.FkTblReportsFkAssoc.TblModuleMenu"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkTblModuleMenuPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_TBL_MODULE_MENU_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblModuleMenu.ModuleMenuId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="PkTblModuleMenuUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PK_TBL_MODULE_MENU_UK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.eo.TblModuleMenu.ModuleMenuName"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="FkTblRoleDetailFkLink"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <ViewLinkDefEnd
+    Name="TblRoleMasterView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.queryBasedVO.TblRoleMasterView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="TblRoleMasterView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.queryBasedVO.TblRoleMasterView.RoleMasterId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="TblRoleDetailPagesView"
+    Cardinality="-1"
+    Owner="model.queryBasedVO.TblRoleDetailPagesView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="TblRoleDetailPagesView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.queryBasedVO.TblRoleDetailPagesView.RoleMasterId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
