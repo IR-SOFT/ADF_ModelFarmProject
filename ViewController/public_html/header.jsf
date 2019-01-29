@@ -1,102 +1,127 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
                     xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:h="http://java.sun.com/jsf/html">
-  <af:xmlContent>
-    <afc:component>
-      <afc:description/>
-      <afc:display-name>header</afc:display-name>
-      
-      <afc:attribute>
-        <afc:attribute-name>menubarHeader</afc:attribute-name>
-        <afc:attribute-class>java.lang.String</afc:attribute-class>
-      </afc:attribute>
-    </afc:component>
-  </af:xmlContent>
-  <af:panelGridLayout id="pt_pgl1">
-    <!--<af:gridRow height="240px" id="pt_gr1">-->
-    <af:gridRow id="pt_gr1">
-      <af:gridCell width="1275px" halign="stretch" valign="stretch" id="pt_gc1" inlineStyle=" background-color:White; ">
-        <!-- Header -->
-        <af:panelGridLayout id="pt_pgl3" inlineStyle="width:1275px;">
-          <af:gridRow marginTop="5px" height="auto" id="pt_gr3">
-            <af:gridCell marginStart="5px" width="18%" id="pt_gc3">
-              <af:image source="#{resource['images:CABI.png']}" id="pt_i1" inlineStyle="width:226px; height:87px;"/>
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>header</afc:display-name>
+            <afc:attribute>
+                <afc:attribute-name>menubarHeader</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+            </afc:attribute>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelGridLayout id="pt_pgl1">
+        <!--<af:gridRow height="240px" id="pt_gr1">-->
+        <af:gridRow id="pt_gr1">
+            <af:gridCell width="1275px" halign="stretch" valign="stretch" id="pt_gc1"
+                         inlineStyle=" background-color:White; ">
+                <!-- Header -->
+                <af:panelGridLayout id="pt_pgl3" inlineStyle="width:1275px;">
+                    <af:gridRow marginTop="10px" height="90px" id="pt_gr3">
+                        <af:gridCell marginStart="5px" width="15%" id="pt_gc3">
+                            <af:image source="#{resource['images:CABI.png']}" id="pt_i1"
+                                      inlineStyle="width:190px; height:122px;"/>
+                        </af:gridCell>
+                        <af:gridCell marginStart="5px" width="85%" marginEnd="5px" id="pt_gc4" halign="start"
+                                     valign="bottom">
+                            <h:panelGroup id="pt_pg2">
+                                <af:spacer width="30" height="10" id="pt_s6"/>
+                                <af:button text="Home" id="pt_b2" destination="mainPage.jsf"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Home')=='Y'}"
+                                           inlineStyle="height:40px;width:140px !important; text-align:center; vertical-align: middle;"
+                                           icon="#{resource['images:home.png']}"/>
+                                <af:spacer width="5" height="30" id="pt_s2"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Home')=='Y'}"/>
+                                <af:button text="Admin" id="pt_b7"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Admin')=='Y'}"
+                                           inlineStyle="height:40px;width:140px !important; text-align:center; vertical-align: middle;"
+                                           icon="#{resource['images:admin.png']}" destination="Admin.jsf"/>
+                                <af:spacer width="5" height="30" id="pt_s8"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Admin')=='Y'}"/>
+                                <af:button text="Setups" id="pt_b8" destination="setup.jsf"
+                                           inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Setup')=='Y'}"
+                                           icon="#{resource['images:settings.png']}"/>
+                            </h:panelGroup>
+                            <af:spacer width="492" height="10" id="pt_s11"/>
+                            <h:panelGroup id="pt_pg1">
+                                <af:button text="Logout" id="pt_b1"
+                                           action="#{backingBeanScope.backing_login.logout_action}"
+                                           icon="#{resource['images:logout.png']}"/>
+                               
+                            </h:panelGroup>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr4">
+                        <af:gridCell marginStart="5px" width="15%" id="pt_gc5"/>
+                        <af:gridCell marginStart="5px" width="85%" marginEnd="5px" id="pt_gc6" valign="bottom"
+                                     halign="start">
+                            <h:panelGroup id="pt_pg3">
+                                <af:spacer width="30" height="10" id="pt_s9"/>
+                                <af:button text="Cluster/Farmers" id="pt_b3" destination="Clusters.jsf"
+                                           inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cluster/Farmers')=='Y'}"
+                                           icon="#{resource['images:farmers.png']}"/>
+                                <af:spacer width="5" height="30" id="pt_s4"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cluster/Farmers')=='Y'}"/>
+                                <af:button text="Course/Training" id="pt_b4"
+                                           inlineStyle="width:140px; text-align:center; vertical-align: middle;"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Course/Training')=='Y'}"
+                                           destination="Course_Training.jsf"
+                                           icon="#{resource['images:trainning.png']}"/>
+                                <af:spacer width="5" height="30" id="pt_s5"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Course/Training')=='Y'}"/>
+                                
+                                <af:button text="Monitoring" id="pt_b5" destination="Monitoring.jsf"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
+                                           inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
+                                           icon="#{resource['images:monitoring.png']}"/>
+                                <af:spacer width="5" height="30" id="pt_s3"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
+                                <af:button text="Grants" id="pt_b9" destination="Monitoring.jsf"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
+                                           inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
+                                           icon="#{resource['images:grants.png']}"/>
+                                <af:spacer width="5" height="30" id="pt_s12"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
+                                <af:button text="Cert/Expo" id="pt_b6"
+                                           inlineStyle="width:140px; text-align:center; vertical-align: middle;"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cert/Expo')=='Y'}"
+                                           destination="Cert_Expo.jsf" icon="#{resource['images:certification.png']}"/>
+                                <af:spacer width="5" height="30" id="pt_s7"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cert/Expo')=='Y'}"/>
+                                <af:button text="Marketing" id="pt_b10" destination="Monitoring.jsf"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
+                                           inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
+                                           icon="#{resource['images:marketing.png']}"/>
+                                <af:spacer width="5" height="30" id="pt_s10"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
+                                <af:button text="Financial" id="pt_b11" destination="Monitoring.jsf"
+                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
+                                           inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
+                                           icon="#{resource['images:financial.png']}"/>
+                                
+                            </h:panelGroup>
+                        </af:gridCell>
+                    </af:gridRow>
+                    <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr5">
+                        <af:gridCell marginStart="5px" width="15%" id="pt_gc7"/>
+                        <af:gridCell marginStart="5px" width="85%" marginEnd="5px" id="pt_gc8" valign="middle"
+                                     halign="center"></af:gridCell>
+                    </af:gridRow>
+                </af:panelGridLayout>
             </af:gridCell>
-            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc4" halign="end" valign="middle">
-              <h:panelGroup id="pt_pg1">
-                <af:button text="Logout" id="pt_b1" action="#{backingBeanScope.backing_login.logout_action}"
-                           icon="#{resource['images:logout.png']}"/>
-                <af:spacer width="10" height="10" id="pt_s1"/>
-              </h:panelGroup>
+        </af:gridRow>
+        <af:gridRow height="100%" id="pt_gr2">
+            <af:gridCell halign="stretch" valign="stretch" id="pt_gc2">
+                <af:panelGroupLayout layout="scroll" id="pt_pgl2" inlineStyle="background-color:white;">
+                    <!-- Content -->
+                    <af:facetRef facetName="body">
+                        <?audit suppress oracle.adf.faces.pt-facet-references?>
+                    </af:facetRef>
+                </af:panelGroupLayout>
             </af:gridCell>
-          </af:gridRow>
-          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr4">
-            <af:gridCell marginStart="5px" width="18%" id="pt_gc5"/>
-            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc6" valign="middle" halign="center">
-              <h:panelGroup id="pt_pg2">
-                <af:button text="Home" id="pt_b2" destination="mainPage.jsf"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Home')=='Y'}"
-                     inlineStyle="height:40px;width:140px !important; text-align:center; vertical-align: middle;"
-                     icon="#{resource['images:home.png']}"/>
-          <af:spacer width="5" height="30" id="pt_s2"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Home')=='Y'}"/>
-          <af:button text="Admin" id="pt_b7"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Admin')=='Y'}"
-          inlineStyle="height:40px;width:140px !important; text-align:center; vertical-align: middle;"
-                     icon="#{resource['images:admin.png']}" destination="Admin.jsf"/>
-          <af:spacer width="5" height="30" id="pt_s8"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Admin')=='Y'}"/>           
-          <af:button text="Setup" id="pt_b8" destination="setup.jsf"
-                     inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Setup')=='Y'}"
-                     icon="#{resource['images:settings.png']}"/>
-          
-          
-              </h:panelGroup>
-            </af:gridCell>
-          </af:gridRow>
-          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr5">
-            <af:gridCell marginStart="5px" width="18%" id="pt_gc7"/>
-            <af:gridCell marginStart="5px" width="82%" marginEnd="5px" id="pt_gc8" valign="middle" halign="center">
-              <af:button text="Cluster/Farmers" id="pt_b3" destination="Clusters.jsf"
-                     inlineStyle="width:140px !important; text-align:center; vertical-align: middle;"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cluster/Farmers')=='Y'}"
-                     icon="#{resource['images:farmers.png']}"/>
-          <af:spacer width="5" height="30" id="pt_s4"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cluster/Farmers')=='Y'}"/>
-          <af:button text="Course/Training" id="pt_b4"
-                     inlineStyle="width:140px; text-align:center; vertical-align: middle;"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Course/Training')=='Y'}"
-                     destination="Course_Training.jsf" icon="#{resource['images:trainning.png']}"/>
-          <af:spacer width="5" height="30" id="pt_s5"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Course/Training')=='Y'}"/>
-          <af:button text="Cert/Expo" id="pt_b6"
-                     inlineStyle="width:140px; text-align:center; vertical-align: middle;"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cert/Expo')=='Y'}"
-                     destination="Cert_Expo.jsf" icon="#{resource['images:certification.png']}"/>
-          <af:spacer width="5" height="30" id="pt_s7"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cert/Expo')=='Y'}"/>
-          <af:button text="Monitoring" id="pt_b5" destination="Monitoring.jsf"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
-                     inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
-                     icon="#{resource['images:monitoring.png']}"/>
-                     <af:spacer width="5" height="30" id="pt_s3"
-          rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
-            </af:gridCell>
-          </af:gridRow>
-        </af:panelGridLayout>
-      </af:gridCell>
-    </af:gridRow>
-    <af:gridRow height="100%" id="pt_gr2">
-      <af:gridCell halign="stretch" valign="stretch" id="pt_gc2" >
-        <af:panelGroupLayout layout="scroll" id="pt_pgl2" inlineStyle="background-color:white;">
-          <!-- Content -->
-          <af:facetRef facetName="body">
-            <?audit suppress oracle.adf.faces.pt-facet-references?>
-          </af:facetRef>
-        </af:panelGroupLayout>
-      </af:gridCell>
-    </af:gridRow>
-    
-  </af:panelGridLayout>
+        </af:gridRow>
+    </af:panelGridLayout>
 </af:pageTemplateDef>
