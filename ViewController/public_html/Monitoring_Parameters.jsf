@@ -119,7 +119,7 @@
                                                                                   columns="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.precision}"
                                                                                   shortDesc="#{bindings.TblMonitoringMonParamView3.hints.OutputIndId.tooltip}"
-                                                                                  id="it2" readOnly="true">
+                                                                                  id="it2" >
                                                                         <f:validator binding="#{row.bindings.OutputIndId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

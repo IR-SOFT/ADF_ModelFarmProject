@@ -170,7 +170,7 @@
                                                                                   columns="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.precision}"
                                                                                   shortDesc="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.tooltip}"
-                                                                                  id="it2" readOnly="true">
+                                                                                  id="it2" >
                                                                         <f:validator binding="#{row.bindings.ProjOffId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

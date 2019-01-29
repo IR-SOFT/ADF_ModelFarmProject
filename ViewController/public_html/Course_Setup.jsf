@@ -138,7 +138,7 @@
                                                                                   columns="#{bindings.TblCourseView3.hints.ProjCompInputId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblCourseView3.hints.ProjCompInputId.precision}"
                                                                                   shortDesc="#{bindings.TblCourseView3.hints.ProjCompInputId.tooltip}"
-                                                                                  id="it6" readOnly="true"
+                                                                                  id="it6" 
                                                                                        inlineStyle="text-align:center; vertical-align: middle;"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.ProjCompInputId.validator}"/>

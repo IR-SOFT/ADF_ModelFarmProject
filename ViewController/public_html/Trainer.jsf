@@ -350,7 +350,7 @@
                                                                                   columns="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.tooltip}"
-                                                                                  id="it17" readOnly="true">
+                                                                                  id="it17">
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -515,7 +515,7 @@
                                                                                   columns="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.displayWidth}"
                                                                                   maximumLength="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.precision}"
                                                                                   shortDesc="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.tooltip}"
-                                                                                  id="it25" readOnly="true">
+                                                                                  id="it25" >
                                                                         <f:validator binding="#{row.bindings.TrainerId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

@@ -175,7 +175,7 @@
                                                                                   columns="#{bindings.TblItemL1View1.hints.ItemL1Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL1View1.hints.ItemL1Id.precision}"
                                                                                   shortDesc="#{bindings.TblItemL1View1.hints.ItemL1Id.tooltip}"
-                                                                                  id="it16">
+                                                                                  id="it16" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.ItemL1Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -290,7 +290,7 @@
                                                                                   columns="#{bindings.TblItemL2View3.hints.ItemL2Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL2View3.hints.ItemL2Id.precision}"
                                                                                   shortDesc="#{bindings.TblItemL2View3.hints.ItemL2Id.tooltip}"
-                                                                                  id="it12">
+                                                                                  id="it12" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.ItemL2Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -432,7 +432,7 @@
                                                                                   columns="#{bindings.TblItemL3View3.hints.ItemL3Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.ItemL3Id.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.ItemL3Id.tooltip}"
-                                                                                  id="it7">
+                                                                                  id="it7" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.ItemL3Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -601,7 +601,7 @@
                                                                                   columns="#{bindings.TblItemL4View41.hints.ItemL4Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL4View41.hints.ItemL4Id.precision}"
                                                                                   shortDesc="#{bindings.TblItemL4View41.hints.ItemL4Id.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.ItemL4Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

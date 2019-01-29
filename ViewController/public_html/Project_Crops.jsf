@@ -84,7 +84,7 @@
                                                                                   columns="#{bindings.TblCropView1.hints.CropId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblCropView1.hints.CropId.precision}"
                                                                                   shortDesc="#{bindings.TblCropView1.hints.CropId.tooltip}"
-                                                                                  id="it1"
+                                                                                  id="it1" readOnly="true"
                                                                                   contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.CropId.validator}"/>
                                                                     </af:inputText>

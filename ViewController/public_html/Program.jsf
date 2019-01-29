@@ -208,7 +208,7 @@
                                                                                   columns="#{bindings.TblProgOffView3.hints.ProgOffId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProgOffView3.hints.ProgOffId.precision}"
                                                                                   shortDesc="#{bindings.TblProgOffView3.hints.ProgOffId.tooltip}"
-                                                                                  id="it4"
+                                                                                  id="it4" readOnly="true"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.ProgOffId.validator}"/>
                                                                     </af:inputText>

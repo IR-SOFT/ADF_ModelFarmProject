@@ -136,7 +136,7 @@
                                                                                   columns="#{bindings.TblModuleView3.hints.CourseId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblModuleView3.hints.CourseId.precision}"
                                                                                   shortDesc="#{bindings.TblModuleView3.hints.CourseId.tooltip}"
-                                                                                  id="it2" readOnly="true"
+                                                                                  id="it2"
                                                                                   inlineStyle="text-align:center; vertical-align: middle;"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.CourseId.validator}"/>

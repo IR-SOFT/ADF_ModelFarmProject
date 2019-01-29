@@ -100,7 +100,7 @@
                                                                                   columns="#{bindings.TblProjView1.hints.ProjId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjView1.hints.ProjId.precision}"
                                                                                   shortDesc="#{bindings.TblProjView1.hints.ProjId.tooltip}"
-                                                                                  id="it1"
+                                                                                  id="it1" readOnly="true"
                                                                                   contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProjId.validator}"/>
                                                                     </af:inputText>
@@ -216,7 +216,7 @@
                                                                                   columns="#{bindings.TblProjOffView3.hints.ProjOffId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjOffView3.hints.ProjOffId.precision}"
                                                                                   shortDesc="#{bindings.TblProjOffView3.hints.ProjOffId.tooltip}"
-                                                                                  id="it5"
+                                                                                  id="it5" readOnly="true"
                                                                                   contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProjOffId.validator}"/>
                                                                     </af:inputText>

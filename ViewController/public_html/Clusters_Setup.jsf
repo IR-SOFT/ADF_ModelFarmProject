@@ -121,7 +121,7 @@
                                                                                   columns="#{bindings.TblClusterView2.hints.ProjCompInputId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblClusterView2.hints.ProjCompInputId.precision}"
                                                                                   shortDesc="#{bindings.TblClusterView2.hints.ProjCompInputId.tooltip}"
-                                                                                  id="it2" readOnly="true"
+                                                                                  id="it2"
                                                                                   contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProjCompInputId.validator}"/>
                                                                     </af:inputText>

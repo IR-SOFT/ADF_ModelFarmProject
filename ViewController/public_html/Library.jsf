@@ -82,7 +82,7 @@
                                                                                   columns="#{bindings.TblLibrMasterView1.hints.LibrMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblLibrMasterView1.hints.LibrMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblLibrMasterView1.hints.LibrMasterId.tooltip}"
-                                                                                  id="it1"
+                                                                                  id="it1" readOnly="true"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.LibrMasterId.validator}"/>
                                                                     </af:inputText>
@@ -185,7 +185,7 @@
                                                                                   columns="#{bindings.TblLibrDetailView3.hints.LibrDetailId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblLibrDetailView3.hints.LibrDetailId.precision}"
                                                                                   shortDesc="#{bindings.TblLibrDetailView3.hints.LibrDetailId.tooltip}"
-                                                                                  id="it3"
+                                                                                  id="it3" readOnly="true"
                                                                                   contentStyle="text-align:center">
                                                                         <f:validator binding="#{row.bindings.LibrDetailId.validator}"/>
                                                                     </af:inputText>

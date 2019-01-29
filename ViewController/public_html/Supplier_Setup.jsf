@@ -82,7 +82,7 @@
                                                                                   columns="#{bindings.TblSupplierView1.hints.SupplierId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblSupplierView1.hints.SupplierId.precision}"
                                                                                   shortDesc="#{bindings.TblSupplierView1.hints.SupplierId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.SupplierId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

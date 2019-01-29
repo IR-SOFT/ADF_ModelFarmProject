@@ -96,7 +96,7 @@
                                                                                   columns="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblSupplierRateMasterView1.hints.SupplierRateMasterId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.SupplierRateMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -215,7 +215,7 @@
                                                                                   columns="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.precision}"
                                                                                   shortDesc="#{bindings.TblSupplierRateDetailView4.hints.SupplierRateDetailId.tooltip}"
-                                                                                  id="it5">
+                                                                                  id="it5" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.SupplierRateDetailId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
