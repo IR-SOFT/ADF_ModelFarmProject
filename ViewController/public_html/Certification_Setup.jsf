@@ -71,7 +71,14 @@
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Certification" id="c2"
-                                                                           width="197">
+                                                                           width="197" >
+                                                                           
+                                                                    <f:facet name="filter">
+                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      shortDesc="Search By Name....." id="id4" placeholder="Search Here......">
+                                                                        </af:inputText>
+                                                                    </f:facet>
+                                                                    
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblCertificationView1.hints.Name.label}"
                                                                                   required="#{bindings.TblCertificationView1.hints.Name.mandatory}"
