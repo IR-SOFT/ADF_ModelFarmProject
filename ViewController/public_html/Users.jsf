@@ -64,6 +64,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="User Master ID"
                                                                            id="c1" width="80">
+                                                                          
+                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.UserMasterId}"
+                                                                                     shortDesc="Search By ID" id="id3" placeholder="ID...">
+                                                                       </af:inputText>
+                                                                 </f:facet>
+                                                                    
                                                                     <af:inputText value="#{row.bindings.UserMasterId.inputValue}"
                                                                                   label="#{bindings.TblUserMasterView1.hints.UserMasterId.label}"
                                                                                   required="#{bindings.TblUserMasterView1.hints.UserMasterId.mandatory}"
@@ -78,6 +85,12 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Role Master"
                                                                            id="c2" width="120">
+                                                                      <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.RoleMasterId}"
+                                                                                     shortDesc="Search By Role" id="it4" placeholder="Role...">
+                                                                       </af:inputText>
+                                                                 </f:facet>      
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.RoleMasterId.inputValue}"
                                                                                         label="#{row.bindings.RoleMasterId.label}"
                                                                                         required="#{bindings.TblUserMasterView1.hints.RoleMasterId.mandatory}"
@@ -92,6 +105,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="User Master"
                                                                            id="c3" width="200">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.UserMasterName}"
+                                                                                     shortDesc="Search By User" id="it5" placeholder="User...">
+                                                                       </af:inputText>
+                                                                 </f:facet>
                                                                     <af:inputText value="#{row.bindings.UserMasterName.inputValue}"
                                                                                   label="#{bindings.TblUserMasterView1.hints.UserMasterName.label}"
                                                                                   required="#{bindings.TblUserMasterView1.hints.UserMasterName.mandatory}"
@@ -106,6 +124,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="User Master Password"
                                                                            id="c4" width="200">
+                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.UserMasterPwd}"
+                                                                                     shortDesc="Search By Password"
+                                                                                     id="it6" placeholder="Password...">
+                                                                       </af:inputText>
+                                                                 </f:facet>
                                                                     <af:inputText value="#{row.bindings.UserMasterPwd.inputValue}"
                                                                                   label="#{bindings.TblUserMasterView1.hints.UserMasterPwd.label}"
                                                                                   required="#{bindings.TblUserMasterView1.hints.UserMasterPwd.mandatory}"
@@ -120,6 +144,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
                                                                            id="c5" width="90">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     shortDesc="Search By Status"
+                                                                                     id="it7" placeholder="Status...">
+                                                                       </af:inputText>
+                                                                 </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblUserMasterView1.hints.Ast.mandatory}"
