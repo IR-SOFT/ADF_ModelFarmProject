@@ -75,7 +75,7 @@
                                                                            
                                                                     <f:facet name="filter">
                                                                         <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                      shortDesc="Search By Name....." id="id4" placeholder="Search Here......">
+                                                                                      shortDesc="Search By Certification" id="id4" placeholder="Certification">
                                                                         </af:inputText>
                                                                     </f:facet>
                                                                     
