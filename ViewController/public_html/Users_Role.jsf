@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-        <!--<f:metadata>
+        <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Users_Role')}"/>
-    </f:metadata>-->
+    </f:metadata>
     <af:document title="Users_Role.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -43,7 +43,7 @@
                                             <af:gridRow marginTop="5px" height="auto" id="gr2">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc2">
                                                     <af:panelTabbed position="above" id="pt2"
-                                                                    inlineStyle="width:1034px;">
+                                                                    inlineStyle="width:357px;">
                                                         <af:showDetailItem id="tab1" text="Roles Master">
                                                             <af:table value="#{bindings.TblRoleMasterView1.collectionModel}"
                                                                       var="row"
@@ -58,25 +58,25 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblRoleMasterView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                      partialTriggers="::b4 ::b6 ::b7" width="343">
                                                                 <af:column sortProperty="#{bindings.TblRoleMasterView1.hints.RoleMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleMasterView1.hints.RoleMasterId.label}"
-                                                                           id="c1">
+                                                                           headerText="Role Master ID " align="center"
+                                                                           id="c1" width="80">
                                                                     <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
                                                                                   label="#{bindings.TblRoleMasterView1.hints.RoleMasterId.label}"
                                                                                   required="#{bindings.TblRoleMasterView1.hints.RoleMasterId.mandatory}"
                                                                                   columns="#{bindings.TblRoleMasterView1.hints.RoleMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleMasterView1.hints.RoleMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleMasterView1.hints.RoleMasterId.tooltip}"
-                                                                                  id="it1">
+                                                                                  id="it1"  contentStyle='text-align:center' >
                                                                         <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleMasterView1.hints.RoleMasterName.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleMasterView1.hints.RoleMasterName.label}"
-                                                                           id="c2">
+                                                                           headerText="Role Master"
+                                                                           id="c2" width="165">
                                                                     <af:inputText value="#{row.bindings.RoleMasterName.inputValue}"
                                                                                   label="#{bindings.TblRoleMasterView1.hints.RoleMasterName.label}"
                                                                                   required="#{bindings.TblRoleMasterView1.hints.RoleMasterName.mandatory}"
@@ -89,8 +89,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleMasterView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleMasterView1.hints.Ast.label}"
-                                                                           id="c3">
+                                                                           headerText="Active"
+                                                                           id="c3" width="60">
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblRoleMasterView1.hints.Ast.mandatory}"
@@ -108,24 +108,28 @@
                                             </af:gridRow>
                                             <af:gridRow marginTop="5px" height="auto" id="gr3">
                                                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px" id="gc4">
-                                                    <af:spacer width="200" height="10" id="s2"/>
+                                                    <af:spacer width="25" height="10" id="s2"/>
                                                     <h:panelGroup id="pg1">
                                                         <af:button actionListener="#{bindings.CreateInsert.execute}"
                                                                    text="Add"
                                                                    disabled="#{!bindings.CreateInsert.enabled}"
-                                                                   id="b4" icon="#{resource['images:add.png']}"/>
+                                                                   id="b4" icon="#{resource['images:add.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s4"/>
                                                         <af:button actionListener="#{bindings.Execute.execute}"
                                                                    text="Edit" disabled="#{!bindings.Execute.enabled}"
-                                                                   id="b6" icon="#{resource['images:edit.png']}"/>
+                                                                   id="b6" icon="#{resource['images:edit.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s6"/>
                                                         <af:button actionListener="#{bindings.Delete.execute}"
                                                                    text="Delete" disabled="#{!bindings.Delete.enabled}"
-                                                                   id="b7" icon="#{resource['images:delete.png']}"/>
+                                                                   id="b7" icon="#{resource['images:delete.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                         <af:spacer width="5" height="10" id="s7"/>
                                                         <af:button actionListener="#{bindings.Commit.execute}"
                                                                    text="Save" disabled="#{!bindings.Commit.enabled}"
-                                                                   id="b8" icon="#{resource['images:save.png']}"/>
+                                                                   id="b8" icon="#{resource['images:save.png']}"
+                                                                   inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                     </h:panelGroup>
                                                 </af:gridCell>
                                             </af:gridRow>
@@ -152,11 +156,11 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblRoleDetailModulesView3Query.processQuery}"
                                                                       varStatus="vs" id="t2"
-                                                                      partialTriggers="::b9 ::b10 ::b11">
+                                                                      partialTriggers="::b9 ::b10 ::b11" width="408">
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.label}"
-                                                                           id="c4">
+                                                                           headerText="Role Detail Module ID" align="center"
+                                                                           id="c4" width="80">
                                                                     <af:inputText value="#{row.bindings.RoleDetailModulesId.inputValue}"
                                                                                   label="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.label}"
                                                                                   required="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.mandatory}"
@@ -169,8 +173,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.label}"
-                                                                           id="c5">
+                                                                           headerText="Role Master ID" align="center"
+                                                                           id="c5" width="80">
                                                                     <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
                                                                                   label="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.label}"
                                                                                   required="#{bindings.TblRoleDetailModulesView3.hints.RoleMasterId.mandatory}"
@@ -183,8 +187,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.label}"
-                                                                           id="c6">
+                                                                           headerText="Module Menu"
+                                                                           id="c6" width="117">
                                                                     <af:selectOneChoice value="#{row.bindings.ModuleMenuId.inputValue}"
                                                                                         label="#{row.bindings.ModuleMenuId.label}"
                                                                                         required="#{bindings.TblRoleDetailModulesView3.hints.ModuleMenuId.mandatory}"
@@ -197,8 +201,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailModulesView3.hints.RView.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailModulesView3.hints.RView.label}"
-                                                                           id="c7">
+                                                                           headerText="Module View"
+                                                                           id="c7" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.RView.inputValue}"
                                                                                         label="#{row.bindings.RView.label}"
                                                                                         required="#{bindings.TblRoleDetailModulesView3.hints.RView.mandatory}"
@@ -212,30 +216,34 @@
                                                             </af:table>
                                                             <af:spacer width="200" height="40" id="s8"/>
                                                             <h:panelGroup id="pg2">
-                                                                <af:spacer width="200" height="20" id="s12"/>
+                                                                <af:spacer width="56" height="20" id="s12"/>
                                                                 <af:button actionListener="#{bindings.CreateInsert1.execute}"
                                                                            text="Add"
                                                                            disabled="#{!bindings.CreateInsert1.enabled}"
                                                                            id="b9"
-                                                                           icon="#{resource['images:add.png']}"/>
+                                                                           icon="#{resource['images:add.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s9"/>
                                                                 <af:button actionListener="#{bindings.Execute1.execute}"
                                                                            text="Edit"
                                                                            disabled="#{!bindings.Execute1.enabled}"
                                                                            id="b10"
-                                                                           icon="#{resource['images:edit.png']}"/>
+                                                                           icon="#{resource['images:edit.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s10"/>
                                                                 <af:button actionListener="#{bindings.Delete1.execute}"
                                                                            text="Delete"
                                                                            disabled="#{!bindings.Delete1.enabled}"
                                                                            id="b11"
-                                                                           icon="#{resource['images:delete.png']}"/>
+                                                                           icon="#{resource['images:delete.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s11"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                            text="Save"
                                                                            disabled="#{!bindings.Commit.enabled}"
                                                                            id="b12"
-                                                                           icon="#{resource['images:save.png']}"/>
+                                                                           icon="#{resource['images:save.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                             </h:panelGroup>
                                                         </af:showDetailItem>
                                                         <af:showDetailItem text="Pages Role" id="sdi2">
@@ -252,39 +260,39 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblRoleDetailPagesView3Query.processQuery}"
                                                                       varStatus="vs" id="t3"
-                                                                      partialTriggers="::b13 ::b14 ::b15">
+                                                                      partialTriggers="::b13 ::b14 ::b15" width="1016">
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.label}"
-                                                                           id="c8">
+                                                                           headerText="Role Detail Pege ID" align="center"
+                                                                           id="c8" width="80">
                                                                     <af:inputText value="#{row.bindings.RoleDetailPagesId.inputValue}"
                                                                                   label="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.label}"
                                                                                   required="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.mandatory}"
                                                                                   columns="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.tooltip}"
-                                                                                  id="it5">
+                                                                                  id="it5" contentStyle='text-align:center' >
                                                                         <f:validator binding="#{row.bindings.RoleDetailPagesId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.label}"
-                                                                           id="c9">
+                                                                           headerText="Role Master ID" align="center"
+                                                                           id="c9" width="80">
                                                                     <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
                                                                                   label="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.label}"
                                                                                   required="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.mandatory}"
                                                                                   columns="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RoleMasterId.tooltip}"
-                                                                                  id="it6">
+                                                                                  id="it6" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.PagesId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.PagesId.label}"
-                                                                           id="c10">
+                                                                           headerText="Page"
+                                                                           id="c10" width="150">
                                                                     <af:selectOneChoice value="#{row.bindings.PagesId.inputValue}"
                                                                                         label="#{row.bindings.PagesId.label}"
                                                                                         required="#{bindings.TblRoleDetailPagesView3.hints.PagesId.mandatory}"
@@ -297,8 +305,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RView.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RView.label}"
-                                                                           id="c11">
+                                                                           headerText="View"
+                                                                           id="c11" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.RView.inputValue}"
                                                                                         label="#{row.bindings.RView.label}"
                                                                                         required="#{bindings.TblRoleDetailPagesView3.hints.RView.mandatory}"
@@ -311,8 +319,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RAdd.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RAdd.label}"
-                                                                           id="c12">
+                                                                           headerText="Add"
+                                                                           id="c12" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.RAdd.inputValue}"
                                                                                         label="#{row.bindings.RAdd.label}"
                                                                                         required="#{bindings.TblRoleDetailPagesView3.hints.RAdd.mandatory}"
@@ -325,8 +333,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.REdit.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.REdit.label}"
-                                                                           id="c13">
+                                                                           headerText="Edit"
+                                                                           id="c13" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.REdit.inputValue}"
                                                                                         label="#{row.bindings.REdit.label}"
                                                                                         required="#{bindings.TblRoleDetailPagesView3.hints.REdit.mandatory}"
@@ -339,8 +347,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RDelete.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RDelete.label}"
-                                                                           id="c14">
+                                                                           headerText="Delete"
+                                                                           id="c14" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.RDelete.inputValue}"
                                                                                         label="#{row.bindings.RDelete.label}"
                                                                                         required="#{bindings.TblRoleDetailPagesView3.hints.RDelete.mandatory}"
@@ -353,8 +361,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RPrint.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RPrint.label}"
-                                                                           id="c15">
+                                                                           headerText="Print"
+                                                                           id="c15" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.RPrint.inputValue}"
                                                                                         label="#{row.bindings.RPrint.label}"
                                                                                         required="#{bindings.TblRoleDetailPagesView3.hints.RPrint.mandatory}"
@@ -367,8 +375,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RPost.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailPagesView3.hints.RPost.label}"
-                                                                           id="c16">
+                                                                           headerText="Post"
+                                                                           id="c16" width="100">
                                                                     <af:selectOneChoice value="#{row.bindings.RPost.inputValue}"
                                                                                         label="#{row.bindings.RPost.label}"
                                                                                         required="#{bindings.TblRoleDetailPagesView3.hints.RPost.mandatory}"
@@ -382,30 +390,34 @@
                                                             </af:table>
                                                             <af:spacer width="40" height="40" id="s14"/>
                                                             <h:panelGroup id="pg3">
-                                                                <af:spacer width="200" height="20" id="s13"/>
+                                                                <af:spacer width="355" height="20" id="s13"/>
                                                                 <af:button actionListener="#{bindings.CreateInsert2.execute}"
                                                                            text="Add"
                                                                            disabled="#{!bindings.CreateInsert2.enabled}"
                                                                            id="b13"
-                                                                           icon="#{resource['images:add.png']}"/>
+                                                                           icon="#{resource['images:add.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s15"/>
                                                                 <af:button actionListener="#{bindings.Execute2.execute}"
                                                                            text="Edit"
                                                                            disabled="#{!bindings.Execute2.enabled}"
                                                                            id="b14"
-                                                                           icon="#{resource['images:edit.png']}"/>
+                                                                           icon="#{resource['images:edit.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s16"/>
                                                                 <af:button actionListener="#{bindings.Delete2.execute}"
                                                                            text="Delete"
                                                                            disabled="#{!bindings.Delete2.enabled}"
                                                                            id="b15"
-                                                                           icon="#{resource['images:delete.png']}"/>
+                                                                           icon="#{resource['images:delete.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s17"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                            text="Save"
                                                                            disabled="#{!bindings.Commit.enabled}"
                                                                            id="b16"
-                                                                           icon="#{resource['images:save.png']}"/>
+                                                                           icon="#{resource['images:save.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                             </h:panelGroup>
                                                         </af:showDetailItem>
                                                         <af:showDetailItem text="Reports Role" id="sdi3">
@@ -422,39 +434,39 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblRoleDetailReportsView3Query.processQuery}"
                                                                       varStatus="vs" id="t4"
-                                                                      partialTriggers="::b17 ::b18 ::b19">
+                                                                      partialTriggers="::b17 ::b18 ::b19" width="438">
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.label}"
-                                                                           id="c17">
+                                                                           headerText="Role Detail Report ID" align="center"
+                                                                           id="c17" width="80">
                                                                     <af:inputText value="#{row.bindings.RoleDetailReportsId.inputValue}"
                                                                                   label="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.label}"
                                                                                   required="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.mandatory}"
                                                                                   columns="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.tooltip}"
-                                                                                  id="it7">
+                                                                                  id="it7" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.RoleDetailReportsId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.label}"
-                                                                           id="c18">
+                                                                           headerText="Role Master ID" align="center"
+                                                                           id="c18" width="80">
                                                                     <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
                                                                                   label="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.label}"
                                                                                   required="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.mandatory}"
                                                                                   columns="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RoleMasterId.tooltip}"
-                                                                                  id="it8">
+                                                                                  id="it8" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.label}"
-                                                                           id="c19">
+                                                                           headerText="Report"
+                                                                           id="c19" width="150">
                                                                     <af:selectOneChoice value="#{row.bindings.ReportsId.inputValue}"
                                                                                         label="#{row.bindings.ReportsId.label}"
                                                                                         required="#{bindings.TblRoleDetailReportsView3.hints.ReportsId.mandatory}"
@@ -467,8 +479,8 @@
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailReportsView3.hints.RView.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="#{bindings.TblRoleDetailReportsView3.hints.RView.label}"
-                                                                           id="c20">
+                                                                           headerText="View"
+                                                                           id="c20" width="80">
                                                                     <af:selectOneChoice value="#{row.bindings.RView.inputValue}"
                                                                                         label="#{row.bindings.RView.label}"
                                                                                         required="#{bindings.TblRoleDetailReportsView3.hints.RView.mandatory}"
@@ -482,30 +494,34 @@
                                                             </af:table>
                                                             <af:spacer width="40" height="40" id="s22"/>
                                                             <h:panelGroup id="pg4">
-                                                                <af:spacer width="200" height="20" id="s18"/>
+                                                                <af:spacer width="72" height="20" id="s18"/>
                                                                 <af:button actionListener="#{bindings.CreateInsert3.execute}"
                                                                            text="Add"
                                                                            disabled="#{!bindings.CreateInsert3.enabled}"
                                                                            id="b17"
-                                                                           icon="#{resource['images:add.png']}"/>
+                                                                           icon="#{resource['images:add.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s19"/>
                                                                 <af:button actionListener="#{bindings.Execute3.execute}"
                                                                            text="Edit"
                                                                            disabled="#{!bindings.Execute3.enabled}"
                                                                            id="b18"
-                                                                           icon="#{resource['images:edit.png']}"/>
+                                                                           icon="#{resource['images:edit.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s20"/>
                                                                 <af:button actionListener="#{bindings.Delete3.execute}"
                                                                            text="Delete"
                                                                            disabled="#{!bindings.Delete3.enabled}"
                                                                            id="b19"
-                                                                           icon="#{resource['images:delete.png']}"/>
+                                                                           icon="#{resource['images:delete.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                                 <af:spacer width="5" height="10" id="s21"/>
                                                                 <af:button actionListener="#{bindings.Commit.execute}"
                                                                            text="Save"
                                                                            disabled="#{!bindings.Commit.enabled}"
                                                                            id="b20"
-                                                                           icon="#{resource['images:save.png']}"/>
+                                                                           icon="#{resource['images:save.png']}"
+                                                                           inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
                                                             </h:panelGroup>
                                                         </af:showDetailItem>
                                                     </af:panelTabbed>
