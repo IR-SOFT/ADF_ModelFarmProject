@@ -63,6 +63,14 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project"
                                                                            id="c2" width="300">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ProjId}"
+                                                                                     shortDesc="Search By Project"
+                                                                                     id="it9" placeholder="Project.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.ProjId.inputValue}"
                                                                                         label="#{row.bindings.ProjId.label}"
                                                                                         required="#{bindings.TblProjCompView1.hints.ProjId.mandatory}"
@@ -77,6 +85,14 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Component ID"
                                                                            id="c1" width="70">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ProjCompId}"
+                                                                                     shortDesc="Search By Project Component ID"
+                                                                                     id="it16" placeholder="ID.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ProjCompId.inputValue}"
                                                                                   label="#{bindings.TblProjCompView1.hints.ProjCompId.label}"
                                                                                   required="#{bindings.TblProjCompView1.hints.ProjCompId.mandatory}"
@@ -92,6 +108,14 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Project Component"
                                                                            id="c3" width="300">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     shortDesc="Search By Project Component"
+                                                                                     id="it19" placeholder="Project Component.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjCompView1.hints.Name.label}"
                                                                                   required="#{bindings.TblProjCompView1.hints.Name.mandatory}"
@@ -106,6 +130,14 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Active" 
                                                                            id="c4" width="65">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     shortDesc="Search By Status"
+                                                                                     id="it17" placeholder="Status.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjCompView1.hints.Ast.mandatory}"
@@ -188,6 +220,14 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Component ID"
                                                                            id="c6" width="80">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ProjCompId}"
+                                                                                     shortDesc="Search By Project Component ID"
+                                                                                     id="it18" placeholder="ID.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ProjCompId.inputValue}"
                                                                                   label="#{bindings.TblProjCompInputView3.hints.ProjCompId.label}"
                                                                                   required="#{bindings.TblProjCompInputView3.hints.ProjCompId.mandatory}"
@@ -202,6 +242,14 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Input Component ID"
                                                                            id="c5" width="80">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ProjCompInputId}"
+                                                                                     shortDesc="Search By Project Input Component ID"
+                                                                                     id="it20" placeholder="ID.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ProjCompInputId.inputValue}"
                                                                                   label="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.label}"
                                                                                   required="#{bindings.TblProjCompInputView3.hints.ProjCompInputId.mandatory}"
@@ -217,6 +265,14 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Project Input Component"
                                                                            id="c7" width="300">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     shortDesc="Search By Project Input Component"
+                                                                                     id="it21" placeholder="Project Input Component.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjCompInputView3.hints.Name.label}"
                                                                                   required="#{bindings.TblProjCompInputView3.hints.Name.mandatory}"
@@ -231,6 +287,14 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" 
                                                                            id="c8" width="60">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     shortDesc="Search By Status"
+                                                                                     id="it2" placeholder="Status.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjCompInputView3.hints.Ast.mandatory}"
@@ -290,6 +354,14 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Component ID"
                                                                            id="c10" width="80">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ProjCompId}"
+                                                                                     shortDesc="Search By Project Component ID"
+                                                                                     id="it22" placeholder="ID.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ProjCompId.inputValue}"
                                                                                   label="#{bindings.TblProjCompOutputView3.hints.ProjCompId.label}"
                                                                                   required="#{bindings.TblProjCompOutputView3.hints.ProjCompId.mandatory}"
@@ -304,13 +376,21 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Project Output Component ID"
                                                                            id="c9" width="81">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ProjCompOutputId}"
+                                                                                     shortDesc="Search By Project Output Component ID"
+                                                                                     id="it23" placeholder="ID.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ProjCompOutputId.inputValue}"
                                                                                   label="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.label}"
                                                                                   required="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.mandatory}"
                                                                                   columns="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.precision}"
                                                                                   shortDesc="#{bindings.TblProjCompOutputView3.hints.ProjCompOutputId.tooltip}"
-                                                                                  id="it9" readOnly="true" contentStyle='text-align:center'>
+                                                                                  id="it15" readOnly="true" contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.ProjCompOutputId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -318,6 +398,14 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Project Output Component"
                                                                            id="c11" width="299">
+                                                                           
+                                                                               <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     shortDesc="Search By Project Output Component"
+                                                                                     id="it24" placeholder="Project Output Component.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjCompOutputView3.hints.Name.label}"
                                                                                   required="#{bindings.TblProjCompOutputView3.hints.Name.mandatory}"
@@ -332,6 +420,14 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Active" 
                                                                            id="c12" width="60">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     shortDesc="Search By Status"
+                                                                                     id="it4" placeholder="Status.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjCompOutputView3.hints.Ast.mandatory}"
@@ -429,6 +525,14 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" 
                                                                            id="c17" width="60">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     shortDesc="Search By Status"
+                                                                                     id="it14" placeholder="Status.....">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_BeneficiaryView1.hints.Ast.mandatory}"
