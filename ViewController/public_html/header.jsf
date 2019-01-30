@@ -69,7 +69,7 @@
                                            inlineStyle="width:140px; text-align:center; vertical-align: middle;"
                                            rendered="#{backingBeanScope.backing_login.checkmoduleSession('Course/Training')=='Y'}"
                                            destination="Course_Training.jsf"
-                                           icon="#{resource['images:trainning.png']}"/>
+                                           icon="#{resource['images:course_training.png']}"/>
                                 <af:spacer width="5" height="30" id="pt_s5"
                                            rendered="#{backingBeanScope.backing_login.checkmoduleSession('Course/Training')=='Y'}"/>
                                 
