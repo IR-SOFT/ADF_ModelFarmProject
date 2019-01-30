@@ -21,9 +21,11 @@ import oracle.adf.view.rich.component.rich.layout.RichGridCell;
 import oracle.adf.view.rich.component.rich.layout.RichGridRow;
 import oracle.adf.view.rich.component.rich.layout.RichPanelAccordion;
 import oracle.adf.view.rich.component.rich.layout.RichPanelGridLayout;
+import oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout;
 import oracle.adf.view.rich.component.rich.layout.RichShowDetailItem;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
 
+import oracle.adf.view.rich.component.rich.output.RichImage;
 import oracle.adf.view.rich.component.rich.output.RichSpacer;
 
 import oracle.jdbc.OracleDriver;
@@ -55,51 +57,34 @@ public class Login {
     private RichPanelGridLayout pgl1;
     private RichGridRow gr1;
     private RichGridCell gc1;
-    private RichGridCell gc2;
     private RichGridCell gc3;
-    private RichGridCell gc4;
-    private RichGridCell gc5;
     private RichGridRow gr2;
     private RichGridCell gc6;
-    private RichGridCell gc7;
     private RichGridCell gc8;
-    private RichGridCell gc9;
     private RichGridCell gc10;
     private RichGridRow gr3;
     private RichGridCell gc11;
-    private RichGridCell gc12;
     private RichGridCell gc13;
-    private RichGridCell gc14;
     private RichGridCell gc15;
     private RichGridRow gr4;
     private RichGridCell gc16;
-    private RichGridCell gc17;
     private RichGridCell gc18;
-    private RichGridCell gc19;
     private RichGridCell gc20;
     private RichGridRow gr5;
     private RichGridCell gc21;
-    private RichGridCell gc22;
     private RichGridCell gc23;
-    private RichGridCell gc24;
     private RichGridCell gc25;
     private RichGridRow gr6;
     private RichGridCell gc26;
-    private RichGridCell gc27;
     private RichGridCell gc28;
-    private RichGridCell gc29;
     private RichGridCell gc30;
     private RichGridRow gr7;
     private RichGridCell gc31;
-    private RichGridCell gc32;
     private RichGridCell gc33;
-    private RichGridCell gc34;
     private RichGridCell gc35;
     private RichGridRow gr8;
     private RichGridCell gc36;
-    private RichGridCell gc37;
     private RichGridCell gc38;
-    private RichGridCell gc39;
     private RichGridCell gc40;
     private RichInputText it1;
     private RichInputText it2;
@@ -114,6 +99,15 @@ public class Login {
     private HtmlPanelGroup pg1;
     private RichButton b4;
     private RichSpacer s4;
+    private RichImage i1;
+    private HtmlPanelGroup pg2;
+
+    private RichPanelGroupLayout pgl2;
+
+    private RichSpacer s5;
+    private RichSpacer s6;
+    private RichPanelGroupLayout pgl3;
+
 
     public void setF1(RichForm f1) {
         this.f1 = f1;
@@ -172,13 +166,6 @@ public class Login {
         return gc1;
     }
 
-    public void setGc2(RichGridCell gc2) {
-        this.gc2 = gc2;
-    }
-
-    public RichGridCell getGc2() {
-        return gc2;
-    }
 
     public void setGc3(RichGridCell gc3) {
         this.gc3 = gc3;
@@ -188,21 +175,6 @@ public class Login {
         return gc3;
     }
 
-    public void setGc4(RichGridCell gc4) {
-        this.gc4 = gc4;
-    }
-
-    public RichGridCell getGc4() {
-        return gc4;
-    }
-
-    public void setGc5(RichGridCell gc5) {
-        this.gc5 = gc5;
-    }
-
-    public RichGridCell getGc5() {
-        return gc5;
-    }
 
     public void setGr2(RichGridRow gr2) {
         this.gr2 = gr2;
@@ -220,13 +192,6 @@ public class Login {
         return gc6;
     }
 
-    public void setGc7(RichGridCell gc7) {
-        this.gc7 = gc7;
-    }
-
-    public RichGridCell getGc7() {
-        return gc7;
-    }
 
     public void setGc8(RichGridCell gc8) {
         this.gc8 = gc8;
@@ -236,13 +201,6 @@ public class Login {
         return gc8;
     }
 
-    public void setGc9(RichGridCell gc9) {
-        this.gc9 = gc9;
-    }
-
-    public RichGridCell getGc9() {
-        return gc9;
-    }
 
     public void setGc10(RichGridCell gc10) {
         this.gc10 = gc10;
@@ -268,13 +226,6 @@ public class Login {
         return gc11;
     }
 
-    public void setGc12(RichGridCell gc12) {
-        this.gc12 = gc12;
-    }
-
-    public RichGridCell getGc12() {
-        return gc12;
-    }
 
     public void setGc13(RichGridCell gc13) {
         this.gc13 = gc13;
@@ -284,13 +235,6 @@ public class Login {
         return gc13;
     }
 
-    public void setGc14(RichGridCell gc14) {
-        this.gc14 = gc14;
-    }
-
-    public RichGridCell getGc14() {
-        return gc14;
-    }
 
     public void setGc15(RichGridCell gc15) {
         this.gc15 = gc15;
@@ -316,13 +260,6 @@ public class Login {
         return gc16;
     }
 
-    public void setGc17(RichGridCell gc17) {
-        this.gc17 = gc17;
-    }
-
-    public RichGridCell getGc17() {
-        return gc17;
-    }
 
     public void setGc18(RichGridCell gc18) {
         this.gc18 = gc18;
@@ -332,13 +269,6 @@ public class Login {
         return gc18;
     }
 
-    public void setGc19(RichGridCell gc19) {
-        this.gc19 = gc19;
-    }
-
-    public RichGridCell getGc19() {
-        return gc19;
-    }
 
     public void setGc20(RichGridCell gc20) {
         this.gc20 = gc20;
@@ -364,13 +294,6 @@ public class Login {
         return gc21;
     }
 
-    public void setGc22(RichGridCell gc22) {
-        this.gc22 = gc22;
-    }
-
-    public RichGridCell getGc22() {
-        return gc22;
-    }
 
     public void setGc23(RichGridCell gc23) {
         this.gc23 = gc23;
@@ -380,13 +303,6 @@ public class Login {
         return gc23;
     }
 
-    public void setGc24(RichGridCell gc24) {
-        this.gc24 = gc24;
-    }
-
-    public RichGridCell getGc24() {
-        return gc24;
-    }
 
     public void setGc25(RichGridCell gc25) {
         this.gc25 = gc25;
@@ -412,13 +328,6 @@ public class Login {
         return gc26;
     }
 
-    public void setGc27(RichGridCell gc27) {
-        this.gc27 = gc27;
-    }
-
-    public RichGridCell getGc27() {
-        return gc27;
-    }
 
     public void setGc28(RichGridCell gc28) {
         this.gc28 = gc28;
@@ -428,13 +337,6 @@ public class Login {
         return gc28;
     }
 
-    public void setGc29(RichGridCell gc29) {
-        this.gc29 = gc29;
-    }
-
-    public RichGridCell getGc29() {
-        return gc29;
-    }
 
     public void setGc30(RichGridCell gc30) {
         this.gc30 = gc30;
@@ -460,13 +362,6 @@ public class Login {
         return gc31;
     }
 
-    public void setGc32(RichGridCell gc32) {
-        this.gc32 = gc32;
-    }
-
-    public RichGridCell getGc32() {
-        return gc32;
-    }
 
     public void setGc33(RichGridCell gc33) {
         this.gc33 = gc33;
@@ -476,13 +371,6 @@ public class Login {
         return gc33;
     }
 
-    public void setGc34(RichGridCell gc34) {
-        this.gc34 = gc34;
-    }
-
-    public RichGridCell getGc34() {
-        return gc34;
-    }
 
     public void setGc35(RichGridCell gc35) {
         this.gc35 = gc35;
@@ -508,13 +396,6 @@ public class Login {
         return gc36;
     }
 
-    public void setGc37(RichGridCell gc37) {
-        this.gc37 = gc37;
-    }
-
-    public RichGridCell getGc37() {
-        return gc37;
-    }
 
     public void setGc38(RichGridCell gc38) {
         this.gc38 = gc38;
@@ -524,13 +405,6 @@ public class Login {
         return gc38;
     }
 
-    public void setGc39(RichGridCell gc39) {
-        this.gc39 = gc39;
-    }
-
-    public RichGridCell getGc39() {
-        return gc39;
-    }
 
     public void setGc40(RichGridCell gc40) {
         this.gc40 = gc40;
@@ -1152,6 +1026,54 @@ public class Login {
 
     public RichSpacer getS4() {
         return s4;
+    }
+
+    public void setI1(RichImage i1) {
+        this.i1 = i1;
+    }
+
+    public RichImage getI1() {
+        return i1;
+    }
+
+    public void setPg2(HtmlPanelGroup pg2) {
+        this.pg2 = pg2;
+    }
+
+    public HtmlPanelGroup getPg2() {
+        return pg2;
+    }
+
+    public void setPgl2(RichPanelGroupLayout pgl2) {
+        this.pgl2 = pgl2;
+    }
+
+    public RichPanelGroupLayout getPgl2() {
+        return pgl2;
+    }
+
+    public void setS5(RichSpacer s5) {
+        this.s5 = s5;
+    }
+
+    public RichSpacer getS5() {
+        return s5;
+    }
+
+    public void setS6(RichSpacer s6) {
+        this.s6 = s6;
+    }
+
+    public RichSpacer getS6() {
+        return s6;
+    }
+
+    public void setPgl3(RichPanelGroupLayout pgl3) {
+        this.pgl3 = pgl3;
+    }
+
+    public RichPanelGroupLayout getPgl3() {
+        return pgl3;
     }
 }
 
