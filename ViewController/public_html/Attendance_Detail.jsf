@@ -81,6 +81,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster Attendance Master ID"
                                                                            id="c1" align="center">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ClusterAttMasterId}"
+                                                                                     id="it22" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ClusterAttMasterId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.ClusterAttMasterId.mandatory}"
@@ -116,6 +123,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
                                                                            id="c4">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Status}"
+                                                                                     id="it23" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Status.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Status.mandatory}"
@@ -132,6 +146,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
                                                                            id="c2" width="60">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainerId}"
+                                                                                     id="it21" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainerId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.TrainerId.mandatory}"
@@ -146,6 +167,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer"
                                                                            id="c6" width="250">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Trainer_Name}"
+                                                                                     id="it19" placeholder="Search Trainer">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Trainer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Trainer_Name.mandatory}"
@@ -160,6 +188,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.label}"
                                                                            id="c5" width="325">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Remarks}"
+                                                                                     id="it20" placeholder="Search Remarks">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Remarks.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttMasterView1_1.hints.Remarks.mandatory}"
@@ -232,6 +267,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Cluster Attendance Master ID"
                                                                            id="c9" width="72">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ClusterAttMasterId}"
+                                                                                     id="it18" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ClusterAttMasterId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttMasterId.mandatory}"
@@ -246,6 +288,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Cluster Attendance Detail ID"
                                                                            id="c8" width="69">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ClusterAttDetailId}"
+                                                                                     id="it17" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ClusterAttDetailId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.ClusterAttDetailId.mandatory}"
@@ -260,6 +309,13 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Farmer Registration ID" align="center"
                                                                            id="c10" width="80">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.FarmerRegId}"
+                                                                                     id="it16" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.FarmerRegId.mandatory}"
@@ -274,6 +330,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer"
                                                                            id="c11" width="405">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Farmer_Name}"
+                                                                                     id="it15" placeholder="Search Farmer">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Farmer_Name.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Name.mandatory}"
@@ -288,6 +351,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="CNIC"
                                                                            id="c7" width="110">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Farmer_Cnic}"
+                                                                                     id="it14" placeholder="Search CNIC">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Farmer_Cnic.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Cnic.mandatory}"
@@ -302,6 +372,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Mobile"
                                                                            id="c12" width="110">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Farmer_Mobile}"
+                                                                                     id="it13" placeholder="Search Mobile">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Farmer_Mobile.inputValue}"
                                                                                   label="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.label}"
                                                                                   required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Farmer_Mobile.mandatory}"
@@ -315,6 +392,13 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Ast.name}"
                                                                            filterable="true" sortable="true" headerText="Attendance"
                                                                            id="c13" width="80">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it12" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_ATT_ClusterAttDetailView1_2.hints.Ast.mandatory}"
