@@ -5,30 +5,230 @@
         <af:messages id="m1"/>
         <af:form id="f1">
             <af:pageTemplate viewId="/header.jsf" id="pt1"/>\
-            <af:panelAccordion discloseMany="false" id="pa1">
+            <af:panelAccordion discloseMany="false" id="pa1" inlineStyle="width:1268px;">
                 <af:showDetailItem id="pane1" text="Panel Label 1">
-                    <af:panelFormLayout id="pfl1">
-                        <af:inputText value="#{bindings.ProgId1.inputValue}" label="#{bindings.ProgId1.hints.label}"
-                                      required="#{bindings.ProgId1.hints.mandatory}"
-                                      columns="#{bindings.ProgId1.hints.displayWidth}"
-                                      maximumLength="#{bindings.ProgId1.hints.precision}"
-                                      shortDesc="#{bindings.ProgId1.hints.tooltip}" id="it1">
-                            <f:validator binding="#{bindings.ProgId1.validator}"/>
-                        </af:inputText>
-                        <af:inputText value="#{bindings.Name1.inputValue}" label="#{bindings.Name1.hints.label}"
-                                      required="#{bindings.Name1.hints.mandatory}"
-                                      columns="#{bindings.Name1.hints.displayWidth}"
-                                      maximumLength="#{bindings.Name1.hints.precision}"
-                                      shortDesc="#{bindings.Name1.hints.tooltip}" id="it2">
-                            <f:validator binding="#{bindings.Name1.validator}"/>
-                        </af:inputText>
-                        <af:selectOneChoice value="#{bindings.Ast1.inputValue}" label="#{bindings.Ast1.label}"
-                                            required="#{bindings.Ast1.hints.mandatory}"
-                                            shortDesc="#{bindings.Ast1.hints.tooltip}" id="soc1">
-                            <f:selectItems value="#{bindings.Ast1.items}" id="si1"/>
-                            <f:validator binding="#{bindings.Ast1.validator}"/>
-                        </af:selectOneChoice>
-                    </af:panelFormLayout>
+                    <af:table value="#{bindings.Tbl_TrainerView1.collectionModel}" var="row"
+                              rows="#{bindings.Tbl_TrainerView1.rangeSize}"
+                              emptyText="#{bindings.Tbl_TrainerView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              rowBandingInterval="0"
+                              selectedRowKeys="#{bindings.Tbl_TrainerView1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.Tbl_TrainerView1.collectionModel.makeCurrent}"
+                              rowSelection="single" fetchSize="#{bindings.Tbl_TrainerView1.rangeSize}"
+                              filterModel="#{bindings.Tbl_TrainerView1Query.queryDescriptor}" filterVisible="true"
+                              queryListener="#{bindings.Tbl_TrainerView1Query.processQuery}" varStatus="vs" id="t1"
+                              partialTriggers="::b1 ::b2">
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.TrainerId.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.TrainerId.label}"
+                                   id="c1">
+                            <af:inputText value="#{row.bindings.TrainerId.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.TrainerId.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.TrainerId.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.TrainerId.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.TrainerId.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.TrainerId.tooltip}" id="it1">
+                                <f:validator binding="#{row.bindings.TrainerId.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Name.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Name.label}" id="c2">
+                            <af:inputText value="#{row.bindings.Name.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Name.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Name.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Name.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.Name.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Name.tooltip}" id="it2">
+                                <f:validator binding="#{row.bindings.Name.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.FatherName.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.FatherName.label}"
+                                   id="c3">
+                            <af:inputText value="#{row.bindings.FatherName.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.FatherName.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.FatherName.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.FatherName.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.FatherName.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.FatherName.tooltip}" id="it3">
+                                <f:validator binding="#{row.bindings.FatherName.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ast.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Ast.label}" id="c4">
+                            <af:selectOneChoice value="#{row.bindings.Ast.inputValue}" label="#{row.bindings.Ast.label}"
+                                                required="#{bindings.Tbl_TrainerView1.hints.Ast.mandatory}"
+                                                shortDesc="#{bindings.Tbl_TrainerView1.hints.Ast.tooltip}" id="soc1">
+                                <f:selectItems value="#{row.bindings.Ast.items}" id="si1"/>
+                                <f:validator binding="#{row.bindings.Ast.validator}"/>
+                            </af:selectOneChoice>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.MarStatus.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.MarStatus.label}"
+                                   id="c5">
+                            <af:inputText value="#{row.bindings.MarStatus.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.MarStatus.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.MarStatus.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.MarStatus.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.MarStatus.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.MarStatus.tooltip}" id="it4">
+                                <f:validator binding="#{row.bindings.MarStatus.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Dob.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Dob.label}" id="c6">
+                            <f:facet name="filter">
+                                <af:inputDate value="#{bindings.Tbl_TrainerView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Dob.value}"
+                                              id="id1">
+                                    <af:convertDateTime pattern="#{bindings.Tbl_TrainerView1.hints.Dob.format}"/>
+                                </af:inputDate>
+                            </f:facet>
+                            <af:inputDate value="#{row.bindings.Dob.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Dob.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Dob.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Dob.displayWidth}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Dob.tooltip}" id="id2">
+                                <f:validator binding="#{row.bindings.Dob.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.Tbl_TrainerView1.hints.Dob.format}"/>
+                            </af:inputDate>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Doj.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Doj.label}" id="c7">
+                            <f:facet name="filter">
+                                <af:inputDate value="#{bindings.Tbl_TrainerView1Query.queryDescriptor.filterConjunctionCriterion.criterionMap.Doj.value}"
+                                              id="id3">
+                                    <af:convertDateTime pattern="#{bindings.Tbl_TrainerView1.hints.Doj.format}"/>
+                                </af:inputDate>
+                            </f:facet>
+                            <af:inputDate value="#{row.bindings.Doj.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Doj.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Doj.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Doj.displayWidth}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Doj.tooltip}" id="id4">
+                                <f:validator binding="#{row.bindings.Doj.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.Tbl_TrainerView1.hints.Doj.format}"/>
+                            </af:inputDate>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ntn.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Ntn.label}" id="c8">
+                            <af:inputText value="#{row.bindings.Ntn.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Ntn.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Ntn.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Ntn.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.Ntn.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Ntn.tooltip}" id="it5">
+                                <f:validator binding="#{row.bindings.Ntn.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.PassNo.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.PassNo.label}" id="c9">
+                            <af:inputText value="#{row.bindings.PassNo.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.PassNo.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.PassNo.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.PassNo.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.PassNo.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.PassNo.tooltip}" id="it6">
+                                <f:validator binding="#{row.bindings.PassNo.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Cnic.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Cnic.label}" id="c10">
+                            <af:inputText value="#{row.bindings.Cnic.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Cnic.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Cnic.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Cnic.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.Cnic.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Cnic.tooltip}" id="it7">
+                                <f:validator binding="#{row.bindings.Cnic.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.DrLicNo.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.DrLicNo.label}"
+                                   id="c11">
+                            <af:inputText value="#{row.bindings.DrLicNo.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.DrLicNo.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.DrLicNo.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.DrLicNo.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.DrLicNo.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.DrLicNo.tooltip}" id="it8">
+                                <f:validator binding="#{row.bindings.DrLicNo.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Telephone.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Telephone.label}"
+                                   id="c12">
+                            <af:inputText value="#{row.bindings.Telephone.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Telephone.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Telephone.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Telephone.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.Telephone.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Telephone.tooltip}" id="it9">
+                                <f:validator binding="#{row.bindings.Telephone.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Mobile.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Mobile.label}"
+                                   id="c13">
+                            <af:inputText value="#{row.bindings.Mobile.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Mobile.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Mobile.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Mobile.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.Mobile.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Mobile.tooltip}" id="it10">
+                                <f:validator binding="#{row.bindings.Mobile.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Email.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Email.label}" id="c14">
+                            <af:inputText value="#{row.bindings.Email.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Email.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Email.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Email.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.Email.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Email.tooltip}" id="it11">
+                                <f:validator binding="#{row.bindings.Email.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Url.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.Url.label}" id="c15">
+                            <af:inputText value="#{row.bindings.Url.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.Url.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.Url.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.Url.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.Url.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.Url.tooltip}" id="it12">
+                                <f:validator binding="#{row.bindings.Url.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.PreAddress.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.PreAddress.label}"
+                                   id="c16">
+                            <af:inputText value="#{row.bindings.PreAddress.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.PreAddress.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.PreAddress.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.PreAddress.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.PreAddress.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.PreAddress.tooltip}" id="it13">
+                                <f:validator binding="#{row.bindings.PreAddress.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.PerAddress.name}" filterable="true"
+                                   sortable="true" headerText="#{bindings.Tbl_TrainerView1.hints.PerAddress.label}"
+                                   id="c17">
+                            <af:inputText value="#{row.bindings.PerAddress.inputValue}"
+                                          label="#{bindings.Tbl_TrainerView1.hints.PerAddress.label}"
+                                          required="#{bindings.Tbl_TrainerView1.hints.PerAddress.mandatory}"
+                                          columns="#{bindings.Tbl_TrainerView1.hints.PerAddress.displayWidth}"
+                                          maximumLength="#{bindings.Tbl_TrainerView1.hints.PerAddress.precision}"
+                                          shortDesc="#{bindings.Tbl_TrainerView1.hints.PerAddress.tooltip}" id="it14">
+                                <f:validator binding="#{row.bindings.PerAddress.validator}"/>
+                            </af:inputText>
+                        </af:column>
+                    </af:table>
+                    <af:button actionListener="#{bindings.CreateInsert.execute}" text="CreateInsert"
+                               disabled="#{!bindings.CreateInsert.enabled}" id="b1"/>
+                    <af:button actionListener="#{bindings.Execute.execute}" text="Execute"
+                               disabled="#{!bindings.Execute.enabled}" id="b2"/>
+                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit"
+                               disabled="#{!bindings.Commit.enabled}" id="b3"/>
                 </af:showDetailItem>
             </af:panelAccordion>
         </af:form>

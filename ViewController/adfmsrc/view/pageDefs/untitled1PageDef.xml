@@ -10,6 +10,9 @@
     <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl4" id="TblProgView1Iterator3"/>
     <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl5" id="TblProgView1Iterator4"/>
     <iterator Binds="TblProgView1" RangeSize="25" DataControl="AppModuleDataControl6" id="TblProgView1Iterator5"/>
+    <iterator Binds="Tbl_TrainerView1" RangeSize="25" DataControl="AppModuleDataControl" id="Tbl_TrainerView1Iterator"/>
+    <searchRegion Binds="Tbl_TrainerView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="Tbl_TrainerView1Query"/>
   </executables>
   <bindings>
     <list IterBinding="TblProgView1Iterator" StaticList="false" Uses="LOV_ProgId_AST" id="ProgId"
@@ -36,5 +39,32 @@
     </attributeValues>
     <list IterBinding="TblProgView1Iterator5" StaticList="false" Uses="LOV_Prog_Ast" id="Ast1" DTSupportsMRU="false"
           SelectItemValueMode="ListObject"/>
+    <tree IterBinding="Tbl_TrainerView1Iterator" id="Tbl_TrainerView1">
+      <nodeDefinition DefName="model.vo.Tbl_TrainerView" Name="Tbl_TrainerView10">
+        <AttrNames>
+          <Item Value="TrainerId"/>
+          <Item Value="Name"/>
+          <Item Value="FatherName"/>
+          <Item Value="Ast"/>
+          <Item Value="MarStatus"/>
+          <Item Value="Dob"/>
+          <Item Value="Doj"/>
+          <Item Value="Ntn"/>
+          <Item Value="PassNo"/>
+          <Item Value="Cnic"/>
+          <Item Value="DrLicNo"/>
+          <Item Value="Telephone"/>
+          <Item Value="Mobile"/>
+          <Item Value="Email"/>
+          <Item Value="Url"/>
+          <Item Value="PreAddress"/>
+          <Item Value="PerAddress"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="Tbl_TrainerView1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="Tbl_TrainerView1Iterator" id="Execute" RequiresUpdateModel="true" Action="iteratorExecute"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>
