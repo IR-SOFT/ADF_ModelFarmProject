@@ -65,7 +65,7 @@
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Project_Comp_Output_Name}"
-                                                                                     shortDesc="Search By Output Component" id="id4" placeholder="Output Component.....">
+                                                                                      id="id4" placeholder="Search Output Component">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -80,8 +80,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                     shortDesc="Search By Output Indicator"
-                                                                                     id="it5" placeholder="Output Indicator.....">
+                                                                                     
+                                                                                     id="it5" placeholder="Search Output Indicator">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                             
@@ -95,8 +95,7 @@
                                                                            
                                                                               <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     shortDesc="Search By Status"
-                                                                                     id="it6" placeholder="Status.....">
+                                                                                     id="it6" placeholder="Search Status">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            
@@ -139,8 +138,7 @@
                                                                            
                                                                              <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.OutputIndId}"
-                                                                                     shortDesc="Search By Output Indicator ID"
-                                                                                     id="it7" placeholder="ID.....">
+                                                                                     id="it7" placeholder="Search ID">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            
@@ -162,8 +160,7 @@
                                                                            
                                                                                <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.MonParamId}"
-                                                                                     shortDesc="Search By Monitoring Parameter ID"
-                                                                                     id="it8" placeholder="ID.....">
+                                                                                    id="it8" placeholder="Search ID">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            
@@ -184,8 +181,7 @@
                                                                            
                                                                                  <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Name}"
-                                                                                     shortDesc="Search By Monitoring Parameter"
-                                                                                     id="it9" placeholder="Monitoring Parameter.....">
+                                                                                     id="it9" placeholder="Search Monitoring Parameter">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            
@@ -205,8 +201,7 @@
                                                                            
                                                                                 <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Perc}"
-                                                                                     shortDesc="Search By Perquisites"
-                                                                                     id="it10" placeholder="Perquisites.....">
+                                                                                      id="it10" placeholder="Search Perquisites">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            
@@ -228,8 +223,7 @@
                                                                            
                                                                                  <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     shortDesc="Search By Status"
-                                                                                     id="it11" placeholder="Status.....">
+                                                                                     id="it11" placeholder="Search Status">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            

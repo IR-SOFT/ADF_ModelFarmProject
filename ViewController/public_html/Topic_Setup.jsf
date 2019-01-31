@@ -80,6 +80,13 @@
                                                                            filterable="true"
                                                                            headerText="Training"
                                                                            id="c9" width="270">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Course_Name}"
+                                                                                     id="it7" placeholder="Search Training">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Course_Name}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Course_Name.tooltip}"
                                                                                    id="ot5"/>
@@ -89,6 +96,13 @@
                                                                            filterable="true"
                                                                            headerText="Module"
                                                                             id="c3" width="350">
+                                                                            
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it8" placeholder="Search Module">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                            
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
@@ -97,6 +111,13 @@
                                                                            filterable="true"
                                                                            headerText="Active"
                                                                             id="c4" width="60">
+                                                                            
+                                                                               <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it9" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                            
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblModuleView1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -132,6 +153,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module ID"
                                                                            align="center" id="c6" width="80">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ModuleId}"
+                                                                                     id="it5" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ModuleId.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.ModuleId.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.ModuleId.mandatory}"
@@ -148,6 +176,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Topic ID"
                                                                             align="center" id="c5" width="60">
+                                                                            
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TopicsId}"
+                                                                                     id="it6" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                            
                                                                     <af:inputText value="#{row.bindings.TopicsId.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.TopicsId.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.TopicsId.mandatory}"
@@ -179,6 +214,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
                                                                            id="c8" width="60">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it4" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblTopicsView3.hints.Ast.mandatory}"

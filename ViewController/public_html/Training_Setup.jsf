@@ -81,6 +81,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Training ID" align="center"
                                                                            id="c1" width="63">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainingId}"
+                                                                                     id="it9" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainingId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingView1.hints.TrainingId.label}"
                                                                                   required="#{bindings.Tbl_TrainingView1.hints.TrainingId.mandatory}"
@@ -95,6 +102,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Training"
                                                                            id="c2" width="350">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it4" placeholder="Search Training">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingView1.hints.Name.label}"
                                                                                   required="#{bindings.Tbl_TrainingView1.hints.Name.mandatory}"
@@ -109,6 +123,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
                                                                            id="c3" width="65">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it3" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_TrainingView1.hints.Ast.mandatory}"
