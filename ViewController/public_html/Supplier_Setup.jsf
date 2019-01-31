@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <!--<f:metadata>
+    <f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Supplier_Setup')}"/>
-    </f:metadata>-->
+    </f:metadata>
     <af:document title="Supplier_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -76,6 +76,11 @@
                                                                            filterable="true" sortable="true"
                                                                            align="center" headerText="Supplier ID"
                                                                            id="c1" width="65">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.SupplierId}"
+                                                                                      id="it53" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.SupplierId.inputValue}"
                                                                                   label="#{bindings.TblSupplierView1.hints.SupplierId.label}"
                                                                                   required="#{bindings.TblSupplierView1.hints.SupplierId.mandatory}"
@@ -89,6 +94,11 @@
                                                                 <af:column sortProperty="#{bindings.TblSupplierView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Supplier" id="c2" width="500">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it3" placeholder="Search Supplier">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblSupplierView1.hints.Name.label}"
                                                                                   required="#{bindings.TblSupplierView1.hints.Name.mandatory}"
@@ -102,6 +112,11 @@
                                                                 <af:column sortProperty="#{bindings.TblSupplierView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c3" width="60">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it15" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblSupplierView1.hints.Ast.mandatory}"
