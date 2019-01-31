@@ -12,7 +12,6 @@
   BindingStyle="OracleName">
   <Attribute
     Name="TrainerId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="TRAINER_ID"
     SQLType="VARCHAR"
