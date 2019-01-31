@@ -387,6 +387,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Cluster"
                                                                            id="c2">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ClusterId}"
+                                                                                     id="it20" placeholder="Search Cluster">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.ClusterId.inputValue}"
                                                                                         label="#{row.bindings.ClusterId.label}"
                                                                                         required="#{bindings.Tbl_TrainingSchDetailView3.hints.ClusterId.mandatory}"
@@ -401,6 +408,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Training Schedule Detail ID" align="center"
                                                                            id="c14">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainingSchDetailId}"
+                                                                                     id="it21" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainingSchDetailId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingSchDetailView3.hints.TrainingSchDetailId.label}"
                                                                                   required="#{bindings.Tbl_TrainingSchDetailView3.hints.TrainingSchDetailId.mandatory}"
@@ -415,6 +429,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Training Schedule Master ID" align="center"
                                                                            id="c15">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainingSchMasterId}"
+                                                                                     id="it22" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainingSchMasterId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainingSchDetailView3.hints.TrainingSchMasterId.label}"
                                                                                   required="#{bindings.Tbl_TrainingSchDetailView3.hints.TrainingSchMasterId.mandatory}"

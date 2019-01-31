@@ -81,6 +81,13 @@
                                                                            filterable="true"
                                                                            headerText="Component Input" id="c9"
                                                                            width="270">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Project_Comp_Name}"
+                                                                                     id="it4" placeholder="Search Component Input">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Project_Comp_Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Project_Comp_Name.tooltip}"
                                                                                    id="ot5"/>
@@ -88,6 +95,13 @@
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Name.name}"
                                                                            filterable="true" headerText="Training"
                                                                            id="c3" width="350">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it5" placeholder="Search Training">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
@@ -95,6 +109,13 @@
                                                                 <af:column sortProperty="#{bindings.TblCourseView1.hints.Ast.name}"
                                                                            filterable="true" headerText="Active" id="c4"
                                                                            width="60">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it6" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblCourseView1.hints.Ast.tooltip}"
                                                                                    id="ot4"/>
@@ -130,6 +151,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Training ID" align="center"
                                                                            id="c6" width="80">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.CourseId}"
+                                                                                     id="it8" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.CourseId.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.CourseId.label}"
                                                                                   required="#{bindings.TblModuleView3.hints.CourseId.mandatory}"
@@ -146,6 +174,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module ID" align="center" id="c5"
                                                                            width="80">
+                                                                           
+                                                                               <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ModuleId}"
+                                                                                     id="it10" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ModuleId.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.ModuleId.label}"
                                                                                   required="#{bindings.TblModuleView3.hints.ModuleId.mandatory}"
@@ -161,6 +196,13 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Module" id="c7" width="445">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it9" placeholder="Search Module">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblModuleView3.hints.Name.label}"
                                                                                   required="#{bindings.TblModuleView3.hints.Name.mandatory}"
@@ -174,6 +216,13 @@
                                                                 <af:column sortProperty="#{bindings.TblModuleView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c8" width="60">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it7" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                            </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblModuleView3.hints.Ast.mandatory}"
