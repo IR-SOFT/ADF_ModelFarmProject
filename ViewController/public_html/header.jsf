@@ -80,25 +80,19 @@
                                 <af:spacer width="5" height="30" id="pt_s3"
                                            rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
                                 <af:button text="Grants" id="pt_b9" destination="Monitoring.jsf"
-                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
                                            inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
                                            icon="#{resource['images:grants.png']}"/>
-                                <af:spacer width="5" height="30" id="pt_s12"
-                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
+                                <af:spacer width="5" height="30" id="pt_s12"/>
                                 <af:button text="Cert/Expo" id="pt_b6"
                                            inlineStyle="width:140px; text-align:center; vertical-align: middle;"
                                            rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cert/Expo')=='Y'}"
                                            destination="Cert_Expo.jsf" icon="#{resource['images:certification.png']}"/>
-                                <af:spacer width="5" height="30" id="pt_s7"
-                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Cert/Expo')=='Y'}"/>
+                                <af:spacer width="5" height="30" id="pt_s7"/>
                                 <af:button text="Marketing" id="pt_b10" destination="Monitoring.jsf"
-                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
                                            inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
                                            icon="#{resource['images:marketing.png']}"/>
-                                <af:spacer width="5" height="30" id="pt_s10"
-                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"/>
+                                <af:spacer width="5" height="30" id="pt_s10"/>
                                 <af:button text="Financial" id="pt_b11" destination="Monitoring.jsf"
-                                           rendered="#{backingBeanScope.backing_login.checkmoduleSession('Monitoring')=='Y'}"
                                            inlineStyle="width:140px !important;; text-align:center; vertical-align: middle;"
                                            icon="#{resource['images:financial.png']}"/>
                                 
