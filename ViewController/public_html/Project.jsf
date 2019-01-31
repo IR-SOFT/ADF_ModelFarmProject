@@ -80,6 +80,12 @@
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.ProgId.name}"
                                                                            headerText="Program" filterable="true"
                                                                            sortable="true" id="c16" width="248">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ProgId}"
+                                                                        id="it22" placeholder="Search Program ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.ProgId.inputValue}"
                                                                                         label="#{row.bindings.ProgId.label}"
                                                                                         required="#{bindings.TblProjView1.hints.ProgId.mandatory}"
@@ -94,6 +100,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project ID" align="center"
                                                                            id="c1" width="-88">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ProjId}"
+                                                                        id="it2" placeholder="Search ID ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.ProjId.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.ProjId.label}"
                                                                                   required="#{bindings.TblProjView1.hints.ProjId.mandatory}"
@@ -108,6 +120,12 @@
                                                                 <af:column sortProperty="#{bindings.TblProjView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project" id="c3" width="330">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Name}"
+                                                                        id="it4" placeholder="Search Project ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjView1.hints.Name.label}"
                                                                                   required="#{bindings.TblProjView1.hints.Name.mandatory}"
@@ -122,6 +140,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c4" width="60"
                                                                            align="left">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Ast}"
+                                                                        id="it13" placeholder="Search Status ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjView1.hints.Ast.mandatory}"
@@ -195,6 +219,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project ID" id="c6" width="50"
                                                                            align="center">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ProjId}"
+                                                                        id="it14" placeholder="Search ID ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.ProjId.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.ProjId.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.ProjId.mandatory}"
@@ -210,6 +240,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Office ID" id="c5" width="50"
                                                                            align="center">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ProjOffId}"
+                                                                        id="it15" placeholder="Search ID ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.ProjOffId.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.ProjOffId.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.ProjOffId.mandatory}"
@@ -225,6 +261,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Office" id="c7" width="173"
                                                                            align="left">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Name}"
+                                                                        id="it16" placeholder="Search Office ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Name.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Name.mandatory}"
@@ -239,6 +281,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Contact Person" id="c8"
                                                                            align="left">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.ContactPer}"
+                                                                        id="it17" placeholder="Search Contact ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.ContactPer.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.ContactPer.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.ContactPer.mandatory}"
@@ -253,6 +301,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjOffView3.hints.Address.label}"
                                                                            id="c9" align="left" width="180">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Address}"
+                                                                        id="it18" placeholder="Search Address ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.Address.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Address.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Address.mandatory}"
@@ -267,6 +321,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Telephone" id="c10" width="70"
                                                                            align="center">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Tel}"
+                                                                        id="it19" placeholder="Search Telephone ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.Tel.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Tel.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Tel.mandatory}"
@@ -282,6 +342,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjOffView3.hints.Fax.label}"
                                                                            id="c11" width="70" align="center">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Fax}"
+                                                                        id="it20" placeholder="Search Fax ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.Fax.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Fax.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Fax.mandatory}"
@@ -297,6 +363,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="E-mail" id="c12" width="70"
                                                                            align="left">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Email}"
+                                                                        id="it21" placeholder="Search E-mail ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:inputText value="#{row.bindings.Email.inputValue}"
                                                                                   label="#{bindings.TblProjOffView3.hints.Email.label}"
                                                                                   required="#{bindings.TblProjOffView3.hints.Email.mandatory}"
@@ -311,6 +383,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblProjOffView3.hints.Category.label}"
                                                                            id="c13" width="88" align="left">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Category}"
+                                                                        id="it23" placeholder="Search Category ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Category.inputValue}"
                                                                                         label="#{row.bindings.Category.label}"
                                                                                         required="#{bindings.TblProjOffView3.hints.Category.mandatory}"
@@ -325,6 +403,12 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c14" width="52"
                                                                            align="left">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText 
+                                                                       value="#{vs.filterCriteria.Ast}"
+                                                                        id="it24" placeholder="Search Status ">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblProjOffView3.hints.Ast.mandatory}"

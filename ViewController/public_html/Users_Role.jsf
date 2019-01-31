@@ -66,7 +66,7 @@
                                                                            
                                                                     <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleMasterId}"
-                                                                                     shortDesc="Search By ID" id="id4" placeholder="ID...">
+                                                                                     id="id4" placeholder="Search ID">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -87,7 +87,7 @@
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleMasterName}"
-                                                                                     shortDesc="Search By Role" id="it9" placeholder="Role...">
+                                                                                     id="it9" placeholder="Search Role">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -108,8 +108,8 @@
                                                                            
                                                                              <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     shortDesc="Search By Status"
-                                                                                     id="it10" placeholder="Status...">
+                                                                                     
+                                                                                     id="it10" placeholder="Search Status">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -186,8 +186,8 @@
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleDetailModulesId}"
-                                                                                     shortDesc="Search By ID"
-                                                                                     id="it11" placeholder="ID...">
+                                                                                     
+                                                                                     id="it11" placeholder="Search ID">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -208,8 +208,8 @@
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleMasterId}"
-                                                                                     shortDesc="Search By ID"
-                                                                                     id="it12" placeholder="ID...">
+                                                                                     
+                                                                                     id="it12" placeholder="Search ID">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -230,8 +230,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ModuleMenuId}"
-                                                                                     shortDesc="Search By Module"
-                                                                                     id="it13" placeholder="Module...">
+                                                                                     
+                                                                                     id="it13" placeholder="Search Module">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -251,9 +251,9 @@
                                                                            id="c7" width="80">
                                                                            
                                                                            <f:facet name="filter">
-                                                                       <af:inputText value="#{vs.filterCriteria.ModuleMenuId}"
-                                                                                     shortDesc="Search By View "
-                                                                                     id="it14" placeholder="View...">
+                                                                       <af:inputText value="#{vs.filterCriteria.RView}"
+                                                                                     
+                                                                                     id="it14" placeholder="Search View Right">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -317,13 +317,13 @@
                                                                       partialTriggers="::b13 ::b14 ::b15" width="1016">
                                                                 <af:column sortProperty="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.name}"
                                                                            filterable="true" sortable="true"
-                                                                           headerText="Role Detail Pege ID" align="center"
+                                                                           headerText="Role Detail Page ID" align="center"
                                                                            id="c8" width="80">
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleDetailPagesId}"
-                                                                                     shortDesc="Search By ID "
-                                                                                     id="it15" placeholder="ID...">
+                                                                                     
+                                                                                     id="it15" placeholder="Search ID">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                            
@@ -344,8 +344,8 @@
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleMasterId}"
-                                                                                     shortDesc="Search By ID "
-                                                                                     id="it16" placeholder="ID...">
+                                                                                     
+                                                                                     id="it16" placeholder="Search ID">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                     <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
@@ -365,8 +365,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.PagesId}"
-                                                                                     shortDesc="Search By Pages "
-                                                                                     id="it17" placeholder="Pages...">
+                                                                                     
+                                                                                     id="it17" placeholder="Search Page">
                                                                        </af:inputText>
                                                                    </f:facet>
                                                                     <af:selectOneChoice value="#{row.bindings.PagesId.inputValue}"
@@ -385,8 +385,8 @@
                                                                            id="c11" width="100">
                                                                         <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RView}"
-                                                                                     shortDesc="Search By View "
-                                                                                     id="it18" placeholder="View...">
+                                                                                     
+                                                                                     id="it18" placeholder="Search View Right">
                                                                        </af:inputText>
                                                                    </f:facet>    
                                                                     
@@ -407,8 +407,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RAdd}"
-                                                                                     shortDesc="Search By Add "
-                                                                                     id="it19" placeholder="Add...">
+                                                                                     
+                                                                                     id="it19" placeholder="Search Add Right">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.RAdd.inputValue}"
@@ -428,8 +428,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.REdit}"
-                                                                                     shortDesc="Search By Edit "
-                                                                                     id="it21" placeholder="Edit...">
+                                                                                     
+                                                                                     id="it21" placeholder="Search Edit Right">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.REdit.inputValue}"
@@ -449,8 +449,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RDelete}"
-                                                                                     shortDesc="Search By Delete "
-                                                                                     id="it22" placeholder="Delete...">
+                                                                                     
+                                                                                     id="it22" placeholder="Search Delete Right">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.RDelete.inputValue}"
@@ -472,7 +472,7 @@
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RPrint}"
                                                                                      shortDesc="Search By Print "
-                                                                                     id="it20" placeholder="Print...">
+                                                                                     id="it20" placeholder="Search Print Right">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.RPrint.inputValue}"
@@ -492,8 +492,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RPost}"
-                                                                                     shortDesc="Search By Post "
-                                                                                     id="it23" placeholder="Post...">
+                                                                                    
+                                                                                     id="it23" placeholder="Search Post Right">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.RPost.inputValue}"
@@ -561,8 +561,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleDetailReportsId}"
-                                                                                     shortDesc="Search By ID "
-                                                                                     id="it24" placeholder="ID...">
+                                                                                     
+                                                                                     id="it24" placeholder="Search ID">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:inputText value="#{row.bindings.RoleDetailReportsId.inputValue}"
@@ -582,8 +582,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RoleMasterId}"
-                                                                                     shortDesc="Search By ID "
-                                                                                     id="it25" placeholder="ID...">
+                                                                                     
+                                                                                     id="it25" placeholder="Search ID">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:inputText value="#{row.bindings.RoleMasterId.inputValue}"
@@ -603,8 +603,8 @@
                                                                            
                                                                            <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.ReportsId}"
-                                                                                     shortDesc="Search By Report "
-                                                                                     id="it26" placeholder="Report...">
+                                                                                     
+                                                                                     id="it26" placeholder="Search Report">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.ReportsId.inputValue}"
@@ -624,8 +624,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.RView}"
-                                                                                     shortDesc="Search By View "
-                                                                                     id="it27" placeholder="View...">
+                                                                                    
+                                                                                     id="it27" placeholder="Search View Right">
                                                                        </af:inputText>
                                                                    </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.RView.inputValue}"

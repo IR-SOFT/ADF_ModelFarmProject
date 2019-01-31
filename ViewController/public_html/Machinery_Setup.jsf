@@ -75,6 +75,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL1Id.name}"
                                                                            filterable="true" align="center"
                                                                            headerText="Level-1 ID" id="c4" width="54">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL1Id}"
+                                                                                      id="it7" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:outputText value="#{row.ItemL1Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL1Id.tooltip}"
                                                                                    id="ot4"/>
@@ -82,6 +87,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.L1_Name.name}"
                                                                            filterable="true" headerText="Level-1"
                                                                            id="c33" width="105" align="left">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L1_Name}"
+                                                                                      id="it21" placeholder="Search Level-1">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:outputText value="#{row.L1_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L1_Name.tooltip}"
                                                                                    id="ot9"/>
@@ -89,6 +99,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL2Id.name}"
                                                                            filterable="true" align="center"
                                                                            headerText="Level-2 ID" id="c3" width="57">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL2Id}"
+                                                                                      id="it22" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:outputText value="#{row.ItemL2Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL2Id.tooltip}"
                                                                                    id="ot3"/>
@@ -96,6 +111,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.L2_Name.name}"
                                                                            filterable="true" headerText="Level-2"
                                                                            id="c32" width="117">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L2_Name}"
+                                                                                      id="it23" placeholder="Search Level-2">
+                                                                       </af:inputText>
+                                                                   </f:facet>
                                                                     <af:outputText value="#{row.L2_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L2_Name.tooltip}"
                                                                                    id="ot8"/>
@@ -103,13 +123,22 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL3Id.name}"
                                                                            filterable="true" headerText="Level-3 ID"
                                                                            id="c2" width="47" align="center">
-                                                                    <af:outputText value="#{row.ItemL3Id}"
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL3Id}"
+                                                                                      id="it24" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>                                                                    <af:outputText value="#{row.ItemL3Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL3Id.tooltip}"
                                                                                    id="ot2"/>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.L3_Name.name}"
                                                                            filterable="true" headerText="Level-3"
                                                                            id="c31" width="151">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L3_Name}"
+                                                                                      id="it25" placeholder="Search Level-3">
+                                                                       </af:inputText>
+                                                                   </f:facet>   
                                                                     <af:outputText value="#{row.L3_Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.L3_Name.tooltip}"
                                                                                    id="ot7"/>
@@ -117,6 +146,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.ItemL4Id.name}"
                                                                            filterable="true" align="center"
                                                                            headerText="Item ID" id="c1" width="65">
+                                                                         <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
+                                                                                      id="it26" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:outputText value="#{row.ItemL4Id}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.ItemL4Id.tooltip}"
                                                                                    id="ot1"/>
@@ -124,6 +158,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Name.name}"
                                                                            filterable="true" headerText="Item"
                                                                            align="left" id="c5" width="250">
+                                                                      <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it27" placeholder="Search Item">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Name.tooltip}"
                                                                                    id="ot5"/>
@@ -131,6 +170,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View4.hints.Ast.name}"
                                                                            filterable="true" align="left"
                                                                            headerText="Active" id="c6" width="62">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it29" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblItemL4View4.hints.Ast.tooltip}"
                                                                                    id="ot6"/>
@@ -169,6 +213,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1 ID" align="center"
                                                                            id="c22" width="61">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL1Id}"
+                                                                                      id="it28" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL1View1.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL1View1.hints.ItemL1Id.mandatory}"
@@ -182,6 +231,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL1View1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1" id="c23" width="139">
+                                                                         <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it30" placeholder="Search Level-1">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL1View1.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL1View1.hints.Name.mandatory}"
@@ -195,6 +249,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL1View1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c24" width="100">
+                                                                         <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it31" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL1View1.hints.Ast.mandatory}"
@@ -257,6 +316,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1 ID" id="c19" width="58"
                                                                            align="center">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL1Id}"
+                                                                                      id="it32" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.ItemL1Id.mandatory}"
@@ -270,6 +334,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL2View3.hints.L1_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1" id="c25" width="142">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L1_Name}"
+                                                                                      id="it33" placeholder="Search Level-1">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.L1_Name.mandatory}"
@@ -284,6 +353,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-2 ID" id="c18" width="55"
                                                                            align="center">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL2Id}"
+                                                                                      id="it35" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.ItemL2Id.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.ItemL2Id.mandatory}"
@@ -297,6 +371,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL2View3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-2" id="c20" width="145">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it34" placeholder="Search Level-2">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL2View3.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL2View3.hints.Name.mandatory}"
@@ -310,6 +389,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL2View3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c21" width="100">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it36" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL2View3.hints.Ast.mandatory}"
@@ -372,6 +456,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1 ID" id="c15" width="47"
                                                                            align="center">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL1Id}"
+                                                                                      id="it37" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.ItemL1Id.mandatory}"
@@ -385,6 +474,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.L1_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1" id="c27" width="153">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L1_Name}"
+                                                                                      id="it38" placeholder="Search Level-1">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.L1_Name.mandatory}"
@@ -399,6 +493,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-2 ID" id="c14" width="52"
                                                                            align="center">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL2Id}"
+                                                                                      id="it39" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL2Id.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.ItemL2Id.mandatory}"
@@ -412,6 +511,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.L2_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-2" id="c26" width="148">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L2_Name}"
+                                                                                      id="it40" placeholder="Search Level-2">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.L2_Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.L2_Name.mandatory}"
@@ -426,19 +530,29 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-3 ID" id="c13" width="54"
                                                                            align="center">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL3Id}"
+                                                                                      id="it41" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL3Id.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.ItemL3Id.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.ItemL3Id.mandatory}"
                                                                                   columns="#{bindings.TblItemL3View3.hints.ItemL3Id.displayWidth}"
                                                                                   maximumLength="#{bindings.TblItemL3View3.hints.ItemL3Id.precision}"
                                                                                   shortDesc="#{bindings.TblItemL3View3.hints.ItemL3Id.tooltip}"
-                                                                                  id="it7" readOnly="true" >
+                                                                                  id="it42" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.ItemL3Id.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-3" id="c16" width="146">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it43" placeholder="Search Level-3">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL3View3.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL3View3.hints.Name.mandatory}"
@@ -452,6 +566,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL3View3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c17" width="100">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it44" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL3View3.hints.Ast.mandatory}"
@@ -514,6 +633,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1 ID" align="center"
                                                                            id="c10" width="51">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL1Id}"
+                                                                                      id="it45" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL1Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL1Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL1Id.mandatory}"
@@ -527,6 +651,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.L1_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-1" id="c28" width="149">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L1_Name}"
+                                                                                      id="it46" placeholder="Search Level-1">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.L1_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L1_Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.L1_Name.mandatory}"
@@ -541,6 +670,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-2 ID" align="center"
                                                                            id="c9" width="60">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL2Id}"
+                                                                                      id="it47" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL2Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL2Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL2Id.mandatory}"
@@ -554,6 +688,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.L2_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-2" id="c29" width="140">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L2_Name}"
+                                                                                      id="it48" placeholder="Search Level-2">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.L2_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L2_Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.L2_Name.mandatory}"
@@ -568,6 +707,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-3 ID" align="center"
                                                                            id="c8" width="47">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL3Id}"
+                                                                                      id="it49" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL3Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL3Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL3Id.mandatory}"
@@ -581,6 +725,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.L3_Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Level-3" id="c30" width="153">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.L3_Name}"
+                                                                                      id="it50" placeholder="Search Level-3">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.L3_Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.L3_Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.L3_Name.mandatory}"
@@ -595,6 +744,11 @@
                                                                            filterable="true" sortable="true"
                                                                            align="center" headerText="Item ID" id="c7"
                                                                            width="34">
+                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ItemL4Id}"
+                                                                                      id="it51" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.ItemL4Id.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.ItemL4Id.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.ItemL4Id.mandatory}"
@@ -608,6 +762,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Item" id="c11" width="166">
+                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                      id="it52" placeholder="Search Item">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblItemL4View41.hints.Name.label}"
                                                                                   required="#{bindings.TblItemL4View41.hints.Name.mandatory}"
@@ -621,6 +780,11 @@
                                                                 <af:column sortProperty="#{bindings.TblItemL4View41.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c12" width="100">
+                                                                        <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                      id="it53" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet> 
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblItemL4View41.hints.Ast.mandatory}"
