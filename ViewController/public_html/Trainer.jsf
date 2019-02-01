@@ -82,6 +82,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
                                                                            id="c1" width="60">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainerId}"
+                                                                                     id="id4" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainerId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerView1.hints.TrainerId.label}"
                                                                                   required="#{bindings.Tbl_TrainerView1.hints.TrainerId.mandatory}"
@@ -95,6 +102,13 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Name.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer" id="c2" width="250">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it4" placeholder="Search Trainer">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerView1.hints.Name.label}"
                                                                                   required="#{bindings.Tbl_TrainerView1.hints.Name.mandatory}"
@@ -108,6 +122,13 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.FatherName.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Father" id="c3" width="250">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.FatherName}"
+                                                                                     id="it29" placeholder="Search Father">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.FatherName.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerView1.hints.FatherName.label}"
                                                                                   required="#{bindings.Tbl_TrainerView1.hints.FatherName.mandatory}"
@@ -121,6 +142,13 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerView1.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c4" width="60">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it30" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_TrainerView1.hints.Ast.mandatory}"
@@ -344,6 +372,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
                                                                            id="c6" width="60">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainerId}"
+                                                                                     id="it31" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainerId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.TrainerId.mandatory}"
@@ -358,6 +393,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Academy ID" align="center"
                                                                            id="c5" width="60">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainerAcaId}"
+                                                                                     id="it32" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainerAcaId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.TrainerAcaId.mandatory}"
@@ -372,6 +414,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_TrainerAcaView3.hints.Degree.label}"
                                                                            id="c7" width="150">
+                                                                           
+                                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Degree}"
+                                                                                     id="it33" placeholder="Search Degree">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Degree.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.Degree.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.Degree.mandatory}"
@@ -387,6 +436,13 @@
                                                                            align="center"
                                                                            headerText="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.label}"
                                                                            id="c8" width="70">
+                                                                           
+                                                                                      <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.PassYear}"
+                                                                                     id="it34" placeholder="Search Year">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.PassYear.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.PassYear.mandatory}"
@@ -403,6 +459,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Major Subject" id="c9"
                                                                            width="150">
+                                                                           
+                                                                                       <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.MajSub}"
+                                                                                     id="it35" placeholder="Search Subject">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.MajSub.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.MajSub.mandatory}"
@@ -417,6 +480,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="University/Board" id="c10"
                                                                            width="270">
+                                                                           
+                                                                                         <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.UniBoard}"
+                                                                                     id="it36" placeholder="Search University/Board">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.UniBoard.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.UniBoard.mandatory}"
@@ -431,6 +501,13 @@
                                                                            filterable="true" sortable="true"
                                                                            align="center" headerText="Percentage"
                                                                            id="c11" width="70">
+                                                                           
+                                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Perc}"
+                                                                                     id="it37" placeholder="Search %">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Perc.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.Perc.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.Perc.mandatory}"
@@ -447,6 +524,13 @@
                                                                            filterable="true" sortable="true"
                                                                            align="center" headerText="CGPA" id="c12"
                                                                            width="55">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Cgpa}"
+                                                                                     id="it38" placeholder="Search CGPA">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Cgpa.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.label}"
                                                                                   required="#{bindings.Tbl_TrainerAcaView3.hints.Cgpa.mandatory}"
@@ -509,6 +593,14 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Trainer ID" align="center"
                                                                            id="c14" width="60">
+                                                                           
+                                                                                   <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainerId}"
+                                                                                     id="it39" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainerId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.label}"
                                                                                   required="#{bindings.Tbl_TrainerPercView3.hints.TrainerId.mandatory}"
@@ -524,6 +616,13 @@
                                                                            align="center"
                                                                            headerText="Trainer Perquisites ID" id="c13"
                                                                            width="80">
+                                                                           
+                                                                                   <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TrainerPercId}"
+                                                                                     id="it40" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TrainerPercId.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.label}"
                                                                                   required="#{bindings.Tbl_TrainerPercView3.hints.TrainerPercId.mandatory}"
@@ -538,6 +637,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Perquisites" id="c15"
                                                                            width="150">
+                                                                           
+                                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.PercName}"
+                                                                                     id="it41" placeholder="Search Perquisites">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.PercName.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.PercName.label}"
                                                                                   required="#{bindings.Tbl_TrainerPercView3.hints.PercName.mandatory}"
@@ -553,6 +659,13 @@
                                                                            align="center"
                                                                            headerText="#{bindings.Tbl_TrainerPercView3.hints.Amount.label}"
                                                                            id="c16" width="80">
+                                                                           
+                                                                                    <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Amount}"
+                                                                                     id="it42" placeholder="Search Amount">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Amount.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.Amount.label}"
                                                                                   required="#{bindings.Tbl_TrainerPercView3.hints.Amount.mandatory}"
@@ -569,6 +682,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_TrainerPercView3.hints.Remarks.label}"
                                                                            id="c17" width="480">
+                                                                           
+                                                                                     <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Remarks}"
+                                                                                     id="it43" placeholder="Search Remarks">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Remarks.inputValue}"
                                                                                   label="#{bindings.Tbl_TrainerPercView3.hints.Remarks.label}"
                                                                                   required="#{bindings.Tbl_TrainerPercView3.hints.Remarks.mandatory}"
@@ -582,6 +702,13 @@
                                                                 <af:column sortProperty="#{bindings.Tbl_TrainerPercView3.hints.Ast.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active" id="c18" width="60">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it44" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.Tbl_TrainerPercView3.hints.Ast.mandatory}"
