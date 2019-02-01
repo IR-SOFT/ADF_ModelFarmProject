@@ -63,6 +63,13 @@
                                                                            filterable="true"
                                                                            headerText="Project"
                                                                            id="c16" width="150">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Project_Name}"
+                                                                                     id="it36" placeholder="Search Project">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Project_Name}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Project_Name.tooltip}"
                                                                                    id="ot11"/>
@@ -72,6 +79,13 @@
                                                                            filterable="true"
                                                                            headerText="Project Office"
                                                                            id="c3" width="150">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it3" placeholder="Search Project Office">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Name}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Name.tooltip}"
                                                                                    id="ot3"/>
@@ -80,6 +94,13 @@
                                                                            filterable="true"
                                                                            headerText="Contact Person"
                                                                            id="c4" width="99">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ContactPer}"
+                                                                                     id="it6" placeholder="Search Contact Person">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.ContactPer}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.ContactPer.tooltip}"
                                                                                    id="ot4"/>
@@ -88,6 +109,13 @@
                                                                            filterable="true"
                                                                            headerText="#{bindings.TblClusterProjOffView1.hints.Address.label}"
                                                                            id="c5" width="150">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Address}"
+                                                                                     id="it7" placeholder="Search Address">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Address}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Address.tooltip}"
                                                                                    id="ot5"/>
@@ -96,6 +124,13 @@
                                                                            filterable="true" align="center"
                                                                            headerText="Telephone"
                                                                            id="c6" width="60">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Tel}"
+                                                                                     id="it8" placeholder="Search Telephone">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Tel}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Tel.tooltip}"
                                                                                    id="ot6"/>
@@ -104,6 +139,13 @@
                                                                            filterable="true" align="center"
                                                                            headerText="#{bindings.TblClusterProjOffView1.hints.Fax.label}"
                                                                            id="c7" width="60">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Fax}"
+                                                                                     id="it9" placeholder="Search Fax">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Fax}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Fax.tooltip}"
                                                                                    id="ot7"/>
@@ -112,6 +154,13 @@
                                                                            filterable="true"
                                                                            headerText="E-mail"
                                                                            id="c8" width="100">
+                                                                           
+                                                                                   <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Email}"
+                                                                                     id="it10" placeholder="Search E-mail">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Email}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Email.tooltip}"
                                                                                    id="ot8"/>
@@ -120,6 +169,13 @@
                                                                            filterable="true" align="left"
                                                                            headerText="#{bindings.TblClusterProjOffView1.hints.Category.label}"
                                                                            id="c9" width="60">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Category}"
+                                                                                     id="it11" placeholder="Search Category">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Category}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Category.tooltip}"
                                                                                    id="ot9"/>
@@ -128,6 +184,13 @@
                                                                            filterable="true" align="left"
                                                                            headerText="Active"
                                                                            id="c10" width="60">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it12" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblClusterProjOffView1.hints.Ast.tooltip}"
                                                                                    id="ot10"/>
@@ -164,6 +227,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project Office ID" align="center"
                                                                            id="c12" width="70">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ProjOffId}"
+                                                                                     id="it13" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ProjOffId.inputValue}"
                                                                                   label="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.label}"
                                                                                   required="#{bindings.TblClusterTargetCropsView3.hints.ProjOffId.mandatory}"
@@ -178,6 +248,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Project Office"
                                                                            id="c17" width="280">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Project_Office_Name}"
+                                                                                     id="it14" placeholder="Search Project Office">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Project_Office_Name.inputValue}"
                                                                                   label="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.label}"
                                                                                   required="#{bindings.TblClusterTargetCropsView3.hints.Project_Office_Name.mandatory}"
@@ -192,6 +269,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Crop"
                                                                            id="c19" width="150">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.CropId}"
+                                                                                     id="it15" placeholder="Search Crop">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.CropId.inputValue}"
                                                                                         label="#{row.bindings.CropId.label}"
                                                                                         required="#{bindings.TblClusterTargetCropsView3.hints.CropId.mandatory}"
@@ -206,6 +290,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Target ID"
                                                                            id="c11" width="75">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TargetCropsId}"
+                                                                                     id="it16" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TargetCropsId.inputValue}"
                                                                                   label="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.label}"
                                                                                   required="#{bindings.TblClusterTargetCropsView3.hints.TargetCropsId.mandatory}"
@@ -220,6 +311,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Target Distribution"
                                                                            id="c14" width="280">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.TarDis}"
+                                                                                     id="it17" placeholder="Search Target Distribution">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.TarDis.inputValue}"
                                                                                   label="#{bindings.TblClusterTargetCropsView3.hints.TarDis.label}"
                                                                                   required="#{bindings.TblClusterTargetCropsView3.hints.TarDis.mandatory}"
@@ -234,6 +332,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
                                                                            id="c15" width="60">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it18" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblClusterTargetCropsView3.hints.Ast.mandatory}"

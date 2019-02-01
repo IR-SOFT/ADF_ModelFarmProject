@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Farmer_Registration')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Farmer_Registration.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -65,6 +65,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer Reg ID" align="center"
                                                                            id="c1" width="85">
+                                                                           
+                                                                                  <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.FarmerRegId}"
+                                                                                     id="it18" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.FarmerRegId.mandatory}"
@@ -79,6 +86,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer"
                                                                            id="c2" width="226">
+                                                                           
+                                                                                 <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it4" placeholder="Search Farmer">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.Name.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.Name.mandatory}"
@@ -93,6 +107,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Father"
                                                                            id="c3" width="177">
+                                                                           
+                                                                               <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.FatherName}"
+                                                                                     id="it5" placeholder="Search Father">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.FatherName.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegView5.hints.FatherName.label}"
                                                                                   required="#{bindings.TblFarmerRegView5.hints.FatherName.mandatory}"
@@ -107,6 +128,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Active"
                                                                            id="c4" width="-105">
+                                                                           
+                                                                               <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Ast}"
+                                                                                     id="it22" placeholder="Search Status">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.Ast.inputValue}"
                                                                                         label="#{row.bindings.Ast.label}"
                                                                                         required="#{bindings.TblFarmerRegView5.hints.Ast.mandatory}"
@@ -339,6 +367,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Land ID" align="center"
                                                                            id="c5" width="57">
+                                                                           
+                                                                              <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.FarmerRegLandId}"
+                                                                                     id="it42" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.FarmerRegLandId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.FarmerRegLandId.mandatory}"
@@ -353,6 +388,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Farmer Reg ID" align="center"
                                                                            id="c6" width="75">
+                                                                           
+                                                                               <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.FarmerRegId}"
+                                                                                     id="it43" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.FarmerRegId.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.FarmerRegId.mandatory}"
@@ -367,13 +409,20 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Land (Acre)" align="center"
                                                                            id="c7" width="126">
+                                                                           
+                                                                                <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.LandAcre}"
+                                                                                     id="it44" placeholder="Search Acre">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.LandAcre.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.LandAcre.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.LandAcre.mandatory}"
                                                                                   columns="#{bindings.TblFarmerRegLandView7.hints.LandAcre.displayWidth}"
                                                                                   maximumLength="#{bindings.TblFarmerRegLandView7.hints.LandAcre.precision}"
                                                                                   shortDesc="#{bindings.TblFarmerRegLandView7.hints.LandAcre.tooltip}"
-                                                                                  id="it18">
+                                                                                  id="it41">
                                                                         <f:validator binding="#{row.bindings.LandAcre.validator}"/>
                                                                         <af:convertNumber groupingUsed="false"
                                                                                           pattern="#{bindings.TblFarmerRegLandView7.hints.LandAcre.format}"/>
@@ -383,6 +432,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Land (Kanal)"
                                                                            id="c8" width="128">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.LandKanal}"
+                                                                                     id="it45" placeholder="Search Kanal">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.LandKanal.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.LandKanal.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.LandKanal.mandatory}"
@@ -399,6 +455,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Present Production"
                                                                            id="c9" width="114">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.PresentProd}"
+                                                                                     id="it46" placeholder="Search Production">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.PresentProd.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.PresentProd.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.PresentProd.mandatory}"
@@ -415,6 +478,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Land Under Orchard"
                                                                            id="c10" width="100">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.LandUnderOrch}"
+                                                                                     id="it47" placeholder="Search Land Under Orchard">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.LandUnderOrch.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.LandUnderOrch.mandatory}"
@@ -431,6 +501,13 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.label}"
                                                                            id="c31">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.SelfshipType}"
+                                                                                     id="it48" placeholder="Search Selfship">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:selectOneChoice value="#{row.bindings.SelfshipType.inputValue}"
                                                                                         label="#{row.bindings.SelfshipType.label}"
                                                                                         required="#{bindings.TblFarmerRegLandView7.hints.SelfshipType.mandatory}"
@@ -445,6 +522,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Self Local Marketing"
                                                                            id="c12" width="100">
+                                                                           
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.SelfLocalMark}"
+                                                                                     id="it49" placeholder="Search Marketing">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.SelfLocalMark.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.SelfLocalMark.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.SelfLocalMark.mandatory}"
@@ -459,6 +543,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Self Export Marketing"
                                                                            id="c13" width="100">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.SelfExportMark}"
+                                                                                     id="it50" placeholder="Search Marketing">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.SelfExportMark.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.SelfExportMark.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.SelfExportMark.mandatory}"
@@ -473,6 +564,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Contract Mark"
                                                                            id="c14">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.ContractMark}"
+                                                                                     id="it51" placeholder="Search Marketing">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.ContractMark.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.ContractMark.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.ContractMark.mandatory}"
@@ -487,6 +585,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegLandView7.hints.KhatooniNo.label}"
                                                                            id="c15">
+                                                                           
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.KhatooniNo}"
+                                                                                     id="it52" placeholder="Search No.">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.KhatooniNo.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.KhatooniNo.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.KhatooniNo.mandatory}"
@@ -503,6 +608,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="#{bindings.TblFarmerRegLandView7.hints.KhauuetNo.label}"
                                                                            id="c16">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.KhauuetNo}"
+                                                                                     id="it53" placeholder="Search No.">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.KhauuetNo.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.KhauuetNo.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.KhauuetNo.mandatory}"
@@ -519,6 +631,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Qitta No."
                                                                            id="c17">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.QittaNo}"
+                                                                                     id="it54" placeholder="Search No.">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.QittaNo.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.QittaNo.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.QittaNo.mandatory}"
@@ -535,6 +654,13 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText="Khasra No."
                                                                            id="c18">
+                                                                           
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.KhasraNo}"
+                                                                                     id="it55" placeholder="Search No.">
+                                                                       </af:inputText>
+                                                                   </f:facet>
+                                                                           
                                                                     <af:inputText value="#{row.bindings.KhasraNo.inputValue}"
                                                                                   label="#{bindings.TblFarmerRegLandView7.hints.KhasraNo.label}"
                                                                                   required="#{bindings.TblFarmerRegLandView7.hints.KhasraNo.mandatory}"
