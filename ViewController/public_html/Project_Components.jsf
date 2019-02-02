@@ -471,6 +471,11 @@
                                                                            filterable="true" sortable="true" align="center"
                                                                            headerText=" Beneficiary ID"
                                                                            id="c14" width="80">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.BeneficiaryId}"
+                                                                                     id="it25" placeholder="Search ID">
+                                                                       </af:inputText>
+                                                                            </f:facet>
                                                                     <af:inputText value="#{row.bindings.BeneficiaryId.inputValue}"
                                                                                   label="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.label}"
                                                                                   required="#{bindings.Tbl_BeneficiaryView1.hints.BeneficiaryId.mandatory}"
@@ -485,6 +490,11 @@
                                                                            filterable="true" sortable="true" 
                                                                            headerText="Beneficiary"
                                                                            id="c15" width="300">
+                                                                            <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it26" placeholder="Search Beneficiary">
+                                                                       </af:inputText>
+                                                                            </f:facet>
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.Tbl_BeneficiaryView1.hints.Name.label}"
                                                                                   required="#{bindings.Tbl_BeneficiaryView1.hints.Name.mandatory}"
@@ -499,6 +509,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.label}"
                                                                            id="c16" width="80">
+                                                                           <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Vtp}"
+                                                                                     id="it27" placeholder="Search Vtp">
+                                                                       </af:inputText>
+                                                                            </f:facet>
                                                                     <af:inputText value="#{row.bindings.Vtp.inputValue}"
                                                                                   label="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.label}"
                                                                                   required="#{bindings.Tbl_BeneficiaryView1.hints.Vtp.mandatory}"
@@ -516,8 +531,8 @@
                                                                            
                                                                             <f:facet name="filter">
                                                                        <af:inputText value="#{vs.filterCriteria.Ast}"
-                                                                                     shortDesc="Search By Status"
-                                                                                     id="it14" placeholder="Status.....">
+                                                                                     
+                                                                                     id="it14" placeholder="Search Status">
                                                                        </af:inputText>
                                                                             </f:facet>
                                                                            

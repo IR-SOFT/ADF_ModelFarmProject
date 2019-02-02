@@ -200,6 +200,11 @@
                                                                            filterable="true" sortable="true"
                                                                            headerText="Topic"
                                                                            id="c7" width="475">
+                                                                             <f:facet name="filter">
+                                                                       <af:inputText value="#{vs.filterCriteria.Name}"
+                                                                                     id="it10" placeholder="Search Topic">
+                                                                       </af:inputText>
+                                                                            </f:facet>
                                                                     <af:inputText value="#{row.bindings.Name.inputValue}"
                                                                                   label="#{bindings.TblTopicsView3.hints.Name.label}"
                                                                                   required="#{bindings.TblTopicsView3.hints.Name.mandatory}"
