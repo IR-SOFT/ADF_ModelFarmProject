@@ -18,7 +18,9 @@
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_PROG"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -86,4 +88,17 @@
       <Item Value="model.eo.TblProg.Name"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblProg"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

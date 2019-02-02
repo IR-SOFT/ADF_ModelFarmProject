@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblFarmerRegMem"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_FARMER_REG_MEM"
@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="FarmerRegMemId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="FARMER_REG_MEM_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_FARMER_REG_MEM"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -176,4 +177,17 @@
       <Item Value="model.eo.TblFarmerRegMem.FarmerRegId"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblFarmerRegMem"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

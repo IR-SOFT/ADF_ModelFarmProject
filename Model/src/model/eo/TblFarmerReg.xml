@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="FarmerRegId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="FARMER_REG_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_FARMER_REG"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -251,6 +252,13 @@
     AssociationOtherEnd="model.eo.FKTblClusterDetailViewAssoc.TblFarmerReg"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblFarmerCluster"
+    Association="model.eo.FkTblFarmerRegFkAssoc"
+    AssociationEnd="model.eo.FkTblFarmerRegFkAssoc.TblFarmerCluster"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegFkAssoc.TblFarmerReg"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <ViewLinkAccessor
     Name="TblClusterDetailView"
     ViewLink="model.vo.FKTblClusterDetailFKLink2"
@@ -291,4 +299,17 @@
       <Item Value="model.eo.TblFarmerReg.ClusterId"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblFarmerReg"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

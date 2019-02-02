@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="TeamId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="TEAM_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_TEAM"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -124,4 +125,17 @@
       <Item Value="model.eo.Tbl_Team.TrainerId"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.Tbl_Team"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

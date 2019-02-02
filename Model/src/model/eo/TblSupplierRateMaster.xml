@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblSupplierRateMaster"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_SUPPLIER_RATE_MASTER"
@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="SupplierRateMasterId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="SUPPLIER_RATE_MASTER_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_SUPPLIER_RATE_MASTER"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -99,4 +100,17 @@
       <Item Value="model.eo.TblSupplierRateMaster.SupplierId"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblSupplierRateMaster"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblFarmerRegCrops"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_FARMER_REG_CROPS"
@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="FarmerRegCropsId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="FARMER_REG_CROPS_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_FARMER_REG_CROPS"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -55,6 +56,13 @@
     Association="model.eo.FkTblFarmerRegCropsFkAssoc1"
     AssociationEnd="model.eo.FkTblFarmerRegCropsFkAssoc1.TblFarmerReg"
     AssociationOtherEnd="model.eo.FkTblFarmerRegCropsFkAssoc1.TblFarmerRegCrops"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="TblFarmerCrop"
+    Association="model.eo.FkTblFarmerRegCropsFkAssoc"
+    AssociationEnd="model.eo.FkTblFarmerRegCropsFkAssoc.TblFarmerCrop"
+    AssociationOtherEnd="model.eo.FkTblFarmerRegCropsFkAssoc.TblFarmerRegCrops"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
   <ViewLinkAccessor
@@ -96,4 +104,17 @@
       <Item Value="model.eo.TblFarmerRegCrops.FarmerRegId"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblFarmerRegCrops"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

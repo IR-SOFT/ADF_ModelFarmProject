@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="RoleDetailModulesId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="ROLE_DETAIL_MODULES_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_ROLE_DETAIL_MODULES"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -111,4 +112,17 @@
       <Item Value="model.eo.TblRoleDetailModules.RoleMasterId"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblRoleDetailModules"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

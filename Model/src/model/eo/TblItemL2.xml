@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="TblItemL2"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_ITEM_L2"
@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="ItemL2Id"
-    IsNotNull="true"
     Precision="3"
     ColumnName="ITEM_L2_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_ITEM_L2"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -118,4 +119,17 @@
       <Item Value="model.eo.TblItemL2.ItemL1Id"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblItemL2"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

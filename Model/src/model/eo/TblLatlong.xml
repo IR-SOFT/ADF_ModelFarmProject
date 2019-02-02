@@ -17,7 +17,9 @@
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="TBL_LATLONG"
-    PrimaryKey="true"/>
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true"/>
   <Attribute
     Name="Longitude"
     ColumnName="LONGITUDE"
@@ -60,4 +62,17 @@
       <Item Value="model.eo.TblLatlong.Qty"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.TblLatlong"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

@@ -19,7 +19,8 @@
     ColumnType="VARCHAR2"
     TableName="TBL_PROJ_COMP"
     PrimaryKey="true"
-    IsNotNull="true">
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -94,18 +95,6 @@
     </AttrArray>
   </Key>
   <Key
-    Name="TblProjCompProjCompIdCheck">
-    <DesignTime>
-      <Attr Name="_isNotNull" Value="true"/>
-      <Attr Name="_checkCondition" Value='"PROJ_COMP_ID" IS NOT NULL'/>
-      <Attr Name="_isCheck" Value="true"/>
-      <Attr Name="_DBObjectName" Value="TBL_PROJ_COMP_PROJ_COMP_ID_CHE"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="model.eo.Tbl_ProjComp.ProjCompId"/>
-    </AttrArray>
-  </Key>
-  <Key
     Name="FkTblProjCompFk">
     <DesignTime>
       <Attr Name="_referencedKey" Value="PK_TBL_PROJ_PK"/>
@@ -116,4 +105,17 @@
       <Item Value="model.eo.Tbl_ProjComp.ProjId"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.Tbl_ProjComp"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>

@@ -4,7 +4,7 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_ATT_Trainer"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   DBObjectType="table"
   DBObjectName="TBL_TRAINER"
@@ -12,14 +12,15 @@
   BindingStyle="OracleName">
   <Attribute
     Name="TrainerId"
-    IsNotNull="true"
     Precision="3"
     ColumnName="TRAINER_ID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
     TableName="TBL_TRAINER"
-    PrimaryKey="true">
+    PrimaryKey="true"
+    RetrievedOnInsert="true"
+    RetrievedOnUpdate="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="3"/>
     </DesignTime>
@@ -251,4 +252,17 @@
       <Item Value="model.eo.Tbl_ATT_Trainer.Email"/>
     </AttrArray>
   </Key>
+  <Permission
+    target="model.eo.Tbl_ATT_Trainer"
+    permissionClass="oracle.adf.share.security.authorization.EntityPermission">
+    <privilege-map
+      operation="read"
+      privilege="read"/>
+    <privilege-map
+      operation="update"
+      privilege="update"/>
+    <privilege-map
+      operation="removeCurrentRow"
+      privilege="delete"/>
+  </Permission>
 </Entity>
