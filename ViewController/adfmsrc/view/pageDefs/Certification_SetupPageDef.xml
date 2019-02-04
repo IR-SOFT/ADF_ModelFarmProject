@@ -26,5 +26,9 @@
     <action IterBinding="TblCertificationView1Iterator" id="Delete" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action IterBinding="TblCertificationView1Iterator" id="removeRowWithKey" RequiresUpdateModel="false"
+            Action="removeRowWithKey">
+      <NamedData NDName="rowKey" NDType="java.lang.String"/>
+    </action>
   </bindings>
 </pageDefinition>

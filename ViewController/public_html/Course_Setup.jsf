@@ -120,7 +120,7 @@
                                                                            
                                                                     <af:outputText value="#{row.Ast}"
                                                                                    shortDesc="#{bindings.TblProjCompInput2View11.hints.Ast.tooltip}"
-                                                                                   id="ot4"/>
+                                                                                   id="ot4" />
                                                                 </af:column>
                                                             </af:table>
                                                         </af:showDetailItem>

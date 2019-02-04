@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
         xmlns:h="http://java.sun.com/jsf/html">
-    <f:metadata>
+    <!--<f:metadata>
         <?audit suppress oracle.ide.xml.validation-error?>
         <f:event type="preRenderView" listener="#{backingBeanScope.backing_login.checkSession('Certification_Setup')}"/>
-    </f:metadata>
+    </f:metadata>-->
     <af:document title="Certification_Setup.jsf" id="d1">
         <af:messages id="m1"/>
         <af:form id="f1">
@@ -53,7 +53,7 @@
                                                                       filterVisible="true"
                                                                       queryListener="#{bindings.TblCertificationView1Query.processQuery}"
                                                                       varStatus="vs" id="t1"
-                                                                      partialTriggers="::b4 ::b6 ::b7">
+                                                                      partialTriggers="::b4 ::b6 ::b7 ::b2">
                                                                 <af:column sortProperty="#{bindings.TblCertificationView1.hints.CertificationId.name}"
                                                                            filterable="true" sortable="true"
                                                                            headerText="Certification ID" align="center"
@@ -85,7 +85,7 @@
                                                                                   columns="#{bindings.TblCertificationView1.hints.Name.displayWidth}"
                                                                                   maximumLength="#{bindings.TblCertificationView1.hints.Name.precision}"
                                                                                   shortDesc="#{bindings.TblCertificationView1.hints.Name.tooltip}"
-                                                                                  id="it2">
+                                                                                  id="it2" placeholder="aaa.......">
                                                                         <f:validator binding="#{row.bindings.Name.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -137,6 +137,10 @@
                                                                    rendered="#{backingBeanScope.backing_login.get_save_view_rights() == 'Y'}"
                                                                    icon="#{resource['images:save.png']}"
                                                                    inlineStyle="width:70px; text-align:center; vertical-align: middle;"/>
+                                                        <af:button actionListener="#{bindings.removeRowWithKey.execute}"
+                                                                   text="removeRowWithKey"
+                                                                   disabled="#{!bindings.removeRowWithKey.enabled}"
+                                                                   id="b2"/>
                                                     </h:panelGroup>
                                                 </af:gridCell>
                                             </af:gridRow>
