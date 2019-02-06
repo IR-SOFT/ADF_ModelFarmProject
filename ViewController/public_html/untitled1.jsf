@@ -231,6 +231,9 @@
                                disabled="#{!bindings.Commit.enabled}" id="b3"/>
                 </af:showDetailItem>
             </af:panelAccordion>
+            <af:panelAccordion discloseMany="true" id="pa2" inlineStyle="width:360px;">
+                <af:showDetailItem id="pane2" text="Panel Label 2"/>
+            </af:panelAccordion>
         </af:form>
     </af:document>
 </f:view>

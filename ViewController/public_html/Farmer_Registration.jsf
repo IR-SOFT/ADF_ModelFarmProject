@@ -159,6 +159,7 @@
                                                                     inlineStyle="width:1011px;">
                                                         <af:showDetailItem id="tab2" text="Other Detail">
                                                             <af:panelFormLayout id="pfl1" maxColumns="3" rows="5">
+                                                           
                                                                 <af:selectOneChoice value="#{bindings.ClusterId1.inputValue}"
                                                                                     label="Cluster"
                                                                                     required="#{bindings.ClusterId1.hints.mandatory}"
@@ -169,16 +170,27 @@
                                                                                    id="si3"/>
                                                                     <f:validator binding="#{bindings.ClusterId1.validator}"/>
                                                                 </af:selectOneChoice>
-                                                                <af:inputText value="#{bindings.MarStatus.inputValue}"
-                                                                              label="Marital Status"
-                                                                              required="#{bindings.MarStatus.hints.mandatory}"
-                                                                              columns="#{bindings.MarStatus.hints.displayWidth}"
-                                                                              maximumLength="#{bindings.MarStatus.hints.precision}"
-                                                                              shortDesc="#{bindings.MarStatus.hints.tooltip}"
-                                                                              id="it6" contentStyle="width:200px">
-                                                                    <f:validator binding="#{bindings.MarStatus.validator}"/>
-                                                                </af:inputText>
+                                                                <af:selectOneChoice value="#{bindings.Gender.inputValue}"
+                                                                                    label="#{bindings.Gender.label}"
+                                                                                    required="#{bindings.Gender.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.Gender.hints.tooltip}"
+                                                                                    id="soc6"
+                                                                                    contentStyle="width:200px">
+                                                                    <f:selectItems value="#{bindings.Gender.items}"
+                                                                                   id="si6"/>
+                                                                    <f:validator binding="#{bindings.Gender.validator}"/>
+                                                                </af:selectOneChoice>
                                                                 
+                                                                <af:selectOneChoice value="#{bindings.MarStatus1.inputValue}"
+                                                                                    label="Marital Status"
+                                                                                    required="#{bindings.MarStatus1.hints.mandatory}"
+                                                                                    shortDesc="#{bindings.MarStatus1.hints.tooltip}"
+                                                                                    id="soc5"
+                                                                                    contentStyle="width:200px">
+                                                                    <f:selectItems value="#{bindings.MarStatus1.items}"
+                                                                                   id="si5"/>
+                                                                    <f:validator binding="#{bindings.MarStatus1.validator}"/>
+                                                                </af:selectOneChoice>
                                                                 <af:inputDate value="#{bindings.Dob.inputValue}"
                                                                               label="DOB"
                                                                               required="#{bindings.Dob.hints.mandatory}"
@@ -269,6 +281,7 @@
                                                                               id="it14" contentStyle="width:250px">
                                                                     <f:validator binding="#{bindings.PreAddress.validator}"/>
                                                                 </af:inputText>
+                                                                
                                                                 <af:inputText value="#{bindings.PerAddress.inputValue}"
                                                                               label="Permanent Address"
                                                                               required="#{bindings.PerAddress.hints.mandatory}"

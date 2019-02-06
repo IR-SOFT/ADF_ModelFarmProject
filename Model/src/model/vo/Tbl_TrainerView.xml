@@ -4,7 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Tbl_TrainerView"
-  Version="12.2.1.11.3"
+  Version="12.2.1.9.14"
   InheritPersonalization="merge"
   SelectListFlags="1"
   FromListFlags="1"
@@ -18,6 +18,24 @@
     ViewObjectName="model.lov.Active_Status"
     AMUsageName="AppModule"
     ViewInstanceName="Active_Status1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Marital_Status_LOV1_1"
+    ViewObjectName="model.lov.Marital_Status_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Marital_Status_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Marital_Status_LOV1_2"
+    ViewObjectName="model.lov.Marital_Status_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Marital_Status_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Gender_LOV2_1"
+    ViewObjectName="model.lov.Gender_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Gender_LOV2"
     RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
@@ -33,6 +51,40 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="astView"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_MarStatus"
+    ListVOName="AppModule_Marital_Status_LOV1_2"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="MarStatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Marital_Status_DB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Marital_Status_View"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Gender"
+    ListVOName="AppModule_Gender_LOV2_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Gender"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="GenderDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="GenderView"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -81,7 +133,15 @@
     PrecisionRule="true"
     EntityAttrName="MarStatus"
     EntityUsage="Tbl_Trainer"
-    AliasName="MAR_STATUS"/>
+    AliasName="MAR_STATUS"
+    LOVName="LOV_MarStatus">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Dob"
     IsNotNull="true"
@@ -162,6 +222,20 @@
     EntityAttrName="PerAddress"
     EntityUsage="Tbl_Trainer"
     AliasName="PER_ADDRESS"/>
+  <ViewAttribute
+    Name="Gender"
+    PrecisionRule="true"
+    EntityAttrName="Gender"
+    EntityUsage="Tbl_Trainer"
+    AliasName="GENDER"
+    LOVName="LOV_Gender">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="Tbl_TrainerAcaView"
     ViewLink="model.vo.FkTblTrainerAcaFkLink"

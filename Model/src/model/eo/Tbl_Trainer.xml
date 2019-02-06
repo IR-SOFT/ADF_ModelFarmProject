@@ -223,6 +223,20 @@
       <Attr Name="_DisplaySize" Value="300"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Gender"
+    Precision="1"
+    ColumnName="GENDER"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_TRAINER"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="Tbl_TrainerAca"
     Association="model.eo.FkTblTrainerAcaFkAssoc"

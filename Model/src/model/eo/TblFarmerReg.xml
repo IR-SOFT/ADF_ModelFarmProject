@@ -224,6 +224,20 @@
       <Attr Name="_DisplaySize" Value="300"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Gender"
+    Precision="1"
+    ColumnName="GENDER"
+    SQLType="CHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="TBL_FARMER_REG"
+    RetrievedOnUpdate="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
   <AccessorAttribute
     Name="TblFarmerRegCrops"
     Association="model.eo.FkTblFarmerRegCropsFkAssoc1"

@@ -88,4 +88,7 @@
   <ViewUsage
     Name="Marital_Status_LOV1"
     ViewObjectName="model.lov.Marital_Status_LOV"/>
+  <ViewUsage
+    Name="Gender_LOV2"
+    ViewObjectName="model.lov.Gender_LOV"/>
 </AppModule>

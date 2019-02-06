@@ -137,5 +137,10 @@
             Action="iteratorExecute"/>
     <action IterBinding="Tbl_TrainerPercView3Iterator" id="Delete2" RequiresUpdateModel="false"
             Action="removeCurrentRow"/>
+    <listOfValues IterBinding="Tbl_TrainerView1Iterator" StaticList="false" Uses="LOV_MarStatus" id="MarStatus1"/>
+    <list IterBinding="Tbl_TrainerView1Iterator" StaticList="false" Uses="LOV_MarStatus" id="MarStatus2"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject"/>
+    <list IterBinding="Tbl_TrainerView1Iterator" StaticList="false" Uses="LOV_Gender" id="Gender" DTSupportsMRU="true"
+          SelectItemValueMode="ListObject"/>
   </bindings>
 </pageDefinition>

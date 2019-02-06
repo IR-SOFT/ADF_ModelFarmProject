@@ -25,6 +25,18 @@
     AMUsageName="AppModule"
     ViewInstanceName="Cluster_Name_LOV1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Marital_Status_LOV1_1"
+    ViewObjectName="model.lov.Marital_Status_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Marital_Status_LOV1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="AppModule_Gender_LOV2_1"
+    ViewObjectName="model.lov.Gender_LOV"
+    AMUsageName="AppModule"
+    ViewInstanceName="Gender_LOV2"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_Ast"
     ListVOName="AppModule_Active_Status1_1"
@@ -56,6 +68,40 @@
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="Name"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_MarStatus"
+    ListVOName="AppModule_Marital_Status_LOV1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="MarStatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Marital_Status_DB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Marital_Status_View"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Gender"
+    ListVOName="AppModule_Gender_LOV2_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Gender"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="GenderDB"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="GenderView"/>
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
@@ -119,7 +165,15 @@
     PrecisionRule="true"
     EntityAttrName="MarStatus"
     EntityUsage="TblFarmerReg"
-    AliasName="MAR_STATUS"/>
+    AliasName="MAR_STATUS"
+    LOVName="LOV_MarStatus">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewAttribute
     Name="Dob"
     IsNotNull="true"
@@ -194,6 +248,20 @@
     EntityAttrName="PerAddress"
     EntityUsage="TblFarmerReg"
     AliasName="PER_ADDRESS"/>
+  <ViewAttribute
+    Name="Gender"
+    PrecisionRule="true"
+    EntityAttrName="Gender"
+    EntityUsage="TblFarmerReg"
+    AliasName="GENDER"
+    LOVName="LOV_Gender">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="combo"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
   <ViewLinkAccessor
     Name="TblFarmerRegCropsView"
     ViewLink="model.vo.FkTblFarmerRegCropsFkAssoc1Link"
