@@ -6,7 +6,8 @@
         <af:form id="f1" binding="#{backingBeanScope.backing_login.f1}">
             <f:facet name="center"/>
             <af:panelAccordion discloseMany="false" id="pa1" binding="#{backingBeanScope.backing_login.pa1}">
-                <af:showDetailItem id="pane1" binding="#{backingBeanScope.backing_login.pane1}">
+                <af:showDetailItem id="pane1" binding="#{backingBeanScope.backing_login.pane1}"
+                                   inlineStyle="background-image:url(&quot;Blue-Blur-Background.jpg&quot;);">
                     <af:panelGridLayout id="pgl1" binding="#{backingBeanScope.backing_login.pgl1}">
                         <af:gridRow marginTop="5px" height="auto" id="gr1"
                                     binding="#{backingBeanScope.backing_login.gr1}">
@@ -29,7 +30,10 @@
                             <af:gridCell marginStart="5px" width="20%" id="gc11"
                                          binding="#{backingBeanScope.backing_login.gc11}"/>
                             <af:gridCell marginStart="5px" width="20%" id="gc13"
-                                         binding="#{backingBeanScope.backing_login.gc13}"></af:gridCell>
+                                         binding="#{backingBeanScope.backing_login.gc13}">
+                                <af:spacer width="300" height="100" id="s7"
+                                           binding="#{backingBeanScope.backing_login.s7}"/>
+                            </af:gridCell>
                             <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc15"
                                          binding="#{backingBeanScope.backing_login.gc15}"/>
                         </af:gridRow>
@@ -39,21 +43,20 @@
                                          binding="#{backingBeanScope.backing_login.gc16}"/>
                             <af:gridCell marginStart="5px" width="20%" id="gc18" valign="middle" halign="center"
                                          binding="#{backingBeanScope.backing_login.gc18}">
-                                <af:panelAccordion discloseMany="false" id="pa2"
-                                                   binding="#{backingBeanScope.backing_login.pa2}"
-                                                   inlineStyle="width:241px;">
-                                    <af:showDetailItem id="pane2" text="Login"
-                                                       binding="#{backingBeanScope.backing_login.pane2}">
-                                        <af:spacer width="10" height="30" id="s1"
-                                                   binding="#{backingBeanScope.backing_login.s1}"/>
-                                        <af:panelGroupLayout layout="horizontal" id="pgl2" binding="#{backingBeanScope.backing_login.pgl2}">
+                                <af:spacer width="115" height="100" id="s9"
+                                           binding="#{backingBeanScope.backing_login.s9}"/>
+                                <af:image id="i4"
+                                          binding="#{backingBeanScope.backing_login.i4}"
+                                          source="#{resource['images:main_login.png']}"
+                                          inlineStyle="width:67px; height:63px;"/>
+                                <af:panelGroupLayout layout="horizontal" id="pgl2" binding="#{backingBeanScope.backing_login.pgl2}">
                                             <af:spacer width="10" height="10" id="s5"
                                                        binding="#{backingBeanScope.backing_login.s5}"/>
-                                            <af:image id="i1"
-                                                      binding="#{backingBeanScope.backing_login.i1}"
-                                                      source="#{resource['images:useer_loogin.png']}"/>
+                                            <af:image source="#{resource['images:user_login.png']}" id="i3"
+                                                      binding="#{backingBeanScope.backing_login.i3}"/>
+                                        
                                             <af:inputText id="it1" binding="#{backingBeanScope.backing_login.it1}"
-                                                          value="User Name"/>
+                                                          placeholder="User Name" columns="30" rows="1"/>
                                         </af:panelGroupLayout>
                                         <af:spacer width="10" height="20" id="s2"
                                                    binding="#{backingBeanScope.backing_login.s2}"/>
@@ -66,26 +69,17 @@
                                                       binding="#{backingBeanScope.backing_login.i1}"
                                                              source="#{resource['images:password_login.png']}"/>
                                         <af:inputText id="it2"
-                                                      binding="#{backingBeanScope.backing_login.it2}" value="Password"/>
-                                        </af:panelGroupLayout>
-                                        
-                                        <af:spacer width="10" height="20" id="s3"
-                                                   binding="#{backingBeanScope.backing_login.s3}"/>
-                                        <h:panelGroup id="pg1" binding="#{backingBeanScope.backing_login.pg1}">
-                                            <af:spacer width="75" height="30" id="s4"
-                                                       binding="#{backingBeanScope.backing_login.s4}"/>
+                                                      binding="#{backingBeanScope.backing_login.it2}" placeholder="Password"
+                                                      columns="30" rows="1"/>
+                                </af:panelGroupLayout>
+                                <af:spacer width="100" height="60" id="s3"
+                                           binding="#{backingBeanScope.backing_login.s3}"/>
+                                <af:panelGroupLayout id="pgl4" binding="#{backingBeanScope.backing_login.pgl4}">
                                             <af:button text="Login" id="b1"
                                                        binding="#{backingBeanScope.backing_login.b1}"
                                                        action="#{backingBeanScope.backing_login.login_action}"
                                                        icon="#{resource['images:login.png']}"/>
-                                        </h:panelGroup>
-                                        <!--<af:button text="Logout" id="b2" binding="#{backingBeanScope.backing_login.b2}"
-                                                   action="#{backingBeanScope.backing_login.logout_action}"/>
-                                        <af:button text="Check Session" id="b3"
-                                                   binding="#{backingBeanScope.backing_login.b3}"
-                                                   action="#{backingBeanScope.backing_login.checkSession(null)}"/>-->
-                                    </af:showDetailItem>
-                                </af:panelAccordion>
+                                                       </af:panelGroupLayout>
                             </af:gridCell>
                             <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc20"
                                          binding="#{backingBeanScope.backing_login.gc20}"/>
@@ -95,7 +89,10 @@
                             <af:gridCell marginStart="5px" width="20%" id="gc21"
                                          binding="#{backingBeanScope.backing_login.gc21}"/>
                             <af:gridCell marginStart="5px" width="20%" id="gc23"
-                                         binding="#{backingBeanScope.backing_login.gc23}"/>
+                                         binding="#{backingBeanScope.backing_login.gc23}">
+                                <af:spacer width="300" height="480" id="s8"
+                                           binding="#{backingBeanScope.backing_login.s8}"/>
+                            </af:gridCell>
                             <af:gridCell marginStart="5px" width="20%" marginEnd="5px" id="gc25"
                                          binding="#{backingBeanScope.backing_login.gc25}"/>
                         </af:gridRow>
