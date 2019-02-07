@@ -120,7 +120,6 @@ public class Login {
     private RichImage i5;
     private HtmlGraphicImage gi1;
     private RichActiveImage ai1;
-    private RichIcon i5;
     private RichLink l1;
 
 
@@ -1162,14 +1161,6 @@ public class Login {
 
     public RichActiveImage getAi1() {
         return ai1;
-    }
-
-    public void setI5(RichIcon i5) {
-        this.i5 = i5;
-    }
-
-    public RichIcon getI5() {
-        return i5;
     }
 
     public void setL1(RichLink l1) {
