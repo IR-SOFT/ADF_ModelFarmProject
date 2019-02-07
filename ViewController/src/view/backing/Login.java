@@ -8,6 +8,7 @@ import java.sql.Statement;
 
 import javax.annotation.PostConstruct;
 
+import javax.faces.component.html.HtmlGraphicImage;
 import javax.faces.component.html.HtmlPanelGroup;
 import javax.faces.context.FacesContext;
 
@@ -25,6 +26,9 @@ import oracle.adf.view.rich.component.rich.layout.RichPanelGroupLayout;
 import oracle.adf.view.rich.component.rich.layout.RichShowDetailItem;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
 
+import oracle.adf.view.rich.component.rich.nav.RichLink;
+import oracle.adf.view.rich.component.rich.output.RichActiveImage;
+import oracle.adf.view.rich.component.rich.output.RichIcon;
 import oracle.adf.view.rich.component.rich.output.RichImage;
 import oracle.adf.view.rich.component.rich.output.RichSpacer;
 
@@ -112,6 +116,12 @@ public class Login {
     private RichSpacer s9;
     private RichPanelGroupLayout pgl4;
     private RichImage i4;
+    private RichSpacer s4;
+    private RichImage i5;
+    private HtmlGraphicImage gi1;
+    private RichActiveImage ai1;
+    private RichIcon i5;
+    private RichLink l1;
 
 
     public void setF1(RichForm f1) {
@@ -1120,6 +1130,54 @@ public class Login {
 
     public RichImage getI4() {
         return i4;
+    }
+
+    public void setS4(RichSpacer s4) {
+        this.s4 = s4;
+    }
+
+    public RichSpacer getS4() {
+        return s4;
+    }
+
+    public void setI5(RichImage i5) {
+        this.i5 = i5;
+    }
+
+    public RichImage getI5() {
+        return i5;
+    }
+
+    public void setGi1(HtmlGraphicImage gi1) {
+        this.gi1 = gi1;
+    }
+
+    public HtmlGraphicImage getGi1() {
+        return gi1;
+    }
+
+    public void setAi1(RichActiveImage ai1) {
+        this.ai1 = ai1;
+    }
+
+    public RichActiveImage getAi1() {
+        return ai1;
+    }
+
+    public void setI5(RichIcon i5) {
+        this.i5 = i5;
+    }
+
+    public RichIcon getI5() {
+        return i5;
+    }
+
+    public void setL1(RichLink l1) {
+        this.l1 = l1;
+    }
+
+    public RichLink getL1() {
+        return l1;
     }
 }
 

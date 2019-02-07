@@ -19,6 +19,7 @@
          <list n="constituent-sets">
             <hash>
                <list n="pattern-filters">
+                  <string v="+login-button.png"/>
                   <string v="+user_login.png"/>
                </list>
                <list n="url-path">
