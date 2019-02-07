@@ -77,7 +77,8 @@
                                                                                   columns="#{bindings.TblUserMasterView1.hints.UserMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblUserMasterView1.hints.UserMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblUserMasterView1.hints.UserMasterId.tooltip}"
-                                                                                  id="it1" contentStyle='text-align:center'>
+                                                                                  id="it1" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.UserMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>

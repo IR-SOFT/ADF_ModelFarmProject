@@ -76,7 +76,8 @@
                                                                                   columns="#{bindings.TblRoleMasterView1.hints.RoleMasterId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleMasterView1.hints.RoleMasterId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleMasterView1.hints.RoleMasterId.tooltip}"
-                                                                                  id="it1"  contentStyle='text-align:center' >
+                                                                                  id="it1"  readOnly="true"
+                                                                                  contentStyle='text-align:center' >
                                                                         <f:validator binding="#{row.bindings.RoleMasterId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -197,7 +198,7 @@
                                                                                   columns="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailModulesView3.hints.RoleDetailModulesId.tooltip}"
-                                                                                  id="it3">
+                                                                                  id="it3" readOnly="true" >
                                                                         <f:validator binding="#{row.bindings.RoleDetailModulesId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -333,7 +334,8 @@
                                                                                   columns="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailPagesView3.hints.RoleDetailPagesId.tooltip}"
-                                                                                  id="it5" contentStyle='text-align:center' >
+                                                                                  id="it5" readOnly="true"
+                                                                                  contentStyle='text-align:center' >
                                                                         <f:validator binding="#{row.bindings.RoleDetailPagesId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
@@ -571,7 +573,8 @@
                                                                                   columns="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.displayWidth}"
                                                                                   maximumLength="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.precision}"
                                                                                   shortDesc="#{bindings.TblRoleDetailReportsView3.hints.RoleDetailReportsId.tooltip}"
-                                                                                  id="it7" contentStyle='text-align:center'>
+                                                                                  id="it7" readOnly="true"
+                                                                                  contentStyle='text-align:center'>
                                                                         <f:validator binding="#{row.bindings.RoleDetailReportsId.validator}"/>
                                                                     </af:inputText>
                                                                 </af:column>
