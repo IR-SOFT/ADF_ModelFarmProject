@@ -98,7 +98,6 @@ public class Login {
     private RichSpacer s3;
     private HtmlPanelGroup pg1;
     private RichButton b4;
-    private RichSpacer s4;
     private RichImage i1;
     private HtmlPanelGroup pg2;
 
@@ -107,6 +106,12 @@ public class Login {
     private RichSpacer s5;
     private RichSpacer s6;
     private RichPanelGroupLayout pgl3;
+    private RichImage i3;
+    private RichSpacer s7;
+    private RichSpacer s8;
+    private RichSpacer s9;
+    private RichPanelGroupLayout pgl4;
+    private RichImage i4;
 
 
     public void setF1(RichForm f1) {
@@ -1020,13 +1025,6 @@ public class Login {
         return b4;
     }
 
-    public void setS4(RichSpacer s4) {
-        this.s4 = s4;
-    }
-
-    public RichSpacer getS4() {
-        return s4;
-    }
 
     public void setI1(RichImage i1) {
         this.i1 = i1;
@@ -1074,6 +1072,54 @@ public class Login {
 
     public RichPanelGroupLayout getPgl3() {
         return pgl3;
+    }
+
+    public void setI3(RichImage i3) {
+        this.i3 = i3;
+    }
+
+    public RichImage getI3() {
+        return i3;
+    }
+
+    public void setS7(RichSpacer s7) {
+        this.s7 = s7;
+    }
+
+    public RichSpacer getS7() {
+        return s7;
+    }
+
+    public void setS8(RichSpacer s8) {
+        this.s8 = s8;
+    }
+
+    public RichSpacer getS8() {
+        return s8;
+    }
+
+    public void setS9(RichSpacer s9) {
+        this.s9 = s9;
+    }
+
+    public RichSpacer getS9() {
+        return s9;
+    }
+
+    public void setPgl4(RichPanelGroupLayout pgl4) {
+        this.pgl4 = pgl4;
+    }
+
+    public RichPanelGroupLayout getPgl4() {
+        return pgl4;
+    }
+
+    public void setI4(RichImage i4) {
+        this.i4 = i4;
+    }
+
+    public RichImage getI4() {
+        return i4;
     }
 }
 
